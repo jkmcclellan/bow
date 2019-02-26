@@ -1759,77 +1759,77 @@
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Id.swift",
-      "line": 17,
+      "line": 11,
       "symbol": "Id.value",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Id.swift",
-      "line": 56,
+      "line": 45,
       "symbol": "ForId.eq(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Id.swift",
-      "line": 62,
+      "line": 51,
       "symbol": "ForId.map(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Id.swift",
-      "line": 68,
+      "line": 57,
       "symbol": "ForId.pure(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Id.swift",
-      "line": 74,
+      "line": 63,
       "symbol": "ForId.flatMap(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Id.swift",
-      "line": 79,
+      "line": 68,
       "symbol": "ForId.tailRecM(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Id.swift",
-      "line": 87,
+      "line": 76,
       "symbol": "ForId.coflatMap(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Id.swift",
-      "line": 91,
+      "line": 80,
       "symbol": "ForId.extract(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Id.swift",
-      "line": 99,
+      "line": 88,
       "symbol": "ForId.foldLeft(_:_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Id.swift",
-      "line": 104,
+      "line": 93,
       "symbol": "ForId.foldRight(_:_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Id.swift",
-      "line": 111,
+      "line": 100,
       "symbol": "ForId.traverse(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
@@ -3502,212 +3502,184 @@
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Instances/BoolInstances.swift",
-      "line": 4,
+      "line": 5,
       "symbol": "Bool.combine(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Instances/BoolInstances.swift",
-      "line": 10,
+      "line": 12,
       "symbol": "Bool.empty()",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Instances/NumberInstances.swift",
-      "line": 4,
+      "line": 5,
       "symbol": "Int.combine(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Instances/NumberInstances.swift",
-      "line": 10,
+      "line": 12,
       "symbol": "Int.empty()",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Instances/NumberInstances.swift",
-      "line": 16,
+      "line": 19,
       "symbol": "Int8.combine(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Instances/NumberInstances.swift",
-      "line": 22,
+      "line": 26,
       "symbol": "Int8.empty()",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Instances/NumberInstances.swift",
-      "line": 28,
+      "line": 33,
       "symbol": "Int16.combine(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Instances/NumberInstances.swift",
-      "line": 34,
+      "line": 40,
       "symbol": "Int16.empty()",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Instances/NumberInstances.swift",
-      "line": 40,
+      "line": 47,
       "symbol": "Int32.combine(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Instances/NumberInstances.swift",
-      "line": 46,
+      "line": 54,
       "symbol": "Int32.empty()",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Instances/NumberInstances.swift",
-      "line": 52,
+      "line": 61,
       "symbol": "Int64.combine(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Instances/NumberInstances.swift",
-      "line": 58,
+      "line": 68,
       "symbol": "Int64.empty()",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Instances/NumberInstances.swift",
-      "line": 67,
+      "line": 75,
       "symbol": "UInt.combine(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Instances/NumberInstances.swift",
-      "line": 73,
+      "line": 82,
       "symbol": "UInt.empty()",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Instances/NumberInstances.swift",
-      "line": 79,
+      "line": 89,
       "symbol": "UInt8.combine(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Instances/NumberInstances.swift",
-      "line": 85,
+      "line": 96,
       "symbol": "UInt8.empty()",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Instances/NumberInstances.swift",
-      "line": 91,
+      "line": 103,
       "symbol": "UInt16.combine(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Instances/NumberInstances.swift",
-      "line": 97,
+      "line": 110,
       "symbol": "UInt16.empty()",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Instances/NumberInstances.swift",
-      "line": 103,
+      "line": 117,
       "symbol": "UInt32.combine(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Instances/NumberInstances.swift",
-      "line": 109,
+      "line": 124,
       "symbol": "UInt32.empty()",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Instances/NumberInstances.swift",
-      "line": 115,
+      "line": 131,
       "symbol": "UInt64.combine(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Instances/NumberInstances.swift",
-      "line": 121,
+      "line": 138,
       "symbol": "UInt64.empty()",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Instances/NumberInstances.swift",
-      "line": 127,
+      "line": 145,
       "symbol": "Float.combine(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Instances/NumberInstances.swift",
-      "line": 133,
+      "line": 152,
       "symbol": "Float.empty()",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Instances/NumberInstances.swift",
-      "line": 139,
+      "line": 159,
       "symbol": "Double.combine(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Instances/NumberInstances.swift",
-      "line": 145,
+      "line": 166,
       "symbol": "Double.empty()",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Instances/OptionInstances.swift",
-      "line": null,
-      "symbol": "FirstOption",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Instances/OptionInstances.swift",
-      "line": null,
-      "symbol": "FirstOption",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Instances/OptionInstances.swift",
-      "line": null,
-      "symbol": "LastOption",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Instances/OptionInstances.swift",
-      "line": null,
-      "symbol": "LastOption",
-      "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
@@ -3726,105 +3698,63 @@
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Instances/OptionInstances.swift",
-      "line": 6,
-      "symbol": "FirstOption",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Instances/OptionInstances.swift",
-      "line": 7,
+      "line": 8,
       "symbol": "FirstOption.const",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Instances/OptionInstances.swift",
-      "line": 9,
-      "symbol": "FirstOption.init(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Instances/OptionInstances.swift",
-      "line": 13,
-      "symbol": "FirstOption.init(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Instances/OptionInstances.swift",
-      "line": 18,
-      "symbol": "LastOption",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Instances/OptionInstances.swift",
-      "line": 19,
+      "line": 27,
       "symbol": "LastOption.const",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Instances/OptionInstances.swift",
-      "line": 21,
-      "symbol": "LastOption.init(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Instances/OptionInstances.swift",
-      "line": 25,
-      "symbol": "LastOption.init(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Instances/OptionInstances.swift",
-      "line": 31,
+      "line": 46,
       "symbol": "FirstOption.combine(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Instances/OptionInstances.swift",
-      "line": 37,
+      "line": 53,
       "symbol": "FirstOption.empty()",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Instances/OptionInstances.swift",
-      "line": 43,
+      "line": 60,
       "symbol": "LastOption.combine(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Instances/OptionInstances.swift",
-      "line": 49,
+      "line": 67,
       "symbol": "LastOption.empty()",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Instances/StringInstances.swift",
-      "line": 4,
+      "line": 5,
       "symbol": "String.combine(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Instances/StringInstances.swift",
-      "line": 10,
+      "line": 12,
       "symbol": "String.empty()",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Syntax/HigherKinds.swift",
-      "line": 15,
+      "line": 11,
       "symbol": "Kind.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -3841,13 +3771,6 @@
       "line": 4,
       "symbol": "unit",
       "symbol_kind": "source.lang.swift.decl.var.global",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Syntax/Predef.swift",
-      "line": 183,
-      "symbol": "andThen(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.free",
       "warning": "undocumented"
     },
     {
