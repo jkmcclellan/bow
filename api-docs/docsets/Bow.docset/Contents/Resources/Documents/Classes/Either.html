@@ -1404,7 +1404,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Constructs a left value given an instance of <code>A</code>.</p>
+                        <p>Constructs a left value.</p>
 
                       </div>
                       <div class="declaration">
@@ -1414,6 +1414,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">left</span><span class="p">(</span><span class="n">_</span> <span class="nv">a</span><span class="p">:</span> <span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Either</span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  a
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Value to be wrapped in a left of this Either type.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A left value of Either.</p>
                       </div>
                     </section>
                   </div>
@@ -1429,7 +1452,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Constructs a right value given an instance of <code>B</code>.</p>
+                        <p>Constructs a right value</p>
 
                       </div>
                       <div class="declaration">
@@ -1439,6 +1462,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">right</span><span class="p">(</span><span class="n">_</span> <span class="nv">b</span><span class="p">:</span> <span class="kt">B</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Either</span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  b
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Value to be wrapped in a right of this Either type.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A right value of Either.</p>
                       </div>
                     </section>
                   </div>
@@ -1454,7 +1500,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Safe downcast to <code>Either&lt;A, B&gt;</code>.</p>
+                        <p>Safe downcast.</p>
 
                       </div>
                       <div class="declaration">
@@ -1464,6 +1510,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">fix</span><span class="p">(</span><span class="n">_</span> <span class="nv">fa</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:3Bow8EitherOfa">EitherOf</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Either</span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  fa
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Value in the higher-kind form.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Value cast to Either.</p>
                       </div>
                     </section>
                   </div>
@@ -1502,7 +1571,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>Closure to apply if the contained value in this <code>Either</code> is of type <code>A</code>.</p>
+                                  <p>Closure to apply if the contained value in this <code>Either</code> is a member of the left type.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1514,7 +1583,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>Closure to apply if the contained value in this <code>Either</code> is of type <code>B</code>.</p>
+                                  <p>Closure to apply if the contained value in this <code>Either</code> is a member of the right type.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1654,6 +1723,10 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An either value with its types reversed respect to this one.</p>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1668,7 +1741,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Transforms both type parameters, preserving its structure.</p>
+                        <p>Transforms both type parameters, preserving the structure of this value.</p>
 
                       </div>
                       <div class="declaration">
@@ -1710,6 +1783,10 @@
                           </tbody>
                         </table>
                       </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Result of applying the corresponding closure to this value.</p>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1737,6 +1814,10 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An option containing a right value, or none if there is a left value.</p>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1762,6 +1843,29 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  defaultValue
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Value to be returned if this value is left.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The wrapped value if it is right; otherwise, the default value.</p>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1786,6 +1890,41 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">filterOrElse</span><span class="p">(</span><span class="n">_</span> <span class="nv">predicate</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">B</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">_</span> <span class="n">defaultValue</span> <span class="p">:</span> <span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Either</span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  predicate
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Predicate to test the right value.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  defaultValue
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Value to be returned if the right value does not satisfies the predicate.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>This value, if it matches the predicate or is left; otherwise, a left value wrapping the default value.</p>
                       </div>
                     </section>
                   </div>
