@@ -2452,91 +2452,91 @@
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Option.swift",
-      "line": 156,
+      "line": 141,
       "symbol": "ForOption.eq(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Option.swift",
-      "line": 165,
+      "line": 151,
       "symbol": "ForOption.map(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Option.swift",
-      "line": 171,
+      "line": 158,
       "symbol": "ForOption.pure(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Option.swift",
-      "line": 177,
+      "line": 165,
       "symbol": "ForOption.flatMap(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Option.swift",
-      "line": 182,
+      "line": 170,
       "symbol": "ForOption.tailRecM(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Option.swift",
-      "line": 192,
+      "line": 181,
       "symbol": "ForOption.E",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Option.swift",
-      "line": 194,
+      "line": 183,
       "symbol": "ForOption.raiseError(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Option.swift",
-      "line": 198,
+      "line": 187,
       "symbol": "ForOption.handleErrorWith(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Option.swift",
-      "line": 208,
+      "line": 200,
       "symbol": "ForOption.empty()",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Option.swift",
-      "line": 214,
+      "line": 207,
       "symbol": "ForOption.foldLeft(_:_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Option.swift",
-      "line": 220,
+      "line": 213,
       "symbol": "ForOption.foldRight(_:_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Option.swift",
-      "line": 228,
+      "line": 222,
       "symbol": "ForOption.traverse(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Option.swift",
-      "line": 236,
+      "line": 231,
       "symbol": "ForOption.traverseFilter(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"

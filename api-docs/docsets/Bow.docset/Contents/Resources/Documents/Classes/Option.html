@@ -1429,12 +1429,16 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>Value to be wrapped in an <code>Option&lt;A&gt;</code>.</p>
+                                  <p>Value to be wrapped in an <code>Option</code>.</p>
                                 </div>
                               </td>
                             </tr>
                           </tbody>
                         </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An option wrapping the value passed as an argument.</p>
                       </div>
                     </section>
                   </div>
@@ -1462,6 +1466,10 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">none</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Option</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An option with no present value</p>
                       </div>
                     </section>
                   </div>
@@ -1507,6 +1515,10 @@
                           </tbody>
                         </table>
                       </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An Option with the same structure as the argument.</p>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1521,7 +1533,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Safe downcast to <code>Option&lt;A&gt;</code>.</p>
+                        <p>Safe downcasting.</p>
 
                       </div>
                       <div class="declaration">
@@ -1531,6 +1543,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">fix</span><span class="p">(</span><span class="n">_</span> <span class="nv">fa</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:3Bow8OptionOfa">OptionOf</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Option</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  fa
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Option in higher-kind form.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Value cast to Option.</p>
                       </div>
                     </section>
                   </div>
@@ -1588,6 +1623,10 @@
                           </tbody>
                         </table>
                       </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Result of applying the corresponding closure based on the value of this object.</p>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1631,6 +1670,10 @@
                             </tr>
                           </tbody>
                         </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>This value if it does not match the predicate, or none otherwise.</p>
                       </div>
                     </section>
                   </div>
@@ -1676,6 +1719,10 @@
                           </tbody>
                         </table>
                       </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The value wrapped in this Option, if present, or the value provided as an argument, otherwise.</p>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1719,6 +1766,10 @@
                             </tr>
                           </tbody>
                         </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The value wrapped in this Option, if present, or the result of running the closure provided as an argument, otherwise.</p>
                       </div>
                     </section>
                   </div>
@@ -1764,6 +1815,10 @@
                           </tbody>
                         </table>
                       </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>This option, if has a present value, or the value provided as an argument, otherwise.</p>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1808,6 +1863,10 @@
                           </tbody>
                         </table>
                       </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>This option, if has a present value, or the result of running the closure provided as an argument, otherwise.</p>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1833,6 +1892,10 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A Swift Optional with the same structure as this value.</p>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1847,7 +1910,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Converts this option into an empty array, if absent, or a singleton array, if present.</p>
+                        <p>Converts this option into an array.</p>
 
                       </div>
                       <div class="declaration">
@@ -1857,6 +1920,10 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">toArray</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">A</span><span class="p">]</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An empty array if this value is absent, or a singleton array, if present.</p>
                       </div>
                     </section>
                   </div>
