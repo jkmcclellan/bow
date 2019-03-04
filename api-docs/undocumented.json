@@ -127,34 +127,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Arrow/Cokleisli.swift",
-      "line": 51,
-      "symbol": "CokleisliPartial.map(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Arrow/Cokleisli.swift",
-      "line": 57,
-      "symbol": "CokleisliPartial.pure(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Arrow/Cokleisli.swift",
-      "line": 63,
-      "symbol": "CokleisliPartial.flatMap(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Arrow/Cokleisli.swift",
-      "line": 68,
-      "symbol": "CokleisliPartial.tailRecM(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Arrow/Function0.swift",
       "line": null,
       "symbol": "ForFunction0",
@@ -235,34 +207,6 @@
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Arrow/Function0.swift",
       "line": 23,
       "symbol": "ForFunction0.eq(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Arrow/Function0.swift",
-      "line": 29,
-      "symbol": "ForFunction0.map(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Arrow/Function0.swift",
-      "line": 35,
-      "symbol": "ForFunction0.pure(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Arrow/Function0.swift",
-      "line": 41,
-      "symbol": "ForFunction0.flatMap(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Arrow/Function0.swift",
-      "line": 50,
-      "symbol": "ForFunction0.tailRecM(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
@@ -355,34 +299,6 @@
       "line": 18,
       "symbol": "Function1.invoke(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Arrow/Function1.swift",
-      "line": 24,
-      "symbol": "Function1Partial.map(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Arrow/Function1.swift",
-      "line": 30,
-      "symbol": "Function1Partial.pure(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Arrow/Function1.swift",
-      "line": 36,
-      "symbol": "Function1Partial.flatMap(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Arrow/Function1.swift",
-      "line": 44,
-      "symbol": "Function1Partial.tailRecM(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
@@ -611,41 +527,6 @@
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Arrow/Kleisli.swift",
-      "line": 53,
-      "symbol": "KleisliPartial.map(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Arrow/Kleisli.swift",
-      "line": 59,
-      "symbol": "KleisliPartial.pure(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Arrow/Kleisli.swift",
-      "line": 63,
-      "symbol": "KleisliPartial.ap(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Arrow/Kleisli.swift",
-      "line": 69,
-      "symbol": "KleisliPartial.flatMap(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Arrow/Kleisli.swift",
-      "line": 73,
-      "symbol": "KleisliPartial.tailRecM(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Arrow/Kleisli.swift",
       "line": 79,
       "symbol": "KleisliPartial.ask()",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
@@ -856,34 +737,6 @@
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/ArrayK.swift",
-      "line": 70,
-      "symbol": "ForArrayK.map(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/ArrayK.swift",
-      "line": 76,
-      "symbol": "ForArrayK.pure(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/ArrayK.swift",
-      "line": 82,
-      "symbol": "ForArrayK.flatMap(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/ArrayK.swift",
-      "line": 99,
-      "symbol": "ForArrayK.tailRecM(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/ArrayK.swift",
       "line": 105,
       "symbol": "ForArrayK.foldLeft(_:_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
@@ -914,13 +767,6 @@
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/ArrayK.swift",
       "line": 136,
       "symbol": "ForArrayK.emptyK()",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/ArrayK.swift",
-      "line": 144,
-      "symbol": "ForArrayK.empty()",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
@@ -1059,27 +905,6 @@
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Const.swift",
-      "line": 42,
-      "symbol": "ConstPartial.map(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Const.swift",
-      "line": 48,
-      "symbol": "ConstPartial.pure(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Const.swift",
-      "line": 52,
-      "symbol": "ConstPartial.ap(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Const.swift",
       "line": 60,
       "symbol": "ConstPartial.foldLeft(_:_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
@@ -1096,20 +921,6 @@
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Const.swift",
       "line": 70,
       "symbol": "ConstPartial.traverse(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Const.swift",
-      "line": 78,
-      "symbol": "ConstPartial.traverseFilter(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Const.swift",
-      "line": 82,
-      "symbol": "ConstPartial.mapFilter(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
@@ -1201,13 +1012,6 @@
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Coproduct.swift",
       "line": 24,
       "symbol": "CoproductPartial.eq(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Coproduct.swift",
-      "line": 32,
-      "symbol": "CoproductPartial.map(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
@@ -1346,13 +1150,6 @@
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Day.swift",
-      "line": 82,
-      "symbol": "DayPartial.map(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Day.swift",
       "line": 88,
       "symbol": "DayPartial.coflatMap(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
@@ -1481,34 +1278,6 @@
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Either.swift",
       "line": 164,
       "symbol": "EitherPartial.eq(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Either.swift",
-      "line": 174,
-      "symbol": "EitherPartial.map(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Either.swift",
-      "line": 181,
-      "symbol": "EitherPartial.pure(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Either.swift",
-      "line": 188,
-      "symbol": "EitherPartial.flatMap(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Either.swift",
-      "line": 192,
-      "symbol": "EitherPartial.tailRecM(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
@@ -1696,34 +1465,6 @@
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Eval.swift",
-      "line": 268,
-      "symbol": "ForEval.map(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Eval.swift",
-      "line": 274,
-      "symbol": "ForEval.pure(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Eval.swift",
-      "line": 280,
-      "symbol": "ForEval.flatMap(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Eval.swift",
-      "line": 292,
-      "symbol": "ForEval.tailRecM(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Eval.swift",
       "line": 301,
       "symbol": "ForEval.eq(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
@@ -1740,34 +1481,6 @@
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Id.swift",
       "line": 46,
       "symbol": "ForId.eq(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Id.swift",
-      "line": 52,
-      "symbol": "ForId.map(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Id.swift",
-      "line": 58,
-      "symbol": "ForId.pure(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Id.swift",
-      "line": 64,
-      "symbol": "ForId.flatMap(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Id.swift",
-      "line": 69,
-      "symbol": "ForId.tailRecM(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
@@ -2018,34 +1731,6 @@
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Ior.swift",
-      "line": 154,
-      "symbol": "IorPartial.map(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Ior.swift",
-      "line": 163,
-      "symbol": "IorPartial.pure(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Ior.swift",
-      "line": 169,
-      "symbol": "IorPartial.flatMap(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Ior.swift",
-      "line": 196,
-      "symbol": "IorPartial.tailRecM(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Ior.swift",
       "line": 202,
       "symbol": "IorPartial.foldLeft(_:_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
@@ -2133,13 +1818,6 @@
       "line": 15,
       "symbol": "Moore.init(view:handle:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Moore.swift",
-      "line": 22,
-      "symbol": "MoorePartial.map(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
@@ -2382,34 +2060,6 @@
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/NonEmptyArray.swift",
-      "line": 97,
-      "symbol": "ForNonEmptyArray.map(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/NonEmptyArray.swift",
-      "line": 103,
-      "symbol": "ForNonEmptyArray.pure(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/NonEmptyArray.swift",
-      "line": 109,
-      "symbol": "ForNonEmptyArray.flatMap(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/NonEmptyArray.swift",
-      "line": 125,
-      "symbol": "ForNonEmptyArray.tailRecM(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/NonEmptyArray.swift",
       "line": 131,
       "symbol": "ForNonEmptyArray.coflatMap(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
@@ -2459,34 +2109,6 @@
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Option.swift",
-      "line": 151,
-      "symbol": "ForOption.map(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Option.swift",
-      "line": 158,
-      "symbol": "ForOption.pure(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Option.swift",
-      "line": 165,
-      "symbol": "ForOption.flatMap(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Option.swift",
-      "line": 170,
-      "symbol": "ForOption.tailRecM(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Option.swift",
       "line": 181,
       "symbol": "ForOption.E",
       "symbol_kind": "source.lang.swift.decl.typealias",
@@ -2508,13 +2130,6 @@
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Option.swift",
-      "line": 200,
-      "symbol": "ForOption.empty()",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Option.swift",
       "line": 207,
       "symbol": "ForOption.foldLeft(_:_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
@@ -2531,13 +2146,6 @@
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Option.swift",
       "line": 222,
       "symbol": "ForOption.traverse(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Option.swift",
-      "line": 231,
-      "symbol": "ForOption.traverseFilter(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
@@ -2732,13 +2340,6 @@
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Store.swift",
-      "line": 27,
-      "symbol": "StorePartial.map(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Store.swift",
       "line": 35,
       "symbol": "StorePartial.coflatMap(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
@@ -2868,13 +2469,6 @@
       "line": 35,
       "symbol": "Sum.change(side:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Sum.swift",
-      "line": 44,
-      "symbol": "SumPartial.map(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
@@ -3077,34 +2671,6 @@
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Try.swift",
       "line": 101,
       "symbol": "ForTry.eq(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Try.swift",
-      "line": 110,
-      "symbol": "ForTry.map(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Try.swift",
-      "line": 116,
-      "symbol": "ForTry.pure(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Try.swift",
-      "line": 122,
-      "symbol": "ForTry.flatMap(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Try.swift",
-      "line": 127,
-      "symbol": "ForTry.tailRecM(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
@@ -3364,27 +2930,6 @@
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Validated.swift",
       "line": 112,
       "symbol": "ValidatedPartial.eq(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Validated.swift",
-      "line": 121,
-      "symbol": "ValidatedPartial.map(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Validated.swift",
-      "line": 127,
-      "symbol": "ValidatedPartial.pure(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Validated.swift",
-      "line": 131,
-      "symbol": "ValidatedPartial.ap(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
@@ -3670,41 +3215,6 @@
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Transformers/EitherT.swift",
-      "line": 78,
-      "symbol": "EitherTPartial.map(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Transformers/EitherT.swift",
-      "line": 84,
-      "symbol": "EitherTPartial.pure(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Transformers/EitherT.swift",
-      "line": 88,
-      "symbol": "EitherTPartial.ap(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Transformers/EitherT.swift",
-      "line": 98,
-      "symbol": "EitherTPartial.flatMap(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Transformers/EitherT.swift",
-      "line": 109,
-      "symbol": "EitherTPartial.tailRecM(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Transformers/EitherT.swift",
       "line": 123,
       "symbol": "EitherTPartial.E",
       "symbol_kind": "source.lang.swift.decl.typealias",
@@ -3950,48 +3460,6 @@
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Transformers/OptionT.swift",
-      "line": 92,
-      "symbol": "OptionTPartial.map(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Transformers/OptionT.swift",
-      "line": 99,
-      "symbol": "OptionTPartial.mapFilter(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Transformers/OptionT.swift",
-      "line": 106,
-      "symbol": "OptionTPartial.pure(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Transformers/OptionT.swift",
-      "line": 110,
-      "symbol": "OptionTPartial.ap(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Transformers/OptionT.swift",
-      "line": 118,
-      "symbol": "OptionTPartial.flatMap(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Transformers/OptionT.swift",
-      "line": 126,
-      "symbol": "OptionTPartial.tailRecM(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Transformers/OptionT.swift",
       "line": 137,
       "symbol": "OptionTPartial.combineK(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
@@ -4195,34 +3663,6 @@
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Transformers/StateT.swift",
-      "line": 86,
-      "symbol": "StateTPartial.map(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Transformers/StateT.swift",
-      "line": 92,
-      "symbol": "StateTPartial.pure(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Transformers/StateT.swift",
-      "line": 98,
-      "symbol": "StateTPartial.flatMap(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Transformers/StateT.swift",
-      "line": 111,
-      "symbol": "StateTPartial.tailRecM(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Transformers/StateT.swift",
       "line": 123,
       "symbol": "StateTPartial.get()",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
@@ -4246,13 +3686,6 @@
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Transformers/StateT.swift",
       "line": 141,
       "symbol": "StateTPartial.emptyK()",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Transformers/StateT.swift",
-      "line": 153,
-      "symbol": "StateTPartial.empty()",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
@@ -4580,41 +4013,6 @@
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Transformers/WriterT.swift",
-      "line": 134,
-      "symbol": "WriterTPartial.map(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Transformers/WriterT.swift",
-      "line": 141,
-      "symbol": "WriterTPartial.pure(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Transformers/WriterT.swift",
-      "line": 147,
-      "symbol": "WriterTPartial.flatMap(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Transformers/WriterT.swift",
-      "line": 156,
-      "symbol": "WriterTPartial.tailRecM(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Transformers/WriterT.swift",
-      "line": 169,
-      "symbol": "WriterTPartial.empty()",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Transformers/WriterT.swift",
       "line": 175,
       "symbol": "WriterTPartial.combineK(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
@@ -4653,391 +4051,6 @@
       "line": 3,
       "symbol": "Alternative",
       "symbol_kind": "source.lang.swift.decl.protocol",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": null,
-      "symbol": "Applicative",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 3,
-      "symbol": "Applicative",
-      "symbol_kind": "source.lang.swift.decl.protocol",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 4,
-      "symbol": "Applicative.pure(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 5,
-      "symbol": "Applicative.ap(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 13,
-      "symbol": "Applicative.product(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 17,
-      "symbol": "Applicative.product(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 21,
-      "symbol": "Applicative.product(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 25,
-      "symbol": "Applicative.product(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 29,
-      "symbol": "Applicative.product(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 33,
-      "symbol": "Applicative.product(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 37,
-      "symbol": "Applicative.product(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 41,
-      "symbol": "Applicative.product(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 45,
-      "symbol": "Applicative.map2Eval(_:_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 49,
-      "symbol": "Applicative.tupled(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 54,
-      "symbol": "Applicative.tupled(_:_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 60,
-      "symbol": "Applicative.tupled(_:_:_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 67,
-      "symbol": "Applicative.tupled(_:_:_:_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 75,
-      "symbol": "Applicative.tupled(_:_:_:_:_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 84,
-      "symbol": "Applicative.tupled(_:_:_:_:_:_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 94,
-      "symbol": "Applicative.tupled(_:_:_:_:_:_:_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 105,
-      "symbol": "Applicative.tupled(_:_:_:_:_:_:_:_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 117,
-      "symbol": "Applicative.map(_:_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 123,
-      "symbol": "Applicative.map(_:_:_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 130,
-      "symbol": "Applicative.map(_:_:_:_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 138,
-      "symbol": "Applicative.map(_:_:_:_:_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 147,
-      "symbol": "Applicative.map(_:_:_:_:_:_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 157,
-      "symbol": "Applicative.map(_:_:_:_:_:_:_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 168,
-      "symbol": "Applicative.map(_:_:_:_:_:_:_:_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 180,
-      "symbol": "Applicative.map(_:_:_:_:_:_:_:_:_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 196,
-      "symbol": "Kind.pure(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 200,
-      "symbol": "Kind.ap(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 204,
-      "symbol": "Kind.product(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 208,
-      "symbol": "Kind.product(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 212,
-      "symbol": "Kind.product(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 216,
-      "symbol": "Kind.product(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 220,
-      "symbol": "Kind.product(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 224,
-      "symbol": "Kind.product(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 228,
-      "symbol": "Kind.product(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 232,
-      "symbol": "Kind.product(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 236,
-      "symbol": "Kind.tupled(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 241,
-      "symbol": "Kind.tupled(_:_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 247,
-      "symbol": "Kind.tupled(_:_:_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 254,
-      "symbol": "Kind.tupled(_:_:_:_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 262,
-      "symbol": "Kind.tupled(_:_:_:_:_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 271,
-      "symbol": "Kind.tupled(_:_:_:_:_:_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 281,
-      "symbol": "Kind.tupled(_:_:_:_:_:_:_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 292,
-      "symbol": "Kind.tupled(_:_:_:_:_:_:_:_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 304,
-      "symbol": "Kind.map(_:_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 310,
-      "symbol": "Kind.map(_:_:_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 317,
-      "symbol": "Kind.map(_:_:_:_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 325,
-      "symbol": "Kind.map(_:_:_:_:_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 334,
-      "symbol": "Kind.map(_:_:_:_:_:_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 344,
-      "symbol": "Kind.map(_:_:_:_:_:_:_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 355,
-      "symbol": "Kind.map(_:_:_:_:_:_:_:_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Applicative.swift",
-      "line": 367,
-      "symbol": "Kind.map(_:_:_:_:_:_:_:_:_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
@@ -5261,13 +4274,6 @@
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Contravariant.swift",
       "line": 4,
       "symbol": "Contravariant.contramap(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Contravariant.swift",
-      "line": 8,
-      "symbol": "Contravariant.imap(_:_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
@@ -5608,461 +4614,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Functor.swift",
-      "line": null,
-      "symbol": "Functor",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Functor.swift",
-      "line": 3,
-      "symbol": "Functor",
-      "symbol_kind": "source.lang.swift.decl.protocol",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Functor.swift",
-      "line": 4,
-      "symbol": "Functor.map(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Functor.swift",
-      "line": 8,
-      "symbol": "Functor.imap(_:_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Functor.swift",
-      "line": 12,
-      "symbol": "Functor.lift(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Functor.swift",
-      "line": 16,
-      "symbol": "Functor.void(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Functor.swift",
-      "line": 20,
-      "symbol": "Functor.fproduct(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Functor.swift",
-      "line": 24,
-      "symbol": "Functor.as(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Functor.swift",
-      "line": 28,
-      "symbol": "Functor.tupleLeft(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Functor.swift",
-      "line": 32,
-      "symbol": "Functor.tupleRight(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Functor.swift",
-      "line": 40,
-      "symbol": "Kind.map(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Functor.swift",
-      "line": 44,
-      "symbol": "Kind.lift(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Functor.swift",
-      "line": 48,
-      "symbol": "Kind.void()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Functor.swift",
-      "line": 52,
-      "symbol": "Kind.fproduct(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Functor.swift",
-      "line": 56,
-      "symbol": "Kind.as(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Functor.swift",
-      "line": 60,
-      "symbol": "Kind.tupleLeft(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Functor.swift",
-      "line": 64,
-      "symbol": "Kind.tupleRight(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/FunctorFilter.swift",
-      "line": null,
-      "symbol": "FunctorFilter",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/FunctorFilter.swift",
-      "line": 3,
-      "symbol": "FunctorFilter",
-      "symbol_kind": "source.lang.swift.decl.protocol",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/FunctorFilter.swift",
-      "line": 4,
-      "symbol": "FunctorFilter.mapFilter(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/FunctorFilter.swift",
-      "line": 8,
-      "symbol": "FunctorFilter.flattenOption(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/FunctorFilter.swift",
-      "line": 12,
-      "symbol": "FunctorFilter.filter(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/FunctorFilter.swift",
-      "line": 20,
-      "symbol": "Kind.mapFilter(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/FunctorFilter.swift",
-      "line": 24,
-      "symbol": "Kind.flattenOption(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/FunctorFilter.swift",
-      "line": 28,
-      "symbol": "Kind.filter(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Invariant.swift",
-      "line": 3,
-      "symbol": "Invariant",
-      "symbol_kind": "source.lang.swift.decl.protocol",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Invariant.swift",
-      "line": 4,
-      "symbol": "Invariant.imap(_:_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Invariant.swift",
-      "line": 10,
-      "symbol": "Kind.imap(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Monad.swift",
-      "line": null,
-      "symbol": "Monad",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Monad.swift",
-      "line": 3,
-      "symbol": "Monad",
-      "symbol_kind": "source.lang.swift.decl.protocol",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Monad.swift",
-      "line": 4,
-      "symbol": "Monad.flatMap(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Monad.swift",
-      "line": 5,
-      "symbol": "Monad.tailRecM(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Monad.swift",
-      "line": 9,
-      "symbol": "Monad.ap(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Monad.swift",
-      "line": 13,
-      "symbol": "Monad.flatten(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Monad.swift",
-      "line": 17,
-      "symbol": "Monad.followedBy(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Monad.swift",
-      "line": 21,
-      "symbol": "Monad.followedByEval(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Monad.swift",
-      "line": 25,
-      "symbol": "Monad.forEffect(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Monad.swift",
-      "line": 29,
-      "symbol": "Monad.forEffectEval(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Monad.swift",
-      "line": 33,
-      "symbol": "Monad.mproduct(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Monad.swift",
-      "line": 37,
-      "symbol": "Monad.ifM(_:_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Monad.swift",
-      "line": 43,
-      "symbol": "Monad.binding(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Monad.swift",
-      "line": 48,
-      "symbol": "Monad.binding(_:_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Monad.swift",
-      "line": 58,
-      "symbol": "Monad.binding(_:_:_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Monad.swift",
-      "line": 71,
-      "symbol": "Monad.binding(_:_:_:_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Monad.swift",
-      "line": 87,
-      "symbol": "Monad.binding(_:_:_:_:_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Monad.swift",
-      "line": 106,
-      "symbol": "Monad.binding(_:_:_:_:_:_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Monad.swift",
-      "line": 128,
-      "symbol": "Monad.binding(_:_:_:_:_:_:_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Monad.swift",
-      "line": 153,
-      "symbol": "Monad.binding(_:_:_:_:_:_:_:_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Monad.swift",
-      "line": 185,
-      "symbol": "Kind.flatMap(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Monad.swift",
-      "line": 189,
-      "symbol": "Kind.tailRecM(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Monad.swift",
-      "line": 193,
-      "symbol": "Kind.flatten(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Monad.swift",
-      "line": 197,
-      "symbol": "Kind.followedBy(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Monad.swift",
-      "line": 201,
-      "symbol": "Kind.followedByEval(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Monad.swift",
-      "line": 205,
-      "symbol": "Kind.forEffect(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Monad.swift",
-      "line": 209,
-      "symbol": "Kind.forEffectEval(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Monad.swift",
-      "line": 213,
-      "symbol": "Kind.mproduct(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Monad.swift",
-      "line": 218,
-      "symbol": "Kind.binding(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Monad.swift",
-      "line": 223,
-      "symbol": "Kind.binding(_:_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Monad.swift",
-      "line": 229,
-      "symbol": "Kind.binding(_:_:_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Monad.swift",
-      "line": 236,
-      "symbol": "Kind.binding(_:_:_:_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Monad.swift",
-      "line": 244,
-      "symbol": "Kind.binding(_:_:_:_:_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Monad.swift",
-      "line": 253,
-      "symbol": "Kind.binding(_:_:_:_:_:_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Monad.swift",
-      "line": 263,
-      "symbol": "Kind.binding(_:_:_:_:_:_:_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Monad.swift",
-      "line": 274,
-      "symbol": "Kind.binding(_:_:_:_:_:_:_:_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Monad.swift",
-      "line": 289,
-      "symbol": "Kind.ifM(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/MonadCombine.swift",
       "line": null,
       "symbol": "MonadCombine",
@@ -6116,41 +4667,6 @@
       "line": 16,
       "symbol": "Kind.ensure(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/MonadFilter.swift",
-      "line": null,
-      "symbol": "MonadFilter",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/MonadFilter.swift",
-      "line": 3,
-      "symbol": "MonadFilter",
-      "symbol_kind": "source.lang.swift.decl.protocol",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/MonadFilter.swift",
-      "line": 4,
-      "symbol": "MonadFilter.empty()",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/MonadFilter.swift",
-      "line": 8,
-      "symbol": "MonadFilter.mapFilter(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/MonadFilter.swift",
-      "line": 18,
-      "symbol": "Kind.empty",
-      "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
@@ -6728,55 +5244,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/TraverseFilter.swift",
-      "line": null,
-      "symbol": "TraverseFilter",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/TraverseFilter.swift",
-      "line": 3,
-      "symbol": "TraverseFilter",
-      "symbol_kind": "source.lang.swift.decl.protocol",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/TraverseFilter.swift",
-      "line": 4,
-      "symbol": "TraverseFilter.traverseFilter(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/TraverseFilter.swift",
-      "line": 8,
-      "symbol": "TraverseFilter.filterA(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/TraverseFilter.swift",
-      "line": 12,
-      "symbol": "TraverseFilter.filter(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/TraverseFilter.swift",
-      "line": 20,
-      "symbol": "Kind.traverseFilter(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/TraverseFilter.swift",
-      "line": 24,
-      "symbol": "Kind.filterA(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/travis/build/bow-swift/bow/Sources/BowBrightFutures/FutureK.swift",
       "line": null,
       "symbol": "FutureKPartial",
@@ -6928,34 +5395,6 @@
       "line": 58,
       "symbol": "FutureK.runAsync(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/BowBrightFutures/FutureK.swift",
-      "line": 65,
-      "symbol": "FutureKPartial.map(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/BowBrightFutures/FutureK.swift",
-      "line": 71,
-      "symbol": "FutureKPartial.pure(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/BowBrightFutures/FutureK.swift",
-      "line": 77,
-      "symbol": "FutureKPartial.flatMap(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/BowBrightFutures/FutureK.swift",
-      "line": 81,
-      "symbol": "FutureKPartial.tailRecM(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
@@ -7166,34 +5605,6 @@
       "line": 155,
       "symbol": "IO.mapLeft(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/BowEffects/IO.swift",
-      "line": 303,
-      "symbol": "IOPartial.map(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/BowEffects/IO.swift",
-      "line": 309,
-      "symbol": "IOPartial.pure(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/BowEffects/IO.swift",
-      "line": 315,
-      "symbol": "IOPartial.flatMap(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/BowEffects/IO.swift",
-      "line": 319,
-      "symbol": "IOPartial.tailRecM(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
@@ -7555,13 +5966,6 @@
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/BowFree/Cofree.swift",
-      "line": 80,
-      "symbol": "CofreePartial.map(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/BowFree/Cofree.swift",
       "line": 86,
       "symbol": "CofreePartial.coflatMap(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
@@ -7663,13 +6067,6 @@
       "line": 43,
       "symbol": "Coyoneda.toYoneda()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/BowFree/Coyoneda.swift",
-      "line": 55,
-      "symbol": "CoyonedaPartial.map(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
@@ -7778,34 +6175,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/BowFree/Free.swift",
-      "line": 127,
-      "symbol": "FreePartial.map(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/BowFree/Free.swift",
-      "line": 133,
-      "symbol": "FreePartial.pure(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/BowFree/Free.swift",
-      "line": 139,
-      "symbol": "FreePartial.flatMap(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/BowFree/Free.swift",
-      "line": 143,
-      "symbol": "FreePartial.tailRecM(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/travis/build/bow-swift/bow/Sources/BowFree/Yoneda.swift",
       "line": null,
       "symbol": "Yoneda",
@@ -7879,13 +6248,6 @@
       "file": "/Users/travis/build/bow-swift/bow/Sources/BowFree/Yoneda.swift",
       "line": 27,
       "symbol": "Yoneda.apply(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/BowFree/Yoneda.swift",
-      "line": 59,
-      "symbol": "YonedaPartial.map(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
@@ -12217,7 +10579,7 @@
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/BowRecursionSchemes/Recursion.swift",
-      "line": 19,
+      "line": 20,
       "symbol": "Kind.hylo(_:_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
@@ -12518,34 +10880,6 @@
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/BowRx/MaybeK.swift",
-      "line": 45,
-      "symbol": "ForMaybeK.map(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/BowRx/MaybeK.swift",
-      "line": 51,
-      "symbol": "ForMaybeK.pure(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/BowRx/MaybeK.swift",
-      "line": 57,
-      "symbol": "ForMaybeK.flatMap(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/BowRx/MaybeK.swift",
-      "line": 61,
-      "symbol": "ForMaybeK.tailRecM(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/BowRx/MaybeK.swift",
       "line": 69,
       "symbol": "ForMaybeK.foldLeft(_:_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
@@ -12742,34 +11076,6 @@
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/BowRx/ObservableK.swift",
-      "line": 55,
-      "symbol": "ForObservableK.map(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/BowRx/ObservableK.swift",
-      "line": 61,
-      "symbol": "ForObservableK.pure(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/BowRx/ObservableK.swift",
-      "line": 67,
-      "symbol": "ForObservableK.flatMap(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/BowRx/ObservableK.swift",
-      "line": 71,
-      "symbol": "ForObservableK.tailRecM(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/BowRx/ObservableK.swift",
       "line": 79,
       "symbol": "ForObservableK.E",
       "symbol_kind": "source.lang.swift.decl.typealias",
@@ -12948,34 +11254,6 @@
       "line": 48,
       "symbol": "SingleK.init(value:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/BowRx/SingleK.swift",
-      "line": 54,
-      "symbol": "ForSingleK.map(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/BowRx/SingleK.swift",
-      "line": 60,
-      "symbol": "ForSingleK.pure(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/BowRx/SingleK.swift",
-      "line": 66,
-      "symbol": "ForSingleK.flatMap(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/BowRx/SingleK.swift",
-      "line": 70,
-      "symbol": "ForSingleK.tailRecM(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {

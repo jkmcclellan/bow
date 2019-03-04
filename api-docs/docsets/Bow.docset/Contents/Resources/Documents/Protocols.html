@@ -65,7 +65,7 @@
             <img style="height: 18px;" class="header-icon" src="img/bow-logo.png" alt="Bow Docs"/>
             <span class="header-title">Bow</span>
           </a>
-          <span class="header-tag"> 14% documented</span>
+          <span class="header-tag"> 25% documented</span>
         </p>
     
           <p class="header-col header-col--secondary">
@@ -1518,7 +1518,9 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A Functor provides a type with the ability to transform its value type into another type, while preserving its structure.</p>
+
+<p>Using the encoding for HKTs in Bow, in the type <code>Kind&lt;F, A&gt;</code>, <code>A</code> is the value type and <code>F</code> represents the structure of the type. An instance of <code>Functor</code> for <code>F</code> allows to transform <code>A</code> into another type, while maintaining <code>F</code> unchanged.</p>
 
                         <a href="Protocols/Functor.html" class="slightly-smaller">See more</a>
                       </div>
@@ -1928,7 +1930,24 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>An Applicative Functor is a <code><a href="Protocols/Functor.html">Functor</a></code> that also provides functionality to lift pure expressions, and sequence computations and combine their results.</p>
+
+<p>Instances of this typeclass must obey the following laws:</p>
+
+<ol>
+<li><p>Identity</p>
+<pre class="highlight swift"><code><span class="nf">ap</span><span class="p">(</span><span class="nf">pure</span><span class="p">(</span><span class="n">id</span><span class="p">),</span> <span class="n">v</span><span class="p">)</span> <span class="o">==</span> <span class="n">v</span>
+</code></pre></li>
+<li><p>Composition</p>
+<pre class="highlight swift"><code><span class="nf">ap</span><span class="p">(</span><span class="nf">ap</span><span class="p">(</span><span class="nf">ap</span><span class="p">(</span><span class="nf">pure</span><span class="p">(</span><span class="n">compose</span><span class="p">),</span> <span class="n">u</span><span class="p">),</span> <span class="n">v</span><span class="p">),</span> <span class="n">w</span><span class="p">)</span> <span class="o">==</span> <span class="nf">compose</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="nf">compose</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">w</span><span class="p">))</span>
+</code></pre></li>
+<li><p>Homomorphism</p>
+<pre class="highlight swift"><code><span class="nf">ap</span><span class="p">(</span><span class="nf">pure</span><span class="p">(</span><span class="n">f</span><span class="p">),</span> <span class="nf">pure</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="o">==</span> <span class="nf">pure</span><span class="p">(</span><span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</code></pre></li>
+<li><p>Interchange</p>
+<pre class="highlight swift"><code><span class="nf">ap</span><span class="p">(</span><span class="n">fa</span><span class="p">,</span> <span class="nf">pure</span><span class="p">(</span><span class="n">b</span><span class="p">))</span> <span class="o">==</span> <span class="nf">ap</span><span class="p">(</span><span class="nf">pure</span><span class="p">({</span> <span class="n">x</span> <span class="k">in</span> <span class="nf">x</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="p">}),</span> <span class="n">fa</span><span class="p">)</span>
+</code></pre></li>
+</ol>
 
                         <a href="Protocols/Applicative.html" class="slightly-smaller">See more</a>
                       </div>
@@ -2137,7 +2156,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A FunctorFilter provides the same capabilities as a <code><a href="Protocols/Functor.html">Functor</a></code>, while filtering out elements simultaneously.</p>
 
                         <a href="Protocols/FunctorFilter.html" class="slightly-smaller">See more</a>
                       </div>
@@ -2167,7 +2186,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>An Invariant Functor provides a type the ability to transform its value type into another type. An instance of <code><a href="Protocols/Functor.html">Functor</a></code> or <code><a href="Protocols/Contravariant.html">Contravariant</a></code> are Invariant Functors as well.</p>
 
                         <a href="Protocols/Invariant.html" class="slightly-smaller">See more</a>
                       </div>
@@ -2197,7 +2216,17 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A Monad provides functionality to sequence operations that are dependent from one another.</p>
+
+<p>Instances of <code>Monad</code> must obey the following rules:</p>
+<pre class="highlight swift"><code><span class="nf">flatMap</span><span class="p">(</span><span class="nf">pure</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="n">f</span><span class="p">)</span> <span class="o">==</span> <span class="nf">f</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nf">flatMap</span><span class="p">(</span><span class="n">fa</span><span class="p">,</span> <span class="n">pure</span><span class="p">)</span> <span class="o">==</span> <span class="n">fa</span>
+<span class="nf">flatMap</span><span class="p">(</span><span class="n">fa</span><span class="p">)</span> <span class="p">{</span> <span class="n">a</span> <span class="k">in</span> <span class="nf">flatMap</span><span class="p">(</span><span class="nf">f</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="n">g</span><span class="p">)</span> <span class="p">}</span> <span class="o">==</span> <span class="nf">flatMap</span><span class="p">(</span><span class="nf">flatMap</span><span class="p">(</span><span class="n">fa</span><span class="p">,</span> <span class="n">f</span><span class="p">),</span> <span class="n">g</span><span class="p">)</span>
+</code></pre>
+
+<p>Also, instances of <code>Monad</code> derive a default implementation for <code>Applicative.ap</code> as:</p>
+<pre class="highlight swift"><code><span class="nf">ap</span><span class="p">(</span><span class="n">ff</span><span class="p">,</span> <span class="n">fa</span><span class="p">)</span> <span class="o">==</span> <span class="nf">flapMap</span><span class="p">(</span><span class="n">ff</span><span class="p">,</span> <span class="p">{</span> <span class="n">f</span> <span class="k">in</span> <span class="nf">map</span><span class="p">(</span><span class="n">fa</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span> <span class="p">}</span>
+</code></pre>
 
                         <a href="Protocols/Monad.html" class="slightly-smaller">See more</a>
                       </div>
@@ -2287,7 +2316,9 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A MonadFilter is a <code><a href="Protocols/Monad.html">Monad</a></code> with <code><a href="Protocols/FunctorFilter.html">FunctorFilter</a></code> capabilities. It also provides functionality to create a value that represents an empty element in the context implementing an instance of this typeclass.</p>
+
+<p>Implementing this typeclass automatically derives an implementation for <code>FunctorFilter.mapFilter</code>.</p>
 
                         <a href="Protocols/MonadFilter.html" class="slightly-smaller">See more</a>
                       </div>
@@ -2617,7 +2648,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>TraverseFilter represents array-like structures that can be traversed and filtered as a single combined operation. It provides the same capabilities as <code><a href="Protocols/Traverse.html">Traverse</a></code> and <code><a href="Protocols/FunctorFilter.html">FunctorFilter</a></code> together.</p>
 
                         <a href="Protocols/TraverseFilter.html" class="slightly-smaller">See more</a>
                       </div>
@@ -2645,7 +2676,7 @@
         <p>with support from <a href="https://47deg.com/">47 Degrees</a></p>
       </div>
       <div>
-        <p>&copy; 2019 <a class="link" href="https://bow-swift.io" target="_blank" rel="external">Bow</a>. All rights reserved. (Last updated: 2019-02-27)</p>
+        <p>&copy; 2019 <a class="link" href="https://bow-swift.io" target="_blank" rel="external">Bow</a>. All rights reserved. (Last updated: 2019-03-04)</p>
         <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
       </div>
     </section>
