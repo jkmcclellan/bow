@@ -65,7 +65,7 @@
             <img style="height: 18px;" class="header-icon" src="../img/bow-logo.png" alt="Bow Docs"/>
             <span class="header-title">Bow</span>
           </a>
-          <span class="header-tag"> 25% documented</span>
+          <span class="header-tag"> 35% documented</span>
         </p>
     
           <p class="header-col header-col--secondary">
@@ -364,6 +364,9 @@
               <li class="nav-group-task" data-name="Function1Partial" data-url="Classes/Function1Partial.html">
                 <a title="Function1Partial" class="nav-group-task-link" href="../Classes/Function1Partial.html">Function1Partial</a>
               </li>
+              <li class="nav-group-task" data-name="FunctionK" data-url="Classes/FunctionK.html">
+                <a title="FunctionK" class="nav-group-task-link" href="../Classes/FunctionK.html">FunctionK</a>
+              </li>
               <li class="nav-group-task" data-name="FutureK" data-url="Classes/FutureK.html">
                 <a title="FutureK" class="nav-group-task-link" href="../Classes/FutureK.html">FutureK</a>
               </li>
@@ -393,9 +396,6 @@
               </li>
               <li class="nav-group-task" data-name="Id" data-url="Classes/Id.html">
                 <a title="Id" class="nav-group-task-link" href="../Classes/Id.html">Id</a>
-              </li>
-              <li class="nav-group-task" data-name="IdFunctionK" data-url="Classes/IdFunctionK.html">
-                <a title="IdFunctionK" class="nav-group-task-link" href="../Classes/IdFunctionK.html">IdFunctionK</a>
               </li>
               <li class="nav-group-task" data-name="IndexFromIso" data-url="Classes/IndexFromIso.html">
                 <a title="IndexFromIso" class="nav-group-task-link" href="../Classes/IndexFromIso.html">IndexFromIso</a>
@@ -1007,9 +1007,6 @@
               <li class="nav-group-task" data-name="Foldable" data-url="Protocols/Foldable.html">
                 <a title="Foldable" class="nav-group-task-link" href="../Protocols/Foldable.html">Foldable</a>
               </li>
-              <li class="nav-group-task" data-name="FunctionK" data-url="Protocols/FunctionK.html">
-                <a title="FunctionK" class="nav-group-task-link" href="../Protocols/FunctionK.html">FunctionK</a>
-              </li>
               <li class="nav-group-task" data-name="Functor" data-url="Protocols/Functor.html">
                 <a title="Functor" class="nav-group-task-link" href="../Protocols/Functor.html">Functor</a>
               </li>
@@ -1384,7 +1381,7 @@
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p>This data type acts as a wrapper over functions that receive no input and produce a value; namely, constant functions. This wrapper gives these functions capabilities to be used as a Higher Kinded Type and conform to typeclasses that have this requirement.</p>
 
           </div>
         </section>
@@ -1404,7 +1401,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Safe downcast.</p>
 
                       </div>
                       <div class="declaration">
@@ -1414,6 +1411,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">fix</span><span class="p">(</span><span class="n">_</span> <span class="nv">fa</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:3Bow11Function0Ofa">Function0Of</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Function0</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  fa
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Value in the higher-kind form.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Value cast to <code>Function0</code>.</p>
                       </div>
                     </section>
                   </div>
@@ -1429,7 +1449,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Constructs a value of <code>Function0</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -1439,6 +1459,25 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  f
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A constant function.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -1454,7 +1493,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Invokes the function.</p>
 
                       </div>
                       <div class="declaration">
@@ -1464,6 +1503,10 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">invoke</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">A</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Value produced by this function.</p>
                       </div>
                     </section>
                   </div>
@@ -1481,7 +1524,7 @@
         <p>with support from <a href="https://47deg.com/">47 Degrees</a></p>
       </div>
       <div>
-        <p>&copy; 2019 <a class="link" href="https://bow-swift.io" target="_blank" rel="external">Bow</a>. All rights reserved. (Last updated: 2019-03-04)</p>
+        <p>&copy; 2019 <a class="link" href="https://bow-swift.io" target="_blank" rel="external">Bow</a>. All rights reserved. (Last updated: 2019-03-06)</p>
         <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
       </div>
     </section>

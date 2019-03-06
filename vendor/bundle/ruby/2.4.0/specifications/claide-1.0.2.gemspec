@@ -12,8 +12,8 @@ Gem::Specification.new do |s|
   s.email = ["eloy.de.enige@gmail.com".freeze, "fabiopelosin@gmail.com".freeze]
   s.homepage = "https://github.com/CocoaPods/CLAide".freeze
   s.licenses = ["MIT".freeze]
-  s.rubygems_version = "3.0.2".freeze
+  s.rubygems_version = "3.0.3".freeze
   s.summary = "A small command-line interface framework.".freeze
 
-  s.installed_by_version = "3.0.2" if s.respond_to? :installed_by_version
+  s.installed_by_version = "3.0.3" if s.respond_to? :installed_by_version
 end

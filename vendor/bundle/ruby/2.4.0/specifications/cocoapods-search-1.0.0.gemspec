@@ -13,10 +13,10 @@ Gem::Specification.new do |s|
   s.email = ["eloy.de.enige@gmail.com".freeze, "fabiopelosin@gmail.com".freeze, "emkosz@gmail.com".freeze]
   s.homepage = "https://github.com/CocoaPods/cocoapods-search".freeze
   s.licenses = ["MIT".freeze]
-  s.rubygems_version = "3.0.2".freeze
+  s.rubygems_version = "3.0.3".freeze
   s.summary = "Searches for pods, ignoring case, whose name matches `QUERY`. If the `--full` option is specified, this will also search in the summary and description of the pods.".freeze
 
-  s.installed_by_version = "3.0.2" if s.respond_to? :installed_by_version
+  s.installed_by_version = "3.0.3" if s.respond_to? :installed_by_version
 
   if s.respond_to? :specification_version then
     s.specification_version = 4

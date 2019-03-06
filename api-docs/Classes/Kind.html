@@ -65,7 +65,7 @@
             <img style="height: 18px;" class="header-icon" src="../img/bow-logo.png" alt="Bow Docs"/>
             <span class="header-title">Bow</span>
           </a>
-          <span class="header-tag"> 25% documented</span>
+          <span class="header-tag"> 35% documented</span>
         </p>
     
           <p class="header-col header-col--secondary">
@@ -364,6 +364,9 @@
               <li class="nav-group-task" data-name="Function1Partial" data-url="Classes/Function1Partial.html">
                 <a title="Function1Partial" class="nav-group-task-link" href="../Classes/Function1Partial.html">Function1Partial</a>
               </li>
+              <li class="nav-group-task" data-name="FunctionK" data-url="Classes/FunctionK.html">
+                <a title="FunctionK" class="nav-group-task-link" href="../Classes/FunctionK.html">FunctionK</a>
+              </li>
               <li class="nav-group-task" data-name="FutureK" data-url="Classes/FutureK.html">
                 <a title="FutureK" class="nav-group-task-link" href="../Classes/FutureK.html">FutureK</a>
               </li>
@@ -393,9 +396,6 @@
               </li>
               <li class="nav-group-task" data-name="Id" data-url="Classes/Id.html">
                 <a title="Id" class="nav-group-task-link" href="../Classes/Id.html">Id</a>
-              </li>
-              <li class="nav-group-task" data-name="IdFunctionK" data-url="Classes/IdFunctionK.html">
-                <a title="IdFunctionK" class="nav-group-task-link" href="../Classes/IdFunctionK.html">IdFunctionK</a>
               </li>
               <li class="nav-group-task" data-name="IndexFromIso" data-url="Classes/IndexFromIso.html">
                 <a title="IndexFromIso" class="nav-group-task-link" href="../Classes/IndexFromIso.html">IndexFromIso</a>
@@ -1006,9 +1006,6 @@
               </li>
               <li class="nav-group-task" data-name="Foldable" data-url="Protocols/Foldable.html">
                 <a title="Foldable" class="nav-group-task-link" href="../Protocols/Foldable.html">Foldable</a>
-              </li>
-              <li class="nav-group-task" data-name="FunctionK" data-url="Protocols/FunctionK.html">
-                <a title="FunctionK" class="nav-group-task-link" href="../Protocols/FunctionK.html">FunctionK</a>
               </li>
               <li class="nav-group-task" data-name="Functor" data-url="Protocols/Functor.html">
                 <a title="Functor" class="nav-group-task-link" href="../Protocols/Functor.html">Functor</a>
@@ -4322,7 +4319,9 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Lifts an error to the context implementing this instance.</p>
+
+<p>This is a convenience method to call <code>ApplicativeError.raiseError</code> as a static method of this type.</p>
 
                       </div>
                       <div class="declaration">
@@ -4332,6 +4331,29 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">raiseError</span><span class="p">(</span><span class="n">_</span> <span class="nv">e</span><span class="p">:</span> <span class="kt">F</span><span class="o">.</span><span class="kt">E</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Kind</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  e
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A value of the error type.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A value representing the error in the context implementing this instance.</p>
                       </div>
                     </section>
                   </div>
@@ -4347,7 +4369,9 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Handles an error, potentially recovering from it by mapping it to a value in the context implementing this instance.</p>
+
+<p>This is a convenience method to call <code>ApplicativeError.handleErrorWith</code> as an instance method of this type.</p>
 
                       </div>
                       <div class="declaration">
@@ -4357,6 +4381,29 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">handleErrorWith</span><span class="p">(</span><span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">F</span><span class="o">.</span><span class="kt">E</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Kind</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Kind</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  f
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A recovery function.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A value where the possible errors have been recovered using the provided function.</p>
                       </div>
                     </section>
                   </div>
@@ -4372,7 +4419,9 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Handles an error, potentially recovering from it by mapping it to a value.</p>
+
+<p>This is a convenience method to call <code>ApplicativeError.handleError</code> as an instance method of this type.</p>
 
                       </div>
                       <div class="declaration">
@@ -4382,6 +4431,29 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">handleError</span><span class="p">(</span><span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">F</span><span class="o">.</span><span class="kt">E</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Kind</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  f
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A recovery function.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A value where the possible errors have been recovered using the provided function.</p>
                       </div>
                     </section>
                   </div>
@@ -4397,7 +4469,9 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Handles errors by converting them into <code><a href="../Classes/Either.html">Either</a></code> values in the context implementing this instance.</p>
+
+<p>This is a convenience method to call <code>ApplicativeError.attempt</code> as an instance method of this type.</p>
 
                       </div>
                       <div class="declaration">
@@ -4407,6 +4481,10 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">attempt</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Kind</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt"><a href="../Classes/Either.html">Either</a></span><span class="o">&lt;</span><span class="kt">F</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An either wrapped in the context implementing this instance.</p>
                       </div>
                     </section>
                   </div>
@@ -4422,7 +4500,9 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Converts an <code><a href="../Classes/Either.html">Either</a></code> value into a value in the context implementing this instance.</p>
+
+<p>This is a convenience method to call <code>ApplicativeError.fromEither</code> as a static method of this type.</p>
 
                       </div>
                       <div class="declaration">
@@ -4432,6 +4512,29 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">fromEither</span><span class="p">(</span><span class="n">_</span> <span class="nv">fea</span><span class="p">:</span> <span class="kt"><a href="../Classes/Either.html">Either</a></span><span class="o">&lt;</span><span class="kt">F</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Kind</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  fea
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An <code><a href="../Classes/Either.html">Either</a></code> value.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A value in the context implementing this instance.</p>
                       </div>
                     </section>
                   </div>
@@ -4447,7 +4550,9 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Evaluates a throwing function, catching and mapping errors.</p>
+
+<p>This is a convenience method to call <code>ApplicativeError.catchError</code> as a static method of this type.</p>
 
                       </div>
                       <div class="declaration">
@@ -4457,6 +4562,41 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">catchError</span><span class="p">(</span><span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span> <span class="n">_</span> <span class="nv">recover</span><span class="p">:</span> <span class="p">(</span><span class="kt">Error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">F</span><span class="o">.</span><span class="kt">E</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Kind</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  f
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A throwing function.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  recover
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A function that maps from <code>Error</code> to the type that this instance is able to handle.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A value in the context implementing this instance.</p>
                       </div>
                     </section>
                   </div>
@@ -4483,7 +4623,9 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Evaluates a throwing function, catching errors.</p>
+
+<p>This is a convenience method to call <code>ApplicativeError.catchError</code> as a static method of this type.</p>
 
                       </div>
                       <div class="declaration">
@@ -4493,6 +4635,29 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">catchError</span><span class="p">(</span><span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Kind</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  f
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A throwing function.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A value in the context implementing this instance.</p>
                       </div>
                     </section>
                   </div>
@@ -4519,7 +4684,11 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Applies this value to a function that takes a value in this context, and returns a normal value.</p>
+
+<p>This function is the dual of <code>Monad.flatMap</code>.</p>
+
+<p>This is a convenience function to call <code>Comonad.coflatMap</code> as an instance method.</p>
 
                       </div>
                       <div class="declaration">
@@ -4529,6 +4698,29 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">coflatMap</span><span class="o">&lt;</span><span class="kt">B</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Kind</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">B</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Kind</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  f
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Extracting function.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The result of extracting and transforming the value, in the context implementing this instance.</p>
                       </div>
                     </section>
                   </div>
@@ -4544,7 +4736,11 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Extracts the value contained in this context.</p>
+
+<p>This function is the dual of <code>Monad.pure</code> (via <code><a href="../Protocols/Applicative.html">Applicative</a></code>).</p>
+
+<p>This is a convenience function to call <code>Comonad.extract</code> as an instance method.</p>
 
                       </div>
                       <div class="declaration">
@@ -4554,6 +4750,10 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">extract</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">A</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A normal value.</p>
                       </div>
                     </section>
                   </div>
@@ -4569,7 +4769,7 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Wraps this in another layer of this context.</p>
 
                       </div>
                       <div class="declaration">
@@ -4579,6 +4779,10 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">duplicate</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Kind</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">Kind</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>This value wrapped in another context layer.</p>
                       </div>
                     </section>
                   </div>
@@ -4647,6 +4851,13 @@ Classes that want to have HKT support must extend this class. Type parameter <co
               </ul>
             </div>
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Syntax%20for%20EquatableK"></a>
+                <a name="//apple_ref/swift/Section/Syntax for EquatableK" class="dashAnchor"></a>
+                <a href="#/Syntax%20for%20EquatableK">
+                  <h3 id="Syntax%20for%20EquatableK" class="section-name">Syntax for EquatableK<span class="anchor-icon" /></h3>
+                </a>
+              </div>
               <ul class="item-container">
                 <li class="item">
                   <div>
@@ -4659,7 +4870,9 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Checks if two kinds are equal, given that the enclosed value type conforms to <code>Equatable</code>.</p>
+
+<p>This is a convenience method to call <code>EquatableK.eq</code> as an instance method of this type.</p>
 
                       </div>
                       <div class="declaration">
@@ -4670,12 +4883,54 @@ Classes that want to have HKT support must extend this class. Type parameter <co
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  lhs
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Left hand side of the equality check.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  rhs
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Right hand side of the equality check.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A boolean value indicating if the two values are equal or not.</p>
+                      </div>
                     </section>
                   </div>
                 </li>
               </ul>
             </div>
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Syntax%20for%20Equatable"></a>
+                <a name="//apple_ref/swift/Section/Syntax for Equatable" class="dashAnchor"></a>
+                <a href="#/Syntax%20for%20Equatable">
+                  <h3 id="Syntax%20for%20Equatable" class="section-name">Syntax for Equatable<span class="anchor-icon" /></h3>
+                </a>
+              </div>
               <ul class="item-container">
                 <li class="item">
                   <div>
@@ -7204,24 +7459,49 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3Bow4KindCA2A12MonadCombineRzrlE5uniteyACyxqd_0_GACyxACyqd__qd_0_GGAA8FoldableRd__r0_lFZ"></a>
+                    <a name="/s:3Bow4KindCA2A12MonadCombineRzrlE5uniteyACyxq_GACyxACyqd__q_GGAA8FoldableRd__lFZ"></a>
                     <a name="//apple_ref/swift/Method/unite(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3Bow4KindCA2A12MonadCombineRzrlE5uniteyACyxqd_0_GACyxACyqd__qd_0_GGAA8FoldableRd__r0_lFZ"><span class="token-name">unite(_:)</span><span class="token-icon" /></a>
+                    <a class="token" href="#/s:3Bow4KindCA2A12MonadCombineRzrlE5uniteyACyxq_GACyxACyqd__q_GGAA8FoldableRd__lFZ"><span class="token-name">unite(_:)</span><span class="token-icon" /></a>
                     </code>
                   </div>
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Fold over the inner structure to combine all of the values with our combine method inherited from `MonoidK.</p>
+
+<p>This is a convenience method to call <code>MonadCombine.unite</code> as a static method of this type.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language keyline-blue">
                           <p  style="background: rgba(65, 131, 196, 0.15);" class="aside-title text-blue">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">unite</span><span class="o">&lt;</span><span class="kt">G</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">fga</span><span class="p">:</span> <span class="kt">Kind</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">Kind</span><span class="o">&lt;</span><span class="kt">G</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Kind</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">G</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/Foldable.html">Foldable</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">unite</span><span class="o">&lt;</span><span class="kt">G</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">fga</span><span class="p">:</span> <span class="kt">Kind</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">Kind</span><span class="o">&lt;</span><span class="kt">G</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Kind</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">G</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/Foldable.html">Foldable</a></span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  fga
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Nested contexts value.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A value in the context implementing this instance where the inner context has been folded.</p>
                       </div>
                     </section>
                   </div>
@@ -7229,6 +7509,13 @@ Classes that want to have HKT support must extend this class. Type parameter <co
               </ul>
             </div>
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Syntax%20for%20MonadError"></a>
+                <a name="//apple_ref/swift/Section/Syntax for MonadError" class="dashAnchor"></a>
+                <a href="#/Syntax%20for%20MonadError">
+                  <h3 id="Syntax%20for%20MonadError" class="section-name">Syntax for MonadError<span class="anchor-icon" /></h3>
+                </a>
+              </div>
               <ul class="item-container">
                 <li class="item">
                   <div>
@@ -7241,7 +7528,9 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Checks if the value of this computation matches a predicate, raising an error if not.</p>
+
+<p>This is a convenience method to call <code>MonadError.ensure</code> as an instance method of this type.</p>
 
                       </div>
                       <div class="declaration">
@@ -7251,6 +7540,41 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">ensure</span><span class="p">(</span><span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">F</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="n">_</span> <span class="nv">predicate</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Kind</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  error
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A function that produces an error of the type this instance is able to handle.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  predicate
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A boolean predicate to test the value of the computation.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A value or an error in the context implementing this instance.</p>
                       </div>
                     </section>
                   </div>
@@ -7317,7 +7641,9 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Retrieves the shared environment.</p>
+
+<p>This is a convenience method to call <code>MonadReader.ask</code> as a static method of this type.</p>
 
                       </div>
                       <div class="declaration">
@@ -7327,6 +7653,10 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">ask</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Kind</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">F</span><span class="o">.</span><span class="kt">D</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Shared environment.</p>
                       </div>
                     </section>
                   </div>
@@ -7342,7 +7672,9 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Executes this computation in a modified environment.</p>
+
+<p>This is a convenience method to call <code>MonadReader.local</code> as an instance method of this type.</p>
 
                       </div>
                       <div class="declaration">
@@ -7352,6 +7684,29 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">local</span><span class="p">(</span><span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">F</span><span class="o">.</span><span class="kt">D</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">F</span><span class="o">.</span><span class="kt">D</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Kind</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  f
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Funtion to modify the environment.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Computation in the modified environment.</p>
                       </div>
                     </section>
                   </div>
@@ -7367,7 +7722,9 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Retrieves a function of the current environment.</p>
+
+<p>This is a convenience method to call <code>MonadReader.reader</code> as a static method of this type.</p>
 
                       </div>
                       <div class="declaration">
@@ -7377,6 +7734,29 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">reader</span><span class="p">(</span><span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">F</span><span class="o">.</span><span class="kt">D</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Kind</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  f
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Selector function to apply to the environment.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A value extracted from the environment, in the context implementing this instance.</p>
                       </div>
                     </section>
                   </div>
@@ -7403,7 +7783,9 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Retrieves the state from the internals of the monad.</p>
+
+<p>This is a convenience method to call <code>MonadState.get</code> as a static method of this type.</p>
 
                       </div>
                       <div class="declaration">
@@ -7413,6 +7795,10 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">get</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Kind</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">F</span><span class="o">.</span><span class="kt">S</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Maintained state.</p>
                       </div>
                     </section>
                   </div>
@@ -7428,7 +7814,9 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Replaces the state inside the monad.</p>
+
+<p>This is a convenience method to call <code>MonadState.set</code> as a static method of this type.</p>
 
                       </div>
                       <div class="declaration">
@@ -7438,6 +7826,29 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">set</span><span class="p">(</span><span class="n">_</span> <span class="nv">s</span><span class="p">:</span> <span class="kt">F</span><span class="o">.</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Kind</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="p">()</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  s
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>New state.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Unit.</p>
                       </div>
                     </section>
                   </div>
@@ -7453,7 +7864,9 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Embeds a state action into the monad.</p>
+
+<p>This is a convenience method to call <code>MonadState.state</code> as a static method of this type.</p>
 
                       </div>
                       <div class="declaration">
@@ -7463,6 +7876,29 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">state</span><span class="p">(</span><span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">F</span><span class="o">.</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">F</span><span class="o">.</span><span class="kt">S</span><span class="p">,</span> <span class="kt">A</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="kt">Kind</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  f
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A function that receives the state and computes a value and a new state.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A value with the output of the function and the new state.</p>
                       </div>
                     </section>
                   </div>
@@ -7478,7 +7914,9 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Modifies the internal state.</p>
+
+<p>This is a convenience method to call <code>MonadState.modify</code> as a static method of this type.</p>
 
                       </div>
                       <div class="declaration">
@@ -7488,6 +7926,29 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">modify</span><span class="p">(</span><span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">F</span><span class="o">.</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">F</span><span class="o">.</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Kind</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="p">()</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  f
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Function that modifies the state.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Unit.</p>
                       </div>
                     </section>
                   </div>
@@ -7503,7 +7964,9 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Retrieves a specific component of the state.</p>
+
+<p>This is a convenience method to call <code>MonadState.inspect</code> as a static method of this type.</p>
 
                       </div>
                       <div class="declaration">
@@ -7513,6 +7976,29 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">inspect</span><span class="p">(</span><span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">F</span><span class="o">.</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Kind</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  f
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Projection function to obtain part of the state.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A specific part of the state.</p>
                       </div>
                     </section>
                   </div>
@@ -7539,7 +8025,9 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Embeds a writer action.</p>
+
+<p>This is a convenience method to call <code>MonadWriter.writer</code> as a static method of this type.</p>
 
                       </div>
                       <div class="declaration">
@@ -7549,6 +8037,29 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">writer</span><span class="p">(</span><span class="n">_</span> <span class="nv">aw</span><span class="p">:</span> <span class="p">(</span><span class="kt">F</span><span class="o">.</span><span class="kt">W</span><span class="p">,</span> <span class="kt">A</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="kt">Kind</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  aw
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A tupe of the writer type and a value.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The writer action embedded in the context implementing this instance.</p>
                       </div>
                     </section>
                   </div>
@@ -7564,7 +8075,9 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Adds the side stream of data to the result of this computation.</p>
+
+<p>This is a convenience method to call <code>MonadWriter.listen</code> as an instance method of this type.</p>
 
                       </div>
                       <div class="declaration">
@@ -7574,6 +8087,10 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">listen</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Kind</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="p">(</span><span class="kt">F</span><span class="o">.</span><span class="kt">W</span><span class="p">,</span> <span class="kt">A</span><span class="p">)</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The result of the computation paired with the side stream of data.</p>
                       </div>
                     </section>
                   </div>
@@ -7589,7 +8106,9 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Performs a computation and transforms the side stream of data.</p>
+
+<p>This is a convenience method to call <code>MonadWriter.pass</code> as a static method of this type.</p>
 
                       </div>
                       <div class="declaration">
@@ -7599,6 +8118,29 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">pass</span><span class="p">(</span><span class="n">_</span> <span class="nv">fa</span><span class="p">:</span> <span class="kt">Kind</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="p">((</span><span class="kt">F</span><span class="o">.</span><span class="kt">W</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">F</span><span class="o">.</span><span class="kt">W</span><span class="p">,</span> <span class="kt">A</span><span class="p">)</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Kind</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  fa
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A computation that transform the stream of data.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Result of the computation.</p>
                       </div>
                     </section>
                   </div>
@@ -7614,7 +8156,9 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Produces a new value of the side stream of data.</p>
+
+<p>This is a convenience method to call <code>MonadWriter.tell</code> as a static method of this type.</p>
 
                       </div>
                       <div class="declaration">
@@ -7624,6 +8168,29 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">tell</span><span class="p">(</span><span class="n">_</span> <span class="nv">w</span><span class="p">:</span> <span class="kt">F</span><span class="o">.</span><span class="kt">W</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Kind</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="p">()</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  w
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>New value.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Unit.</p>
                       </div>
                     </section>
                   </div>
@@ -7639,7 +8206,9 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Performs this computation and transforms the side stream of data, pairing it with the result of this computation.</p>
+
+<p>This is a convenience method to call <code>MonadWriter.listens</code> as an instance method of this type.</p>
 
                       </div>
                       <div class="declaration">
@@ -7649,6 +8218,29 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">listens</span><span class="o">&lt;</span><span class="kt">B</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">F</span><span class="o">.</span><span class="kt">W</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">B</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Kind</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="p">(</span><span class="kt">B</span><span class="p">,</span> <span class="kt">A</span><span class="p">)</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  f
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A function to transform the side stream of data.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A tuple of the transformation of the side stream and the result of the computation.</p>
                       </div>
                     </section>
                   </div>
@@ -7664,7 +8256,9 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Transforms the side stream of data of this computation.</p>
+
+<p>This is a convenience method to call <code>MonadWriter.censor</code> as an instance method of this type.</p>
 
                       </div>
                       <div class="declaration">
@@ -7674,6 +8268,75 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">censor</span><span class="p">(</span><span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">F</span><span class="o">.</span><span class="kt">W</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">F</span><span class="o">.</span><span class="kt">W</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Kind</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  f
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Transforming function.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A computation with the same result as the provided one, with the transformed side stream of data.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Syntax%20for%20MonoidK"></a>
+                <a name="//apple_ref/swift/Section/Syntax for MonoidK" class="dashAnchor"></a>
+                <a href="#/Syntax%20for%20MonoidK">
+                  <h3 id="Syntax%20for%20MonoidK" class="section-name">Syntax for MonoidK<span class="anchor-icon" /></h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3Bow4KindCA2A7MonoidKRzrlE6emptyKACyxq_GyFZ"></a>
+                    <a name="//apple_ref/swift/Method/emptyK()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow4KindCA2A7MonoidKRzrlE6emptyKACyxq_GyFZ"><span class="token-name">emptyK()</span><span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Empty element.</p>
+
+<p>This element must obey the following laws:</p>
+<pre class="highlight swift"><code><span class="nf">combineK</span><span class="p">(</span><span class="n">fa</span><span class="p">,</span> <span class="nf">emptyK</span><span class="p">())</span> <span class="o">==</span> <span class="nf">combineK</span><span class="p">(</span><span class="nf">emptyK</span><span class="p">(),</span> <span class="n">fa</span><span class="p">)</span> <span class="o">==</span> <span class="n">fa</span>
+</code></pre>
+
+<p>This is a convenience method to call <code>MonoidK.emptyK</code> as a static method of this type.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language keyline-blue">
+                          <p  style="background: rgba(65, 131, 196, 0.15);" class="aside-title text-blue">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">emptyK</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Kind</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A value representing the empty element of this MonoidK instance.</p>
                       </div>
                     </section>
                   </div>
@@ -7851,7 +8514,9 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Combines this value with another value of the same type.</p>
+
+<p>This is a convenience method to call <code>SemigroupK.combineK</code> as an instance method of this type.</p>
 
                       </div>
                       <div class="declaration">
@@ -7861,6 +8526,29 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">combineK</span><span class="p">(</span><span class="n">_</span> <span class="nv">y</span><span class="p">:</span> <span class="kt">Kind</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Kind</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  y
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Right value in the combination.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Combination of the two values.</p>
                       </div>
                     </section>
                   </div>
@@ -8110,7 +8798,7 @@ Classes that want to have HKT support must extend this class. Type parameter <co
         <p>with support from <a href="https://47deg.com/">47 Degrees</a></p>
       </div>
       <div>
-        <p>&copy; 2019 <a class="link" href="https://bow-swift.io" target="_blank" rel="external">Bow</a>. All rights reserved. (Last updated: 2019-03-04)</p>
+        <p>&copy; 2019 <a class="link" href="https://bow-swift.io" target="_blank" rel="external">Bow</a>. All rights reserved. (Last updated: 2019-03-06)</p>
         <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
       </div>
     </section>

@@ -13,10 +13,10 @@ Gem::Specification.new do |s|
   s.email = ["orta.therox@gmail.com".freeze, "gh_inspector@krausefx.com".freeze]
   s.homepage = "https://github.com/orta/gh_inspector".freeze
   s.licenses = ["MIT".freeze]
-  s.rubygems_version = "3.0.2".freeze
+  s.rubygems_version = "3.0.3".freeze
   s.summary = "Search through GitHub issues for your project for existing issues about a Ruby Error.".freeze
 
-  s.installed_by_version = "3.0.2" if s.respond_to? :installed_by_version
+  s.installed_by_version = "3.0.3" if s.respond_to? :installed_by_version
 
   if s.respond_to? :specification_version then
     s.specification_version = 4

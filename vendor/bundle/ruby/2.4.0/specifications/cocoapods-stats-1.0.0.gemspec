@@ -13,10 +13,10 @@ Gem::Specification.new do |s|
   s.email = ["orta.therox@gmail.com".freeze, "segiddins@segiddins.me".freeze]
   s.homepage = "https://github.com/cocoapods/cocoapods-stats".freeze
   s.licenses = ["MIT".freeze]
-  s.rubygems_version = "3.0.2".freeze
+  s.rubygems_version = "3.0.3".freeze
   s.summary = "Uploads installation version data to stats.cocoapods.org to provide per-Pod analytics.".freeze
 
-  s.installed_by_version = "3.0.2" if s.respond_to? :installed_by_version
+  s.installed_by_version = "3.0.3" if s.respond_to? :installed_by_version
 
   if s.respond_to? :specification_version then
     s.specification_version = 4

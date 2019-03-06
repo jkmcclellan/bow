@@ -15,8 +15,8 @@ Gem::Specification.new do |s|
   s.homepage = "http://www.a-k-r.org/escape/".freeze
   s.rdoc_options = ["--title".freeze, "escape".freeze, "--main".freeze, "Readme".freeze, "--line-numbers".freeze]
   s.required_ruby_version = Gem::Requirement.new("> 0.0.0".freeze)
-  s.rubygems_version = "3.0.2".freeze
+  s.rubygems_version = "3.0.3".freeze
   s.summary = "...".freeze
 
-  s.installed_by_version = "3.0.2" if s.respond_to? :installed_by_version
+  s.installed_by_version = "3.0.3" if s.respond_to? :installed_by_version
 end

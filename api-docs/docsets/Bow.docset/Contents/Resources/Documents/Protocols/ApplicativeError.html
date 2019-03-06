@@ -65,7 +65,7 @@
             <img style="height: 18px;" class="header-icon" src="../img/bow-logo.png" alt="Bow Docs"/>
             <span class="header-title">Bow</span>
           </a>
-          <span class="header-tag"> 25% documented</span>
+          <span class="header-tag"> 35% documented</span>
         </p>
     
           <p class="header-col header-col--secondary">
@@ -364,6 +364,9 @@
               <li class="nav-group-task" data-name="Function1Partial" data-url="Classes/Function1Partial.html">
                 <a title="Function1Partial" class="nav-group-task-link" href="../Classes/Function1Partial.html">Function1Partial</a>
               </li>
+              <li class="nav-group-task" data-name="FunctionK" data-url="Classes/FunctionK.html">
+                <a title="FunctionK" class="nav-group-task-link" href="../Classes/FunctionK.html">FunctionK</a>
+              </li>
               <li class="nav-group-task" data-name="FutureK" data-url="Classes/FutureK.html">
                 <a title="FutureK" class="nav-group-task-link" href="../Classes/FutureK.html">FutureK</a>
               </li>
@@ -393,9 +396,6 @@
               </li>
               <li class="nav-group-task" data-name="Id" data-url="Classes/Id.html">
                 <a title="Id" class="nav-group-task-link" href="../Classes/Id.html">Id</a>
-              </li>
-              <li class="nav-group-task" data-name="IdFunctionK" data-url="Classes/IdFunctionK.html">
-                <a title="IdFunctionK" class="nav-group-task-link" href="../Classes/IdFunctionK.html">IdFunctionK</a>
               </li>
               <li class="nav-group-task" data-name="IndexFromIso" data-url="Classes/IndexFromIso.html">
                 <a title="IndexFromIso" class="nav-group-task-link" href="../Classes/IndexFromIso.html">IndexFromIso</a>
@@ -1007,9 +1007,6 @@
               <li class="nav-group-task" data-name="Foldable" data-url="Protocols/Foldable.html">
                 <a title="Foldable" class="nav-group-task-link" href="../Protocols/Foldable.html">Foldable</a>
               </li>
-              <li class="nav-group-task" data-name="FunctionK" data-url="Protocols/FunctionK.html">
-                <a title="FunctionK" class="nav-group-task-link" href="../Protocols/FunctionK.html">FunctionK</a>
-              </li>
               <li class="nav-group-task" data-name="Functor" data-url="Protocols/Functor.html">
                 <a title="Functor" class="nav-group-task-link" href="../Protocols/Functor.html">Functor</a>
               </li>
@@ -1384,7 +1381,9 @@
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p>An ApplicativeError is an <code><a href="../Protocols/Applicative.html">Applicative</a></code> that has capabilities to raise and handle error values.</p>
+
+<p>It has an associated type <code>E</code> to represent the error type that the implementing instance is able to handle.</p>
 
           </div>
         </section>
@@ -1404,7 +1403,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Error type associated to this <code>ApplicativeError</code> instance</p>
 
                       </div>
                       <div class="declaration">
@@ -1429,7 +1428,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Lifts an error to the context implementing this instance.</p>
 
                       </div>
                       <div class="declaration">
@@ -1439,6 +1438,29 @@
                           <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="n">raiseError</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">e</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ApplicativeError.html#/s:3Bow16ApplicativeErrorP1EQa">E</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  e
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A value of the error type.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A value representing the error in the context implementing this instance.</p>
                       </div>
                     </section>
                   </div>
@@ -1454,7 +1476,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Handles an error, potentially recovering from it by mapping it to a value in the context implementing this instance.</p>
 
                       </div>
                       <div class="declaration">
@@ -1465,12 +1487,54 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  fa
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A computation that may have an error.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  f
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A recovery function.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A value where the possible errors have been recovered using the provided function.</p>
+                      </div>
                     </section>
                   </div>
                 </li>
               </ul>
             </div>
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Related%20functions"></a>
+                <a name="//apple_ref/swift/Section/Related functions" class="dashAnchor"></a>
+                <a href="#/Related%20functions">
+                  <h3 id="Related%20functions" class="section-name">Related functions<span class="anchor-icon" /></h3>
+                </a>
+              </div>
               <ul class="item-container">
                 <li class="item">
                   <div>
@@ -1486,7 +1550,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Handles an error, potentially recovering from it by mapping it to a value.</p>
 
                       </div>
                       <div class="declaration">
@@ -1496,6 +1560,41 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">handleError</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">fa</span><span class="p">:</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Protocols/ApplicativeError.html#/s:3Bow16ApplicativeErrorP1EQa">E</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  fa
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A computation that may have an error.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  f
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A recovery function.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A value where the possible errors have been recovered using the provided function.</p>
                       </div>
                     </section>
                   </div>
@@ -1514,7 +1613,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Handles errors by converting them into <code><a href="../Classes/Either.html">Either</a></code> values in the context implementing this instance.</p>
 
                       </div>
                       <div class="declaration">
@@ -1524,6 +1623,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">attempt</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">fa</span><span class="p">:</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt"><a href="../Classes/Either.html">Either</a></span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/ApplicativeError.html#/s:3Bow16ApplicativeErrorP1EQa">E</a></span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  fa
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A computation that may have an error.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An either wrapped in the context implementing this instance.</p>
                       </div>
                     </section>
                   </div>
@@ -1542,7 +1664,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Converts an <code><a href="../Classes/Either.html">Either</a></code> value into a value in the context implementing this instance.</p>
 
                       </div>
                       <div class="declaration">
@@ -1552,6 +1674,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">fromEither</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">fea</span><span class="p">:</span> <span class="kt"><a href="../Classes/Either.html">Either</a></span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/ApplicativeError.html#/s:3Bow16ApplicativeErrorP1EQa">E</a></span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  fea
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An <code><a href="../Classes/Either.html">Either</a></code> value.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A value in the context implementing this instance.</p>
                       </div>
                     </section>
                   </div>
@@ -1570,7 +1715,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Evaluates a throwing function, catching and mapping errors.</p>
 
                       </div>
                       <div class="declaration">
@@ -1580,6 +1725,41 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">catchError</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span> <span class="n">_</span> <span class="nv">recover</span><span class="p">:</span> <span class="p">(</span><span class="kt">Error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/ApplicativeError.html#/s:3Bow16ApplicativeErrorP1EQa">E</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  f
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A throwing function.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  recover
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A function that maps from <code>Error</code> to the type that this instance is able to handle.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A value in the context implementing this instance.</p>
                       </div>
                     </section>
                   </div>
@@ -1598,7 +1778,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Evaluates a throwing function, catching errors.</p>
 
                       </div>
                       <div class="declaration">
@@ -1608,6 +1788,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">catchError</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  f
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A throwing function.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A value in the context implementing this instance.</p>
                       </div>
                     </section>
                   </div>
@@ -1625,7 +1828,7 @@
         <p>with support from <a href="https://47deg.com/">47 Degrees</a></p>
       </div>
       <div>
-        <p>&copy; 2019 <a class="link" href="https://bow-swift.io" target="_blank" rel="external">Bow</a>. All rights reserved. (Last updated: 2019-03-04)</p>
+        <p>&copy; 2019 <a class="link" href="https://bow-swift.io" target="_blank" rel="external">Bow</a>. All rights reserved. (Last updated: 2019-03-06)</p>
         <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
       </div>
     </section>

@@ -65,7 +65,7 @@
             <img style="height: 18px;" class="header-icon" src="../img/bow-logo.png" alt="Bow Docs"/>
             <span class="header-title">Bow</span>
           </a>
-          <span class="header-tag"> 25% documented</span>
+          <span class="header-tag"> 35% documented</span>
         </p>
     
           <p class="header-col header-col--secondary">
@@ -364,6 +364,9 @@
               <li class="nav-group-task" data-name="Function1Partial" data-url="Classes/Function1Partial.html">
                 <a title="Function1Partial" class="nav-group-task-link" href="../Classes/Function1Partial.html">Function1Partial</a>
               </li>
+              <li class="nav-group-task" data-name="FunctionK" data-url="Classes/FunctionK.html">
+                <a title="FunctionK" class="nav-group-task-link" href="../Classes/FunctionK.html">FunctionK</a>
+              </li>
               <li class="nav-group-task" data-name="FutureK" data-url="Classes/FutureK.html">
                 <a title="FutureK" class="nav-group-task-link" href="../Classes/FutureK.html">FutureK</a>
               </li>
@@ -393,9 +396,6 @@
               </li>
               <li class="nav-group-task" data-name="Id" data-url="Classes/Id.html">
                 <a title="Id" class="nav-group-task-link" href="../Classes/Id.html">Id</a>
-              </li>
-              <li class="nav-group-task" data-name="IdFunctionK" data-url="Classes/IdFunctionK.html">
-                <a title="IdFunctionK" class="nav-group-task-link" href="../Classes/IdFunctionK.html">IdFunctionK</a>
               </li>
               <li class="nav-group-task" data-name="IndexFromIso" data-url="Classes/IndexFromIso.html">
                 <a title="IndexFromIso" class="nav-group-task-link" href="../Classes/IndexFromIso.html">IndexFromIso</a>
@@ -1007,9 +1007,6 @@
               <li class="nav-group-task" data-name="Foldable" data-url="Protocols/Foldable.html">
                 <a title="Foldable" class="nav-group-task-link" href="../Protocols/Foldable.html">Foldable</a>
               </li>
-              <li class="nav-group-task" data-name="FunctionK" data-url="Protocols/FunctionK.html">
-                <a title="FunctionK" class="nav-group-task-link" href="../Protocols/FunctionK.html">FunctionK</a>
-              </li>
               <li class="nav-group-task" data-name="Functor" data-url="Protocols/Functor.html">
                 <a title="Functor" class="nav-group-task-link" href="../Protocols/Functor.html">Functor</a>
               </li>
@@ -1384,7 +1381,14 @@
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p>A Comonad is the dual of a <code><a href="../Protocols/Monad.html">Monad</a></code>. It provides capabilities to compose functions that extract values from their context.</p>
+
+<p>Implementations of this instance must obey the following laws:</p>
+<pre class="highlight swift"><code><span class="nf">extract</span><span class="p">(</span><span class="nf">duplicate</span><span class="p">(</span><span class="n">fa</span><span class="p">))</span> <span class="o">==</span> <span class="n">fa</span>
+<span class="nf">map</span><span class="p">(</span><span class="n">fa</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span> <span class="o">==</span> <span class="nf">coflatMap</span><span class="p">(</span><span class="n">fa</span><span class="p">,</span> <span class="p">{</span> <span class="n">a</span> <span class="k">in</span> <span class="nf">f</span><span class="p">(</span><span class="nf">extract</span><span class="p">(</span><span class="n">a</span><span class="p">))</span> <span class="p">}</span>
+<span class="nf">coflatMap</span><span class="p">(</span><span class="n">fa</span><span class="p">,</span> <span class="n">extract</span><span class="p">)</span> <span class="o">==</span> <span class="n">fa</span>
+<span class="nf">extract</span><span class="p">(</span><span class="nf">coflatMap</span><span class="p">(</span><span class="n">fa</span><span class="p">,</span> <span class="n">f</span><span class="p">))</span> <span class="o">==</span> <span class="nf">f</span><span class="p">(</span><span class="n">fa</span><span class="p">)</span>
+</code></pre>
 
           </div>
         </section>
@@ -1404,7 +1408,9 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Applies a value in the context implementing this instance to a function that takes a value in a context, and returns a normal value.</p>
+
+<p>This function is the dual of <code>Monad.flatMap</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -1414,6 +1420,41 @@
                           <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="n">coflatMap</span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">fa</span><span class="p">:</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">B</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  fa
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Value in the context implementing this instance.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  f
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Extracting function.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The result of extracting and transforming the value, in the context implementing this instance.</p>
                       </div>
                     </section>
                   </div>
@@ -1429,7 +1470,9 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Extracts the value contained in the context implementing this instance.</p>
+
+<p>This function is the dual of <code>Monad.pure</code> (via <code><a href="../Protocols/Applicative.html">Applicative</a></code>).</p>
 
                       </div>
                       <div class="declaration">
@@ -1440,12 +1483,42 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  fa
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A value in the context implementing this instance.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A normal value.</p>
+                      </div>
                     </section>
                   </div>
                 </li>
               </ul>
             </div>
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Related%20functions"></a>
+                <a name="//apple_ref/swift/Section/Related functions" class="dashAnchor"></a>
+                <a href="#/Related%20functions">
+                  <h3 id="Related%20functions" class="section-name">Related functions<span class="anchor-icon" /></h3>
+                </a>
+              </div>
               <ul class="item-container">
                 <li class="item">
                   <div>
@@ -1461,7 +1534,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Wraps a value in another layer of the context implementing this instance.</p>
 
                       </div>
                       <div class="declaration">
@@ -1471,6 +1544,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">duplicate</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">fa</span><span class="p">:</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  fa
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A value in the context implementing this instance.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Value wrapped in another context layer.</p>
                       </div>
                     </section>
                   </div>
@@ -1488,7 +1584,7 @@
         <p>with support from <a href="https://47deg.com/">47 Degrees</a></p>
       </div>
       <div>
-        <p>&copy; 2019 <a class="link" href="https://bow-swift.io" target="_blank" rel="external">Bow</a>. All rights reserved. (Last updated: 2019-03-04)</p>
+        <p>&copy; 2019 <a class="link" href="https://bow-swift.io" target="_blank" rel="external">Bow</a>. All rights reserved. (Last updated: 2019-03-06)</p>
         <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
       </div>
     </section>

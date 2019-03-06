@@ -13,8 +13,8 @@ Gem::Specification.new do |s|
   s.email = "ara.t.howard@gmail.com".freeze
   s.homepage = "https://github.com/ahoward/open4".freeze
   s.licenses = ["Ruby".freeze]
-  s.rubygems_version = "3.0.2".freeze
+  s.rubygems_version = "3.0.3".freeze
   s.summary = "open4".freeze
 
-  s.installed_by_version = "3.0.2" if s.respond_to? :installed_by_version
+  s.installed_by_version = "3.0.3" if s.respond_to? :installed_by_version
 end

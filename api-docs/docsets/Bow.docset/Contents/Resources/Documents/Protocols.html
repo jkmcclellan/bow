@@ -65,7 +65,7 @@
             <img style="height: 18px;" class="header-icon" src="img/bow-logo.png" alt="Bow Docs"/>
             <span class="header-title">Bow</span>
           </a>
-          <span class="header-tag"> 25% documented</span>
+          <span class="header-tag"> 35% documented</span>
         </p>
     
           <p class="header-col header-col--secondary">
@@ -364,6 +364,9 @@
               <li class="nav-group-task" data-name="Function1Partial" data-url="Classes/Function1Partial.html">
                 <a title="Function1Partial" class="nav-group-task-link" href="Classes/Function1Partial.html">Function1Partial</a>
               </li>
+              <li class="nav-group-task" data-name="FunctionK" data-url="Classes/FunctionK.html">
+                <a title="FunctionK" class="nav-group-task-link" href="Classes/FunctionK.html">FunctionK</a>
+              </li>
               <li class="nav-group-task" data-name="FutureK" data-url="Classes/FutureK.html">
                 <a title="FutureK" class="nav-group-task-link" href="Classes/FutureK.html">FutureK</a>
               </li>
@@ -393,9 +396,6 @@
               </li>
               <li class="nav-group-task" data-name="Id" data-url="Classes/Id.html">
                 <a title="Id" class="nav-group-task-link" href="Classes/Id.html">Id</a>
-              </li>
-              <li class="nav-group-task" data-name="IdFunctionK" data-url="Classes/IdFunctionK.html">
-                <a title="IdFunctionK" class="nav-group-task-link" href="Classes/IdFunctionK.html">IdFunctionK</a>
               </li>
               <li class="nav-group-task" data-name="IndexFromIso" data-url="Classes/IndexFromIso.html">
                 <a title="IndexFromIso" class="nav-group-task-link" href="Classes/IndexFromIso.html">IndexFromIso</a>
@@ -1006,9 +1006,6 @@
               </li>
               <li class="nav-group-task" data-name="Foldable" data-url="Protocols/Foldable.html">
                 <a title="Foldable" class="nav-group-task-link" href="Protocols/Foldable.html">Foldable</a>
-              </li>
-              <li class="nav-group-task" data-name="FunctionK" data-url="Protocols/FunctionK.html">
-                <a title="FunctionK" class="nav-group-task-link" href="Protocols/FunctionK.html">FunctionK</a>
               </li>
               <li class="nav-group-task" data-name="Functor" data-url="Protocols/Functor.html">
                 <a title="Functor" class="nav-group-task-link" href="Protocols/Functor.html">Functor</a>
@@ -1863,36 +1860,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3Bow9FunctionKP"></a>
-                    <a name="//apple_ref/swift/Protocol/FunctionK" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3Bow9FunctionKP"><span class="token-name">FunctionK</span><span class="token-icon" /></a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <section class="section">
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="Protocols/FunctionK.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language keyline-blue">
-                          <p  style="background: rgba(65, 131, 196, 0.15);" class="aside-title text-blue">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">FunctionK</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:3Bow11AlternativeP"></a>
                     <a name="//apple_ref/swift/Protocol/Alternative" class="dashAnchor"></a>
                     <a class="token" href="#/s:3Bow11AlternativeP"><span class="token-name">Alternative</span><span class="token-icon" /></a>
@@ -1901,7 +1868,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>An Alternative is an <code><a href="Protocols/Applicative.html">Applicative</a></code> with <code><a href="Protocols/MonoidK.html">MonoidK</a></code> capabilities.</p>
 
                       </div>
                       <div class="declaration">
@@ -1977,7 +1944,9 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>An ApplicativeError is an <code><a href="Protocols/Applicative.html">Applicative</a></code> that has capabilities to raise and handle error values.</p>
+
+<p>It has an associated type <code>E</code> to represent the error type that the implementing instance is able to handle.</p>
 
                         <a href="Protocols/ApplicativeError.html" class="slightly-smaller">See more</a>
                       </div>
@@ -2007,7 +1976,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A Bimonad has the same capabilities as <code><a href="Protocols/Monad.html">Monad</a></code> and <code><a href="Protocols/Comonad.html">Comonad</a></code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -2036,7 +2005,14 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A Comonad is the dual of a <code><a href="Protocols/Monad.html">Monad</a></code>. It provides capabilities to compose functions that extract values from their context.</p>
+
+<p>Implementations of this instance must obey the following laws:</p>
+<pre class="highlight swift"><code><span class="nf">extract</span><span class="p">(</span><span class="nf">duplicate</span><span class="p">(</span><span class="n">fa</span><span class="p">))</span> <span class="o">==</span> <span class="n">fa</span>
+<span class="nf">map</span><span class="p">(</span><span class="n">fa</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span> <span class="o">==</span> <span class="nf">coflatMap</span><span class="p">(</span><span class="n">fa</span><span class="p">,</span> <span class="p">{</span> <span class="n">a</span> <span class="k">in</span> <span class="nf">f</span><span class="p">(</span><span class="nf">extract</span><span class="p">(</span><span class="n">a</span><span class="p">))</span> <span class="p">}</span>
+<span class="nf">coflatMap</span><span class="p">(</span><span class="n">fa</span><span class="p">,</span> <span class="n">extract</span><span class="p">)</span> <span class="o">==</span> <span class="n">fa</span>
+<span class="nf">extract</span><span class="p">(</span><span class="nf">coflatMap</span><span class="p">(</span><span class="n">fa</span><span class="p">,</span> <span class="n">f</span><span class="p">))</span> <span class="o">==</span> <span class="nf">f</span><span class="p">(</span><span class="n">fa</span><span class="p">)</span>
+</code></pre>
 
                         <a href="Protocols/Comonad.html" class="slightly-smaller">See more</a>
                       </div>
@@ -2096,7 +2072,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>EquatableK provides capabilities to check equality of values at the kind level.</p>
 
                         <a href="Protocols/EquatableK.html" class="slightly-smaller">See more</a>
                       </div>
@@ -2256,7 +2232,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A MonadCombine has the capabilities of <code><a href="Protocols/MonadFilter.html">MonadFilter</a></code> and <code><a href="Protocols.html#/s:3Bow11AlternativeP">Alternative</a></code> together.</p>
 
                         <a href="Protocols/MonadCombine.html" class="slightly-smaller">See more</a>
                       </div>
@@ -2286,7 +2262,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A MonadError has the same capabilities as a <code><a href="Protocols/Monad.html">Monad</a></code> and an <code><a href="Protocols/ApplicativeError.html">ApplicativeError</a></code>.</p>
 
                         <a href="Protocols/MonadError.html" class="slightly-smaller">See more</a>
                       </div>
@@ -2348,7 +2324,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A MonadReader is a <code><a href="Protocols/Monad.html">Monad</a></code> with capabilities to read values from a shared environment.</p>
 
                         <a href="Protocols/MonadReader.html" class="slightly-smaller">See more</a>
                       </div>
@@ -2378,7 +2354,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A MonadState is a <code><a href="Protocols/Monad.html">Monad</a></code> that maintains a state.</p>
 
                         <a href="Protocols/MonadState.html" class="slightly-smaller">See more</a>
                       </div>
@@ -2408,7 +2384,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A MonadWriter is a <code><a href="Protocols/Monad.html">Monad</a></code> with the ability to produce a stream of data in addition to the computed values.</p>
 
                         <a href="Protocols/MonadWriter.html" class="slightly-smaller">See more</a>
                       </div>
@@ -2468,7 +2444,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A MonoidK is a <code><a href="Protocols/SemigroupK.html">SemigroupK</a></code> that also has an empty element.</p>
 
                         <a href="Protocols/MonoidK.html" class="slightly-smaller">See more</a>
                       </div>
@@ -2588,7 +2564,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>SemigroupK is a <code><a href="Protocols/Semigroup.html">Semigroup</a></code> that operates on kinds with one type parameter.</p>
 
                         <a href="Protocols/SemigroupK.html" class="slightly-smaller">See more</a>
                       </div>
@@ -2676,7 +2652,7 @@
         <p>with support from <a href="https://47deg.com/">47 Degrees</a></p>
       </div>
       <div>
-        <p>&copy; 2019 <a class="link" href="https://bow-swift.io" target="_blank" rel="external">Bow</a>. All rights reserved. (Last updated: 2019-03-04)</p>
+        <p>&copy; 2019 <a class="link" href="https://bow-swift.io" target="_blank" rel="external">Bow</a>. All rights reserved. (Last updated: 2019-03-06)</p>
         <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
       </div>
     </section>

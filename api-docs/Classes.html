@@ -65,7 +65,7 @@
             <img style="height: 18px;" class="header-icon" src="img/bow-logo.png" alt="Bow Docs"/>
             <span class="header-title">Bow</span>
           </a>
-          <span class="header-tag"> 25% documented</span>
+          <span class="header-tag"> 35% documented</span>
         </p>
     
           <p class="header-col header-col--secondary">
@@ -364,6 +364,9 @@
               <li class="nav-group-task" data-name="Function1Partial" data-url="Classes/Function1Partial.html">
                 <a title="Function1Partial" class="nav-group-task-link" href="Classes/Function1Partial.html">Function1Partial</a>
               </li>
+              <li class="nav-group-task" data-name="FunctionK" data-url="Classes/FunctionK.html">
+                <a title="FunctionK" class="nav-group-task-link" href="Classes/FunctionK.html">FunctionK</a>
+              </li>
               <li class="nav-group-task" data-name="FutureK" data-url="Classes/FutureK.html">
                 <a title="FutureK" class="nav-group-task-link" href="Classes/FutureK.html">FutureK</a>
               </li>
@@ -393,9 +396,6 @@
               </li>
               <li class="nav-group-task" data-name="Id" data-url="Classes/Id.html">
                 <a title="Id" class="nav-group-task-link" href="Classes/Id.html">Id</a>
-              </li>
-              <li class="nav-group-task" data-name="IdFunctionK" data-url="Classes/IdFunctionK.html">
-                <a title="IdFunctionK" class="nav-group-task-link" href="Classes/IdFunctionK.html">IdFunctionK</a>
               </li>
               <li class="nav-group-task" data-name="IndexFromIso" data-url="Classes/IndexFromIso.html">
                 <a title="IndexFromIso" class="nav-group-task-link" href="Classes/IndexFromIso.html">IndexFromIso</a>
@@ -1006,9 +1006,6 @@
               </li>
               <li class="nav-group-task" data-name="Foldable" data-url="Protocols/Foldable.html">
                 <a title="Foldable" class="nav-group-task-link" href="Protocols/Foldable.html">Foldable</a>
-              </li>
-              <li class="nav-group-task" data-name="FunctionK" data-url="Protocols/FunctionK.html">
-                <a title="FunctionK" class="nav-group-task-link" href="Protocols/FunctionK.html">FunctionK</a>
               </li>
               <li class="nav-group-task" data-name="Functor" data-url="Protocols/Functor.html">
                 <a title="Functor" class="nav-group-task-link" href="Protocols/Functor.html">Functor</a>
@@ -3703,7 +3700,7 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Witness for the <code><a href="Classes/Function0.html">Function0&lt;A&gt;</a></code> data type. To be used in simulated Higher Kinded Types.</p>
 
                         <a href="Classes/ForFunction0.html" class="slightly-smaller">See more</a>
                       </div>
@@ -3729,7 +3726,7 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This data type acts as a wrapper over functions that receive no input and produce a value; namely, constant functions. This wrapper gives these functions capabilities to be used as a Higher Kinded Type and conform to typeclasses that have this requirement.</p>
 
                         <a href="Classes/Function0.html" class="slightly-smaller">See more</a>
                       </div>
@@ -3759,7 +3756,7 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Witness for the <code>Function1&lt;I, O&gt;</code> data type. To be used in simulated Higher Kinded Types`.</p>
 
                       </div>
                       <div class="declaration">
@@ -3784,7 +3781,7 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Partial application of the <code><a href="Classes/Function1.html">Function1</a></code> type constructor, omitting the last parameter.</p>
 
                         <a href="Classes/Function1Partial.html" class="slightly-smaller">See more</a>
                       </div>
@@ -3810,7 +3807,7 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This data type acts as a wrapper over functions. It receives two type parameters representing the input and output type of the function. The wrapper adds capabilities to use a function as a Higher Kinded Type and conform to typeclasses that have this requirement.</p>
 
                         <a href="Classes/Function1.html" class="slightly-smaller">See more</a>
                       </div>
@@ -3832,23 +3829,25 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3Bow11IdFunctionKC"></a>
-                    <a name="//apple_ref/swift/Class/IdFunctionK" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3Bow11IdFunctionKC"><span class="token-name">IdFunctionK</span><span class="token-icon" /></a>
+                    <a name="/s:3Bow9FunctionKC"></a>
+                    <a name="//apple_ref/swift/Class/FunctionK" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow9FunctionKC"><span class="token-name">FunctionK</span><span class="token-icon" /></a>
                     </code>
                   </div>
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A transformation between two kinds.</p>
 
-                        <a href="Classes/IdFunctionK.html" class="slightly-smaller">See more</a>
+<p>As <code>Function1&lt;A, B&gt;</code> represents a transformation from <code>A</code> to <code>B</code>, <code>FunctionK&lt;F, G&gt;</code> represents a transformation from <code>Kind&lt;F, A&gt;</code> to <code>Kind&lt;G, A&gt;</code>. Subclasses of <code>FunctionK</code> need to implement <code>invoke</code>.</p>
+
+                        <a href="Classes/FunctionK.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language keyline-blue">
                           <p  style="background: rgba(65, 131, 196, 0.15);" class="aside-title text-blue">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">IdFunctionK</span><span class="o">&lt;</span><span class="kt">M</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Protocols/FunctionK.html">FunctionK</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">FunctionK</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">G</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -5197,7 +5196,7 @@ Classes that want to have HKT support must extend this class. Type parameter <co
         <p>with support from <a href="https://47deg.com/">47 Degrees</a></p>
       </div>
       <div>
-        <p>&copy; 2019 <a class="link" href="https://bow-swift.io" target="_blank" rel="external">Bow</a>. All rights reserved. (Last updated: 2019-03-04)</p>
+        <p>&copy; 2019 <a class="link" href="https://bow-swift.io" target="_blank" rel="external">Bow</a>. All rights reserved. (Last updated: 2019-03-06)</p>
         <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
       </div>
     </section>

@@ -13,10 +13,10 @@ Gem::Specification.new do |s|
   s.email = ["segiddins@segiddins.me".freeze]
   s.homepage = "https://github.com/segiddins/xcinvoke".freeze
   s.required_ruby_version = Gem::Requirement.new(">= 2.0.0".freeze)
-  s.rubygems_version = "3.0.2".freeze
+  s.rubygems_version = "3.0.3".freeze
   s.summary = "Manage Xcode versions with ease!".freeze
 
-  s.installed_by_version = "3.0.2" if s.respond_to? :installed_by_version
+  s.installed_by_version = "3.0.3" if s.respond_to? :installed_by_version
 
   if s.respond_to? :specification_version then
     s.specification_version = 4
