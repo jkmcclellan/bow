@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600");
-*, *:before, *:after {
+*,
+*::before,
+*::after {
   box-sizing: inherit; }
 
 html {
@@ -7,7 +9,7 @@ html {
 
 body {
   margin: 0;
-  background: #fff;
+  background: #fafafa;
   color: #312d2c;
   font: 14px/25px "Montserrat", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -48,7 +50,8 @@ h4 {
   color: #312d2c;
   margin: 1.275em 0 0.85em; }
 
-h5, h6 {
+h5,
+h6 {
   font-family: "Montserrat", "Open Sans Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1rem;
   font-weight: bold;
@@ -58,16 +61,17 @@ h5, h6 {
 p {
   margin: 0 0 1em; }
 
-ul, ol {
+ul,
+ol {
   padding: 0 0 0 1.5em;
   margin: 0 0 0.85em; }
 
 ul.item-container {
-  padding: 0px; }
+  padding: 0; }
 
 ul:first-of-type,
 ol:first-of-type {
-  margin: 0px; }
+  margin: 0; }
 
 blockquote {
   margin: 0 0 0.85em;
@@ -87,7 +91,7 @@ a {
     box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05); }
 
 table {
-  background: #fff;
+  background: #fafafa;
   width: 100%;
   font-size: 13px;
   line-height: 23px;
@@ -96,13 +100,14 @@ table {
   overflow: auto;
   margin: 0 0 0.85em; }
 
-th, td {
+th,
+td {
   padding: 6px 13px;
   border: 1px solid rgba(12, 40, 73, 0.08); }
 
 pre {
   margin: 0 0 1.275em;
-  padding: .85em 1em;
+  padding: 0.85em 1em;
   overflow: auto;
   background: #f5f5f5;
   font-family: Menlo, Bitstream Vera Sans Mono, Monaco, Consolas, monospace;
@@ -111,10 +116,11 @@ pre {
 code {
   font-family: Menlo, Bitstream Vera Sans Mono, Monaco, Consolas, monospace;
   font-size: 13px;
-  line-height: .85em; }
+  line-height: 0.85em; }
 
-p > code, li > code {
-  background: #f5f5f5;
+p > code,
+li > code {
+  background: white;
   padding: 0.1em 0.2em;
   font-weight: bold;
   border: 1px solid #eee;
@@ -139,7 +145,7 @@ pre code {
 .limiter {
   max-width: 1360px;
   margin: auto;
-  padding: 0px 30px; }
+  padding: 0 30px; }
 
 .space-right2 {
   margin-right: 20px; }
@@ -149,7 +155,7 @@ pre code {
 
 .header {
   display: flex;
-  padding: 12px 0px;
+  padding: 12px 0;
   font-size: 1rem;
   color: white; }
   @media (max-width: 768px) {
@@ -181,14 +187,15 @@ pre code {
   font-family: "Montserrat", "Open Sans Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #fff; }
 
-.header-image, .header-icon {
+.header-image,
+.header-icon {
   padding-right: 2px;
   vertical-align: -4px;
   height: 16px; }
 
 .breadcrumbs {
   font-size: 13px;
-  padding: 8px 0px;
+  padding: 8px 0;
   margin: 0;
   background: #f5f5f5; }
 
@@ -219,9 +226,10 @@ pre code {
     padding: 0 0 0 0; }
 
 .nav-group-name {
-  padding: 8px 0 8px 0px; }
+  padding: 8px 0 8px 0; }
 
-.small-heading, h4 {
+.small-heading,
+h4 {
   font-size: 13px;
   font-family: "Montserrat", "Open Sans Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
@@ -278,7 +286,7 @@ pre code {
       max-width: 75%; } }
 
 .section {
-  padding: 0px 20px; }
+  padding: 0 20px; }
   @media (max-width: 768px) {
     .section {
       padding: inherit; } }
@@ -323,23 +331,23 @@ h1 > .anchor-icon {
   border-top: 1px solid #ddd; }
 
 .task-group {
-  padding-top: 0px; }
+  padding-top: 0; }
 
-.task-name-container a[name]:before {
+.task-name-container a[name]::before {
   content: "";
   display: block; }
 
 .item {
   width: 100%;
   list-style-type: none; }
-  .item a[name]:before {
+  .item a[name]::before {
     content: "";
     display: block; }
   .item .token {
-    margin-left: 0px;
+    margin-left: 0;
     font-size: 13px;
     display: flex;
-    padding: 5px 0px;
+    padding: 5px 0;
     line-height: 14px; }
   .item .token-name {
     display: inline-block;
@@ -381,7 +389,7 @@ h1 > .anchor-icon {
   height: 12px;
   border-left: 1px solid #ddd;
   border-top: 1px solid #ddd;
-  background: #fdfeff;
+  background: #fafafa;
   transform: rotate(45deg); }
 
 .height-container {
@@ -390,19 +398,20 @@ h1 > .anchor-icon {
   width: 100%;
   overflow: hidden; }
   .height-container .section {
-    background: #fdfeff;
-    border: 1px solid rgba(12, 40, 73, 0.08);
+    background: #f5f5f5;
     padding: 15px 20px;
     border-radius: 2px;
-    margin: 10px 0px 30px; }
+    margin: 10px 0 30px; }
 
-.aside, .language {
+.aside,
+.language {
   padding: 6px 12px;
   margin: 12px 0;
-  border-left: 4px solid #dddddd;
-  border-radius: 2px;
+  border-left: 3px solid #dddddd;
+  border-radius: 0;
   overflow-y: hidden; }
-  .aside .aside-title, .language .aside-title {
+  .aside .aside-title,
+  .language .aside-title {
     font-size: 10px;
     font-family: "Montserrat", "Open Sans Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
     letter-spacing: 2px;
@@ -411,22 +420,29 @@ h1 > .anchor-icon {
     display: inline;
     margin: 0;
     -webkit-user-select: none; }
-  .aside p:last-child, .language p:last-child {
+  .aside p:last-child,
+  .language p:last-child {
     margin-bottom: 0; }
 
 .language {
-  background: #f5f5f5;
+  background: white;
   border-left: 4px solid #f4511e; }
 
-.aside.aside-see, .aside.aside-note {
+.aside.aside-see,
+.aside.aside-note {
   background: #f5f5f5; }
-  .aside.aside-see .aside-title, .aside.aside-note .aside-title {
-    padding-left: 0px; }
+  .aside.aside-see .aside-title,
+  .aside.aside-note .aside-title {
+    padding-left: 0; }
 
-.aside-warning, .aside-deprecated, .aside-unavailable {
-  border-left: 4px solid #ff6666; }
-  .aside-warning .aside-title, .aside-deprecated .aside-title, .aside-unavailable .aside-title {
-    color: #ff0000; }
+.aside-warning,
+.aside-deprecated,
+.aside-unavailable {
+  border-left: 3px solid #ff6666; }
+  .aside-warning .aside-title,
+  .aside-deprecated .aside-title,
+  .aside-unavailable .aside-title {
+    color: #f00; }
 
 .graybox {
   width: 100%;
@@ -448,10 +464,12 @@ h1 > .anchor-icon {
     width: 40px;
     border-left: none;
     border-top: none; }
-  .graybox th, .graybox td {
+  .graybox th,
+  .graybox td {
     border-right: none;
     border-top: none; }
-  .graybox td:first-child, .graybox th:first-child {
+  .graybox td:first-child,
+  .graybox th:first-child {
     border-left: none; }
   .graybox tr:last-of-type td {
     border-bottom: none; }
@@ -467,11 +485,11 @@ h1 > .anchor-icon {
   display: inline-block;
   font-size: 13px; }
 
-form[role=search] input {
+form[role="search"] input {
   font: 14px/25px "Montserrat", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 24px;
-  padding: 0px 15px;
+  padding: 0 15px;
   height: 36px;
   margin: 0;
   border: 1px solid rgba(12, 40, 73, 0.08);
@@ -480,39 +498,39 @@ form[role=search] input {
   margin-bottom: 10px;
   border-radius: 2px;
   width: calc(100% - 30px); }
-  .loading form[role=search] input {
+  .loading form[role="search"] input {
     background: white url(../img/spinner.gif) center right 4px no-repeat; }
-form[role=search] input:focus {
+form[role="search"] input:focus {
   border: 1px solid #f4511e;
   background: #fff; }
-form[role=search] .twitter-typeahead {
+form[role="search"] .twitter-typeahead {
   width: 100%; }
-form[role=search] .tt-menu {
+form[role="search"] .tt-menu {
   margin: 0;
   background: #fbfbfb;
   color: #333;
   border: 1px solid rgba(12, 40, 73, 0.08); }
-form[role=search] .tt-highlight {
+form[role="search"] .tt-highlight {
   font-weight: bold; }
-form[role=search] .tt-suggestion {
+form[role="search"] .tt-suggestion {
   font: 14px/25px "Montserrat", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   padding: 0 8px; }
-  form[role=search] .tt-suggestion span {
+  form[role="search"] .tt-suggestion span {
     display: table-cell;
     white-space: nowrap; }
-  form[role=search] .tt-suggestion .doc-parent-name {
+  form[role="search"] .tt-suggestion .doc-parent-name {
     width: 100%;
     text-align: right;
     font-weight: normal;
     font-size: 0.9em;
     padding-left: 16px; }
-form[role=search] .tt-suggestion:hover,
-form[role=search] .tt-suggestion.tt-cursor {
+form[role="search"] .tt-suggestion:hover,
+form[role="search"] .tt-suggestion.tt-cursor {
   cursor: pointer;
   background-color: #f4511e;
   color: #fff; }
-form[role=search] .tt-suggestion:hover .doc-parent-name,
-form[role=search] .tt-suggestion.tt-cursor .doc-parent-name {
+form[role="search"] .tt-suggestion:hover .doc-parent-name,
+form[role="search"] .tt-suggestion.tt-cursor .doc-parent-name {
   color: #fff; }
 
 .footer {
@@ -538,30 +556,36 @@ form[role=search] .tt-suggestion.tt-cursor .doc-parent-name {
       .footer div:last-child {
         margin-top: 0; } }
 
-html.dash .header, html.dash .breadcrumbs, html.dash .navigation {
+html.dash .header,
+html.dash .breadcrumbs,
+html.dash .navigation {
   display: none; }
 html.dash .height-container {
   display: block; }
 
 @font-face {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   src: url("../fonts/opensans-regular.eot");
   src: url("../fonts/opensans-regular.eot#iefix") format("embedded-opentype"), url("../fonts/opensans-regular.woff") format("woff"); }
 @font-face {
-  font-family: 'Open Sans Bold';
+  font-family: "Open Sans Bold";
   src: url("../fonts/opensans-bold.eot");
   src: url("../fonts/opensans-bold.eot#iefix") format("embedded-opentype"), url("../fonts/opensans-bold.woff") format("woff"); }
 .strong {
   font-family: "Montserrat", "Open Sans Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
-.text-purple {
-  color: #9595D1; }
+.key-main {
+  border-color: #f4511e; }
 
-.text-blue {
-  color: #fa8940; }
-
-.keyline-purple {
-  border-color: #9595D1; }
-
-.keyline-blue {
+.key-other {
   border-color: #fa8940; }
+
+.key-main-text,
+.key-main-other {
+  background: rgba(0, 0, 0, 0.1); }
+
+.key-main-text {
+  color: #f4511e; }
+
+.key-other-text {
+  color: #fa8940; }
