@@ -355,7 +355,7 @@ h1 > .anchor-icon {
     overflow: hidden;
     text-overflow: ellipsis; }
   .item .token-icon {
-    background: url("../img/plus.svg");
+    background: url("../img/minus.svg");
     width: 17px;
     display: inline-block;
     vertical-align: middle;
@@ -363,8 +363,8 @@ h1 > .anchor-icon {
     opacity: 1;
     margin-left: 5px;
     background-repeat: no-repeat; }
-  .item .token-icon-minus {
-    background: url("../img/minus.svg");
+  .item .token-icon-plus {
+    background: url("../img/plus.svg");
     background-repeat: no-repeat; }
   .item .discouraged {
     text-decoration: line-through; }
@@ -393,7 +393,6 @@ h1 > .anchor-icon {
   transform: rotate(45deg); }
 
 .height-container {
-  display: none;
   position: relative;
   width: 100%;
   overflow: hidden; }
@@ -575,10 +574,11 @@ html.dash .height-container {
   font-family: "Montserrat", "Open Sans Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 .key-main {
-  border-color: #f4511e; }
+  border-color: #fa8940; }
 
 .key-other {
-  border-color: #fa8940; }
+  border-color: #fa8940;
+  border-width: 2px; }
 
 .key-main-text,
 .key-main-other {
