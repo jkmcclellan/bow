@@ -504,11 +504,17 @@ form[role="search"] input:focus {
   background: #fff; }
 form[role="search"] .twitter-typeahead {
   width: 100%; }
+form[role="search"] .tt-hint {
+  color: #aaa; }
 form[role="search"] .tt-menu {
-  margin: 0;
+  margin: -10px 0 0;
   background: #fbfbfb;
   color: #333;
-  border: 1px solid rgba(12, 40, 73, 0.08); }
+  border: 1px solid rgba(12, 40, 73, 0.08);
+  width: calc(100% - 30px);
+  max-height: 0;
+  opacity: 0;
+  transition: max-height ease-in 350ms, opacity ease-in 250ms; }
 form[role="search"] .tt-highlight {
   font-weight: bold; }
 form[role="search"] .tt-suggestion {
