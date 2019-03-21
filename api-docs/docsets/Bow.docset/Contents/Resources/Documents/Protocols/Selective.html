@@ -2,14 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Bow - Comonad Protocol Reference</title>
+    <title>Bow - Selective Protocol Reference</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Bow is a library for Typed Functional Programming in Swift">
     <meta name="keywords" content="functional-programming, swift-library, monads, monad-transformers, functional-data-structure, swift, fp-types, adt, free-monads, tagless-final, mtl, for-comprehension, category-theory">
 
     <meta property="og:image" content="" />
-    <meta property="og:title" content="Bow - Comonad Protocol Reference" />
+    <meta property="og:title" content="Bow - Selective Protocol Reference" />
     <meta property="og:site_name" content="Bow" />
     <meta property="og:url" content="https://bow-swift.io" />
     <meta property="og:type" content="website" />
@@ -38,12 +38,12 @@
     <script src="../js/jazzy.search.js" defer></script>
 
     <meta class="swiftype" name="type" data-type="enum" content="Bow Reference" />
-    <meta class="swiftype" name="title" data-type="string" content="Comonad" />
+    <meta class="swiftype" name="title" data-type="string" content="Selective" />
 
 
     <style type="text/css">
-      .nav-group-name[data-name="Comonad"] > .small-heading,
-      .nav-group-task[data-name="Comonad"] {
+      .nav-group-name[data-name="Selective"] > .small-heading,
+      .nav-group-task[data-name="Selective"] {
         background-color: #f5f5f5;
         font-weight: bold;
         border-left: 3px solid #f4511e;
@@ -53,9 +53,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Protocol/Comonad" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Protocol/Selective" class="dashAnchor"></a>
 
-    <a title="Comonad Protocol Reference"></a>
+    <a title="Selective Protocol Reference"></a>
 
     <header class="header-container">
       <div class="limiter">
@@ -91,7 +91,7 @@
       <div class="limiter">
         <a class="breadcrumb" href="../index.html">Bow Reference</a>
         <img class="carat" src="../img/carat.png" />
-        Comonad Protocol Reference
+        Selective Protocol Reference
       </div>
     </div>
 
@@ -1491,21 +1491,14 @@
 
         <section class="section">
           <div class="section-content">
-            <a href="#/Comonad"><h1 id="Comonad">Comonad<span class="anchor-icon" /></h1></a>
+            <a href="#/Selective"><h1 id="Selective">Selective<span class="anchor-icon" /></h1></a>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">Comonad</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/Functor.html">Functor</a></span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">Selective</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/Applicative.html">Applicative</a></span></code></pre>
 
                 </div>
               </div>
-            <p>A Comonad is the dual of a <code><a href="../Protocols/Monad.html">Monad</a></code>. It provides capabilities to compose functions that extract values from their context.</p>
-
-<p>Implementations of this instance must obey the following laws:</p>
-<pre class="highlight swift"><code><span class="nf">extract</span><span class="p">(</span><span class="nf">duplicate</span><span class="p">(</span><span class="n">fa</span><span class="p">))</span> <span class="o">==</span> <span class="n">fa</span>
-<span class="nf">map</span><span class="p">(</span><span class="n">fa</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span> <span class="o">==</span> <span class="nf">coflatMap</span><span class="p">(</span><span class="n">fa</span><span class="p">,</span> <span class="p">{</span> <span class="n">a</span> <span class="k">in</span> <span class="nf">f</span><span class="p">(</span><span class="nf">extract</span><span class="p">(</span><span class="n">a</span><span class="p">))</span> <span class="p">}</span>
-<span class="nf">coflatMap</span><span class="p">(</span><span class="n">fa</span><span class="p">,</span> <span class="n">extract</span><span class="p">)</span> <span class="o">==</span> <span class="n">fa</span>
-<span class="nf">extract</span><span class="p">(</span><span class="nf">coflatMap</span><span class="p">(</span><span class="n">fa</span><span class="p">,</span> <span class="n">f</span><span class="p">))</span> <span class="o">==</span> <span class="nf">f</span><span class="p">(</span><span class="n">fa</span><span class="p">)</span>
-</code></pre>
+            <p>The Selective typeclass represents Selective Applicative Functors, described in <a href="https://www.staff.ncl.ac.uk/andrey.mokhov/selective-functors.pdf">this paper</a>. Selective Applicative Functors enrich Applicative Functors by providing an operation that composes two effectful computations where the second depends on the first.</p>
 
           </div>
         </section>
@@ -1517,26 +1510,24 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3Bow7ComonadP9coflatMapyAA4KindCyxqd_0_GAFyxqd__G_qd_0_AHctr0_lFZ"></a>
-                    <a name="//apple_ref/swift/Method/coflatMap(_:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3Bow7ComonadP9coflatMapyAA4KindCyxqd_0_GAFyxqd__G_qd_0_AHctr0_lFZ">
-                      <span class="token-name">coflatMap(_:_:)</span>
+                    <a name="/s:3Bow9SelectiveP6selectyAA4KindCyxqd_0_GAFyxAA6EitherCyqd__qd_0_GG_AFyxqd_0_qd__cGtr0_lFZ"></a>
+                    <a name="//apple_ref/swift/Method/select(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow9SelectiveP6selectyAA4KindCyxqd_0_GAFyxAA6EitherCyqd__qd_0_GG_AFyxqd_0_qd__cGtr0_lFZ">
+                      <span class="token-name">select(_:_:)</span>
                       <span class="token-icon" /></a>
                     </code>
                   </div>
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Applies a value in the context implementing this instance to a function that takes a value in a context, and returns a normal value.</p>
-
-<p>This function is the dual of <code>Monad.flatMap</code>.</p>
+                        <p>Conditionally applies the second computation based on the result of the first.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language key-main">
                           <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="n">coflatMap</span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">fa</span><span class="p">:</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">B</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="n">select</span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">fab</span><span class="p">:</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt"><a href="../Classes/Either.html">Either</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;&gt;</span><span class="p">,</span> <span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="p">(</span><span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">B</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -1547,12 +1538,12 @@
                             <tr>
                               <td>
                                 <code>
-                                  fa
+                                  fab
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>Value in the context implementing this instance.</p>
+                                  <p>A computation that results in an <code><a href="../Classes/Either.html">Either</a></code> value.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1564,7 +1555,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>Extracting function.</p>
+                                  <p>A computation that is executed in case the first computation evaluates to a left value.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1573,59 +1564,7 @@
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The result of extracting and transforming the value, in the context implementing this instance.</p>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3Bow7ComonadP7extractyqd__AA4KindCyxqd__GlFZ"></a>
-                    <a name="//apple_ref/swift/Method/extract(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3Bow7ComonadP7extractyqd__AA4KindCyxqd__GlFZ">
-                      <span class="token-name">extract(_:)</span>
-                      <span class="token-icon" /></a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <section class="section">
-                      <div class="abstract">
-                        <p>Extracts the value contained in the context implementing this instance.</p>
-
-<p>This function is the dual of <code>Monad.pure</code> (via <code><a href="../Protocols/Applicative.html">Applicative</a></code>).</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language key-main">
-                          <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="n">extract</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">fa</span><span class="p">:</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                  fa
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>A value in the context implementing this instance.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>A normal value.</p>
+                        <p>Composition of the two computations.</p>
                       </div>
                     </section>
                   </div>
@@ -1644,10 +1583,10 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3Bow7ComonadPAAE9duplicateyAA4KindCyxAFyxqd__GGAGlFZ"></a>
-                    <a name="//apple_ref/swift/Method/duplicate(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3Bow7ComonadPAAE9duplicateyAA4KindCyxAFyxqd__GGAGlFZ">
-                      <span class="token-name">duplicate(_:)</span>
+                    <a name="/s:3Bow9SelectivePAAE5whenSyAA4KindCyxytGAFyxSbG_AGtFZ"></a>
+                    <a name="//apple_ref/swift/Method/whenS(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow9SelectivePAAE5whenSyAA4KindCyxytGAFyxSbG_AGtFZ">
+                      <span class="token-name">whenS(_:_:)</span>
                       <span class="token-icon" /></a>
                     </code>
                       <span class="declaration-note">
@@ -1657,14 +1596,14 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Wraps a value in another layer of the context implementing this instance.</p>
+                        <p>Evaluates the second computation when the first evaluates to <code>true</code>.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language key-main">
                           <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">duplicate</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">fa</span><span class="p">:</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">whenS</span><span class="p">(</span><span class="n">_</span> <span class="nv">cond</span><span class="p">:</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">Bool</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="p">()</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="p">()</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -1675,12 +1614,24 @@
                             <tr>
                               <td>
                                 <code>
-                                  fa
+                                  cond
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>A value in the context implementing this instance.</p>
+                                  <p>A computation evaluating to a boolean value.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  f
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A computation that will be evaluated if the first computation evaluates to <code>true</code>.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1689,7 +1640,539 @@
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>Value wrapped in another context layer.</p>
+                        <p>Composition of the two computations.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3Bow9SelectivePAAE6branchyAA4KindCyxqd_1_GAFyxAA6EitherCyqd__qd_0_GG_AFyxqd_1_qd__cGAFyxqd_1_qd_0_cGtr1_lFZ"></a>
+                    <a name="//apple_ref/swift/Method/branch(_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow9SelectivePAAE6branchyAA4KindCyxqd_1_GAFyxAA6EitherCyqd__qd_0_GG_AFyxqd_1_qd__cGAFyxqd_1_qd_0_cGtr1_lFZ">
+                      <span class="token-name">branch(_:_:_:)</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Evaluates one out of two computations based on the result of another computation.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">branch</span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">fab</span><span class="p">:</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt"><a href="../Classes/Either.html">Either</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;&gt;</span><span class="p">,</span> <span class="n">_</span> <span class="nv">fa</span><span class="p">:</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="p">(</span><span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">C</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">_</span> <span class="nv">fb</span><span class="p">:</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="p">(</span><span class="kt">B</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">C</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  fab
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Computation producing an <code><a href="../Classes/Either.html">Either</a></code> value, to decide which computation is executed afterwards.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  fa
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Computation that will be executed if <code>fab</code> evaluates to an <code>Either.left</code> value.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  fb
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Computation that will be executed if <code>fab</code> evaluates to an <code>Either.right</code> value.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Composition of the computations.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3Bow9SelectivePAAE3ifSyAA4KindCyxqd__GAFyxSbG_A2GtlFZ"></a>
+                    <a name="//apple_ref/swift/Method/ifS(_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow9SelectivePAAE3ifSyAA4KindCyxqd__GAFyxSbG_A2GtlFZ">
+                      <span class="token-name">ifS(_:_:_:)</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Evaluates one out of two computations based on the result of another computation.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">ifS</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">x</span><span class="p">:</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">Bool</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">_</span> <span class="nv">t</span><span class="p">:</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">_</span> <span class="nv">e</span><span class="p">:</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  x
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Computation producing a boolean value to decide which computation is exectured afterwards.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  t
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Computation that will be executed if the first evaluates to <code>true</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  e
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Computation that will be executed if the first evaluates to <code>false</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Composition of the computations.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3Bow9SelectivePAAE3orSyAA4KindCyxSbGAG_AGtFZ"></a>
+                    <a name="//apple_ref/swift/Method/orS(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow9SelectivePAAE3orSyAA4KindCyxSbGAG_AGtFZ">
+                      <span class="token-name">orS(_:_:)</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>A lifted version of lazy boolean or.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">orS</span><span class="p">(</span><span class="n">_</span> <span class="nv">x</span><span class="p">:</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">Bool</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">_</span> <span class="nv">y</span><span class="p">:</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">Bool</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">Bool</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  x
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Computation to be or&#39;ed.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  y
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Computation to be or&#39;ed.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Result of the or operation on the two computations.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3Bow9SelectivePAAE4andSyAA4KindCyxSbGAG_AGtFZ"></a>
+                    <a name="//apple_ref/swift/Method/andS(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow9SelectivePAAE4andSyAA4KindCyxSbGAG_AGtFZ">
+                      <span class="token-name">andS(_:_:)</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>A lifted version of lazy boolean and.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">andS</span><span class="p">(</span><span class="n">_</span> <span class="nv">x</span><span class="p">:</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">Bool</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">_</span> <span class="nv">y</span><span class="p">:</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">Bool</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">Bool</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  x
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Computation to be and&#39;ed.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  y
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Computation to be and&#39;ed.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Result of the and operation on the two computations.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3Bow9SelectivePAAE11fromOptionSyAA4KindCyxqd__GAG_AFyxAA0D0Cyqd__GGtlFZ"></a>
+                    <a name="//apple_ref/swift/Method/fromOptionS(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow9SelectivePAAE11fromOptionSyAA4KindCyxqd__GAG_AFyxAA0D0Cyqd__GGtlFZ">
+                      <span class="token-name">fromOptionS(_:_:)</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Evaluates an optional computation, providing a default value for the empty case.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">fromOptionS</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">x</span><span class="p">:</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">_</span> <span class="nv">mx</span><span class="p">:</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt"><a href="../Classes/Option.html">Option</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  x
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Default value for the empty case.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  mx
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A computation resulting in an optional value.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Composition of the two computations.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3Bow9SelectivePAAE4anySyAA4KindCyxSbGAGqd__c_AA6ArrayKCyqd__GtlFZ"></a>
+                    <a name="//apple_ref/swift/Method/anyS(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow9SelectivePAAE4anySyAA4KindCyxSbGAGqd__c_AA6ArrayKCyqd__GtlFZ">
+                      <span class="token-name">anyS(_:_:)</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>A lifted version of <code>any</code>. Retains the short-circuiting behavior.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">anyS</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">p</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">Bool</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">_</span> <span class="nv">array</span><span class="p">:</span> <span class="kt"><a href="../Classes/ArrayK.html">ArrayK</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">Bool</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  p
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A lifted predicate to find any element of the <code>array</code> that matches it.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  array
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An array to look for an element that matches the predicate in.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A boolean computation describing if any element of the array matches the predicate.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3Bow9SelectivePAAE4allSyAA4KindCyxSbGAGqd__c_AA6ArrayKCyqd__GtlFZ"></a>
+                    <a name="//apple_ref/swift/Method/allS(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow9SelectivePAAE4allSyAA4KindCyxSbGAGqd__c_AA6ArrayKCyqd__GtlFZ">
+                      <span class="token-name">allS(_:_:)</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>A lifted version of <code>all</code>. Retains the short-circuiting behavior.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">allS</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">p</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">Bool</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">_</span> <span class="nv">array</span><span class="p">:</span> <span class="kt"><a href="../Classes/ArrayK.html">ArrayK</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">Bool</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  p
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A lifted predicate to check all elements of the <code>array</code> match it.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  array
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An array to check if all elements match the predicate.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A boolean computation describing if all elements of the array match the predicate.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3Bow9SelectivePAAE6whileSyAA4EvalCyAA4KindCyxytGGAHyxSbGFZ"></a>
+                    <a name="//apple_ref/swift/Method/whileS(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow9SelectivePAAE6whileSyAA4EvalCyAA4KindCyxytGGAHyxSbGFZ">
+                      <span class="token-name">whileS(_:)</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Evaluates a computation as long as it evaluates to <code>true</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">whileS</span><span class="p">(</span><span class="n">_</span> <span class="nv">x</span><span class="p">:</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">Bool</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Eval.html">Eval</a></span><span class="o">&lt;</span><span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="p">()</span><span class="o">&gt;&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  x
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A computation.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A potentially lazy computation.</p>
                       </div>
                     </section>
                   </div>
