@@ -6910,14 +6910,14 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/STD/NonEmptyList+Optics.swift",
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/STD/NonEmptyArray+Optics.swift",
       "line": 5,
       "symbol": "NonEmptyArray.head()",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/STD/NonEmptyList+Optics.swift",
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/STD/NonEmptyArray+Optics.swift",
       "line": 11,
       "symbol": "NonEmptyArray.tail()",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
