@@ -65,7 +65,7 @@
             <img style="height: 18px;" class="header-icon" src="../img/bow-logo.png" alt="Bow Docs"/>
             <span class="header-title">Bow</span>
           </a>
-          <span class="header-tag"> 43% documented</span>
+          <span class="header-tag"> 44% documented</span>
         </p>
     
           <p class="header-col header-col--secondary">
@@ -1474,6 +1474,9 @@
               <li class="nav-group-task" data-name="Unit" data-url="Typealiases.html#/s:3Bow4Unita">
                 <a title="Unit" class="nav-group-task-link" href="../Typealiases.html#/s:3Bow4Unita">Unit</a>
               </li>
+              <li class="nav-group-task" data-name="ValidatedNEA" data-url="Typealiases.html#/s:3Bow12ValidatedNEAa">
+                <a title="ValidatedNEA" class="nav-group-task-link" href="../Typealiases.html#/s:3Bow12ValidatedNEAa">ValidatedNEA</a>
+              </li>
               <li class="nav-group-task" data-name="ValidatedOf" data-url="Typealiases.html#/s:3Bow11ValidatedOfa">
                 <a title="ValidatedOf" class="nav-group-task-link" href="../Typealiases.html#/s:3Bow11ValidatedOfa">ValidatedOf</a>
               </li>
@@ -1498,7 +1501,7 @@
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p>Validated is a data type to represent valid and invalid values. It is similar to <code><a href="../Classes/Either.html">Either</a></code>, but with error accumulation in the invalid case.</p>
 
           </div>
         </section>
@@ -1520,7 +1523,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Constructs a valid value.</p>
 
                       </div>
                       <div class="declaration">
@@ -1530,6 +1533,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">valid</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Validated</span><span class="o">&lt;</span><span class="kt">E</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  value
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Valid value to be wrapped in this validated.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>Validated</code> value wrapping the parameter.</p>
                       </div>
                     </section>
                   </div>
@@ -1547,7 +1573,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Constructs an invalid value.</p>
 
                       </div>
                       <div class="declaration">
@@ -1557,6 +1583,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">invalid</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">E</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Validated</span><span class="o">&lt;</span><span class="kt">E</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  value
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Invalid value to be wrapped in this validated.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>Validated</code> value wrapping the parameter.</p>
                       </div>
                     </section>
                   </div>
@@ -1574,7 +1623,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Constructs a <code>Validated</code> from a <code><a href="../Classes/Try.html">Try</a></code> value.</p>
 
                       </div>
                       <div class="declaration">
@@ -1584,6 +1633,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">fromTry</span><span class="p">(</span><span class="n">_</span> <span class="nv">t</span><span class="p">:</span> <span class="kt"><a href="../Classes/Try.html">Try</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Validated</span><span class="o">&lt;</span><span class="kt">Error</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  t
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A <code><a href="../Classes/Try.html">Try</a></code> value.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>Validated</code> that contains an invalid error or a valid value, obtained from the <code><a href="../Classes/Try.html">Try</a></code> value.</p>
                       </div>
                     </section>
                   </div>
@@ -1601,7 +1673,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Constructs a <code>Validated</code> from an <code><a href="../Classes/Option.html">Option</a></code> value.</p>
 
                       </div>
                       <div class="declaration">
@@ -1611,6 +1683,41 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">fromOption</span><span class="p">(</span><span class="n">_</span> <span class="nv">m</span><span class="p">:</span> <span class="kt"><a href="../Classes/Option.html">Option</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">ifNone</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">E</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Validated</span><span class="o">&lt;</span><span class="kt">E</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  m
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An <code><a href="../Classes/Option.html">Option</a></code> value.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  ifNone
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A closure providing a value for the invalid case if the option is not present.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>Validated</code> containing a valid value from the option, or an invalid wrapping the default value from the closure.</p>
                       </div>
                     </section>
                   </div>
@@ -1628,7 +1735,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Safe downcast.</p>
 
                       </div>
                       <div class="declaration">
@@ -1638,6 +1745,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">fix</span><span class="p">(</span><span class="n">_</span> <span class="nv">fa</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:3Bow11ValidatedOfa">ValidatedOf</a></span><span class="o">&lt;</span><span class="kt">E</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Validated</span><span class="o">&lt;</span><span class="kt">E</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  fa
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Value in the higher-kind form.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Value cast to Validated.</p>
                       </div>
                     </section>
                   </div>
@@ -1655,7 +1785,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Applies the provided closures based on the content of this <code>Validated</code> value.</p>
 
                       </div>
                       <div class="declaration">
@@ -1665,6 +1795,41 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">fold</span><span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">fe</span><span class="p">:</span> <span class="p">(</span><span class="kt">E</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">C</span><span class="p">,</span> <span class="n">_</span> <span class="nv">fa</span><span class="p">:</span> <span class="p">(</span><span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">C</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">C</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  fe
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Closure to apply if the contained value is invalid.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  fa
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Closure to apply if the contained value is valid.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Result of applying the corresponding closure to the contained value.</p>
                       </div>
                     </section>
                   </div>
@@ -1682,7 +1847,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Checks if this value is valid.</p>
 
                       </div>
                       <div class="declaration">
@@ -1709,7 +1874,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Checks if this value is invalid.</p>
 
                       </div>
                       <div class="declaration">
@@ -1736,7 +1901,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Checks if the valid value in this <code>Validated</code> matches a predicate.</p>
 
                       </div>
                       <div class="declaration">
@@ -1746,6 +1911,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">exists</span><span class="p">(</span><span class="n">_</span> <span class="nv">predicate</span><span class="p">:</span> <span class="p">(</span><span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  predicate
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Predicate to match the valid values.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>false</code> if the contained value is invalid or does not match the predicate; <code>true</code> otherwise.</p>
                       </div>
                     </section>
                   </div>
@@ -1763,7 +1951,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Converts this value to an <code><a href="../Classes/Either.html">Either</a></code> value.</p>
 
                       </div>
                       <div class="declaration">
@@ -1773,6 +1961,10 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">toEither</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Either.html">Either</a></span><span class="o">&lt;</span><span class="kt">E</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An <code>Either.left</code> if this value is invalid, or an <code>Either.right</code> if this value is valid.</p>
                       </div>
                     </section>
                   </div>
@@ -1790,7 +1982,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Converts this value to an <code><a href="../Classes/Option.html">Option</a></code> value.</p>
 
                       </div>
                       <div class="declaration">
@@ -1800,6 +1992,10 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">toOption</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Option.html">Option</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An <code>Option.none</code> if this value is invalid, or an <code>Option.some</code> if this value is valid.</p>
                       </div>
                     </section>
                   </div>
@@ -1817,7 +2013,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Converts this value to an <code>Array</code> value.</p>
 
                       </div>
                       <div class="declaration">
@@ -1827,6 +2023,41 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">toArray</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">A</span><span class="p">]</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An empty array if this value is invalid, or a singleton array if this value is valid.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3Bow9ValidatedC02toB3NEAACyAA13NonEmptyArrayCyxGq_GyF"></a>
+                    <a name="//apple_ref/swift/Method/toValidatedNEA()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow9ValidatedC02toB3NEAACyAA13NonEmptyArrayCyxGq_GyF">
+                      <span class="token-name">toValidatedNEA()</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Wraps the invalid values of this type into a <code><a href="../Classes/NonEmptyArray.html">NonEmptyArray</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">toValidatedNEA</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Validated</span><span class="o">&lt;</span><span class="kt"><a href="../Typealiases.html#/s:3Bow3NEAa">NEA</a></span><span class="o">&lt;</span><span class="kt">E</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A value that is equivalent to the original one but wraps the invalid value in a <code><a href="../Classes/NonEmptyArray.html">NonEmptyArray</a></code>.</p>
                       </div>
                     </section>
                   </div>
@@ -1844,7 +2075,9 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Applies a function in the <code><a href="../Classes/Either.html">Either</a></code> context to this value.</p>
+
+<p>It uses the isomorphism between <code><a href="../Classes/Either.html">Either</a></code> and <code>Validated</code>, mapping left to invalid and right to valid.</p>
 
                       </div>
                       <div class="declaration">
@@ -1854,6 +2087,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">withEither</span><span class="o">&lt;</span><span class="kt">EE</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="p">(</span><span class="kt"><a href="../Classes/Either.html">Either</a></span><span class="o">&lt;</span><span class="kt">E</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Either.html">Either</a></span><span class="o">&lt;</span><span class="kt">EE</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Validated</span><span class="o">&lt;</span><span class="kt">EE</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">EE</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/Semigroup.html">Semigroup</a></span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  f
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A closure in the <code><a href="../Classes/Either.html">Either</a></code> context.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Transformation of this validated value with the provided closure.</p>
                       </div>
                     </section>
                   </div>
@@ -1871,7 +2127,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Swaps the valid and invalid types.</p>
 
                       </div>
                       <div class="declaration">
@@ -1881,6 +2137,10 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">swap</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Validated</span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">E</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A valid value if it was invalid, and vice versa.</p>
                       </div>
                     </section>
                   </div>
@@ -1898,7 +2158,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Obtains the valid value or a default value for the invalid case.</p>
 
                       </div>
                       <div class="declaration">
@@ -1908,6 +2168,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getOrElse</span><span class="p">(</span><span class="n">_</span> <span class="n">defaultValue</span><span class="p">:</span> <span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  defaultValue
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Default value for the invalid case.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Valid value or default value otherwise.</p>
                       </div>
                     </section>
                   </div>
@@ -1925,7 +2208,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Obtains the valid value or maps the invalid value.</p>
 
                       </div>
                       <div class="declaration">
@@ -1935,6 +2218,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">valueOr</span><span class="p">(</span><span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="p">(</span><span class="kt">E</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  f
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Mapping function for invalid values.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The valid value or the mapped invalid value.</p>
                       </div>
                     </section>
                   </div>
@@ -1952,7 +2258,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Obtains this validated if is valid, or a default value if not.</p>
 
                       </div>
                       <div class="declaration">
@@ -1962,6 +2268,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">orElse</span><span class="p">(</span><span class="n">_</span> <span class="n">defaultValue</span><span class="p">:</span> <span class="kt">Validated</span><span class="o">&lt;</span><span class="kt">E</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Validated</span><span class="o">&lt;</span><span class="kt">E</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  defaultValue
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Value to return if this value is invalid.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>This value if it is valid, or the default one otherwise.</p>
                       </div>
                     </section>
                   </div>
@@ -2112,6 +2441,13 @@
               </ul>
             </div>
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Conformance%20of%20%60Validated%60%20to%20%60CustomStringConvertible%60"></a>
+                <a name="//apple_ref/swift/Section/Conformance of `Validated` to `CustomStringConvertible`" class="dashAnchor"></a>
+                <a href="#/Conformance%20of%20%60Validated%60%20to%20%60CustomStringConvertible%60">
+                  <h3 id="Conformance%20of%20%60Validated%60%20to%20%60CustomStringConvertible%60" class="section-name">Conformance of `Validated` to `CustomStringConvertible`<span class="anchor-icon" /></h3>
+                </a>
+              </div>
               <ul class="item-container">
                 <li class="item">
                   <div>
@@ -2142,6 +2478,13 @@
               </ul>
             </div>
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Conformance%20of%20%60Validated%60%20to%20%60CustomDebugStringConvertible%60"></a>
+                <a name="//apple_ref/swift/Section/Conformance of `Validated` to `CustomDebugStringConvertible`" class="dashAnchor"></a>
+                <a href="#/Conformance%20of%20%60Validated%60%20to%20%60CustomDebugStringConvertible%60">
+                  <h3 id="Conformance%20of%20%60Validated%60%20to%20%60CustomDebugStringConvertible%60" class="section-name">Conformance of `Validated` to `CustomDebugStringConvertible`<span class="anchor-icon" /></h3>
+                </a>
+              </div>
               <ul class="item-container">
                 <li class="item">
                   <div>
@@ -2182,7 +2525,7 @@
         <p>with support from <a href="https://47deg.com/">47 Degrees</a></p>
       </div>
       <div>
-        <p>&copy; 2019 <a class="link" href="https://bow-swift.io" target="_blank" rel="external">Bow</a>. All rights reserved. (Last updated: 2019-03-22)</p>
+        <p>&copy; 2019 <a class="link" href="https://bow-swift.io" target="_blank" rel="external">Bow</a>. All rights reserved. (Last updated: 2019-03-25)</p>
         <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
       </div>
     </section>
