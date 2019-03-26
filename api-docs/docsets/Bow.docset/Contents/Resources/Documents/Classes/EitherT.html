@@ -65,7 +65,7 @@
             <img style="height: 18px;" class="header-icon" src="../img/bow-logo.png" alt="Bow Docs"/>
             <span class="header-title">Bow</span>
           </a>
-          <span class="header-tag"> 47% documented</span>
+          <span class="header-tag"> 51% documented</span>
         </p>
     
           <p class="header-col header-col--secondary">
@@ -1501,7 +1501,7 @@
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p>The EitherT transformer represents the nesting of an <code><a href="../Classes/Either.html">Either</a></code> value inside any other effect. It is equivalent to <code>Kind&lt;F, Either&lt;A, B&gt;&gt;</code>.</p>
 
           </div>
         </section>
@@ -1523,7 +1523,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Safe downcast.</p>
 
                       </div>
                       <div class="declaration">
@@ -1533,6 +1533,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">fix</span><span class="p">(</span><span class="n">_</span> <span class="nv">fa</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:3Bow9EitherTOfa">EitherTOf</a></span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">EitherT</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  fa
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Value in the higher-kind form.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Value cast to EitherT.</p>
                       </div>
                     </section>
                   </div>
@@ -1550,7 +1573,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Initializes an <code>EitherT</code> value.</p>
 
                       </div>
                       <div class="declaration">
@@ -1561,12 +1584,38 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  value
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An <code><a href="../Classes/Either.html">Either</a></code> value wrapped in an effect.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </section>
                   </div>
                 </li>
               </ul>
             </div>
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Functions%20for%20%60EitherT%60%20when%20the%20effect%20has%20an%20instance%20of%20%60Functor%60."></a>
+                <a name="//apple_ref/swift/Section/Functions for `EitherT` when the effect has an instance of `Functor`." class="dashAnchor"></a>
+                <a href="#/Functions%20for%20%60EitherT%60%20when%20the%20effect%20has%20an%20instance%20of%20%60Functor%60.">
+                  <h3 id="Functions%20for%20%60EitherT%60%20when%20the%20effect%20has%20an%20instance%20of%20%60Functor%60." class="section-name">Functions for `EitherT` when the effect has an instance of `Functor`.<span class="anchor-icon" /></h3>
+                </a>
+              </div>
               <ul class="item-container">
                 <li class="item">
                   <div>
@@ -1581,7 +1630,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Applies the provided closures based on the content of the nested <code><a href="../Classes/Either.html">Either</a></code> value.</p>
 
                       </div>
                       <div class="declaration">
@@ -1592,15 +1641,50 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  fa
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Closure to apply if the contained value in the nested <code><a href="../Classes/Either.html">Either</a></code> is a member of the left type.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  fb
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Closure to apply if the contained value in the nested <code><a href="../Classes/Either.html">Either</a></code> is a member of the right type.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Result of applying the corresponding closure to the nested <code><a href="../Classes/Either.html">Either</a></code>, wrapped in the effect.</p>
+                      </div>
                     </section>
                   </div>
                 </li>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3Bow7EitherTCA2A7FunctorRzrlE5liftFyACyxq_qd__GAA4KindCyxqd__GlF"></a>
+                    <a name="/s:3Bow7EitherTCA2A7FunctorRzrlE5liftFyACyxq_q0_GAA4KindCyxq0_GFZ"></a>
                     <a name="//apple_ref/swift/Method/liftF(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3Bow7EitherTCA2A7FunctorRzrlE5liftFyACyxq_qd__GAA4KindCyxqd__GlF">
+                    <a class="token" href="#/s:3Bow7EitherTCA2A7FunctorRzrlE5liftFyACyxq_q0_GAA4KindCyxq0_GFZ">
                       <span class="token-name">liftF(_:)</span>
                       <span class="token-icon" /></a>
                     </code>
@@ -1608,16 +1692,39 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Lifts a value by nesting the contained value in the effect into an <code>Either.right</code> value.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language key-main">
                           <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">liftF</span><span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">fc</span><span class="p">:</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">EitherT</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">A</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">liftF</span><span class="p">(</span><span class="n">_</span> <span class="nv">fc</span><span class="p">:</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">EitherT</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  fc
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Value to be lifted.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A right <code><a href="../Classes/Either.html">Either</a></code> wrapped in the effect.</p>
                       </div>
                     </section>
                   </div>
@@ -1635,16 +1742,51 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Applies the provided closures based on the content of the nested <code><a href="../Classes/Either.html">Either</a></code> value.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language key-main">
                           <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">cata</span><span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">l</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">C</span><span class="p">,</span> <span class="n">_</span> <span class="nv">r</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">B</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">C</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">cata</span><span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">l</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">C</span><span class="p">,</span> <span class="n">_</span> <span class="nv">r</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">B</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">C</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  l
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Closure to apply if the contained value in the nested <code><a href="../Classes/Either.html">Either</a></code> is a member of the left type.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  r
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Closure to apply if the contained value in the nested <code><a href="../Classes/Either.html">Either</a></code> is a member of the right type.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Result of applying the corresponding closure to the nested <code><a href="../Classes/Either.html">Either</a></code>, wrapped in the effect.</p>
                       </div>
                     </section>
                   </div>
@@ -1662,16 +1804,39 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Checks if the wrapped <code><a href="../Classes/Either.html">Either</a></code> matches a predicate.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language key-main">
                           <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">exists</span><span class="p">(</span><span class="n">_</span> <span class="nv">predicate</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">B</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">Bool</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">exists</span><span class="p">(</span><span class="n">_</span> <span class="nv">predicate</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">B</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">Bool</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  predicate
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Predicate to test the nested <code><a href="../Classes/Either.html">Either</a></code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A boolean value indicating if the <code><a href="../Classes/Either.html">Either</a></code> matches the predicate, wrapped in the effect.</p>
                       </div>
                     </section>
                   </div>
@@ -1689,16 +1854,39 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Transforms the nested <code><a href="../Classes/Either.html">Either</a></code>.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language key-main">
                           <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">transform</span><span class="o">&lt;</span><span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">f</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Classes/Either.html">Either</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Either.html">Either</a></span><span class="o">&lt;</span><span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">EitherT</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">transform</span><span class="o">&lt;</span><span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Classes/Either.html">Either</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Either.html">Either</a></span><span class="o">&lt;</span><span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">EitherT</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  f
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Transforming function.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An <code>EitherT</code> where the nested <code><a href="../Classes/Either.html">Either</a></code> has been transformed using the provided function.</p>
                       </div>
                     </section>
                   </div>
@@ -1706,26 +1894,49 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3Bow7EitherTCA2A7FunctorRzrlE11subflatpMapyACyxq_qd__GAA0B0Cyq_qd__Gq0_clF"></a>
-                    <a name="//apple_ref/swift/Method/subflatpMap(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3Bow7EitherTCA2A7FunctorRzrlE11subflatpMapyACyxq_qd__GAA0B0Cyq_qd__Gq0_clF">
-                      <span class="token-name">subflatpMap(_:)</span>
+                    <a name="/s:3Bow7EitherTCA2A7FunctorRzrlE10subflatMapyACyxq_qd__GAA0B0Cyq_qd__Gq0_clF"></a>
+                    <a name="//apple_ref/swift/Method/subflatMap(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow7EitherTCA2A7FunctorRzrlE10subflatMapyACyxq_qd__GAA0B0Cyq_qd__Gq0_clF">
+                      <span class="token-name">subflatMap(_:)</span>
                       <span class="token-icon" /></a>
                     </code>
                   </div>
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Flatmaps the provided function to the nested <code><a href="../Classes/Either.html">Either</a></code>.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language key-main">
                           <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">subflatpMap</span><span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">B</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Either.html">Either</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">EitherT</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">A</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">subflatMap</span><span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">B</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Either.html">Either</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">EitherT</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">A</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  f
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Function for the flatmap operation.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Result of flatmapping the provided function to the nested <code><a href="../Classes/Either.html">Either</a></code>, wrapped in the effect.</p>
                       </div>
                     </section>
                   </div>
@@ -1743,7 +1954,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Converts this value to an <code><a href="../Classes/OptionT.html">OptionT</a></code> by converting the nested <code><a href="../Classes/Either.html">Either</a></code> to an <code><a href="../Classes/Option.html">Option</a></code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -1754,12 +1965,23 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An <code><a href="../Classes/OptionT.html">OptionT</a></code> with the right value of the nested <code><a href="../Classes/Either.html">Either</a></code>, or none if it contained a left value.</p>
+                      </div>
                     </section>
                   </div>
                 </li>
               </ul>
             </div>
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Functions%20for%20%60EitherT%60%20when%20the%20effect%20has%20an%20instance%20of%20%60Applicative%60."></a>
+                <a name="//apple_ref/swift/Section/Functions for `EitherT` when the effect has an instance of `Applicative`." class="dashAnchor"></a>
+                <a href="#/Functions%20for%20%60EitherT%60%20when%20the%20effect%20has%20an%20instance%20of%20%60Applicative%60.">
+                  <h3 id="Functions%20for%20%60EitherT%60%20when%20the%20effect%20has%20an%20instance%20of%20%60Applicative%60." class="section-name">Functions for `EitherT` when the effect has an instance of `Applicative`.<span class="anchor-icon" /></h3>
+                </a>
+              </div>
               <ul class="item-container">
                 <li class="item">
                   <div>
@@ -1774,7 +1996,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Creates an <code>EitherT</code> with a nested left value.</p>
 
                       </div>
                       <div class="declaration">
@@ -1784,6 +2006,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">left</span><span class="p">(</span><span class="n">_</span> <span class="nv">a</span><span class="p">:</span> <span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">EitherT</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  a
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Value for the left case.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A left <code><a href="../Classes/Either.html">Either</a></code> wrapped in the effect.</p>
                       </div>
                     </section>
                   </div>
@@ -1801,7 +2046,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Creates an <code>EitherT</code> with a nested right value.</p>
 
                       </div>
                       <div class="declaration">
@@ -1811,6 +2056,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">right</span><span class="p">(</span><span class="n">_</span> <span class="nv">b</span><span class="p">:</span> <span class="kt">B</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">EitherT</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  b
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Value for the right case.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A right <code><a href="../Classes/Either.html">Either</a></code> wrapped in the effect.</p>
                       </div>
                     </section>
                   </div>
@@ -1828,7 +2096,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Creates an <code>EitherT</code> from an <code><a href="../Classes/Either.html">Either</a></code> value.</p>
 
                       </div>
                       <div class="declaration">
@@ -1839,12 +2107,42 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  either
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code><a href="../Classes/Either.html">Either</a></code> value.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code><a href="../Classes/Either.html">Either</a></code> value wrapped in the effect.</p>
+                      </div>
                     </section>
                   </div>
                 </li>
               </ul>
             </div>
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Functions%20for%20%60EitherT%60%20when%20the%20effect%20has%20an%20instance%20of%20%60Monad%60."></a>
+                <a name="//apple_ref/swift/Section/Functions for `EitherT` when the effect has an instance of `Monad`." class="dashAnchor"></a>
+                <a href="#/Functions%20for%20%60EitherT%60%20when%20the%20effect%20has%20an%20instance%20of%20%60Monad%60.">
+                  <h3 id="Functions%20for%20%60EitherT%60%20when%20the%20effect%20has%20an%20instance%20of%20%60Monad%60." class="section-name">Functions for `EitherT` when the effect has an instance of `Monad`.<span class="anchor-icon" /></h3>
+                </a>
+              </div>
               <ul class="item-container">
                 <li class="item">
                   <div>
@@ -1859,16 +2157,39 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Flatmaps a function that produces an effect and lifts it back to <code>EitherT</code></p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language key-main">
                           <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">semiflatMap</span><span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">f</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">B</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">EitherT</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">A</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">semiflatMap</span><span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">B</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">EitherT</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">A</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  f
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A function producing an effect.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Result of flatmapping and lifting the function in this value.</p>
                       </div>
                     </section>
                   </div>

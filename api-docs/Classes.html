@@ -65,7 +65,7 @@
             <img style="height: 18px;" class="header-icon" src="img/bow-logo.png" alt="Bow Docs"/>
             <span class="header-title">Bow</span>
           </a>
-          <span class="header-tag"> 47% documented</span>
+          <span class="header-tag"> 51% documented</span>
         </p>
     
           <p class="header-col header-col--secondary">
@@ -4930,7 +4930,7 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>State is a convenience data type over the <code><a href="Classes/StateT.html">StateT</a></code> transformer, when the effect is <code><a href="Classes/Id.html">Id</a></code>.</p>
 
                         <a href="Classes/State.html" class="slightly-smaller">See more</a>
                       </div>
@@ -5250,7 +5250,7 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Witness for the <code>EitherT&lt;F, A, B&gt;</code> data type. To be used in simulated Higher Kinded Types.</p>
 
                       </div>
                       <div class="declaration">
@@ -5277,7 +5277,7 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Partial application of the EitherT type constructor, omitting the last parameter.</p>
 
                         <a href="Classes/EitherTPartial.html" class="slightly-smaller">See more</a>
                       </div>
@@ -5305,7 +5305,7 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The EitherT transformer represents the nesting of an <code><a href="Classes/Either.html">Either</a></code> value inside any other effect. It is equivalent to <code>Kind&lt;F, Either&lt;A, B&gt;&gt;</code>.</p>
 
                         <a href="Classes/EitherT.html" class="slightly-smaller">See more</a>
                       </div>
@@ -5337,7 +5337,7 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Witness for the <code>OptionT&lt;F, A&gt;</code> data type. To be used in simulated Higher Kinded Types.</p>
 
                       </div>
                       <div class="declaration">
@@ -5364,7 +5364,7 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Partial application of the OptionT type constructor, omitting the last parameter.</p>
 
                         <a href="Classes/OptionTPartial.html" class="slightly-smaller">See more</a>
                       </div>
@@ -5392,7 +5392,7 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The OptionT transformer represents the nesting of an <code><a href="Classes/Option.html">Option</a></code> value inside any other effect. It is equivalent to <code>Kind&lt;F, Option&lt;A&gt;&gt;</code>.</p>
 
                         <a href="Classes/OptionT.html" class="slightly-smaller">See more</a>
                       </div>
@@ -5424,7 +5424,7 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Witness for the <code>StateT&lt;F, S, A&gt;</code> data type. To be used in simulated Higher Kinded Types.</p>
 
                       </div>
                       <div class="declaration">
@@ -5451,7 +5451,7 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Partial application of the StateT type constructor, omitting the last type argument.</p>
 
                         <a href="Classes/StateTPartial.html" class="slightly-smaller">See more</a>
                       </div>
@@ -5479,7 +5479,11 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>StateT transformer represents operations that need to write and read a state through a computation or effect.</p>
+
+<p>Some computations may not require the full power of this transformer:
+    - For read-only state, see <code><a href="Typealiases.html#/s:3Bow7ReaderTa">ReaderT</a></code> / <code><a href="Classes/Kleisli.html">Kleisli</a></code>.
+    - To accumulate a value without using it on the way, see <code><a href="Classes/WriterT.html">WriterT</a></code>.</p>
 
                         <a href="Classes/StateT.html" class="slightly-smaller">See more</a>
                       </div>

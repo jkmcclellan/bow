@@ -65,7 +65,7 @@
             <img style="height: 18px;" class="header-icon" src="../img/bow-logo.png" alt="Bow Docs"/>
             <span class="header-title">Bow</span>
           </a>
-          <span class="header-tag"> 47% documented</span>
+          <span class="header-tag"> 51% documented</span>
         </p>
     
           <p class="header-col header-col--secondary">
@@ -1501,7 +1501,11 @@
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p>StateT transformer represents operations that need to write and read a state through a computation or effect.</p>
+
+<p>Some computations may not require the full power of this transformer:
+    - For read-only state, see <code><a href="../Typealiases.html#/s:3Bow7ReaderTa">ReaderT</a></code> / <code><a href="../Classes/Kleisli.html">Kleisli</a></code>.
+    - To accumulate a value without using it on the way, see <code><a href="../Classes/WriterT.html">WriterT</a></code>.</p>
 
           </div>
         </section>
@@ -1523,7 +1527,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Safe downcast.</p>
 
                       </div>
                       <div class="declaration">
@@ -1533,6 +1537,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">fix</span><span class="p">(</span><span class="n">_</span> <span class="nv">fa</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:3Bow8StateTOfa">StateTOf</a></span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">S</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">StateT</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">S</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  fa
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Value in the higher-kind form.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Value cast to StateT.</p>
                       </div>
                     </section>
                   </div>
@@ -1550,7 +1577,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Initializes a <code>StateT</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -1561,12 +1588,38 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  runF
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An effect describing a function that receives a state and produces an effect that updates the state and productes a value.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </section>
                   </div>
                 </li>
               </ul>
             </div>
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Convenience%20functions%20when%20the%20effect%20is%20%60Id%60"></a>
+                <a name="//apple_ref/swift/Section/Convenience functions when the effect is `Id`" class="dashAnchor"></a>
+                <a href="#/Convenience%20functions%20when%20the%20effect%20is%20%60Id%60">
+                  <h3 id="Convenience%20functions%20when%20the%20effect%20is%20%60Id%60" class="section-name">Convenience functions when the effect is `Id`<span class="anchor-icon" /></h3>
+                </a>
+              </div>
               <ul class="item-container">
                 <li class="item">
                   <div>
@@ -1581,7 +1634,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Runs this computation provided an initial state.</p>
 
                       </div>
                       <div class="declaration">
@@ -1591,6 +1644,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">run</span><span class="p">(</span><span class="n">_</span> <span class="nv">initialState</span><span class="p">:</span> <span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">S</span><span class="p">,</span> <span class="kt">A</span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  initialState
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Initial state for this computation.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A pair with the updated state and the produced value.</p>
                       </div>
                     </section>
                   </div>
@@ -1608,7 +1684,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Runs this computation provided an initial state.</p>
 
                       </div>
                       <div class="declaration">
@@ -1618,6 +1694,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">runA</span><span class="p">(</span><span class="n">_</span> <span class="nv">s</span><span class="p">:</span> <span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  s
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Initial state for this computation.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Produced value from this computation.</p>
                       </div>
                     </section>
                   </div>
@@ -1635,7 +1734,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Runs this computation provided an initial state.</p>
 
                       </div>
                       <div class="declaration">
@@ -1646,12 +1745,42 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  s
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Initial state for this computation.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Updated state after running the computation.</p>
+                      </div>
                     </section>
                   </div>
                 </li>
               </ul>
             </div>
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Functions%20for%20%60StateT%60%20when%20the%20effect%20has%20an%20instance%20of%20%60Functor%60"></a>
+                <a name="//apple_ref/swift/Section/Functions for `StateT` when the effect has an instance of `Functor`" class="dashAnchor"></a>
+                <a href="#/Functions%20for%20%60StateT%60%20when%20the%20effect%20has%20an%20instance%20of%20%60Functor%60">
+                  <h3 id="Functions%20for%20%60StateT%60%20when%20the%20effect%20has%20an%20instance%20of%20%60Functor%60" class="section-name">Functions for `StateT` when the effect has an instance of `Functor`<span class="anchor-icon" /></h3>
+                </a>
+              </div>
               <ul class="item-container">
                 <li class="item">
                   <div>
@@ -1666,16 +1795,39 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Transforms the return value and final state of a computation using a provided function.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language key-main">
                           <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">transform</span><span class="o">&lt;</span><span class="kt">B</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">f</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">,</span> <span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">S</span><span class="p">,</span> <span class="kt">B</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="kt">StateT</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">S</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">transform</span><span class="o">&lt;</span><span class="kt">B</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">,</span> <span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">S</span><span class="p">,</span> <span class="kt">B</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="kt">StateT</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">S</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  f
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Transforming function.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An <code>StateT</code> where the final state and produced value have been transformed using the provided function.</p>
                       </div>
                     </section>
                   </div>
@@ -1683,30 +1835,60 @@
               </ul>
             </div>
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Functions%20for%20%60StateT%60%20when%20the%20effect%20has%20an%20instance%20of%20%60Monad%60"></a>
+                <a name="//apple_ref/swift/Section/Functions for `StateT` when the effect has an instance of `Monad`" class="dashAnchor"></a>
+                <a href="#/Functions%20for%20%60StateT%60%20when%20the%20effect%20has%20an%20instance%20of%20%60Monad%60">
+                  <h3 id="Functions%20for%20%60StateT%60%20when%20the%20effect%20has%20an%20instance%20of%20%60Monad%60" class="section-name">Functions for `StateT` when the effect has an instance of `Monad`<span class="anchor-icon" /></h3>
+                </a>
+              </div>
               <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3Bow6StateTCA2A5MonadRzrlE4liftyACyxq_q0_GAA4KindCyxq0_GFZ"></a>
-                    <a name="//apple_ref/swift/Method/lift(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3Bow6StateTCA2A5MonadRzrlE4liftyACyxq_q0_GAA4KindCyxq0_GFZ">
-                      <span class="token-name">lift(_:)</span>
+                    <a name="/s:3Bow6StateTCA2A5MonadRzrlE5liftFyACyxq_q0_GAA4KindCyxq0_GFZ"></a>
+                    <a name="//apple_ref/swift/Method/liftF(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow6StateTCA2A5MonadRzrlE5liftFyACyxq_q0_GAA4KindCyxq0_GFZ">
+                      <span class="token-name">liftF(_:)</span>
                       <span class="token-icon" /></a>
                     </code>
                   </div>
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Lifts an effect by wrapping the contained value into a function that depends on some state.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language key-main">
                           <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">lift</span><span class="p">(</span><span class="n">_</span> <span class="nv">fa</span><span class="p">:</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">StateT</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">S</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">liftF</span><span class="p">(</span><span class="n">_</span> <span class="nv">fa</span><span class="p">:</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">StateT</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">S</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  fa
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Value to be lifted.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>StateT</code> that produces the contained value in the original effect, preserving the state.</p>
                       </div>
                     </section>
                   </div>
@@ -1724,7 +1906,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Runs this computation using the provided initial state.</p>
 
                       </div>
                       <div class="declaration">
@@ -1734,6 +1916,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">runA</span><span class="p">(</span><span class="n">_</span> <span class="nv">s</span><span class="p">:</span> <span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  s
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Initial state to run this computation.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Result of running this computation with the provided state, wrapped in the effect.</p>
                       </div>
                     </section>
                   </div>
@@ -1751,7 +1956,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Runs this computation using the provided initial state.</p>
 
                       </div>
                       <div class="declaration">
@@ -1761,6 +1966,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">runS</span><span class="p">(</span><span class="n">_</span> <span class="nv">s</span><span class="p">:</span> <span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">S</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  s
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Initial state to run this computation.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>New state after running this computation with the provided state, wrapped in the effect.</p>
                       </div>
                     </section>
                   </div>
@@ -1778,7 +2006,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Runs this computation using the provided initial state.</p>
 
                       </div>
                       <div class="declaration">
@@ -1788,6 +2016,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">runM</span><span class="p">(</span><span class="n">_</span> <span class="nv">initial</span><span class="p">:</span> <span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="p">(</span><span class="kt">S</span><span class="p">,</span> <span class="kt">A</span><span class="p">)</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  initial
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Initial state to run this computation.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A pair with the new state and produced value, wrapped in the effect.</p>
                       </div>
                     </section>
                   </div>
@@ -1805,7 +2056,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Zips this computation with another one depending on the same state and effect types and combines the produced values using the provided function.</p>
 
                       </div>
                       <div class="declaration">
@@ -1816,32 +2067,90 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  sb
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Another state computation.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  f
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Combining function.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An <code>StateT</code> with the combination of the results of the two state computations, using the provided function.</p>
+                      </div>
                     </section>
                   </div>
                 </li>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3Bow6StateTCA2A5MonadRzrlE8flatMapFyACyxq_qd__GAA4KindCyxqd__Gq0_clF"></a>
-                    <a name="//apple_ref/swift/Method/flatMapF(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3Bow6StateTCA2A5MonadRzrlE8flatMapFyACyxq_qd__GAA4KindCyxqd__Gq0_clF">
-                      <span class="token-name">flatMapF(_:)</span>
+                    <a name="/s:3Bow6StateTCA2A5MonadRzrlE11semiflatMapyACyxq_qd__GAA4KindCyxqd__Gq0_clF"></a>
+                    <a name="//apple_ref/swift/Method/semiflatMap(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow6StateTCA2A5MonadRzrlE11semiflatMapyACyxq_qd__GAA4KindCyxqd__Gq0_clF">
+                      <span class="token-name">semiflatMap(_:)</span>
                       <span class="token-icon" /></a>
                     </code>
                   </div>
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Flatmaps a function that produces an effect and lifts if back to <code>StateT</code>.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language key-main">
                           <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">flatMapF</span><span class="o">&lt;</span><span class="kt">B</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">f</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">StateT</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">S</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">semiflatMap</span><span class="o">&lt;</span><span class="kt">B</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">StateT</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">S</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  f
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A function producing an effect.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Result of flatmapping and lifting the function to this value.</p>
                       </div>
                     </section>
                   </div>
