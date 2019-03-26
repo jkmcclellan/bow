@@ -65,7 +65,7 @@
             <img style="height: 18px;" class="header-icon" src="../img/bow-logo.png" alt="Bow Docs"/>
             <span class="header-title">Bow</span>
           </a>
-          <span class="header-tag"> 46% documented</span>
+          <span class="header-tag"> 47% documented</span>
         </p>
     
           <p class="header-col header-col--secondary">
@@ -1501,7 +1501,7 @@
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p>Describes the result of an operation that may have thrown errors or succeeded. The type parameter corresponds to the result type of the operation.</p>
 
           </div>
         </section>
@@ -1523,7 +1523,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Creates a successful Try value.</p>
 
                       </div>
                       <div class="declaration">
@@ -1533,6 +1533,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">success</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Try</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  value
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Value to be wrapped in a successful Try.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>Try</code> value wrapping the successful value.</p>
                       </div>
                     </section>
                   </div>
@@ -1550,7 +1573,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Creates a failed Try value.</p>
 
                       </div>
                       <div class="declaration">
@@ -1560,6 +1583,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">failure</span><span class="p">(</span><span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Try</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  error
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An error.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>Try</code> value wrapping the error.</p>
                       </div>
                     </section>
                   </div>
@@ -1577,7 +1623,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Creates a failed Try value.</p>
 
                       </div>
                       <div class="declaration">
@@ -1587,6 +1633,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">raise</span><span class="p">(</span><span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Try</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  error
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An error.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>Try</code> value wrapping the error.</p>
                       </div>
                     </section>
                   </div>
@@ -1604,7 +1673,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Invokes a closure that may throw errors and wraps the result in a <code>Try</code> value.</p>
 
                       </div>
                       <div class="declaration">
@@ -1614,6 +1683,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">invoke</span><span class="p">(</span><span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Try</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  f
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Closure to be invoked.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>Try</code> value wrapping the result of the invocation or any error that it may have thrown.</p>
                       </div>
                     </section>
                   </div>
@@ -1631,7 +1723,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Safe downcast.</p>
 
                       </div>
                       <div class="declaration">
@@ -1641,6 +1733,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">fix</span><span class="p">(</span><span class="n">_</span> <span class="nv">fa</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:3Bow5TryOfa">TryOf</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Try</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  fa
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Value in the higher-kind form.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Value cast to Try.</p>
                       </div>
                     </section>
                   </div>
@@ -1658,7 +1773,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Applies the provided closures based on the content of this <code>Try</code> value.</p>
 
                       </div>
                       <div class="declaration">
@@ -1668,6 +1783,41 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">fold</span><span class="o">&lt;</span><span class="kt">B</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">fe</span><span class="p">:</span> <span class="p">(</span><span class="kt">Error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">B</span><span class="p">,</span> <span class="n">_</span> <span class="nv">fa</span><span class="p">:</span> <span class="p">(</span><span class="kt">A</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">B</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">B</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  fe
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Closure to apply if the contained value in this <code>Try</code> is an error.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  fa
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Closure to apply if the contained value in this <code>Try</code> is a successful value.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Result of applying the corresponding closure to this value.</p>
                       </div>
                     </section>
                   </div>
@@ -1685,7 +1835,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Obtains the wrapped error in this <code>Try</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -1695,6 +1845,10 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">failed</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Try</span><span class="o">&lt;</span><span class="kt">Error</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A successful error or a failure with <code>TryError.unsupportedOperation</code> if this value was not an error.</p>
                       </div>
                     </section>
                   </div>
@@ -1712,7 +1866,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Obtains the value wrapped in this <code>Try</code> or a default value if it contains an error.</p>
 
                       </div>
                       <div class="declaration">
@@ -1722,6 +1876,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getOrElse</span><span class="p">(</span><span class="n">_</span> <span class="n">defaultValue</span><span class="p">:</span> <span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  defaultValue
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Default value for the failure case.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Value wrapped in this <code>Try</code>, or the default value if it was an error.</p>
                       </div>
                     </section>
                   </div>
@@ -1739,7 +1916,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Attempts to recover if the contained value in this <code>Try</code> is an error.</p>
 
                       </div>
                       <div class="declaration">
@@ -1749,6 +1926,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">recoverWith</span><span class="p">(</span><span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="p">(</span><span class="kt">Error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Try</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Try</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  f
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Recovery function.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>Try</code> value from the recovery, or the original value if it was not an error.</p>
                       </div>
                     </section>
                   </div>
@@ -1766,7 +1966,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Recovers if the contained value in this <code>Try</code> is an error.</p>
 
                       </div>
                       <div class="declaration">
@@ -1776,6 +1976,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">recover</span><span class="p">(</span><span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Try</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  f
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Recovery function.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>Try</code> value from the recovery, or the original value if it was not an error.</p>
                       </div>
                     </section>
                   </div>
@@ -2062,6 +2285,13 @@
               </ul>
             </div>
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Conformance%20of%20%60Try%60%20to%20%60CustomStringConvertible%60"></a>
+                <a name="//apple_ref/swift/Section/Conformance of `Try` to `CustomStringConvertible`" class="dashAnchor"></a>
+                <a href="#/Conformance%20of%20%60Try%60%20to%20%60CustomStringConvertible%60">
+                  <h3 id="Conformance%20of%20%60Try%60%20to%20%60CustomStringConvertible%60" class="section-name">Conformance of `Try` to `CustomStringConvertible`<span class="anchor-icon" /></h3>
+                </a>
+              </div>
               <ul class="item-container">
                 <li class="item">
                   <div>
@@ -2092,6 +2322,13 @@
               </ul>
             </div>
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Conformance%20of%20%60Try%60%20to%20%60CustomDebugStringConvertible%60"></a>
+                <a name="//apple_ref/swift/Section/Conformance of `Try` to `CustomDebugStringConvertible`" class="dashAnchor"></a>
+                <a href="#/Conformance%20of%20%60Try%60%20to%20%60CustomDebugStringConvertible%60">
+                  <h3 id="Conformance%20of%20%60Try%60%20to%20%60CustomDebugStringConvertible%60" class="section-name">Conformance of `Try` to `CustomDebugStringConvertible`<span class="anchor-icon" /></h3>
+                </a>
+              </div>
               <ul class="item-container">
                 <li class="item">
                   <div>
@@ -2132,7 +2369,7 @@
         <p>with support from <a href="https://47deg.com/">47 Degrees</a></p>
       </div>
       <div>
-        <p>&copy; 2019 <a class="link" href="https://bow-swift.io" target="_blank" rel="external">Bow</a>. All rights reserved. (Last updated: 2019-03-25)</p>
+        <p>&copy; 2019 <a class="link" href="https://bow-swift.io" target="_blank" rel="external">Bow</a>. All rights reserved. (Last updated: 2019-03-26)</p>
         <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
       </div>
     </section>
