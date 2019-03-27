@@ -65,7 +65,7 @@
             <img style="height: 18px;" class="header-icon" src="../img/bow-logo.png" alt="Bow Docs"/>
             <span class="header-title">Bow</span>
           </a>
-          <span class="header-tag"> 51% documented</span>
+          <span class="header-tag"> 54% documented</span>
         </p>
     
           <p class="header-col header-col--secondary">
@@ -1501,7 +1501,7 @@
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p>ArrayK is a Higher Kinded Type wrapper over Swift arrays.</p>
 
           </div>
         </section>
@@ -1523,7 +1523,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Concatenates two arrays</p>
 
                       </div>
                       <div class="declaration">
@@ -1533,6 +1533,41 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">+</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">ArrayK</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">ArrayK</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ArrayK</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  lhs
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Left hand side of the concatenation.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  rhs
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Right hand side of the concatenation.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An array that contains the elements of the two arrays in the order they appear in the original ones.</p>
                       </div>
                     </section>
                   </div>
@@ -1550,7 +1585,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Safe downcast.</p>
 
                       </div>
                       <div class="declaration">
@@ -1560,6 +1595,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">fix</span><span class="p">(</span><span class="n">_</span> <span class="nv">fa</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:3Bow8ArrayKOfa">ArrayKOf</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ArrayK</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  fa
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Value in the higher-kind form.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Value cast to ArrayK.</p>
                       </div>
                     </section>
                   </div>
@@ -1577,7 +1635,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Initializes an <code>ArrayK</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -1587,6 +1645,71 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">array</span><span class="p">:</span> <span class="p">[</span><span class="kt">A</span><span class="p">])</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  array
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A Swift array of values.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3Bow6ArrayKCyACyxGxd_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow6ArrayKCyACyxGxd_tcfc">
+                      <span class="token-name">init(_:)</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Initializes an <code>ArrayK</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">values</span><span class="p">:</span> <span class="kt">A</span><span class="o">...</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  values
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A variable number of values.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -1604,7 +1727,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Obtains the wrapped array.</p>
 
                       </div>
                       <div class="declaration">
@@ -1631,7 +1754,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Obtains the first element of this array, or <code>Option.none</code> if it is empty.</p>
 
                       </div>
                       <div class="declaration">
@@ -1641,6 +1764,10 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">firstOrNone</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Option.html">Option</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An optional value containing the first element of the array, if present.</p>
                       </div>
                     </section>
                   </div>
@@ -1658,7 +1785,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Obtains the element in the position passed as an argument, if any.</p>
 
                       </div>
                       <div class="declaration">
@@ -1668,6 +1795,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getOrNone</span><span class="p">(</span><span class="n">_</span> <span class="nv">i</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Option.html">Option</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  i
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Index of the element to obtain.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An optional value containing the element of the array at the specified index, if present.</p>
                       </div>
                     </section>
                   </div>
@@ -1685,7 +1835,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Obtains the element in the position passed as an argument, if any.</p>
 
                       </div>
                       <div class="declaration">
@@ -1695,6 +1845,25 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">subscript</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Option.html">Option</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  index
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Index of the element to obtain.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -1956,6 +2125,13 @@
               </ul>
             </div>
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Conformance%20of%20%60ArrayK%60%20to%20%60CustomStringConvertible%60."></a>
+                <a name="//apple_ref/swift/Section/Conformance of `ArrayK` to `CustomStringConvertible`." class="dashAnchor"></a>
+                <a href="#/Conformance%20of%20%60ArrayK%60%20to%20%60CustomStringConvertible%60.">
+                  <h3 id="Conformance%20of%20%60ArrayK%60%20to%20%60CustomStringConvertible%60." class="section-name">Conformance of `ArrayK` to `CustomStringConvertible`.<span class="anchor-icon" /></h3>
+                </a>
+              </div>
               <ul class="item-container">
                 <li class="item">
                   <div>
@@ -1986,6 +2162,13 @@
               </ul>
             </div>
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Conformance%20of%20%60ArrayK%60%20to%20%60CustomDebugStringConvertible%60."></a>
+                <a name="//apple_ref/swift/Section/Conformance of `ArrayK` to `CustomDebugStringConvertible`." class="dashAnchor"></a>
+                <a href="#/Conformance%20of%20%60ArrayK%60%20to%20%60CustomDebugStringConvertible%60.">
+                  <h3 id="Conformance%20of%20%60ArrayK%60%20to%20%60CustomDebugStringConvertible%60." class="section-name">Conformance of `ArrayK` to `CustomDebugStringConvertible`.<span class="anchor-icon" /></h3>
+                </a>
+              </div>
               <ul class="item-container">
                 <li class="item">
                   <div>
@@ -2017,10 +2200,10 @@
             </div>
             <div class="task-group">
               <div class="task-name-container">
-                <a name="/Instance%20of%20%60Selective%60%20for%20%60ArrayK%60"></a>
-                <a name="//apple_ref/swift/Section/Instance of `Selective` for `ArrayK`" class="dashAnchor"></a>
-                <a href="#/Instance%20of%20%60Selective%60%20for%20%60ArrayK%60">
-                  <h3 id="Instance%20of%20%60Selective%60%20for%20%60ArrayK%60" class="section-name">Instance of `Selective` for `ArrayK`<span class="anchor-icon" /></h3>
+                <a name="/Instance%20of%20%60Semigroup%60%20for%20%60ArrayK%60"></a>
+                <a name="//apple_ref/swift/Section/Instance of `Semigroup` for `ArrayK`" class="dashAnchor"></a>
+                <a href="#/Instance%20of%20%60Semigroup%60%20for%20%60ArrayK%60">
+                  <h3 id="Instance%20of%20%60Semigroup%60%20for%20%60ArrayK%60" class="section-name">Instance of `Semigroup` for `ArrayK`<span class="anchor-icon" /></h3>
                 </a>
               </div>
               <ul class="item-container">
@@ -2054,10 +2237,10 @@
             </div>
             <div class="task-group">
               <div class="task-name-container">
-                <a name="/Instance%20of%20%60Selective%60%20for%20%60ArrayK%602"></a>
-                <a name="//apple_ref/swift/Section/Instance of `Selective` for `ArrayK`" class="dashAnchor"></a>
-                <a href="#/Instance%20of%20%60Selective%60%20for%20%60ArrayK%602">
-                  <h3 id="Instance%20of%20%60Selective%60%20for%20%60ArrayK%602" class="section-name">Instance of `Selective` for `ArrayK`<span class="anchor-icon" /></h3>
+                <a name="/Instance%20of%20%60Monoid%60%20for%20%60ArrayK%60"></a>
+                <a name="//apple_ref/swift/Section/Instance of `Monoid` for `ArrayK`" class="dashAnchor"></a>
+                <a href="#/Instance%20of%20%60Monoid%60%20for%20%60ArrayK%60">
+                  <h3 id="Instance%20of%20%60Monoid%60%20for%20%60ArrayK%60" class="section-name">Instance of `Monoid` for `ArrayK`<span class="anchor-icon" /></h3>
                 </a>
               </div>
               <ul class="item-container">
@@ -2211,7 +2394,7 @@
         <p>with support from <a href="https://47deg.com/">47 Degrees</a></p>
       </div>
       <div>
-        <p>&copy; 2019 <a class="link" href="https://bow-swift.io" target="_blank" rel="external">Bow</a>. All rights reserved. (Last updated: 2019-03-26)</p>
+        <p>&copy; 2019 <a class="link" href="https://bow-swift.io" target="_blank" rel="external">Bow</a>. All rights reserved. (Last updated: 2019-03-27)</p>
         <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
       </div>
     </section>

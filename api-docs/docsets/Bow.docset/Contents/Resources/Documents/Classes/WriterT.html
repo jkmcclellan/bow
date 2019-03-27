@@ -65,7 +65,7 @@
             <img style="height: 18px;" class="header-icon" src="../img/bow-logo.png" alt="Bow Docs"/>
             <span class="header-title">Bow</span>
           </a>
-          <span class="header-tag"> 51% documented</span>
+          <span class="header-tag"> 54% documented</span>
         </p>
     
           <p class="header-col header-col--secondary">
@@ -1501,7 +1501,7 @@
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p>WriterT transformer represents operations that accumulate values through a computation or effect, without reading them.</p>
 
           </div>
         </section>
@@ -1523,7 +1523,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Safe downcast.</p>
 
                       </div>
                       <div class="declaration">
@@ -1533,6 +1533,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">fix</span><span class="p">(</span><span class="n">_</span> <span class="nv">fa</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:3Bow9WriterTOfa">WriterTOf</a></span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">W</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">WriterT</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">W</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  fa
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Value in the higher-kind form.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Value cast to WriterT.</p>
                       </div>
                     </section>
                   </div>
@@ -1550,7 +1573,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Initializes a <code>WriterT</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -1561,12 +1584,38 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  value
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A pair of accumulator and value wrapped in an effect.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </section>
                   </div>
                 </li>
               </ul>
             </div>
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Functions%20for%20%60WriterT%60%20when%20the%20effect%20has%20an%20instance%20of%20%60Functor%60"></a>
+                <a name="//apple_ref/swift/Section/Functions for `WriterT` when the effect has an instance of `Functor`" class="dashAnchor"></a>
+                <a href="#/Functions%20for%20%60WriterT%60%20when%20the%20effect%20has%20an%20instance%20of%20%60Functor%60">
+                  <h3 id="Functions%20for%20%60WriterT%60%20when%20the%20effect%20has%20an%20instance%20of%20%60Functor%60" class="section-name">Functions for `WriterT` when the effect has an instance of `Functor`<span class="anchor-icon" /></h3>
+                </a>
+              </div>
               <ul class="item-container">
                 <li class="item">
                   <div>
@@ -1581,7 +1630,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Adds an accumulated value to an effect.</p>
 
                       </div>
                       <div class="declaration">
@@ -1592,32 +1641,40 @@
 
                         </div>
                       </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3Bow7WriterTCA2A7FunctorRzrlE5putT2yACyxq_q0_GAA4KindCyxq0_G_q_tFZ"></a>
-                    <a name="//apple_ref/swift/Method/putT2(_:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3Bow7WriterTCA2A7FunctorRzrlE5putT2yACyxq_q0_GAA4KindCyxq0_G_q_tFZ">
-                      <span class="token-name">putT2(_:_:)</span>
-                      <span class="token-icon" /></a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <section class="section">
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  fa
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A value wrapped in an effect.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  w
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A value for the accumulator.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language key-main">
-                          <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">putT2</span><span class="p">(</span><span class="n">_</span> <span class="nv">vf</span><span class="p">:</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">_</span> <span class="nv">w</span><span class="p">:</span> <span class="kt">W</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">WriterT</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">W</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
-
-                        </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>WriterT</code> where the effect wraps the original value with the accumulator.</p>
                       </div>
                     </section>
                   </div>
@@ -1635,7 +1692,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Obtains an effect with the result value.</p>
 
                       </div>
                       <div class="declaration">
@@ -1645,6 +1702,10 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">content</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Effect with the result value.</p>
                       </div>
                     </section>
                   </div>
@@ -1662,7 +1723,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Obtains an effect with the accumulator value.</p>
 
                       </div>
                       <div class="declaration">
@@ -1673,12 +1734,23 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Effect with the accumulator value.</p>
+                      </div>
                     </section>
                   </div>
                 </li>
               </ul>
             </div>
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Functions%20for%20%60WriterT%60%20when%20the%20effect%20has%20an%20instance%20of%20%60Functor%60%20and%20the%20accumulator%20type%20has%20an%20instance%20of%20%60Monoid%60"></a>
+                <a name="//apple_ref/swift/Section/Functions for `WriterT` when the effect has an instance of `Functor` and the accumulator type has an instance of `Monoid`" class="dashAnchor"></a>
+                <a href="#/Functions%20for%20%60WriterT%60%20when%20the%20effect%20has%20an%20instance%20of%20%60Functor%60%20and%20the%20accumulator%20type%20has%20an%20instance%20of%20%60Monoid%60">
+                  <h3 id="Functions%20for%20%60WriterT%60%20when%20the%20effect%20has%20an%20instance%20of%20%60Functor%60%20and%20the%20accumulator%20type%20has%20an%20instance%20of%20%60Monoid%60" class="section-name">Functions for `WriterT` when the effect has an instance of `Functor` and the accumulator type has an instance of `Monoid`<span class="anchor-icon" /></h3>
+                </a>
+              </div>
               <ul class="item-container">
                 <li class="item">
                   <div>
@@ -1693,7 +1765,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Lifts an effect to a <code>WriterT</code> using the empty value of the <code><a href="../Protocols/Monoid.html">Monoid</a></code> as the accumulator.</p>
 
                       </div>
                       <div class="declaration">
@@ -1704,12 +1776,42 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  fa
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An effect.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>WriterT</code> where the effect wraps the original value with an empty accumulator.</p>
+                      </div>
                     </section>
                   </div>
                 </li>
               </ul>
             </div>
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Functions%20for%20%60WriterT%60%20when%20the%20effect%20has%20an%20instance%20of%20%60Applicative%60"></a>
+                <a name="//apple_ref/swift/Section/Functions for `WriterT` when the effect has an instance of `Applicative`" class="dashAnchor"></a>
+                <a href="#/Functions%20for%20%60WriterT%60%20when%20the%20effect%20has%20an%20instance%20of%20%60Applicative%60">
+                  <h3 id="Functions%20for%20%60WriterT%60%20when%20the%20effect%20has%20an%20instance%20of%20%60Applicative%60" class="section-name">Functions for `WriterT` when the effect has an instance of `Applicative`<span class="anchor-icon" /></h3>
+                </a>
+              </div>
               <ul class="item-container">
                 <li class="item">
                   <div>
@@ -1724,7 +1826,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Creates a <code>WriterT</code> from values for the result and accumulator.</p>
 
                       </div>
                       <div class="declaration">
@@ -1734,6 +1836,41 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">both</span><span class="p">(</span><span class="n">_</span> <span class="nv">w</span><span class="p">:</span> <span class="kt">W</span><span class="p">,</span> <span class="n">_</span> <span class="nv">a</span><span class="p">:</span> <span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">WriterT</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">W</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  w
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Initial value for the accumulator.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  a
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Initial value for the result.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>WriterT</code> wrapping the provided values in an effect.</p>
                       </div>
                     </section>
                   </div>
@@ -1751,7 +1888,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Creates a <code>WriterT</code> from a tuple.</p>
 
                       </div>
                       <div class="declaration">
@@ -1761,6 +1898,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">fromTuple</span><span class="p">(</span><span class="n">_</span> <span class="nv">z</span><span class="p">:</span> <span class="p">(</span><span class="kt">W</span><span class="p">,</span> <span class="kt">A</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="kt">WriterT</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">W</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  z
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A tuple where the first component is used for the accumulator and the second for the result value.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>WriterT</code> wrapping the provided values in an effect.</p>
                       </div>
                     </section>
                   </div>
@@ -1778,7 +1938,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Creates a <code>WriterT</code> from values for the result and accumulator.</p>
 
                       </div>
                       <div class="declaration">
@@ -1789,32 +1949,40 @@
 
                         </div>
                       </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3Bow7WriterTCA2A11ApplicativeRzrlE4put2yACyxq_q0_Gq0__q_tFZ"></a>
-                    <a name="//apple_ref/swift/Method/put2(_:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3Bow7WriterTCA2A11ApplicativeRzrlE4put2yACyxq_q0_Gq0__q_tFZ">
-                      <span class="token-name">put2(_:_:)</span>
-                      <span class="token-icon" /></a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <section class="section">
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  a
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Initial value for the result.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  w
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Initial value for the accumulator.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language key-main">
-                          <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">put2</span><span class="p">(</span><span class="n">_</span> <span class="nv">a</span><span class="p">:</span> <span class="kt">A</span><span class="p">,</span> <span class="n">_</span> <span class="nv">w</span><span class="p">:</span> <span class="kt">W</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">WriterT</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">W</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
-
-                        </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>WriterT</code> wrapping the provided values in an effect.</p>
                       </div>
                     </section>
                   </div>
@@ -1832,7 +2000,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Creates a <code>WriterT</code> from an initial value for the accumulator.</p>
 
                       </div>
                       <div class="declaration">
@@ -1842,6 +2010,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">tell</span><span class="p">(</span><span class="n">_</span> <span class="nv">l</span><span class="p">:</span> <span class="kt">W</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">WriterT</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">W</span><span class="p">,</span> <span class="kt"><a href="../Typealiases.html#/s:3Bow4Unita">Unit</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  l
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Initial value for the accumulator.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>WriterT</code> wrapping the provided value and unit for the result value.</p>
                       </div>
                     </section>
                   </div>
@@ -1859,7 +2050,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Lifts an effect using the accumulator value of this <code>WriterT</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -1870,12 +2061,42 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  fb
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Effect to be lifted.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>WriterT</code> wrapping the value contained in the effect parameter and using the accumulator of this <code>WriterT</code>.</p>
+                      </div>
                     </section>
                   </div>
                 </li>
               </ul>
             </div>
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Functions%20for%20%60WriterT%60%20when%20the%20effect%20has%20an%20instance%20of%20%60Applicative%60%20and%20the%20accumulator%20type%20has%20an%20instance%20of%20%60Monoid%60"></a>
+                <a name="//apple_ref/swift/Section/Functions for `WriterT` when the effect has an instance of `Applicative` and the accumulator type has an instance of `Monoid`" class="dashAnchor"></a>
+                <a href="#/Functions%20for%20%60WriterT%60%20when%20the%20effect%20has%20an%20instance%20of%20%60Applicative%60%20and%20the%20accumulator%20type%20has%20an%20instance%20of%20%60Monoid%60">
+                  <h3 id="Functions%20for%20%60WriterT%60%20when%20the%20effect%20has%20an%20instance%20of%20%60Applicative%60%20and%20the%20accumulator%20type%20has%20an%20instance%20of%20%60Monoid%60" class="section-name">Functions for `WriterT` when the effect has an instance of `Applicative` and the accumulator type has an instance of `Monoid`<span class="anchor-icon" /></h3>
+                </a>
+              </div>
               <ul class="item-container">
                 <li class="item">
                   <div>
@@ -1890,7 +2111,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Creates a <code>WriterT</code> from an initial value for the result.</p>
 
                       </div>
                       <div class="declaration">
@@ -1901,12 +2122,42 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  a
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Initial value for the result.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>WriterT</code> wrapping the provided value and using the empty value of the <code><a href="../Protocols/Monoid.html">Monoid</a></code> for the accumulator.</p>
+                      </div>
                     </section>
                   </div>
                 </li>
               </ul>
             </div>
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Functions%20for%20%60WriterT%60%20when%20the%20effect%20has%20an%20instance%20of%20%60Monad%60"></a>
+                <a name="//apple_ref/swift/Section/Functions for `WriterT` when the effect has an instance of `Monad`" class="dashAnchor"></a>
+                <a href="#/Functions%20for%20%60WriterT%60%20when%20the%20effect%20has%20an%20instance%20of%20%60Monad%60">
+                  <h3 id="Functions%20for%20%60WriterT%60%20when%20the%20effect%20has%20an%20instance%20of%20%60Monad%60" class="section-name">Functions for `WriterT` when the effect has an instance of `Monad`<span class="anchor-icon" /></h3>
+                </a>
+              </div>
               <ul class="item-container">
                 <li class="item">
                   <div>
@@ -1921,7 +2172,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Transforms the accumulator and result values using a provided function.</p>
 
                       </div>
                       <div class="declaration">
@@ -1931,6 +2182,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">transform</span><span class="o">&lt;</span><span class="kt">B</span><span class="p">,</span> <span class="kt">U</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="kt">W</span><span class="p">,</span> <span class="kt">A</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">U</span><span class="p">,</span> <span class="kt">B</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="kt">WriterT</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">U</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  f
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Transforming function.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>WriterT</code> where the original values have been transformed using the provided function.</p>
                       </div>
                     </section>
                   </div>
@@ -1948,7 +2222,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Transforms the accumulator using the provided function.</p>
 
                       </div>
                       <div class="declaration">
@@ -1958,6 +2232,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">mapAcc</span><span class="o">&lt;</span><span class="kt">U</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">W</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">U</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">WriterT</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">U</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  f
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Transforming function.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>WriterT</code> with the same result as the original one, and the transformed accumulator.</p>
                       </div>
                     </section>
                   </div>
@@ -1975,7 +2272,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Transforms the accumulator and result values using two functions.</p>
 
                       </div>
                       <div class="declaration">
@@ -1985,6 +2282,41 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">bimap</span><span class="o">&lt;</span><span class="kt">B</span><span class="p">,</span> <span class="kt">U</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">g</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">W</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">U</span><span class="p">,</span> <span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">B</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">WriterT</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">U</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  g
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Transforming function for the accumulator.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  f
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Transforming function for the result.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>WriterT</code> where the original values have been transformed using the provided functions.</p>
                       </div>
                     </section>
                   </div>
@@ -2002,7 +2334,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Flatmaps the provided function to the nested tuple.</p>
 
                       </div>
                       <div class="declaration">
@@ -2012,6 +2344,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">subflatMap</span><span class="o">&lt;</span><span class="kt">B</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">W</span><span class="p">,</span> <span class="kt">B</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="kt">WriterT</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">W</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  f
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Function for the flatmap operation.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Result of flatmapping the provided function to the nested values, wrapped in the effect.</p>
                       </div>
                     </section>
                   </div>
@@ -2029,7 +2384,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Swaps the result and accumulator values.</p>
 
                       </div>
                       <div class="declaration">
@@ -2039,6 +2394,10 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">swap</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">WriterT</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">A</span><span class="p">,</span> <span class="kt">W</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>WriterT</code> where the accumulator is the original result value and vice versa.</p>
                       </div>
                     </section>
                   </div>
@@ -2056,7 +2415,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Runs this effect and pairs the result with the accumulator for a new result.</p>
 
                       </div>
                       <div class="declaration">
@@ -2067,12 +2426,23 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>WriterT</code> where the result is paired with the accumulator.</p>
+                      </div>
                     </section>
                   </div>
                 </li>
               </ul>
             </div>
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Functions%20for%20%60WriterT%60%20when%20the%20effect%20has%20an%20instance%20of%20%60Monad%60%20and%20the%20accumulator%20type%20has%20an%20instance%20of%20%60Semigroup%60"></a>
+                <a name="//apple_ref/swift/Section/Functions for `WriterT` when the effect has an instance of `Monad` and the accumulator type has an instance of `Semigroup`" class="dashAnchor"></a>
+                <a href="#/Functions%20for%20%60WriterT%60%20when%20the%20effect%20has%20an%20instance%20of%20%60Monad%60%20and%20the%20accumulator%20type%20has%20an%20instance%20of%20%60Semigroup%60">
+                  <h3 id="Functions%20for%20%60WriterT%60%20when%20the%20effect%20has%20an%20instance%20of%20%60Monad%60%20and%20the%20accumulator%20type%20has%20an%20instance%20of%20%60Semigroup%60" class="section-name">Functions for `WriterT` when the effect has an instance of `Monad` and the accumulator type has an instance of `Semigroup`<span class="anchor-icon" /></h3>
+                </a>
+              </div>
               <ul class="item-container">
                 <li class="item">
                   <div>
@@ -2087,7 +2457,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Combines the accumulator with a new value.</p>
 
                       </div>
                       <div class="declaration">
@@ -2098,12 +2468,42 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  w
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>New value to combine the accumulator with.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>WriterT</code> with the same result and combined accumulator.</p>
+                      </div>
                     </section>
                   </div>
                 </li>
               </ul>
             </div>
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Functions%20for%20%60WriterT%60%20when%20the%20effect%20has%20an%20instance%20of%20%60Monad%60%20and%20the%20accumulator%20type%20has%20an%20instance%20of%20%60Monoid%60"></a>
+                <a name="//apple_ref/swift/Section/Functions for `WriterT` when the effect has an instance of `Monad` and the accumulator type has an instance of `Monoid`" class="dashAnchor"></a>
+                <a href="#/Functions%20for%20%60WriterT%60%20when%20the%20effect%20has%20an%20instance%20of%20%60Monad%60%20and%20the%20accumulator%20type%20has%20an%20instance%20of%20%60Monoid%60">
+                  <h3 id="Functions%20for%20%60WriterT%60%20when%20the%20effect%20has%20an%20instance%20of%20%60Monad%60%20and%20the%20accumulator%20type%20has%20an%20instance%20of%20%60Monoid%60" class="section-name">Functions for `WriterT` when the effect has an instance of `Monad` and the accumulator type has an instance of `Monoid`<span class="anchor-icon" /></h3>
+                </a>
+              </div>
               <ul class="item-container">
                 <li class="item">
                   <div>
@@ -2118,7 +2518,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Flatmaps a function that produces an effect and lifts it back to <code>WriterT</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -2128,6 +2528,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">semiflatMap</span><span class="o">&lt;</span><span class="kt">B</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">WriterT</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">W</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  f
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A function producing an effect.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Result of flatmapping and lifting the function on this value.</p>
                       </div>
                     </section>
                   </div>
@@ -2145,7 +2568,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Resets the accumulator to the empty value of the <code><a href="../Protocols/Monoid.html">Monoid</a></code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -2155,6 +2578,10 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">reset</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">WriterT</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">W</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>WriterT</code> value with an empty accumulator and the same result value.</p>
                       </div>
                     </section>
                   </div>
@@ -2172,7 +2599,7 @@
         <p>with support from <a href="https://47deg.com/">47 Degrees</a></p>
       </div>
       <div>
-        <p>&copy; 2019 <a class="link" href="https://bow-swift.io" target="_blank" rel="external">Bow</a>. All rights reserved. (Last updated: 2019-03-26)</p>
+        <p>&copy; 2019 <a class="link" href="https://bow-swift.io" target="_blank" rel="external">Bow</a>. All rights reserved. (Last updated: 2019-03-27)</p>
         <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
       </div>
     </section>
