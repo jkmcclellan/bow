@@ -65,7 +65,7 @@
             <img style="height: 18px;" class="header-icon" src="../img/bow-logo.png" alt="Bow Docs"/>
             <span class="header-title">Bow</span>
           </a>
-          <span class="header-tag"> 54% documented</span>
+          <span class="header-tag"> 56% documented</span>
         </p>
     
           <p class="header-col header-col--secondary">
@@ -1501,7 +1501,7 @@
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p>A NonEmptyArray is an array of elements that guarantees to have at least one element.</p>
 
           </div>
         </section>
@@ -1523,7 +1523,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>First element of the array.</p>
 
                       </div>
                       <div class="declaration">
@@ -1550,7 +1550,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Elements of the array, excluding the firs one.</p>
 
                       </div>
                       <div class="declaration">
@@ -1577,7 +1577,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Concatenates two non-empty arrays.</p>
 
                       </div>
                       <div class="declaration">
@@ -1587,6 +1587,41 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">+</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">NonEmptyArray</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">NonEmptyArray</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NonEmptyArray</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  lhs
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Left hand side of the concatenation.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  rhs
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Right hand side of the concatenation.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A non-empty array that contains the elements of the two arguments in the same order.</p>
                       </div>
                     </section>
                   </div>
@@ -1604,7 +1639,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Concatenates a non-empty array with a Swift array.</p>
 
                       </div>
                       <div class="declaration">
@@ -1614,6 +1649,41 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">+</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">NonEmptyArray</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="p">[</span><span class="kt">A</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">NonEmptyArray</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  lhs
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A non-empty array.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  rhs
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A Swift array.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A non-empty array that contains the elements of the two arguments in the same order.</p>
                       </div>
                     </section>
                   </div>
@@ -1631,7 +1701,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Appends an element to a non-empty array.</p>
 
                       </div>
                       <div class="declaration">
@@ -1641,6 +1711,41 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">+</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">NonEmptyArray</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NonEmptyArray</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  lhs
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A non-empty array.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  rhs
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An element.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A non-empty array that has the new element at the end.</p>
                       </div>
                     </section>
                   </div>
@@ -1658,7 +1763,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Creates a non-empty array from several values.</p>
 
                       </div>
                       <div class="declaration">
@@ -1668,6 +1773,41 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">of</span><span class="p">(</span><span class="n">_</span> <span class="nv">head</span><span class="p">:</span> <span class="kt">A</span><span class="p">,</span> <span class="n">_</span> <span class="nv">tail</span><span class="p">:</span> <span class="kt">A</span><span class="o">...</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NonEmptyArray</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  head
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>First element for the non-empty array.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  tail
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Variable number of values for the rest of the non-empty array.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A non-empty array that contains all elements in the specified order.</p>
                       </div>
                     </section>
                   </div>
@@ -1685,7 +1825,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Creates a non-empty array from a Swift array.</p>
 
                       </div>
                       <div class="declaration">
@@ -1695,6 +1835,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">fromArray</span><span class="p">(</span><span class="n">_</span> <span class="nv">array</span><span class="p">:</span> <span class="p">[</span><span class="kt">A</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Option.html">Option</a></span><span class="o">&lt;</span><span class="kt">NonEmptyArray</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  array
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A Swift array.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An optional non-empty array with the contents of the argument, or <code>Option.none</code> if it was empty.</p>
                       </div>
                     </section>
                   </div>
@@ -1712,7 +1875,9 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Unsafely creates a non-empty array from a Swift array.</p>
+
+<p>This function may cause a fatal error if the argument is an empty error.</p>
 
                       </div>
                       <div class="declaration">
@@ -1722,6 +1887,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">fromArrayUnsafe</span><span class="p">(</span><span class="n">_</span> <span class="nv">array</span><span class="p">:</span> <span class="p">[</span><span class="kt">A</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">NonEmptyArray</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  array
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A Swift array.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A non-empty array with the contents of the argument.</p>
                       </div>
                     </section>
                   </div>
@@ -1739,7 +1927,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Safe downcast.</p>
 
                       </div>
                       <div class="declaration">
@@ -1749,6 +1937,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">fix</span><span class="p">(</span><span class="n">_</span> <span class="nv">fa</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:3Bow15NonEmptyArrayOfa">NonEmptyArrayOf</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NonEmptyArray</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  fa
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Value in higher-kind form.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Value cast to NonEmptyArray.</p>
                       </div>
                     </section>
                   </div>
@@ -1766,7 +1977,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Initializes a non-empty array.</p>
 
                       </div>
                       <div class="declaration">
@@ -1776,6 +1987,37 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">head</span><span class="p">:</span> <span class="kt">A</span><span class="p">,</span> <span class="nv">tail</span><span class="p">:</span> <span class="p">[</span><span class="kt">A</span><span class="p">])</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  head
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>First element for the array.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  tail
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An array with the rest of elements.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -1793,7 +2035,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Obtains a Swift array with the elements in this value.</p>
 
                       </div>
                       <div class="declaration">
@@ -1803,6 +2045,10 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">all</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">A</span><span class="p">]</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A Swift array with the elements in this value.</p>
                       </div>
                     </section>
                   </div>
@@ -1820,7 +2066,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Obtains an element from its position in this non-empty array.</p>
 
                       </div>
                       <div class="declaration">
@@ -1830,6 +2076,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getOrNone</span><span class="p">(</span><span class="n">_</span> <span class="nv">i</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Option.html">Option</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  i
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Index of the object to obtain.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An optional value with the object at the indicated position, if any.</p>
                       </div>
                     </section>
                   </div>
@@ -1847,7 +2116,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Obtains an element from its position in this non-empty array.</p>
 
                       </div>
                       <div class="declaration">
@@ -1857,6 +2126,25 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">subscript</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Option.html">Option</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  index
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Index of the object to obtain.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -2118,6 +2406,13 @@
               </ul>
             </div>
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Functions%20for%20%60NonEmptyArray%60%20when%20the%20type%20conforms%20to%20%60Equatable%60"></a>
+                <a name="//apple_ref/swift/Section/Functions for `NonEmptyArray` when the type conforms to `Equatable`" class="dashAnchor"></a>
+                <a href="#/Functions%20for%20%60NonEmptyArray%60%20when%20the%20type%20conforms%20to%20%60Equatable%60">
+                  <h3 id="Functions%20for%20%60NonEmptyArray%60%20when%20the%20type%20conforms%20to%20%60Equatable%60" class="section-name">Functions for `NonEmptyArray` when the type conforms to `Equatable`<span class="anchor-icon" /></h3>
+                </a>
+              </div>
               <ul class="item-container">
                 <li class="item">
                   <div>
@@ -2132,7 +2427,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Checks if an element appears in this array.</p>
 
                       </div>
                       <div class="declaration">
@@ -2142,6 +2437,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">contains</span><span class="p">(</span><span class="nv">element</span><span class="p">:</span> <span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  element
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Element to look for in the array.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Boolean value indicating if the element appears in the array or not.</p>
                       </div>
                     </section>
                   </div>
@@ -2159,7 +2477,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Checks if all the elements of an array appear in this array.</p>
 
                       </div>
                       <div class="declaration">
@@ -2170,12 +2488,42 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  elements
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Elements to look for in the array.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Boolean value indicating if all elements appear in the array or not.</p>
+                      </div>
                     </section>
                   </div>
                 </li>
               </ul>
             </div>
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Functions%20for%20%60NonEmptyArray%60%20when%20the%20type%20conforms%20to%20%60Equatable%602"></a>
+                <a name="//apple_ref/swift/Section/Functions for `NonEmptyArray` when the type conforms to `Equatable`" class="dashAnchor"></a>
+                <a href="#/Functions%20for%20%60NonEmptyArray%60%20when%20the%20type%20conforms%20to%20%60Equatable%602">
+                  <h3 id="Functions%20for%20%60NonEmptyArray%60%20when%20the%20type%20conforms%20to%20%60Equatable%602" class="section-name">Functions for `NonEmptyArray` when the type conforms to `Equatable`<span class="anchor-icon" /></h3>
+                </a>
+              </div>
               <ul class="item-container">
                 <li class="item">
                   <div>
@@ -2206,6 +2554,13 @@
               </ul>
             </div>
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Functions%20for%20%60NonEmptyArray%60%20when%20the%20type%20conforms%20to%20%60Equatable%603"></a>
+                <a name="//apple_ref/swift/Section/Functions for `NonEmptyArray` when the type conforms to `Equatable`" class="dashAnchor"></a>
+                <a href="#/Functions%20for%20%60NonEmptyArray%60%20when%20the%20type%20conforms%20to%20%60Equatable%603">
+                  <h3 id="Functions%20for%20%60NonEmptyArray%60%20when%20the%20type%20conforms%20to%20%60Equatable%603" class="section-name">Functions for `NonEmptyArray` when the type conforms to `Equatable`<span class="anchor-icon" /></h3>
+                </a>
+              </div>
               <ul class="item-container">
                 <li class="item">
                   <div>
@@ -2237,10 +2592,10 @@
             </div>
             <div class="task-group">
               <div class="task-name-container">
-                <a name="/Instance%20of%20%60Selective%60%20for%20%60NonEmptyArray%60"></a>
-                <a name="//apple_ref/swift/Section/Instance of `Selective` for `NonEmptyArray`" class="dashAnchor"></a>
-                <a href="#/Instance%20of%20%60Selective%60%20for%20%60NonEmptyArray%60">
-                  <h3 id="Instance%20of%20%60Selective%60%20for%20%60NonEmptyArray%60" class="section-name">Instance of `Selective` for `NonEmptyArray`<span class="anchor-icon" /></h3>
+                <a name="/Instance%20of%20%60Semigroup%60%20for%20%60NonEmptyArray%60"></a>
+                <a name="//apple_ref/swift/Section/Instance of `Semigroup` for `NonEmptyArray`" class="dashAnchor"></a>
+                <a href="#/Instance%20of%20%60Semigroup%60%20for%20%60NonEmptyArray%60">
+                  <h3 id="Instance%20of%20%60Semigroup%60%20for%20%60NonEmptyArray%60" class="section-name">Instance of `Semigroup` for `NonEmptyArray`<span class="anchor-icon" /></h3>
                 </a>
               </div>
               <ul class="item-container">
