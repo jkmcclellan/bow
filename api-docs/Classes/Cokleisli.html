@@ -65,7 +65,7 @@
             <img style="height: 18px;" class="header-icon" src="../img/bow-logo.png" alt="Bow Docs"/>
             <span class="header-title">Bow</span>
           </a>
-          <span class="header-tag"> 56% documented</span>
+          <span class="header-tag"> 58% documented</span>
         </p>
     
           <p class="header-col header-col--secondary">
@@ -1501,7 +1501,7 @@
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p>Cokleisli represents a function with the signature <code>(Kind&lt;F, A&gt;) -&gt; B</code>.</p>
 
           </div>
         </section>
@@ -1523,7 +1523,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Safe downcast.</p>
 
                       </div>
                       <div class="declaration">
@@ -1533,6 +1533,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">fix</span><span class="p">(</span><span class="n">_</span> <span class="nv">fa</span><span class="p">:</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="kt"><a href="../Classes/CokleisliPartial.html">CokleisliPartial</a></span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Cokleisli</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  value
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Value in higher-kind form.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Value cast to Cokleisli.</p>
                       </div>
                     </section>
                   </div>
@@ -1550,7 +1573,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Initializes a Cokleisli.</p>
 
                       </div>
                       <div class="declaration">
@@ -1560,6 +1583,25 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">run</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">B</span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  run
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Closure to be wrapped in this Cokleisli.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -1577,7 +1619,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Composes the internal function with another function.</p>
 
                       </div>
                       <div class="declaration">
@@ -1588,12 +1630,42 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  f
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Function to compose with the internal function.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A Cokleisli with the result of the composition.</p>
+                      </div>
                     </section>
                   </div>
                 </li>
               </ul>
             </div>
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Functions%20for%20%60Cokleisli%60%20when%20the%20effect%20has%20a%20%60Comonad%60%20instance."></a>
+                <a name="//apple_ref/swift/Section/Functions for `Cokleisli` when the effect has a `Comonad` instance." class="dashAnchor"></a>
+                <a href="#/Functions%20for%20%60Cokleisli%60%20when%20the%20effect%20has%20a%20%60Comonad%60%20instance.">
+                  <h3 id="Functions%20for%20%60Cokleisli%60%20when%20the%20effect%20has%20a%20%60Comonad%60%20instance." class="section-name">Functions for `Cokleisli` when the effect has a `Comonad` instance.<span class="anchor-icon" /></h3>
+                </a>
+              </div>
               <ul class="item-container">
                 <li class="item">
                   <div>
@@ -1608,7 +1680,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Creates a Cokleisli that extracts the value of a <code><a href="../Protocols/Comonad.html">Comonad</a></code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -1618,6 +1690,10 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">ask</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Cokleisli</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A Cokleisli that extracts the value of a <code><a href="../Protocols/Comonad.html">Comonad</a></code>.</p>
                       </div>
                     </section>
                   </div>
@@ -1635,7 +1711,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Transforms the type arguments of this Cokleisli.</p>
 
                       </div>
                       <div class="declaration">
@@ -1645,6 +1721,41 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">bimap</span><span class="o">&lt;</span><span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">g</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">D</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span> <span class="n">_</span> <span class="nv">f</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">B</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">C</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Cokleisli</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">D</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  g
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Function to transform the input type argument.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  f
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Function to transform the output type argument.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A Cokleisli with both type arguments transformed.</p>
                       </div>
                     </section>
                   </div>
@@ -1662,7 +1773,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Transforms the input type argument of this Cokleisli.</p>
 
                       </div>
                       <div class="declaration">
@@ -1672,6 +1783,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">lmap</span><span class="o">&lt;</span><span class="kt">D</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">g</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">D</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Cokleisli</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">D</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  g
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Function to transform the input type argument.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A Cokleisli with both type arguments transformed.</p>
                       </div>
                     </section>
                   </div>
@@ -1689,7 +1823,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Composes this Cokleisli with another one.</p>
 
                       </div>
                       <div class="declaration">
@@ -1699,6 +1833,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">compose</span><span class="o">&lt;</span><span class="kt">D</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">a</span><span class="p">:</span> <span class="kt">Cokleisli</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">D</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Cokleisli</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">D</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  a
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Cokleisli to compose with this value.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Composition of both Cokleisli values.</p>
                       </div>
                     </section>
                   </div>
@@ -1716,7 +1873,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Composes this Cokleisli with an effect, discarding the result produced by this Cokleisli.</p>
 
                       </div>
                       <div class="declaration">
@@ -1726,6 +1883,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">andThen</span><span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">a</span><span class="p">:</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Cokleisli</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">A</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  a
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An effect.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Composition of this Cokleisli with an effect.</p>
                       </div>
                     </section>
                   </div>
@@ -1743,7 +1923,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Composes this Cokleisli with another one.</p>
 
                       </div>
                       <div class="declaration">
@@ -1753,6 +1933,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">andThen</span><span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">a</span><span class="p">:</span> <span class="kt">Cokleisli</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Cokleisli</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">A</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  a
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Cokleisli to compose with this value.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Composition of both Cokleisli values.</p>
                       </div>
                     </section>
                   </div>
