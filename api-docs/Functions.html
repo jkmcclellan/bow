@@ -912,20 +912,20 @@
               <li class="nav-group-task" data-name="compose(_:_:)" data-url="Functions.html#/s:3Bow7composeyq_ycq_xc_xyctr0_lF">
                 <a title="compose(_:_:)" class="nav-group-task-link" href="Functions.html#/s:3Bow7composeyq_ycq_xc_xyctr0_lF">compose(_:_:)</a>
               </li>
-              <li class="nav-group-task" data-name="constant(_:)" data-url="Functions.html#/s:3Bow8constantyxq__q0_q1_q2_tcxr3_lF">
-                <a title="constant(_:)" class="nav-group-task-link" href="Functions.html#/s:3Bow8constantyxq__q0_q1_q2_tcxr3_lF">constant(_:)</a>
+              <li class="nav-group-task" data-name="constant(_:)" data-url="Functions.html#/s:3Bow8constantyxq__q0_q1_q2_tcxyXAr3_lF">
+                <a title="constant(_:)" class="nav-group-task-link" href="Functions.html#/s:3Bow8constantyxq__q0_q1_q2_tcxyXAr3_lF">constant(_:)</a>
               </li>
-              <li class="nav-group-task" data-name="constant(_:)" data-url="Functions.html#/s:3Bow8constantyxq__q0_q1_tcxr2_lF">
-                <a title="constant(_:)" class="nav-group-task-link" href="Functions.html#/s:3Bow8constantyxq__q0_q1_tcxr2_lF">constant(_:)</a>
+              <li class="nav-group-task" data-name="constant(_:)" data-url="Functions.html#/s:3Bow8constantyxq__q0_q1_tcxyXAr2_lF">
+                <a title="constant(_:)" class="nav-group-task-link" href="Functions.html#/s:3Bow8constantyxq__q0_q1_tcxyXAr2_lF">constant(_:)</a>
               </li>
-              <li class="nav-group-task" data-name="constant(_:)" data-url="Functions.html#/s:3Bow8constantyxq__q0_tcxr1_lF">
-                <a title="constant(_:)" class="nav-group-task-link" href="Functions.html#/s:3Bow8constantyxq__q0_tcxr1_lF">constant(_:)</a>
+              <li class="nav-group-task" data-name="constant(_:)" data-url="Functions.html#/s:3Bow8constantyxq__q0_tcxyXAr1_lF">
+                <a title="constant(_:)" class="nav-group-task-link" href="Functions.html#/s:3Bow8constantyxq__q0_tcxyXAr1_lF">constant(_:)</a>
               </li>
-              <li class="nav-group-task" data-name="constant(_:)" data-url="Functions.html#/s:3Bow8constantyxq_cxr0_lF">
-                <a title="constant(_:)" class="nav-group-task-link" href="Functions.html#/s:3Bow8constantyxq_cxr0_lF">constant(_:)</a>
+              <li class="nav-group-task" data-name="constant(_:)" data-url="Functions.html#/s:3Bow8constantyxq_cxyXAr0_lF">
+                <a title="constant(_:)" class="nav-group-task-link" href="Functions.html#/s:3Bow8constantyxq_cxyXAr0_lF">constant(_:)</a>
               </li>
-              <li class="nav-group-task" data-name="constant(_:)" data-url="Functions.html#/s:3Bow8constantyxycxlF">
-                <a title="constant(_:)" class="nav-group-task-link" href="Functions.html#/s:3Bow8constantyxycxlF">constant(_:)</a>
+              <li class="nav-group-task" data-name="constant(_:)" data-url="Functions.html#/s:3Bow8constantyxycxyXAlF">
+                <a title="constant(_:)" class="nav-group-task-link" href="Functions.html#/s:3Bow8constantyxycxyXAlF">constant(_:)</a>
               </li>
               <li class="nav-group-task" data-name="curry(_:)" data-url="Functions.html#/s:3Bow5curryyq0_q_cxcq0_x_q_tcr1_lF">
                 <a title="curry(_:)" class="nav-group-task-link" href="Functions.html#/s:3Bow5curryyq0_q_cxcq0_x_q_tcr1_lF">curry(_:)</a>
@@ -6443,9 +6443,9 @@ As an example, consider this implementation of a memoized factorial:</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3Bow8constantyxycxlF"></a>
+                    <a name="/s:3Bow8constantyxycxyXAlF"></a>
                     <a name="//apple_ref/swift/Function/constant(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3Bow8constantyxycxlF">
+                    <a class="token" href="#/s:3Bow8constantyxycxyXAlF">
                       <span class="token-name">constant(_:)</span>
                       <span class="token-icon" /></a>
                     </code>
@@ -6460,7 +6460,7 @@ As an example, consider this implementation of a memoized factorial:</p>
                         <h4>Declaration</h4>
                         <div class="language key-main">
                           <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">constant</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">a</span><span class="p">:</span> <span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">A</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">constant</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">a</span><span class="p">:</span> <span class="kd">@autoclosure</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">A</span></code></pre>
 
                         </div>
                       </div>
@@ -6493,9 +6493,9 @@ As an example, consider this implementation of a memoized factorial:</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3Bow8constantyxq_cxr0_lF"></a>
+                    <a name="/s:3Bow8constantyxq_cxyXAr0_lF"></a>
                     <a name="//apple_ref/swift/Function/constant(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3Bow8constantyxq_cxr0_lF">
+                    <a class="token" href="#/s:3Bow8constantyxq_cxyXAr0_lF">
                       <span class="token-name">constant(_:)</span>
                       <span class="token-icon" /></a>
                     </code>
@@ -6510,7 +6510,7 @@ As an example, consider this implementation of a memoized factorial:</p>
                         <h4>Declaration</h4>
                         <div class="language key-main">
                           <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">constant</span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">a</span><span class="p">:</span> <span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">B</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">constant</span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">a</span><span class="p">:</span> <span class="kd">@autoclosure</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">B</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span></code></pre>
 
                         </div>
                       </div>
@@ -6543,9 +6543,9 @@ As an example, consider this implementation of a memoized factorial:</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3Bow8constantyxq__q0_tcxr1_lF"></a>
+                    <a name="/s:3Bow8constantyxq__q0_tcxyXAr1_lF"></a>
                     <a name="//apple_ref/swift/Function/constant(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3Bow8constantyxq__q0_tcxr1_lF">
+                    <a class="token" href="#/s:3Bow8constantyxq__q0_tcxyXAr1_lF">
                       <span class="token-name">constant(_:)</span>
                       <span class="token-icon" /></a>
                     </code>
@@ -6560,7 +6560,7 @@ As an example, consider this implementation of a memoized factorial:</p>
                         <h4>Declaration</h4>
                         <div class="language key-main">
                           <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">constant</span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">a</span><span class="p">:</span> <span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">B</span><span class="p">,</span> <span class="kt">C</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">constant</span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">a</span><span class="p">:</span> <span class="kd">@autoclosure</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">B</span><span class="p">,</span> <span class="kt">C</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span></code></pre>
 
                         </div>
                       </div>
@@ -6593,9 +6593,9 @@ As an example, consider this implementation of a memoized factorial:</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3Bow8constantyxq__q0_q1_tcxr2_lF"></a>
+                    <a name="/s:3Bow8constantyxq__q0_q1_tcxyXAr2_lF"></a>
                     <a name="//apple_ref/swift/Function/constant(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3Bow8constantyxq__q0_q1_tcxr2_lF">
+                    <a class="token" href="#/s:3Bow8constantyxq__q0_q1_tcxyXAr2_lF">
                       <span class="token-name">constant(_:)</span>
                       <span class="token-icon" /></a>
                     </code>
@@ -6610,7 +6610,7 @@ As an example, consider this implementation of a memoized factorial:</p>
                         <h4>Declaration</h4>
                         <div class="language key-main">
                           <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">constant</span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">a</span><span class="p">:</span> <span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">B</span><span class="p">,</span> <span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">constant</span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">a</span><span class="p">:</span> <span class="kd">@autoclosure</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">B</span><span class="p">,</span> <span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span></code></pre>
 
                         </div>
                       </div>
@@ -6643,9 +6643,9 @@ As an example, consider this implementation of a memoized factorial:</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3Bow8constantyxq__q0_q1_q2_tcxr3_lF"></a>
+                    <a name="/s:3Bow8constantyxq__q0_q1_q2_tcxyXAr3_lF"></a>
                     <a name="//apple_ref/swift/Function/constant(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3Bow8constantyxq__q0_q1_q2_tcxr3_lF">
+                    <a class="token" href="#/s:3Bow8constantyxq__q0_q1_q2_tcxyXAr3_lF">
                       <span class="token-name">constant(_:)</span>
                       <span class="token-icon" /></a>
                     </code>
@@ -6660,7 +6660,7 @@ As an example, consider this implementation of a memoized factorial:</p>
                         <h4>Declaration</h4>
                         <div class="language key-main">
                           <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">constant</span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="p">,</span> <span class="kt">E</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">a</span><span class="p">:</span> <span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">B</span><span class="p">,</span> <span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="p">,</span> <span class="kt">E</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">constant</span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="p">,</span> <span class="kt">E</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">a</span><span class="p">:</span> <span class="kd">@autoclosure</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">B</span><span class="p">,</span> <span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="p">,</span> <span class="kt">E</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span></code></pre>
 
                         </div>
                       </div>
@@ -9386,7 +9386,7 @@ As an example, consider this implementation of a memoized factorial:</p>
         <p>with support from <a href="https://47deg.com/">47 Degrees</a></p>
       </div>
       <div>
-        <p>&copy; 2019 <a class="link" href="https://bow-swift.io" target="_blank" rel="external">Bow</a>. All rights reserved. (Last updated: 2019-04-01)</p>
+        <p>&copy; 2019 <a class="link" href="https://bow-swift.io" target="_blank" rel="external">Bow</a>. All rights reserved. (Last updated: 2019-04-10)</p>
         <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
       </div>
     </section>
