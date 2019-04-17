@@ -622,6 +622,9 @@
               <li class="nav-group-task" data-name="Optional" data-url="Extensions/Optional.html">
                 <a title="Optional" class="nav-group-task-link" href="../Extensions/Optional.html">Optional</a>
               </li>
+              <li class="nav-group-task" data-name="Optional" data-url="Extensions/Optional.html">
+                <a title="Optional" class="nav-group-task-link" href="../Extensions/Optional.html">Optional</a>
+              </li>
               <li class="nav-group-task" data-name="PrimitiveSequence" data-url="Extensions/PrimitiveSequence.html">
                 <a title="PrimitiveSequence" class="nav-group-task-link" href="../Extensions/PrimitiveSequence.html">PrimitiveSequence</a>
               </li>
@@ -1837,6 +1840,33 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:3Bow6EitherC5orNilq_Sgvp"></a>
+                    <a name="//apple_ref/swift/Property/orNil" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow6EitherC5orNilq_Sgvp">
+                      <span class="token-name">orNil</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Returns the value of the right type, or <code>nil</code> if it is a left value.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">orNil</span><span class="p">:</span> <span class="kt">B</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:3Bow6EitherC4swapACyq_xGyF"></a>
                     <a name="//apple_ref/swift/Method/swap()" class="dashAnchor"></a>
                     <a class="token" href="#/s:3Bow6EitherC4swapACyq_xGyF">
@@ -1923,6 +1953,106 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>Result of applying the corresponding closure to this value.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3Bow6EitherC7mapLeftyACyqd__q_Gqd__xXElF"></a>
+                    <a name="//apple_ref/swift/Method/mapLeft(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow6EitherC7mapLeftyACyqd__q_Gqd__xXElF">
+                      <span class="token-name">mapLeft(_:)</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Transforms the left type parameter, preserving the structure of this value.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">mapLeft</span><span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="p">(</span><span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">C</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Either</span><span class="o">&lt;</span><span class="kt">C</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  f
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Transforming closure.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Result of appliying the transformation to any left value in this value.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3Bow6EitherC11getOrHandleyq_q_xXEF"></a>
+                    <a name="//apple_ref/swift/Method/getOrHandle(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow6EitherC11getOrHandleyq_q_xXEF">
+                      <span class="token-name">getOrHandle(_:)</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Returns the value from this <code>Either.right</code> value or allows callers to transform the <code>Either.left</code> to <code>Either.right</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getOrHandle</span><span class="p">(</span><span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="p">(</span><span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">B</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">B</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  f
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Left transforming function.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Value of this <code>Either.right</code> or transformation of this <code>Either.left</code>.</p>
                       </div>
                     </section>
                   </div>
@@ -2068,6 +2198,118 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>This value, if it matches the predicate or is left; otherwise, a left value wrapping the default value.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3Bow6EitherC13filterOrOtheryACyxq_GSbq_c_xq_ctF"></a>
+                    <a name="//apple_ref/swift/Method/filterOrOther(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow6EitherC13filterOrOtheryACyxq_GSbq_c_xq_ctF">
+                      <span class="token-name">filterOrOther(_:_:)</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Filters the right values, providing a function to transform those that do not match the predicate into a left-type value.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">filterOrOther</span><span class="p">(</span><span class="n">_</span> <span class="nv">predicate</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">B</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">B</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Either</span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  predicate
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Filtering predicate.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  f
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Transforming function.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>This value, if it matches the predicate or is left; otherwise, a left value wrapping the transformation of the right value.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3Bow6EitherC10leftIfNullyACyxqd__GxyXAqd__SgRs_lF"></a>
+                    <a name="//apple_ref/swift/Method/leftIfNull(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow6EitherC10leftIfNullyACyxqd__GxyXAqd__SgRs_lF">
+                      <span class="token-name">leftIfNull(_:)</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Flattens the right side of this value, providing a default value in case the wrapped value is not present.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">leftIfNull</span><span class="o">&lt;</span><span class="kt">BB</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kd">@autoclosure</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Either</span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">BB</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">B</span> <span class="o">==</span> <span class="kt">Optional</span><span class="o">&lt;</span><span class="kt">BB</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  f
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Function providing a default value.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An Either value where the right side is not optional.</p>
                       </div>
                     </section>
                   </div>
@@ -2251,6 +2493,67 @@
             </div>
             <div class="task-group">
               <div class="task-name-container">
+                <a name="/Functions%20when%20the%20right%20side%20is%20Equatable"></a>
+                <a name="//apple_ref/swift/Section/Functions when the right side is Equatable" class="dashAnchor"></a>
+                <a href="#/Functions%20when%20the%20right%20side%20is%20Equatable">
+                  <h3 id="Functions%20when%20the%20right%20side%20is%20Equatable" class="section-name">Functions when the right side is Equatable<span class="anchor-icon" /></h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3Bow6EitherCAASQR_rlE8containsySbq_F"></a>
+                    <a name="//apple_ref/swift/Method/contains(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow6EitherCAASQR_rlE8containsySbq_F">
+                      <span class="token-name">contains(_:)</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Checks if this value has an element in the right side.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">contains</span><span class="p">(</span><span class="n">_</span> <span class="nv">element</span><span class="p">:</span> <span class="kt">B</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  element
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Element to check.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Boolean value indicating if the element was found or not.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
                 <a name="/Conformance%20of%20%60Either%60%20to%20%60CustomStringConvertible%60"></a>
                 <a name="//apple_ref/swift/Section/Conformance of `Either` to `CustomStringConvertible`" class="dashAnchor"></a>
                 <a href="#/Conformance%20of%20%60Either%60%20to%20%60CustomStringConvertible%60">
@@ -2334,7 +2637,7 @@
         <p>with support from <a href="https://47deg.com/">47 Degrees</a></p>
       </div>
       <div>
-        <p>&copy; 2019 <a class="link" href="https://bow-swift.io" target="_blank" rel="external">Bow</a>. All rights reserved. (Last updated: 2019-04-11)</p>
+        <p>&copy; 2019 <a class="link" href="https://bow-swift.io" target="_blank" rel="external">Bow</a>. All rights reserved. (Last updated: 2019-04-17)</p>
         <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
       </div>
     </section>

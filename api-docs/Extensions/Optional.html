@@ -622,6 +622,9 @@
               <li class="nav-group-task" data-name="Optional" data-url="Extensions/Optional.html">
                 <a title="Optional" class="nav-group-task-link" href="../Extensions/Optional.html">Optional</a>
               </li>
+              <li class="nav-group-task" data-name="Optional" data-url="Extensions/Optional.html">
+                <a title="Optional" class="nav-group-task-link" href="../Extensions/Optional.html">Optional</a>
+              </li>
               <li class="nav-group-task" data-name="PrimitiveSequence" data-url="Extensions/PrimitiveSequence.html">
                 <a title="PrimitiveSequence" class="nav-group-task-link" href="../Extensions/PrimitiveSequence.html">PrimitiveSequence</a>
               </li>
@@ -1497,12 +1500,12 @@
             <a href="#/Optional"><h1 id="Optional">Optional<span class="anchor-icon" /></h1></a>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Optional</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span> <span class="o">=</span> <span class="kt"><a href="../Classes/POptional.html">POptional</a></span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">S</span><span class="p">,</span> <span class="kt">A</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">@_frozen</span>
+<span class="kd">enum</span> <span class="kt">Optional</span><span class="o">&lt;</span><span class="kt">Wrapped</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">ExpressibleByNilLiteral</span></code></pre>
 
                 </div>
               </div>
-            <p>Undocumented</p>
-
+            
           </div>
         </section>
 
@@ -1513,57 +1516,49 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9BowOptics9POptionalC2atyACyxxqd_1_qd_1_Gqd___qd_0_t1SQyd__Rs0_AA2AtRd__1IQyd__Rsd_0_1AQyd__Rsd_1_r1_lF"></a>
-                    <a name="//apple_ref/swift/Method/at(_:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9BowOptics9POptionalC2atyACyxxqd_1_qd_1_Gqd___qd_0_t1SQyd__Rs0_AA2AtRd__1IQyd__Rsd_0_1AQyd__Rsd_1_r1_lF">
-                      <span class="token-name">at(_:_:)</span>
+                    <a name="/s:Sq3BowE14rightIfNotNullyAA6EitherCyqd__xGqd__yXKlF"></a>
+                    <a name="//apple_ref/swift/Method/rightIfNotNull(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sq3BowE14rightIfNotNullyAA6EitherCyqd__xGqd__yXKlF">
+                      <span class="token-name">rightIfNotNull(_:)</span>
                       <span class="token-icon" /></a>
                     </code>
                   </div>
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Converts this optional to an <code>Either.right</code> value, providing a default value if it is nil.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language key-main">
                           <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">at</span><span class="o">&lt;</span><span class="kt">AtType</span><span class="p">,</span> <span class="kt">I</span><span class="p">,</span> <span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">at</span><span class="p">:</span> <span class="kt">AtType</span><span class="p">,</span> <span class="n">_</span> <span class="nv">i</span><span class="p">:</span> <span class="kt">I</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Optional</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">T</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">A</span> <span class="o">==</span> <span class="kt">AtType</span><span class="o">.</span><span class="kt">S</span><span class="p">,</span> <span class="kt">AtType</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/At.html">At</a></span><span class="p">,</span> <span class="kt">I</span> <span class="o">==</span> <span class="kt">AtType</span><span class="o">.</span><span class="kt">I</span><span class="p">,</span> <span class="kt">T</span> <span class="o">==</span> <span class="kt">AtType</span><span class="o">.</span><span class="kt">A</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">rightIfNotNull</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="kd">@autoclosure</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Either.html">Either</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">Wrapped</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9BowOptics9POptionalC5everyyAA10PTraversalCyxxqd_0_qd_0_Gqd__1SQyd__Rs0_AA4EachRd__1AQyd__Rsd_0_r0_lF"></a>
-                    <a name="//apple_ref/swift/Method/every(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9BowOptics9POptionalC5everyyAA10PTraversalCyxxqd_0_qd_0_Gqd__1SQyd__Rs0_AA4EachRd__1AQyd__Rsd_0_r0_lF">
-                      <span class="token-name">every(_:)</span>
-                      <span class="token-icon" /></a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <section class="section">
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  f
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Default value provider.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language key-main">
-                          <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">every</span><span class="o">&lt;</span><span class="kt">EachType</span><span class="p">,</span> <span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">each</span><span class="p">:</span> <span class="kt">EachType</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Traversal</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">T</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">A</span> <span class="o">==</span> <span class="kt">EachType</span><span class="o">.</span><span class="kt">S</span><span class="p">,</span> <span class="kt">EachType</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/Each.html">Each</a></span><span class="p">,</span> <span class="kt">T</span> <span class="o">==</span> <span class="kt">EachType</span><span class="o">.</span><span class="kt">A</span></code></pre>
-
-                        </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A right value containing the wrapped value, or a left with the provided default value.</p>
                       </div>
                     </section>
                   </div>
@@ -1581,7 +1576,7 @@
         <p>with support from <a href="https://47deg.com/">47 Degrees</a></p>
       </div>
       <div>
-        <p>&copy; 2019 <a class="link" href="https://bow-swift.io" target="_blank" rel="external">Bow</a>. All rights reserved. (Last updated: 2019-04-11)</p>
+        <p>&copy; 2019 <a class="link" href="https://bow-swift.io" target="_blank" rel="external">Bow</a>. All rights reserved. (Last updated: 2019-04-17)</p>
         <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
       </div>
     </section>
