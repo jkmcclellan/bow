@@ -30,6 +30,9 @@ options:
         - title: Type classes
           url: /docs/fp-concepts/type-classes/
 
+        - title: Data types
+          url: /docs/fp-concepts/data-types/
+
 
   - title: Patterns
 
