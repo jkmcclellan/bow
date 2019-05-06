@@ -1596,7 +1596,7 @@
             <a href="#/Try"><h1 id="Try">Try<span class="anchor-icon" /></h1></a>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">Try</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:3Bow5TryOfa">TryOf</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Try</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:3Bow5TryOfa">TryOf</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                 </div>
               </div>
@@ -1924,6 +1924,60 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:3Bow3TryC9isFailureSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isFailure" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow3TryC9isFailureSbvp">
+                      <span class="token-name">isFailure</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Checks if this value is a failure.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isFailure</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3Bow3TryC9isSuccessSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isSuccess" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow3TryC9isSuccessSbvp">
+                      <span class="token-name">isSuccess</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Checks if this value is a success.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isSuccess</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:3Bow3TryC6failedACys5Error_pGyF"></a>
                     <a name="//apple_ref/swift/Method/failed()" class="dashAnchor"></a>
                     <a class="token" href="#/s:3Bow3TryC6failedACys5Error_pGyF">
@@ -2102,6 +2156,249 @@
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3Bow3TryC9mapFilteryACyqd__GAA6OptionCyqd__GxclF"></a>
+                    <a name="//apple_ref/swift/Method/mapFilter(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow3TryC9mapFilteryACyqd__GAA6OptionCyqd__GxclF">
+                      <span class="token-name">mapFilter(_:)</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Converts this value to a failure if the transformation provides no value.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">mapFilter</span><span class="o">&lt;</span><span class="kt">B</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Option.html">Option</a></span><span class="o">&lt;</span><span class="kt">B</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Try</span><span class="o">&lt;</span><span class="kt">B</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  f
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Transformation function.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A failure if the transformation of this value provides no result, or a success with the result of the transformation.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3Bow3TryC8toOptionAA0D0CyxGyF"></a>
+                    <a name="//apple_ref/swift/Method/toOption()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow3TryC8toOptionAA0D0CyxGyF">
+                      <span class="token-name">toOption()</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Converts this value to an <code><a href="../Classes/Option.html">Option</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">toOption</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Option.html">Option</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>Option.some</code> if this value is a success, or <code>Option.none</code> otherwise.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3Bow3TryC8toEitherAA0D0Cys5Error_pxGyF"></a>
+                    <a name="//apple_ref/swift/Method/toEither()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow3TryC8toEitherAA0D0Cys5Error_pxGyF">
+                      <span class="token-name">toEither()</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Converts this value to an <code><a href="../Classes/Either.html">Either</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">toEither</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Either.html">Either</a></span><span class="o">&lt;</span><span class="kt">Error</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A right value if this value is a success, or a left value if it contains an error.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3Bow3TryC12getOrDefaultyxxyXAF"></a>
+                    <a name="//apple_ref/swift/Method/getOrDefault(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow3TryC12getOrDefaultyxxyXAF">
+                      <span class="token-name">getOrDefault(_:)</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Obtains the value of this success or the provided default one if it is a failure.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getOrDefault</span><span class="p">(</span><span class="n">_</span> <span class="n">defaultValue</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kd">@autoclosure</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  defaultValue
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Function providing the default value.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Wrapped value in this success, or default value otherwise.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3Bow3TryC5orNilxSgyF"></a>
+                    <a name="//apple_ref/swift/Method/orNil()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow3TryC5orNilxSgyF">
+                      <span class="token-name">orNil()</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Obtains the value of this success or nil if it is a failure.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">orNil</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Wrapped value in this success, or nil otherwise.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3Bow3TryC6orElseyACyxGAEyXAF"></a>
+                    <a name="//apple_ref/swift/Method/orElse(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow3TryC6orElseyACyxGAEyXAF">
+                      <span class="token-name">orElse(_:)</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Obtains this value or the provided default <code>Try</code> if it is a failure.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">orElse</span><span class="p">(</span><span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kd">@autoclosure</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Try</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Try</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  f
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Function providing the default value.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>This value if it is a success, or the default provided one otherwise.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
             <div class="task-group">
@@ -2126,7 +2423,7 @@
                         <h4>Declaration</h4>
                         <div class="language key-main">
                           <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">traversal</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Traversal</span><span class="o">&lt;</span><span class="kt"><a href="../Typealiases.html#/s:3Bow5TryOfa">TryOf</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">traversal</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Traversal</span><span class="o">&lt;</span><span class="kt"><a href="../Typealiases.html#/s:3Bow5TryOfa">TryOf</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -2153,7 +2450,7 @@
                         <h4>Declaration</h4>
                         <div class="language key-main">
                           <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">each</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Try/TryEach.html">TryEach</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">each</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Try/TryEach.html">TryEach</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -2181,7 +2478,7 @@
                         <h4>Declaration</h4>
                         <div class="language key-main">
                           <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">TryEach</span><span class="o">&lt;</span><span class="kt">E</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/Each.html">Each</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">TryEach</span><span class="o">&lt;</span><span class="kt">E</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/Each.html">Each</a></span></code></pre>
 
                         </div>
                       </div>
@@ -2212,7 +2509,7 @@
                         <h4>Declaration</h4>
                         <div class="language key-main">
                           <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">pSuccessPrism</span><span class="o">&lt;</span><span class="kt">B</span><span class="o">&gt;</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/PPrism.html">PPrism</a></span><span class="o">&lt;</span><span class="kt">Try</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt">Try</span><span class="o">&lt;</span><span class="kt">B</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="n">pSuccessPrism</span><span class="o">&lt;</span><span class="kt">B</span><span class="o">&gt;</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/PPrism.html">PPrism</a></span><span class="o">&lt;</span><span class="kt">Try</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt">Try</span><span class="o">&lt;</span><span class="kt">B</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -2239,7 +2536,7 @@
                         <h4>Declaration</h4>
                         <div class="language key-main">
                           <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">successPrism</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Prism</span><span class="o">&lt;</span><span class="kt">Try</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">successPrism</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Prism</span><span class="o">&lt;</span><span class="kt">Try</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -2266,7 +2563,7 @@
                         <h4>Declaration</h4>
                         <div class="language key-main">
                           <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">failurePrism</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Prism</span><span class="o">&lt;</span><span class="kt">Try</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt">Error</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">failurePrism</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Prism</span><span class="o">&lt;</span><span class="kt">Try</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt">Error</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -2293,7 +2590,7 @@
                         <h4>Declaration</h4>
                         <div class="language key-main">
                           <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">toPEither</span><span class="o">&lt;</span><span class="kt">B</span><span class="o">&gt;</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/PIso.html">PIso</a></span><span class="o">&lt;</span><span class="kt">Try</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt">Try</span><span class="o">&lt;</span><span class="kt">B</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt"><a href="../Classes/Either.html">Either</a></span><span class="o">&lt;</span><span class="kt">Error</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt"><a href="../Classes/Either.html">Either</a></span><span class="o">&lt;</span><span class="kt">Error</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="n">toPEither</span><span class="o">&lt;</span><span class="kt">B</span><span class="o">&gt;</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/PIso.html">PIso</a></span><span class="o">&lt;</span><span class="kt">Try</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt">Try</span><span class="o">&lt;</span><span class="kt">B</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt"><a href="../Classes/Either.html">Either</a></span><span class="o">&lt;</span><span class="kt">Error</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt"><a href="../Classes/Either.html">Either</a></span><span class="o">&lt;</span><span class="kt">Error</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -2320,7 +2617,7 @@
                         <h4>Declaration</h4>
                         <div class="language key-main">
                           <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">toEither</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Iso</span><span class="o">&lt;</span><span class="kt">Try</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt"><a href="../Classes/Either.html">Either</a></span><span class="o">&lt;</span><span class="kt">Error</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">toEither</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Iso</span><span class="o">&lt;</span><span class="kt">Try</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt"><a href="../Classes/Either.html">Either</a></span><span class="o">&lt;</span><span class="kt">Error</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -2347,7 +2644,7 @@
                         <h4>Declaration</h4>
                         <div class="language key-main">
                           <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">toPValidated</span><span class="o">&lt;</span><span class="kt">B</span><span class="o">&gt;</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/PIso.html">PIso</a></span><span class="o">&lt;</span><span class="kt">Try</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt">Try</span><span class="o">&lt;</span><span class="kt">B</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt"><a href="../Classes/Validated.html">Validated</a></span><span class="o">&lt;</span><span class="kt">Error</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt"><a href="../Classes/Validated.html">Validated</a></span><span class="o">&lt;</span><span class="kt">Error</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="n">toPValidated</span><span class="o">&lt;</span><span class="kt">B</span><span class="o">&gt;</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/PIso.html">PIso</a></span><span class="o">&lt;</span><span class="kt">Try</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt">Try</span><span class="o">&lt;</span><span class="kt">B</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt"><a href="../Classes/Validated.html">Validated</a></span><span class="o">&lt;</span><span class="kt">Error</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt"><a href="../Classes/Validated.html">Validated</a></span><span class="o">&lt;</span><span class="kt">Error</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -2374,7 +2671,7 @@
                         <h4>Declaration</h4>
                         <div class="language key-main">
                           <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">toValidated</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Iso</span><span class="o">&lt;</span><span class="kt">Try</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt"><a href="../Classes/Validated.html">Validated</a></span><span class="o">&lt;</span><span class="kt">Error</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">toValidated</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Iso</span><span class="o">&lt;</span><span class="kt">Try</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt"><a href="../Classes/Validated.html">Validated</a></span><span class="o">&lt;</span><span class="kt">Error</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -2457,6 +2754,80 @@
                 </li>
               </ul>
             </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Instance%20of%20%60Semigroup%60%20for%20%60Try%60"></a>
+                <a name="//apple_ref/swift/Section/Instance of `Semigroup` for `Try`" class="dashAnchor"></a>
+                <a href="#/Instance%20of%20%60Semigroup%60%20for%20%60Try%60">
+                  <h3 id="Instance%20of%20%60Semigroup%60%20for%20%60Try%60" class="section-name">Instance of `Semigroup` for `Try`<span class="anchor-icon" /></h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3Bow9SemigroupP7combineyxxF"></a>
+                    <a name="//apple_ref/swift/Method/combine(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow9SemigroupP7combineyxxF">
+                      <span class="token-name">combine(_:)</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">combine</span><span class="p">(</span><span class="n">_</span> <span class="nv">other</span><span class="p">:</span> <span class="kt">Try</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Try</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Instance%20of%20%60Monoid%60%20for%20%60Try%60"></a>
+                <a name="//apple_ref/swift/Section/Instance of `Monoid` for `Try`" class="dashAnchor"></a>
+                <a href="#/Instance%20of%20%60Monoid%60%20for%20%60Try%60">
+                  <h3 id="Instance%20of%20%60Monoid%60%20for%20%60Try%60" class="section-name">Instance of `Monoid` for `Try`<span class="anchor-icon" /></h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3Bow6MonoidP5emptyxyFZ"></a>
+                    <a name="//apple_ref/swift/Method/empty()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow6MonoidP5emptyxyFZ">
+                      <span class="token-name">empty()</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">empty</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Try</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
 
@@ -2468,7 +2839,7 @@
         <p>with support from <a href="https://47deg.com/">47 Degrees</a></p>
       </div>
       <div>
-        <p>&copy; 2019 <a class="link" href="https://bow-swift.io" target="_blank" rel="external">Bow</a>. All rights reserved. (Last updated: 2019-04-17)</p>
+        <p>&copy; 2019 <a class="link" href="https://bow-swift.io" target="_blank" rel="external">Bow</a>. All rights reserved. (Last updated: 2019-05-06)</p>
         <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
       </div>
     </section>

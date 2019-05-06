@@ -1593,7 +1593,7 @@
         <section class="section">
           <div class="section-content">
             
-            <p><img src="https://bow-swift.io/img/bow-brand-color.png" height="200" width="200"></p>
+            <p><img src="docs/img/bow-brand-color.png" height="300" width="300"></p>
 
 <p><a href="https://travis-ci.org/bow-swift/bow"><img src="https://travis-ci.org/bow-swift/bow.svg?branch=master" alt="Build Status"></a>
 <a href="https://codecov.io/gh/bow-swift/bow"><img src="https://codecov.io/gh/bow-swift/bow/branch/master/graph/badge.svg" alt="codecov"></a>
@@ -1611,7 +1611,6 @@
 <li><code>BowFree</code>: module to work with Free Monads.</li>
 <li><code>BowGeneric</code>: module to work with generic data types.</li>
 <li><code>BowEffects</code>: module to work with effects.</li>
-<li><code>BowResult</code>: module to provide an integration with Result.</li>
 <li><code>BowBrightFutures</code>: module to provide an integration with BrightFutures.</li>
 <li><code>BowRx</code>: module to provide an integration with RxSwift.</li>
 </ul>
@@ -1620,32 +1619,31 @@
 <h3 id='cocoapods' class='heading'>CocoaPods</h3>
 
 <p>You can consume each Bow module as a separate pod. You can add these lines to your Podfile at your convenience:</p>
-<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s2">"Bow"</span><span class="p">,</span>                 <span class="s2">"~&gt; 0.3.0"</span>
-<span class="n">pod</span> <span class="s2">"BowOptics"</span><span class="p">,</span>           <span class="s2">"~&gt; 0.3.0"</span>
-<span class="n">pod</span> <span class="s2">"BowRecursionSchemes"</span><span class="p">,</span> <span class="s2">"~&gt; 0.3.0"</span>
-<span class="n">pod</span> <span class="s2">"BowFree"</span><span class="p">,</span>             <span class="s2">"~&gt; 0.3.0"</span>
-<span class="n">pod</span> <span class="s2">"BowGeneric"</span><span class="p">,</span>          <span class="s2">"~&gt; 0.3.0"</span>
-<span class="n">pod</span> <span class="s2">"BowResult"</span><span class="p">,</span>           <span class="s2">"~&gt; 0.3.0"</span>
-<span class="n">pod</span> <span class="s2">"BowEffects"</span><span class="p">,</span>          <span class="s2">"~&gt; 0.3.0"</span>
-<span class="n">pod</span> <span class="s2">"BowRx"</span><span class="p">,</span>               <span class="s2">"~&gt; 0.3.0"</span>
-<span class="n">pod</span> <span class="s2">"BowBrightFutures"</span><span class="p">,</span>    <span class="s2">"~&gt; 0.3.0"</span>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s2">"Bow"</span><span class="p">,</span>                 <span class="s2">"~&gt; 0.4.0"</span>
+<span class="n">pod</span> <span class="s2">"BowOptics"</span><span class="p">,</span>           <span class="s2">"~&gt; 0.4.0"</span>
+<span class="n">pod</span> <span class="s2">"BowRecursionSchemes"</span><span class="p">,</span> <span class="s2">"~&gt; 0.4.0"</span>
+<span class="n">pod</span> <span class="s2">"BowFree"</span><span class="p">,</span>             <span class="s2">"~&gt; 0.4.0"</span>
+<span class="n">pod</span> <span class="s2">"BowGeneric"</span><span class="p">,</span>          <span class="s2">"~&gt; 0.4.0"</span>
+<span class="n">pod</span> <span class="s2">"BowEffects"</span><span class="p">,</span>          <span class="s2">"~&gt; 0.4.0"</span>
+<span class="n">pod</span> <span class="s2">"BowRx"</span><span class="p">,</span>               <span class="s2">"~&gt; 0.4.0"</span>
+<span class="n">pod</span> <span class="s2">"BowBrightFutures"</span><span class="p">,</span>    <span class="s2">"~&gt; 0.4.0"</span>
 </code></pre>
 <h3 id='carthage' class='heading'>Carthage</h3>
 
 <p>Carthage will download the whole Bow project, but it will compile individual frameworks for each module that you can use separately. Add this line to your Cartfile:</p>
-<pre class="highlight plaintext"><code>github "bow-swift/Bow" ~&gt; 0.3.0
+<pre class="highlight plaintext"><code>github "bow-swift/Bow" ~&gt; 0.4.0
 </code></pre>
 <h3 id='swift-package-manager' class='heading'>Swift Package Manager</h3>
 
 <p>Create a <code>Package.swift</code> file similar to the next one and use the dependencies at your convenience.</p>
-<pre class="highlight plaintext"><code>// swift-tools-version:4.0
+<pre class="highlight plaintext"><code>// swift-tools-version:5.0
 
 import PackageDescription
 
 let package = Package(
     name: "BowTestProject",
     dependencies: [
-        .package(url: "https://github.com/bow-swift/bow.git", from: "0.3.0")
+        .package(url: "https://github.com/bow-swift/bow.git", from: "0.4.0")
     ],
     targets: [
         .target(name: "BowTestProject",
@@ -1656,7 +1654,6 @@ let package = Package(
                     "BowFree",
                     "BowGeneric",
                     "BowEffects",
-                    "BowResult",
                     "BowRx",
                     "BowBrightFutures"]
         )
@@ -1709,7 +1706,7 @@ limitations under the License.
         <p>with support from <a href="https://47deg.com/">47 Degrees</a></p>
       </div>
       <div>
-        <p>&copy; 2019 <a class="link" href="https://bow-swift.io" target="_blank" rel="external">Bow</a>. All rights reserved. (Last updated: 2019-04-17)</p>
+        <p>&copy; 2019 <a class="link" href="https://bow-swift.io" target="_blank" rel="external">Bow</a>. All rights reserved. (Last updated: 2019-05-06)</p>
         <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
       </div>
     </section>
