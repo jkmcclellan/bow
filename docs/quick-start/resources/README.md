@@ -20,7 +20,7 @@ permalink: /docs/quick-start/resources/
 
 ## Presentations
 
- Be the first one showing here!
+ - [Error management and data validation with Bow](https://truizlop.github.io/DataValidationBow/#/) by Tomás Ruiz-López at AltConf Madrid. June 2019.
 
 ## Blog posts
 

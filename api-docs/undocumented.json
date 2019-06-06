@@ -281,55 +281,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Result.swift",
-      "line": 2,
-      "symbol": "Result.toEither()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Result.swift",
-      "line": 6,
-      "symbol": "Result.toTry()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Result.swift",
-      "line": 10,
-      "symbol": "Result.toValidated()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Result.swift",
-      "line": 14,
-      "symbol": "Result.toOption()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Result.swift",
-      "line": 18,
-      "symbol": "Result.fold(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Result.swift",
-      "line": 28,
-      "symbol": "Either.toResult()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Result.swift",
-      "line": 34,
-      "symbol": "Validated.toResult()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Store.swift",
       "line": null,
       "symbol": "StorePartial",
