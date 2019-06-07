@@ -1,5 +1,5 @@
 current directory: /Users/travis/build/bow-swift/bow/docs/vendor/bundle/ruby/2.4.0/gems/sqlite3-1.3.13/ext/sqlite3
-/Users/travis/.rvm/rubies/ruby-2.4.5/bin/ruby -I /Users/travis/.rvm/rubies/ruby-2.4.5/lib/ruby/site_ruby/2.4.0 -r ./siteconf20190607-12678-nwz3w2.rb extconf.rb
+/Users/travis/.rvm/rubies/ruby-2.4.5/bin/ruby -I /Users/travis/.rvm/rubies/ruby-2.4.5/lib/ruby/site_ruby/2.4.0 -r ./siteconf20190607-12673-1wc1obf.rb extconf.rb
 checking for sqlite3.h... yes
 checking for pthread_create() in -lpthread... yes
 checking for sqlite3_libversion_number() in -lsqlite3... yes
@@ -30,4 +30,4 @@ linking shared-object sqlite3/sqlite3_native.bundle
 
 current directory: /Users/travis/build/bow-swift/bow/docs/vendor/bundle/ruby/2.4.0/gems/sqlite3-1.3.13/ext/sqlite3
 make "DESTDIR=" install
-/usr/bin/install -m 0755 sqlite3_native.bundle ./.gem.20190607-12678-1h7hbt6/sqlite3
+/usr/bin/install -m 0755 sqlite3_native.bundle ./.gem.20190607-12673-bn55rs/sqlite3
