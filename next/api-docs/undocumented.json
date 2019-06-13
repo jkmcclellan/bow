@@ -1,6 +1,13 @@
 {
   "warnings": [
     {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Arrow/Cokleisli.swift",
+      "line": 17,
+      "symbol": "Cokleisli.run",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Data/Day.swift",
       "line": null,
       "symbol": "Day",
