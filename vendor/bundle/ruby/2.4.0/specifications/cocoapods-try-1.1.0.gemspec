@@ -11,10 +11,10 @@ Gem::Specification.new do |s|
   s.date = "2016-07-10"
   s.homepage = "https://github.com/cocoapods/cocoapods-try".freeze
   s.licenses = ["MIT".freeze]
-  s.rubygems_version = "3.0.3".freeze
+  s.rubygems_version = "3.0.4".freeze
   s.summary = "CocoaPods plugin which allows to quickly try the demo project of a Pod.".freeze
 
-  s.installed_by_version = "3.0.3" if s.respond_to? :installed_by_version
+  s.installed_by_version = "3.0.4" if s.respond_to? :installed_by_version
 
   if s.respond_to? :specification_version then
     s.specification_version = 4

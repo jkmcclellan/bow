@@ -12,10 +12,10 @@ Gem::Specification.new do |s|
   s.email = ["boris@icculus.org".freeze]
   s.homepage = "https://github.com/segiddins/liferaft".freeze
   s.licenses = ["MIT".freeze]
-  s.rubygems_version = "3.0.3".freeze
+  s.rubygems_version = "3.0.4".freeze
   s.summary = "Liferaft parses Apple build numbers, like 6D1002".freeze
 
-  s.installed_by_version = "3.0.3" if s.respond_to? :installed_by_version
+  s.installed_by_version = "3.0.4" if s.respond_to? :installed_by_version
 
   if s.respond_to? :specification_version then
     s.specification_version = 4
