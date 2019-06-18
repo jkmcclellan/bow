@@ -65,7 +65,7 @@
             <img style="height: 18px;" class="header-icon" src="../img/bow-logo.png" alt="Bow Docs"/>
             <span class="header-title">Bow</span>
           </a>
-          <span class="header-tag"> 57% documented</span>
+          <span class="header-tag"> 58% documented</span>
         </p>
     
           <p class="header-col header-col--secondary">
@@ -655,8 +655,14 @@
               <li class="nav-group-task" data-name="Array" data-url="Extensions/Array.html">
                 <a title="Array" class="nav-group-task-link" href="../Extensions/Array.html">Array</a>
               </li>
+              <li class="nav-group-task" data-name="BidirectionalCollection" data-url="Extensions/BidirectionalCollection.html">
+                <a title="BidirectionalCollection" class="nav-group-task-link" href="../Extensions/BidirectionalCollection.html">BidirectionalCollection</a>
+              </li>
               <li class="nav-group-task" data-name="Bool" data-url="Extensions/Bool.html">
                 <a title="Bool" class="nav-group-task-link" href="../Extensions/Bool.html">Bool</a>
+              </li>
+              <li class="nav-group-task" data-name="Collection" data-url="Extensions/Collection.html">
+                <a title="Collection" class="nav-group-task-link" href="../Extensions/Collection.html">Collection</a>
               </li>
               <li class="nav-group-task" data-name="Comparable" data-url="Extensions/Comparable.html">
                 <a title="Comparable" class="nav-group-task-link" href="../Extensions/Comparable.html">Comparable</a>
@@ -711,6 +717,9 @@
               </li>
               <li class="nav-group-task" data-name="Result" data-url="Extensions/Result.html">
                 <a title="Result" class="nav-group-task-link" href="../Extensions/Result.html">Result</a>
+              </li>
+              <li class="nav-group-task" data-name="Sequence" data-url="Extensions/Sequence.html">
+                <a title="Sequence" class="nav-group-task-link" href="../Extensions/Sequence.html">Sequence</a>
               </li>
               <li class="nav-group-task" data-name="Set" data-url="Extensions/Set.html">
                 <a title="Set" class="nav-group-task-link" href="../Extensions/Set.html">Set</a>
@@ -1697,6 +1706,76 @@
                 </li>
               </ul>
             </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:Sq3BowE8toOptionAA0C0CyxGyF"></a>
+                    <a name="//apple_ref/swift/Method/toOption()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sq3BowE8toOptionAA0C0CyxGyF">
+                      <span class="token-name">toOption()</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Converts this Optional value into a <code>Bow.Option</code>.</p>
+
+<p>This is an alias for <code>Optional.k()</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">toOption</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Option.html">Option</a></span><span class="o">&lt;</span><span class="kt">Wrapped</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An Option value with the same structure as this value.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:Sq3BowE1kAA6OptionCyxGyF"></a>
+                    <a name="//apple_ref/swift/Method/k()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sq3BowE1kAA6OptionCyxGyF">
+                      <span class="token-name">k()</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Converts this Optional value into a <code>Bow.Option</code>.</p>
+
+<p>This is an alias for <code>Optional.k()</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">k</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Option.html">Option</a></span><span class="o">&lt;</span><span class="kt">Wrapped</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An Option value with the same structure as this value.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
 
@@ -1708,7 +1787,7 @@
         <p>with support from <a href="https://47deg.com/">47 Degrees</a></p>
       </div>
       <div>
-        <p>&copy; 2019 <a class="link" href="https://bow-swift.io" target="_blank" rel="external">Bow</a>. All rights reserved. (Last updated: 2019-06-14)</p>
+        <p>&copy; 2019 <a class="link" href="https://bow-swift.io" target="_blank" rel="external">Bow</a>. All rights reserved. (Last updated: 2019-06-18)</p>
         <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
       </div>
     </section>

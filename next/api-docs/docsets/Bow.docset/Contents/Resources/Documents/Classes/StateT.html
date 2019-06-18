@@ -65,7 +65,7 @@
             <img style="height: 18px;" class="header-icon" src="../img/bow-logo.png" alt="Bow Docs"/>
             <span class="header-title">Bow</span>
           </a>
-          <span class="header-tag"> 57% documented</span>
+          <span class="header-tag"> 58% documented</span>
         </p>
     
           <p class="header-col header-col--secondary">
@@ -655,8 +655,14 @@
               <li class="nav-group-task" data-name="Array" data-url="Extensions/Array.html">
                 <a title="Array" class="nav-group-task-link" href="../Extensions/Array.html">Array</a>
               </li>
+              <li class="nav-group-task" data-name="BidirectionalCollection" data-url="Extensions/BidirectionalCollection.html">
+                <a title="BidirectionalCollection" class="nav-group-task-link" href="../Extensions/BidirectionalCollection.html">BidirectionalCollection</a>
+              </li>
               <li class="nav-group-task" data-name="Bool" data-url="Extensions/Bool.html">
                 <a title="Bool" class="nav-group-task-link" href="../Extensions/Bool.html">Bool</a>
+              </li>
+              <li class="nav-group-task" data-name="Collection" data-url="Extensions/Collection.html">
+                <a title="Collection" class="nav-group-task-link" href="../Extensions/Collection.html">Collection</a>
               </li>
               <li class="nav-group-task" data-name="Comparable" data-url="Extensions/Comparable.html">
                 <a title="Comparable" class="nav-group-task-link" href="../Extensions/Comparable.html">Comparable</a>
@@ -711,6 +717,9 @@
               </li>
               <li class="nav-group-task" data-name="Result" data-url="Extensions/Result.html">
                 <a title="Result" class="nav-group-task-link" href="../Extensions/Result.html">Result</a>
+              </li>
+              <li class="nav-group-task" data-name="Sequence" data-url="Extensions/Sequence.html">
+                <a title="Sequence" class="nav-group-task-link" href="../Extensions/Sequence.html">Sequence</a>
               </li>
               <li class="nav-group-task" data-name="Set" data-url="Extensions/Set.html">
                 <a title="Set" class="nav-group-task-link" href="../Extensions/Set.html">Set</a>
@@ -2336,6 +2345,106 @@
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3Bow6StateTCA2A5MonadRzrlE7modifyFyACyxq_ytGAA4KindCyxq_Gq_cF"></a>
+                    <a name="//apple_ref/swift/Method/modifyF(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow6StateTCA2A5MonadRzrlE7modifyFyACyxq_ytGAA4KindCyxq_Gq_cF">
+                      <span class="token-name">modifyF(_:)</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Modifies the state with a function and returns unit.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">modifyF</span><span class="p">(</span><span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">S</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">StateT</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">S</span><span class="p">,</span> <span class="p">()</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  f
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Function to modify the state.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A StateT value with a modified state and unit as result value.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3Bow6StateTCA2A5MonadRzrlE4setFyACyxq_ytGAA4KindCyxq_GF"></a>
+                    <a name="//apple_ref/swift/Method/setF(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow6StateTCA2A5MonadRzrlE4setFyACyxq_ytGAA4KindCyxq_GF">
+                      <span class="token-name">setF(_:)</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Sets the state to a specific value and returns unit.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setF</span><span class="p">(</span><span class="n">_</span> <span class="nv">fs</span><span class="p">:</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">S</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">StateT</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">S</span><span class="p">,</span> <span class="p">()</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  fs
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Value to set the state.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A StateT value with a modified state and unit as result value.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
           </div>
@@ -2349,7 +2458,7 @@
         <p>with support from <a href="https://47deg.com/">47 Degrees</a></p>
       </div>
       <div>
-        <p>&copy; 2019 <a class="link" href="https://bow-swift.io" target="_blank" rel="external">Bow</a>. All rights reserved. (Last updated: 2019-06-14)</p>
+        <p>&copy; 2019 <a class="link" href="https://bow-swift.io" target="_blank" rel="external">Bow</a>. All rights reserved. (Last updated: 2019-06-18)</p>
         <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
       </div>
     </section>

@@ -540,6 +540,34 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Foldable.swift",
+      "line": 221,
+      "symbol": "Foldable.foldK(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Foldable.swift",
+      "line": 225,
+      "symbol": "Foldable.reduceK(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Foldable.swift",
+      "line": 393,
+      "symbol": "Kind.foldK()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Foldable.swift",
+      "line": 397,
+      "symbol": "Kind.reduceK()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/NonEmptyReducible.swift",
       "line": 5,
       "symbol": "NonEmptyReducible.G",
@@ -639,35 +667,35 @@
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Reducible.swift",
-      "line": 41,
+      "line": 37,
       "symbol": "Reducible.reduceMap(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Reducible.swift",
-      "line": 49,
+      "line": 45,
       "symbol": "Kind.reduceLeftTo(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Reducible.swift",
-      "line": 53,
+      "line": 49,
       "symbol": "Kind.reduceRightTo(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Reducible.swift",
-      "line": 57,
+      "line": 53,
       "symbol": "Kind.reduceMap(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/Bow/Typeclasses/Reducible.swift",
-      "line": 63,
+      "line": 59,
       "symbol": "Kind.reduce()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
