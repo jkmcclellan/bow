@@ -65,7 +65,7 @@
             <img style="height: 18px;" class="header-icon" src="../img/bow-logo.png" alt="Bow Docs"/>
             <span class="header-title">Bow</span>
           </a>
-          <span class="header-tag"> 60% documented</span>
+          <span class="header-tag"> 59% documented</span>
         </p>
     
           <p class="header-col header-col--secondary">
@@ -1157,6 +1157,9 @@
               <li class="nav-group-task" data-name="ConcurrentEffect" data-url="Protocols/ConcurrentEffect.html">
                 <a title="ConcurrentEffect" class="nav-group-task-link" href="../Protocols/ConcurrentEffect.html">ConcurrentEffect</a>
               </li>
+              <li class="nav-group-task" data-name="Cons" data-url="Protocols/Cons.html">
+                <a title="Cons" class="nav-group-task-link" href="../Protocols/Cons.html">Cons</a>
+              </li>
               <li class="nav-group-task" data-name="Contravariant" data-url="Protocols/Contravariant.html">
                 <a title="Contravariant" class="nav-group-task-link" href="../Protocols/Contravariant.html">Contravariant</a>
               </li>
@@ -1249,6 +1252,9 @@
               </li>
               <li class="nav-group-task" data-name="SemigroupK" data-url="Protocols/SemigroupK.html">
                 <a title="SemigroupK" class="nav-group-task-link" href="../Protocols/SemigroupK.html">SemigroupK</a>
+              </li>
+              <li class="nav-group-task" data-name="Snoc" data-url="Protocols/Snoc.html">
+                <a title="Snoc" class="nav-group-task-link" href="../Protocols/Snoc.html">Snoc</a>
               </li>
               <li class="nav-group-task" data-name="Traverse" data-url="Protocols/Traverse.html">
                 <a title="Traverse" class="nav-group-task-link" href="../Protocols/Traverse.html">Traverse</a>
@@ -1677,6 +1683,130 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:3Bow6ArrayKC1poiyACyxGx_AEtFZ"></a>
+                    <a name="//apple_ref/swift/Method/+(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow6ArrayKC1poiyACyxGx_AEtFZ">
+                      <span class="token-name">+(_:_:)</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Prepends an element to an array.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">+</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">A</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">ArrayK</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ArrayK</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  lhs
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Element to prepend.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  rhs
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Array.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An array containing the prepended element at the head and the other array as the tail.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3Bow6ArrayKC1poiyACyxGAE_xtFZ"></a>
+                    <a name="//apple_ref/swift/Method/+(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow6ArrayKC1poiyACyxGAE_xtFZ">
+                      <span class="token-name">+(_:_:)</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Appends an element to an array.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">+</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">ArrayK</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ArrayK</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  lhs
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Array.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  rhs
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Element to append.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An array containing all elements of the first array and the appended element as the last element.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:3Bow6ArrayKC3fixyACyxGAA4KindCyAA03ForB1KCxGFZ"></a>
                     <a name="//apple_ref/swift/Method/fix(_:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:3Bow6ArrayKC3fixyACyxGAA4KindCyAA03ForB1KCxGFZ">
@@ -1877,6 +2007,37 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:3Bow6ArrayKC10lastOrNoneAA6OptionCyxGyF"></a>
+                    <a name="//apple_ref/swift/Method/lastOrNone()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow6ArrayKC10lastOrNoneAA6OptionCyxGyF">
+                      <span class="token-name">lastOrNone()</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Obtains the last element of this array, or <code>Option.none</code> if it is empty.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">lastOrNone</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Option.html">Option</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An optional value containing the first element of the array, if present.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:3Bow6ArrayKC9getOrNoneyAA6OptionCyxGSiF"></a>
                     <a name="//apple_ref/swift/Method/getOrNone(_:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:3Bow6ArrayKC9getOrNoneyAA6OptionCyxGSiF">
@@ -1966,6 +2127,68 @@
                             </tr>
                           </tbody>
                         </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3Bow6ArrayKC9dropFirstACyxGyF"></a>
+                    <a name="//apple_ref/swift/Method/dropFirst()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow6ArrayKC9dropFirstACyxGyF">
+                      <span class="token-name">dropFirst()</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Drops the first element of this array.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">dropFirst</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">ArrayK</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A new array that contains all elements but the first.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3Bow6ArrayKC8dropLastACyxGyF"></a>
+                    <a name="//apple_ref/swift/Method/dropLast()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow6ArrayKC8dropLastACyxGyF">
+                      <span class="token-name">dropLast()</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Drops the last element of this array.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">dropLast</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">ArrayK</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A new array that contains all elements but the last.</p>
                       </div>
                     </section>
                   </div>
@@ -2278,6 +2501,136 @@
                         <div class="language key-main">
                           <p class="aside-title key-main-text">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">filter</span><span class="p">(</span><span class="n">_</span> <span class="nv">predicate</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Traversal</span><span class="o">&lt;</span><span class="kt">ArrayK</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Instance%20of%20%60Cons%60%20for%20%60ArrayK%60"></a>
+                <a name="//apple_ref/swift/Section/Instance of `Cons` for `ArrayK`" class="dashAnchor"></a>
+                <a href="#/Instance%20of%20%60Cons%60%20for%20%60ArrayK%60">
+                  <h3 id="Instance%20of%20%60Cons%60%20for%20%60ArrayK%60" class="section-name">Instance of `Cons` for `ArrayK`<span class="anchor-icon" /></h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3Bow6ArrayKC0A6OpticsE5Firsta"></a>
+                    <a name="//apple_ref/swift/Alias/First" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow6ArrayKC0A6OpticsE5Firsta">
+                      <span class="token-name">First</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">First</span> <span class="o">=</span> <span class="kt">A</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3Bow6ArrayKC0A6OpticsE4consAD6PPrismCyACyxGAHx_AHtx_AHtGvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/cons" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow6ArrayKC0A6OpticsE4consAD6PPrismCyACyxGAHx_AHtx_AHtGvpZ">
+                      <span class="token-name">cons</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">cons</span><span class="p">:</span> <span class="kt">Prism</span><span class="o">&lt;</span><span class="kt">ArrayK</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="p">(</span><span class="kt">A</span><span class="p">,</span> <span class="kt">ArrayK</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">)</span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Instance%20of%20%60Snoc%60%20for%20%60ArrayK%60"></a>
+                <a name="//apple_ref/swift/Section/Instance of `Snoc` for `ArrayK`" class="dashAnchor"></a>
+                <a href="#/Instance%20of%20%60Snoc%60%20for%20%60ArrayK%60">
+                  <h3 id="Instance%20of%20%60Snoc%60%20for%20%60ArrayK%60" class="section-name">Instance of `Snoc` for `ArrayK`<span class="anchor-icon" /></h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3Bow6ArrayKC0A6OpticsE4Lasta"></a>
+                    <a name="//apple_ref/swift/Alias/Last" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow6ArrayKC0A6OpticsE4Lasta">
+                      <span class="token-name">Last</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Last</span> <span class="o">=</span> <span class="kt">A</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3Bow6ArrayKC0A6OpticsE4snocAD6PPrismCyACyxGA2H_xtAH_xtGvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/snoc" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow6ArrayKC0A6OpticsE4snocAD6PPrismCyACyxGA2H_xtAH_xtGvpZ">
+                      <span class="token-name">snoc</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">snoc</span><span class="p">:</span> <span class="kt">Prism</span><span class="o">&lt;</span><span class="kt">ArrayK</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="p">(</span><span class="kt">ArrayK</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt">A</span><span class="p">)</span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -2614,7 +2967,7 @@
         <p>with support from <a href="https://47deg.com/">47 Degrees</a></p>
       </div>
       <div>
-        <p>&copy; 2019 <a class="link" href="https://bow-swift.io" target="_blank" rel="external">Bow</a>. All rights reserved. (Last updated: 2019-06-19)</p>
+        <p>&copy; 2019 <a class="link" href="https://bow-swift.io" target="_blank" rel="external">Bow</a>. All rights reserved. (Last updated: 2019-06-20)</p>
         <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
       </div>
     </section>
