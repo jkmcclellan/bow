@@ -3699,91 +3699,266 @@
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/ArrayKOpticsInstances.swift",
       "line": 10,
+      "symbol": "ArrayK.fold",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/ArrayKOpticsInstances.swift",
+      "line": 14,
       "symbol": "ArrayK.traversal",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/ArrayKOpticsInstances.swift",
-      "line": 17,
+      "line": 21,
       "symbol": "ArrayK.EachFoci",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/ArrayKOpticsInstances.swift",
-      "line": 19,
+      "line": 23,
       "symbol": "ArrayK.each",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/ArrayKOpticsInstances.swift",
-      "line": 26,
+      "line": 30,
       "symbol": "ArrayK.IndexType",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/ArrayKOpticsInstances.swift",
-      "line": 27,
+      "line": 31,
       "symbol": "ArrayK.IndexFoci",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/ArrayKOpticsInstances.swift",
-      "line": 29,
+      "line": 33,
       "symbol": "ArrayK.index(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/ArrayKOpticsInstances.swift",
-      "line": 40,
+      "line": 44,
       "symbol": "ArrayK.FilterIndexType",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/ArrayKOpticsInstances.swift",
-      "line": 41,
+      "line": 45,
       "symbol": "ArrayK.FilterIndexFoci",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/ArrayKOpticsInstances.swift",
-      "line": 43,
+      "line": 47,
       "symbol": "ArrayK.filter(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/ArrayKOpticsInstances.swift",
-      "line": 50,
+      "line": 54,
       "symbol": "ArrayK.First",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/ArrayKOpticsInstances.swift",
-      "line": 52,
+      "line": 56,
       "symbol": "ArrayK.cons",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/ArrayKOpticsInstances.swift",
-      "line": 63,
+      "line": 67,
       "symbol": "ArrayK.Last",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/ArrayKOpticsInstances.swift",
-      "line": 65,
+      "line": 69,
       "symbol": "ArrayK.snoc",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/ArrayOpticsInstances.swift",
+      "line": 6,
+      "symbol": "Array.fold",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/ArrayOpticsInstances.swift",
+      "line": 10,
+      "symbol": "Array.traversal",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/ArrayOpticsInstances.swift",
+      "line": 17,
+      "symbol": "Array.EachFoci",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/ArrayOpticsInstances.swift",
+      "line": 19,
+      "symbol": "Array.each",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/ArrayOpticsInstances.swift",
+      "line": 26,
+      "symbol": "Array.IndexType",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/ArrayOpticsInstances.swift",
+      "line": 27,
+      "symbol": "Array.IndexFoci",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/ArrayOpticsInstances.swift",
+      "line": 29,
+      "symbol": "Array.index(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/ArrayOpticsInstances.swift",
+      "line": 36,
+      "symbol": "Array.FilterIndexType",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/ArrayOpticsInstances.swift",
+      "line": 37,
+      "symbol": "Array.FilterIndexFoci",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/ArrayOpticsInstances.swift",
+      "line": 39,
+      "symbol": "Array.filter(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/ArrayOpticsInstances.swift",
+      "line": 46,
+      "symbol": "Array.First",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/ArrayOpticsInstances.swift",
+      "line": 48,
+      "symbol": "Array.cons",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/ArrayOpticsInstances.swift",
+      "line": 55,
+      "symbol": "Array.Last",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/ArrayOpticsInstances.swift",
+      "line": 57,
+      "symbol": "Array.snoc",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/ConstOpticsInstances.swift",
+      "line": 5,
+      "symbol": "Const.fixIso",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/ConstOpticsInstances.swift",
+      "line": 9,
+      "symbol": "Const.fold",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/ConstOpticsInstances.swift",
+      "line": 13,
+      "symbol": "Const.traversal",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/ConstOpticsInstances.swift",
+      "line": 20,
+      "symbol": "Const.EachFoci",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/ConstOpticsInstances.swift",
+      "line": 22,
+      "symbol": "Const.each",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/EitherKOpticsInstances.swift",
+      "line": 5,
+      "symbol": "EitherK.fixIso",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/EitherKOpticsInstances.swift",
+      "line": 11,
+      "symbol": "EitherK.fold",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/EitherKOpticsInstances.swift",
+      "line": 17,
+      "symbol": "EitherK.traversal",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/EitherKOpticsInstances.swift",
+      "line": 24,
+      "symbol": "EitherK.EachFoci",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/EitherKOpticsInstances.swift",
+      "line": 26,
+      "symbol": "EitherK.each",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
@@ -3797,21 +3972,98 @@
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/EitherOpticsInstances.swift",
       "line": 10,
+      "symbol": "Either.fold",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/EitherOpticsInstances.swift",
+      "line": 14,
       "symbol": "Either.traversal",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/EitherOpticsInstances.swift",
-      "line": 17,
+      "line": 21,
       "symbol": "Either.EachFoci",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/EitherOpticsInstances.swift",
-      "line": 19,
+      "line": 23,
       "symbol": "Either.each",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/IdOpticsInstances.swift",
+      "line": 5,
+      "symbol": "Id.fixIso",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/IdOpticsInstances.swift",
+      "line": 9,
+      "symbol": "Id.fold",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/IdOpticsInstances.swift",
+      "line": 13,
+      "symbol": "Id.traversal",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/IdOpticsInstances.swift",
+      "line": 20,
+      "symbol": "Id.EachFoci",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/IdOpticsInstances.swift",
+      "line": 22,
+      "symbol": "Id.each",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/IorOpticsInstances.swift",
+      "line": 5,
+      "symbol": "Ior.fixIso",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/IorOpticsInstances.swift",
+      "line": 9,
+      "symbol": "Ior.fold",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/IorOpticsInstances.swift",
+      "line": 13,
+      "symbol": "Ior.traversal",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/IorOpticsInstances.swift",
+      "line": 20,
+      "symbol": "Ior.EachFoci",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/IorOpticsInstances.swift",
+      "line": 22,
+      "symbol": "Ior.each",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
@@ -3825,62 +4077,69 @@
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/NonEmptyArrayOpticsInstances.swift",
       "line": 10,
+      "symbol": "NonEmptyArray.fold",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/NonEmptyArrayOpticsInstances.swift",
+      "line": 14,
       "symbol": "NonEmptyArray.traversal",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/NonEmptyArrayOpticsInstances.swift",
-      "line": 17,
+      "line": 21,
       "symbol": "NonEmptyArray.EachFoci",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/NonEmptyArrayOpticsInstances.swift",
-      "line": 19,
+      "line": 23,
       "symbol": "NonEmptyArray.each",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/NonEmptyArrayOpticsInstances.swift",
-      "line": 26,
+      "line": 30,
       "symbol": "NonEmptyArray.IndexType",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/NonEmptyArrayOpticsInstances.swift",
-      "line": 27,
+      "line": 31,
       "symbol": "NonEmptyArray.IndexFoci",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/NonEmptyArrayOpticsInstances.swift",
-      "line": 29,
+      "line": 33,
       "symbol": "NonEmptyArray.index(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/NonEmptyArrayOpticsInstances.swift",
-      "line": 38,
+      "line": 42,
       "symbol": "NonEmptyArray.FilterIndexType",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/NonEmptyArrayOpticsInstances.swift",
-      "line": 39,
+      "line": 43,
       "symbol": "NonEmptyArray.FilterIndexFoci",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/NonEmptyArrayOpticsInstances.swift",
-      "line": 41,
+      "line": 45,
       "symbol": "NonEmptyArray.filter(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
@@ -3895,20 +4154,27 @@
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/OptionOpticsInstances.swift",
       "line": 10,
+      "symbol": "Option.fold",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/OptionOpticsInstances.swift",
+      "line": 14,
       "symbol": "Option.traversal",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/OptionOpticsInstances.swift",
-      "line": 17,
+      "line": 21,
       "symbol": "Option.EachFoci",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/OptionOpticsInstances.swift",
-      "line": 19,
+      "line": 23,
       "symbol": "Option.each",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
@@ -3935,6 +4201,76 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/StringOpticsInstances.swift",
+      "line": 22,
+      "symbol": "String.IndexType",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/StringOpticsInstances.swift",
+      "line": 23,
+      "symbol": "String.IndexFoci",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/StringOpticsInstances.swift",
+      "line": 25,
+      "symbol": "String.index(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/StringOpticsInstances.swift",
+      "line": 32,
+      "symbol": "String.FilterIndexType",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/StringOpticsInstances.swift",
+      "line": 33,
+      "symbol": "String.FilterIndexFoci",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/StringOpticsInstances.swift",
+      "line": 35,
+      "symbol": "String.filter(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/StringOpticsInstances.swift",
+      "line": 42,
+      "symbol": "String.First",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/StringOpticsInstances.swift",
+      "line": 44,
+      "symbol": "String.cons",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/StringOpticsInstances.swift",
+      "line": 51,
+      "symbol": "String.Last",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/StringOpticsInstances.swift",
+      "line": 53,
+      "symbol": "String.snoc",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/TryOpticsInstances.swift",
       "line": 6,
       "symbol": "Try.fixIso",
@@ -3944,21 +4280,63 @@
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/TryOpticsInstances.swift",
       "line": 10,
+      "symbol": "Try.fold",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/TryOpticsInstances.swift",
+      "line": 14,
       "symbol": "Try.traversal",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/TryOpticsInstances.swift",
-      "line": 17,
+      "line": 21,
       "symbol": "Try.EachFoci",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/TryOpticsInstances.swift",
-      "line": 19,
+      "line": 23,
       "symbol": "Try.each",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/ValidatedOpticsInstances.swift",
+      "line": 5,
+      "symbol": "Validated.fixIso",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/ValidatedOpticsInstances.swift",
+      "line": 9,
+      "symbol": "Validated.fold",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/ValidatedOpticsInstances.swift",
+      "line": 13,
+      "symbol": "Validated.traversal",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/ValidatedOpticsInstances.swift",
+      "line": 20,
+      "symbol": "Validated.EachFoci",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/Instances/ValidatedOpticsInstances.swift",
+      "line": 22,
+      "symbol": "Validated.each",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
@@ -5406,15 +5784,43 @@
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/STD/ArrayK+Optics.swift",
-      "line": 21,
+      "line": 19,
+      "symbol": "ArrayK.head",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/STD/ArrayK+Optics.swift",
+      "line": 23,
+      "symbol": "ArrayK.tail",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/STD/ArrayK+Optics.swift",
+      "line": 29,
       "symbol": "Array.toPArrayK()",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/STD/ArrayK+Optics.swift",
-      "line": 27,
+      "line": 35,
       "symbol": "Array.toArrayK",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/STD/ArrayK+Optics.swift",
+      "line": 39,
+      "symbol": "Array.head",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/STD/ArrayK+Optics.swift",
+      "line": 43,
+      "symbol": "Array.tail",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
@@ -5433,6 +5839,20 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/STD/Either+Optics.swift",
+      "line": 15,
+      "symbol": "Either.leftPrism",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/STD/Either+Optics.swift",
+      "line": 23,
+      "symbol": "Either.rightPrism",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/STD/Id+Optics.swift",
       "line": 5,
       "symbol": "Id.toPValue()",
@@ -5443,6 +5863,27 @@
       "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/STD/Id+Optics.swift",
       "line": 11,
       "symbol": "Id.toValue",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/STD/Ior+Optics.swift",
+      "line": 4,
+      "symbol": "Ior.leftPrism",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/STD/Ior+Optics.swift",
+      "line": 14,
+      "symbol": "Ior.rightPrism",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/STD/Ior+Optics.swift",
+      "line": 24,
+      "symbol": "Ior.bothPrism",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
@@ -5506,6 +5947,20 @@
       "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/STD/Option+Optics.swift",
       "line": 45,
       "symbol": "Option.toEither",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/STD/Result+Optics.swift",
+      "line": 5,
+      "symbol": "Result.successPrism",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/STD/Result+Optics.swift",
+      "line": 16,
+      "symbol": "Result.failurePrism",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
@@ -5597,6 +6052,34 @@
       "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/STD/Validated+Optics.swift",
       "line": 24,
       "symbol": "Validated.toTry",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/STD/Validated+Optics.swift",
+      "line": 28,
+      "symbol": "Validated.pValidPrism()",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/STD/Validated+Optics.swift",
+      "line": 34,
+      "symbol": "Validated.validPrism",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/STD/Validated+Optics.swift",
+      "line": 38,
+      "symbol": "Validated.pInvalidPrism()",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/bow-swift/bow/Sources/BowOptics/STD/Validated+Optics.swift",
+      "line": 44,
+      "symbol": "Validated.invalidPrism",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },

@@ -65,7 +65,7 @@
             <img style="height: 18px;" class="header-icon" src="img/bow-logo.png" alt="Bow Docs"/>
             <span class="header-title">Bow</span>
           </a>
-          <span class="header-tag"> 59% documented</span>
+          <span class="header-tag"> 58% documented</span>
         </p>
     
           <p class="header-col header-col--secondary">
@@ -1917,6 +1917,180 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:3Bow5ConstC"></a>
+                    <a name="//apple_ref/swift/Class/Const" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow5ConstC">
+                      <span class="token-name">Const</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Constant data type. Represents a container of two types, holding a value of the left type that remains constant, regardless of the transformation applied to it.</p>
+
+                        <a href="Classes/Const.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Const</span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">T</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Typealiases.html#/s:3Bow7ConstOfa">ConstOf</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">T</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3Bow8ForConstC"></a>
+                    <a name="//apple_ref/swift/Class/ForConst" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow8ForConstC">
+                      <span class="token-name">ForConst</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Witness for the <code>Const&lt;A, T&gt;</code> data type. To be used in simulated Higher Kinded Types.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">ForConst</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3Bow12ConstPartialC"></a>
+                    <a name="//apple_ref/swift/Class/ConstPartial" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow12ConstPartialC">
+                      <span class="token-name">ConstPartial</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Partial application of the Const type constructor, omitting the last parameter.</p>
+
+                        <a href="Classes/ConstPartial.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">ConstPartial</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="kt"><a href="Classes.html#/s:3Bow8ForConstC">ForConst</a></span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3Bow7EitherKC"></a>
+                    <a name="//apple_ref/swift/Class/EitherK" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow7EitherKC">
+                      <span class="token-name">EitherK</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>EitherK is a sum type for kinds. Represents a type where you can hold either a <code>Kind&lt;F, A&gt;</code> or a <code>Kind&lt;G, A&gt;</code>.</p>
+
+                        <a href="Classes/EitherK.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">EitherK</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">G</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Typealiases.html#/s:3Bow9EitherKOfa">EitherKOf</a></span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">G</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3Bow10ForEitherKC"></a>
+                    <a name="//apple_ref/swift/Class/ForEitherK" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow10ForEitherKC">
+                      <span class="token-name">ForEitherK</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Witness for the <code>EitherK&lt;F, G, A&gt;</code> data type. To be used in simulated Higher Kinded Types.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">ForEitherK</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3Bow14EitherKPartialC"></a>
+                    <a name="//apple_ref/swift/Class/EitherKPartial" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow14EitherKPartialC">
+                      <span class="token-name">EitherKPartial</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Partial application of the EitherK type constructor, omitting the last parameter.</p>
+
+                        <a href="Classes/EitherKPartial.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">EitherKPartial</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">G</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Typealiases.html#/s:3Bow5Kind2a">Kind2</a></span><span class="o">&lt;</span><span class="kt"><a href="Classes.html#/s:3Bow10ForEitherKC">ForEitherK</a></span><span class="p">,</span> <span class="kt">F</span><span class="p">,</span> <span class="kt">G</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:3Bow6EitherC"></a>
                     <a name="//apple_ref/swift/Class/Either" class="dashAnchor"></a>
                     <a class="token" href="#/s:3Bow6EitherC">
@@ -1991,6 +2165,153 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                         <div class="language key-main">
                           <p class="aside-title key-main-text">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">EitherPartial</span><span class="o">&lt;</span><span class="kt">L</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="kt"><a href="Classes.html#/s:3Bow9ForEitherC">ForEither</a></span><span class="p">,</span> <span class="kt">L</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3Bow2IdC"></a>
+                    <a name="//apple_ref/swift/Class/Id" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow2IdC">
+                      <span class="token-name">Id</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>The identity data type represents a context of having no effect on the type it wraps. A instance of <code>Id&lt;A&gt;</code> is isomorphic to an instance of <code>A</code>; it is just wrapped without any additional information.</p>
+
+                        <a href="Classes/Id.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Id</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Typealiases.html#/s:3Bow4IdOfa">IdOf</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3Bow5ForIdC"></a>
+                    <a name="//apple_ref/swift/Class/ForId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow5ForIdC">
+                      <span class="token-name">ForId</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Witness for the <code><a href="Classes/Id.html">Id&lt;A&gt;</a></code> data type. To be used in simulated Higher Kinded Types.</p>
+
+                        <a href="Classes/ForId.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">ForId</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3Bow3IorC"></a>
+                    <a name="//apple_ref/swift/Class/Ior" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow3IorC">
+                      <span class="token-name">Ior</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Ior represents an inclusive-or of two different types. It may have a value of the left type, the right type or both at the same time.</p>
+
+                        <a href="Classes/Ior.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Ior</span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Typealiases.html#/s:3Bow5IorOfa">IorOf</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3Bow6ForIorC"></a>
+                    <a name="//apple_ref/swift/Class/ForIor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow6ForIorC">
+                      <span class="token-name">ForIor</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Witness for the <code>Ior&lt;A, B&gt;</code> data type. To be used in simulated Higher Kinded Types.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">ForIor</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3Bow10IorPartialC"></a>
+                    <a name="//apple_ref/swift/Class/IorPartial" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow10IorPartialC">
+                      <span class="token-name">IorPartial</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Partial application of the Ior type constructor, omitting the last parameter.</p>
+
+                        <a href="Classes/IorPartial.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">IorPartial</span><span class="o">&lt;</span><span class="kt">L</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="kt"><a href="Classes.html#/s:3Bow6ForIorC">ForIor</a></span><span class="p">,</span> <span class="kt">L</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -2171,6 +2492,93 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                         <div class="language key-main">
                           <p class="aside-title key-main-text">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">ForTry</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3Bow9ValidatedC"></a>
+                    <a name="//apple_ref/swift/Class/Validated" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow9ValidatedC">
+                      <span class="token-name">Validated</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Validated is a data type to represent valid and invalid values. It is similar to <code><a href="Classes/Either.html">Either</a></code>, but with error accumulation in the invalid case.</p>
+
+                        <a href="Classes/Validated.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Validated</span><span class="o">&lt;</span><span class="kt">E</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Typealiases.html#/s:3Bow11ValidatedOfa">ValidatedOf</a></span><span class="o">&lt;</span><span class="kt">E</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3Bow12ForValidatedC"></a>
+                    <a name="//apple_ref/swift/Class/ForValidated" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow12ForValidatedC">
+                      <span class="token-name">ForValidated</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Witness for the <code>Validated&lt;E, A&gt;</code> data type. To be used in simulated Higher Kinded Types.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">ForValidated</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3Bow16ValidatedPartialC"></a>
+                    <a name="//apple_ref/swift/Class/ValidatedPartial" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3Bow16ValidatedPartialC">
+                      <span class="token-name">ValidatedPartial</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Partial application of the Validated type constructor, ommitting the last parameter.</p>
+
+                        <a href="Classes/ValidatedPartial.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">ValidatedPartial</span><span class="o">&lt;</span><span class="kt">I</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="kt"><a href="Classes.html#/s:3Bow12ForValidatedC">ForValidated</a></span><span class="p">,</span> <span class="kt">I</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -2515,153 +2923,6 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                         <div class="language key-main">
                           <p class="aside-title key-main-text">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">PPrism</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">T</span><span class="p">,</span> <span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Typealiases.html#/s:9BowOptics8PPrismOfa">PPrismOf</a></span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">T</span><span class="p">,</span> <span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3Bow2IdC"></a>
-                    <a name="//apple_ref/swift/Class/Id" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3Bow2IdC">
-                      <span class="token-name">Id</span>
-                      <span class="token-icon" /></a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <section class="section">
-                      <div class="abstract">
-                        <p>The identity data type represents a context of having no effect on the type it wraps. A instance of <code>Id&lt;A&gt;</code> is isomorphic to an instance of <code>A</code>; it is just wrapped without any additional information.</p>
-
-                        <a href="Classes/Id.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language key-main">
-                          <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Id</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Typealiases.html#/s:3Bow4IdOfa">IdOf</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3Bow5ForIdC"></a>
-                    <a name="//apple_ref/swift/Class/ForId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3Bow5ForIdC">
-                      <span class="token-name">ForId</span>
-                      <span class="token-icon" /></a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <section class="section">
-                      <div class="abstract">
-                        <p>Witness for the <code><a href="Classes/Id.html">Id&lt;A&gt;</a></code> data type. To be used in simulated Higher Kinded Types.</p>
-
-                        <a href="Classes/ForId.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language key-main">
-                          <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">ForId</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3Bow9ValidatedC"></a>
-                    <a name="//apple_ref/swift/Class/Validated" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3Bow9ValidatedC">
-                      <span class="token-name">Validated</span>
-                      <span class="token-icon" /></a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <section class="section">
-                      <div class="abstract">
-                        <p>Validated is a data type to represent valid and invalid values. It is similar to <code><a href="Classes/Either.html">Either</a></code>, but with error accumulation in the invalid case.</p>
-
-                        <a href="Classes/Validated.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language key-main">
-                          <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Validated</span><span class="o">&lt;</span><span class="kt">E</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Typealiases.html#/s:3Bow11ValidatedOfa">ValidatedOf</a></span><span class="o">&lt;</span><span class="kt">E</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3Bow12ForValidatedC"></a>
-                    <a name="//apple_ref/swift/Class/ForValidated" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3Bow12ForValidatedC">
-                      <span class="token-name">ForValidated</span>
-                      <span class="token-icon" /></a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <section class="section">
-                      <div class="abstract">
-                        <p>Witness for the <code>Validated&lt;E, A&gt;</code> data type. To be used in simulated Higher Kinded Types.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language key-main">
-                          <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">ForValidated</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3Bow16ValidatedPartialC"></a>
-                    <a name="//apple_ref/swift/Class/ValidatedPartial" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3Bow16ValidatedPartialC">
-                      <span class="token-name">ValidatedPartial</span>
-                      <span class="token-icon" /></a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <section class="section">
-                      <div class="abstract">
-                        <p>Partial application of the Validated type constructor, ommitting the last parameter.</p>
-
-                        <a href="Classes/ValidatedPartial.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language key-main">
-                          <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">ValidatedPartial</span><span class="o">&lt;</span><span class="kt">I</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="kt"><a href="Classes.html#/s:3Bow12ForValidatedC">ForValidated</a></span><span class="p">,</span> <span class="kt">I</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -4703,93 +4964,6 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3Bow8ForConstC"></a>
-                    <a name="//apple_ref/swift/Class/ForConst" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3Bow8ForConstC">
-                      <span class="token-name">ForConst</span>
-                      <span class="token-icon" /></a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <section class="section">
-                      <div class="abstract">
-                        <p>Witness for the <code>Const&lt;A, T&gt;</code> data type. To be used in simulated Higher Kinded Types.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language key-main">
-                          <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">ForConst</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3Bow12ConstPartialC"></a>
-                    <a name="//apple_ref/swift/Class/ConstPartial" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3Bow12ConstPartialC">
-                      <span class="token-name">ConstPartial</span>
-                      <span class="token-icon" /></a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <section class="section">
-                      <div class="abstract">
-                        <p>Partial application of the Const type constructor, omitting the last parameter.</p>
-
-                        <a href="Classes/ConstPartial.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language key-main">
-                          <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">ConstPartial</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="kt"><a href="Classes.html#/s:3Bow8ForConstC">ForConst</a></span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3Bow5ConstC"></a>
-                    <a name="//apple_ref/swift/Class/Const" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3Bow5ConstC">
-                      <span class="token-name">Const</span>
-                      <span class="token-icon" /></a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <section class="section">
-                      <div class="abstract">
-                        <p>Constant data type. Represents a container of two types, holding a value of the left type that remains constant, regardless of the transformation applied to it.</p>
-
-                        <a href="Classes/Const.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language key-main">
-                          <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Const</span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">T</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Typealiases.html#/s:3Bow7ConstOfa">ConstOf</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">T</span><span class="o">&gt;</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:3Bow8CoreaderC"></a>
                     <a name="//apple_ref/swift/Class/Coreader" class="dashAnchor"></a>
                     <a class="token" href="#/s:3Bow8CoreaderC">
@@ -4995,93 +5169,6 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3Bow10ForEitherKC"></a>
-                    <a name="//apple_ref/swift/Class/ForEitherK" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3Bow10ForEitherKC">
-                      <span class="token-name">ForEitherK</span>
-                      <span class="token-icon" /></a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <section class="section">
-                      <div class="abstract">
-                        <p>Witness for the <code>EitherK&lt;F, G, A&gt;</code> data type. To be used in simulated Higher Kinded Types.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language key-main">
-                          <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">ForEitherK</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3Bow14EitherKPartialC"></a>
-                    <a name="//apple_ref/swift/Class/EitherKPartial" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3Bow14EitherKPartialC">
-                      <span class="token-name">EitherKPartial</span>
-                      <span class="token-icon" /></a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <section class="section">
-                      <div class="abstract">
-                        <p>Partial application of the EitherK type constructor, omitting the last parameter.</p>
-
-                        <a href="Classes/EitherKPartial.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language key-main">
-                          <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">EitherKPartial</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">G</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Typealiases.html#/s:3Bow5Kind2a">Kind2</a></span><span class="o">&lt;</span><span class="kt"><a href="Classes.html#/s:3Bow10ForEitherKC">ForEitherK</a></span><span class="p">,</span> <span class="kt">F</span><span class="p">,</span> <span class="kt">G</span><span class="o">&gt;</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3Bow7EitherKC"></a>
-                    <a name="//apple_ref/swift/Class/EitherK" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3Bow7EitherKC">
-                      <span class="token-name">EitherK</span>
-                      <span class="token-icon" /></a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <section class="section">
-                      <div class="abstract">
-                        <p>EitherK is a sum type for kinds. Represents a type where you can hold either a <code>Kind&lt;F, A&gt;</code> or a <code>Kind&lt;G, A&gt;</code>.</p>
-
-                        <a href="Classes/EitherK.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language key-main">
-                          <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">EitherK</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">G</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Typealiases.html#/s:3Bow9EitherKOfa">EitherKOf</a></span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">G</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:3Bow7ForEvalC"></a>
                     <a name="//apple_ref/swift/Class/ForEval" class="dashAnchor"></a>
                     <a class="token" href="#/s:3Bow7ForEvalC">
@@ -5129,93 +5216,6 @@ Classes that want to have HKT support must extend this class. Type parameter <co
                         <div class="language key-main">
                           <p class="aside-title key-main-text">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">Eval</span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Typealiases.html#/s:3Bow6EvalOfa">EvalOf</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3Bow6ForIorC"></a>
-                    <a name="//apple_ref/swift/Class/ForIor" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3Bow6ForIorC">
-                      <span class="token-name">ForIor</span>
-                      <span class="token-icon" /></a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <section class="section">
-                      <div class="abstract">
-                        <p>Witness for the <code>Ior&lt;A, B&gt;</code> data type. To be used in simulated Higher Kinded Types.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language key-main">
-                          <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">ForIor</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3Bow10IorPartialC"></a>
-                    <a name="//apple_ref/swift/Class/IorPartial" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3Bow10IorPartialC">
-                      <span class="token-name">IorPartial</span>
-                      <span class="token-icon" /></a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <section class="section">
-                      <div class="abstract">
-                        <p>Partial application of the Ior type constructor, omitting the last parameter.</p>
-
-                        <a href="Classes/IorPartial.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language key-main">
-                          <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">IorPartial</span><span class="o">&lt;</span><span class="kt">L</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="kt"><a href="Classes.html#/s:3Bow6ForIorC">ForIor</a></span><span class="p">,</span> <span class="kt">L</span><span class="o">&gt;</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3Bow3IorC"></a>
-                    <a name="//apple_ref/swift/Class/Ior" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3Bow3IorC">
-                      <span class="token-name">Ior</span>
-                      <span class="token-icon" /></a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <section class="section">
-                      <div class="abstract">
-                        <p>Ior represents an inclusive-or of two different types. It may have a value of the left type, the right type or both at the same time.</p>
-
-                        <a href="Classes/Ior.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language key-main">
-                          <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Ior</span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Typealiases.html#/s:3Bow5IorOfa">IorOf</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
