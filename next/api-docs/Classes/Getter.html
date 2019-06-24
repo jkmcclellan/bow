@@ -65,7 +65,7 @@
             <img style="height: 18px;" class="header-icon" src="../img/bow-logo.png" alt="Bow Docs"/>
             <span class="header-title">Bow</span>
           </a>
-          <span class="header-tag"> 60% documented</span>
+          <span class="header-tag"> 62% documented</span>
         </p>
     
           <p class="header-col header-col--secondary">
@@ -1127,6 +1127,9 @@
               <li class="nav-group-task" data-name="At" data-url="Protocols/At.html">
                 <a title="At" class="nav-group-task-link" href="../Protocols/At.html">At</a>
               </li>
+              <li class="nav-group-task" data-name="AutoFold" data-url="Protocols/AutoFold.html">
+                <a title="AutoFold" class="nav-group-task-link" href="../Protocols/AutoFold.html">AutoFold</a>
+              </li>
               <li class="nav-group-task" data-name="AutoGetter" data-url="Protocols/AutoGetter.html">
                 <a title="AutoGetter" class="nav-group-task-link" href="../Protocols/AutoGetter.html">AutoGetter</a>
               </li>
@@ -1144,6 +1147,9 @@
               </li>
               <li class="nav-group-task" data-name="AutoSetter" data-url="Protocols/AutoSetter.html">
                 <a title="AutoSetter" class="nav-group-task-link" href="../Protocols/AutoSetter.html">AutoSetter</a>
+              </li>
+              <li class="nav-group-task" data-name="AutoTraversal" data-url="Protocols/AutoTraversal.html">
+                <a title="AutoTraversal" class="nav-group-task-link" href="../Protocols/AutoTraversal.html">AutoTraversal</a>
               </li>
               <li class="nav-group-task" data-name="Bimonad" data-url="Protocols.html#/s:3Bow7BimonadP">
                 <a title="Bimonad" class="nav-group-task-link" href="../Protocols.html#/s:3Bow7BimonadP">Bimonad</a>
@@ -2158,9 +2164,178 @@
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9BowOptics6GetterC3ask0A07KleisliCyAE5ForIdCxq_GyF"></a>
+                    <a name="//apple_ref/swift/Method/ask()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9BowOptics6GetterC3ask0A07KleisliCyAE5ForIdCxq_GyF">
+                      <span class="token-name">ask()</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">ask</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:3Bow6Readera">Reader</a></span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9BowOptics6GetterC8toReader0A07KleisliCyAE5ForIdCxq_GyF"></a>
+                    <a name="//apple_ref/swift/Method/toReader()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9BowOptics6GetterC8toReader0A07KleisliCyAE5ForIdCxq_GyF">
+                      <span class="token-name">toReader()</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">toReader</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:3Bow6Readera">Reader</a></span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9BowOptics6GetterC4asksy0A07KleisliCyAE5ForIdCxqd__Gqd__q_clF"></a>
+                    <a name="//apple_ref/swift/Method/asks(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9BowOptics6GetterC4asksy0A07KleisliCyAE5ForIdCxqd__Gqd__q_clF">
+                      <span class="token-name">asks(_:)</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">asks</span><span class="o">&lt;</span><span class="kt">B</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">B</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:3Bow6Readera">Reader</a></span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9BowOptics6GetterC7extract0A06StateTCyAE5ForIdCxq_GyF"></a>
+                    <a name="//apple_ref/swift/Method/extract()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9BowOptics6GetterC7extract0A06StateTCyAE5ForIdCxq_GyF">
+                      <span class="token-name">extract()</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">extract</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:3Bow5Statea">State</a></span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9BowOptics6GetterC7toState0A00E1TCyAE5ForIdCxq_GyF"></a>
+                    <a name="//apple_ref/swift/Method/toState()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9BowOptics6GetterC7toState0A00E1TCyAE5ForIdCxq_GyF">
+                      <span class="token-name">toState()</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">toState</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:3Bow5Statea">State</a></span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9BowOptics6GetterC10extractMapy0A06StateTCyAE5ForIdCxqd__Gqd__q_clF"></a>
+                    <a name="//apple_ref/swift/Method/extractMap(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9BowOptics6GetterC10extractMapy0A06StateTCyAE5ForIdCxqd__Gqd__q_clF">
+                      <span class="token-name">extractMap(_:)</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">extractMap</span><span class="o">&lt;</span><span class="kt">B</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">B</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:3Bow5Statea">State</a></span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Extension%20when%20focus%20has%20%60At%60%20Instance"></a>
+                <a name="//apple_ref/swift/Section/Extension when focus has `At` Instance" class="dashAnchor"></a>
+                <a href="#/Extension%20when%20focus%20has%20%60At%60%20Instance">
+                  <h3 id="Extension%20when%20focus%20has%20%60At%60%20Instance" class="section-name">Extension when focus has `At` Instance<span class="anchor-icon" /></h3>
+                </a>
+              </div>
               <ul class="item-container">
                 <li class="item">
                   <div>
@@ -2175,7 +2350,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Focuses on a specific index of this getter.</p>
 
                       </div>
                       <div class="declaration">
@@ -2185,6 +2360,29 @@
                           <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">at</span><span class="p">(</span><span class="n">_</span> <span class="nv">i</span><span class="p">:</span> <span class="kt">A</span><span class="o">.</span><span class="kt">AtIndex</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Getter</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">A</span><span class="o">.</span><span class="kt">AtFoci</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  i
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Index to focus.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A getter from this structure to the focused index.</p>
                       </div>
                     </section>
                   </div>

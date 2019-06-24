@@ -65,7 +65,7 @@
             <img style="height: 18px;" class="header-icon" src="../img/bow-logo.png" alt="Bow Docs"/>
             <span class="header-title">Bow</span>
           </a>
-          <span class="header-tag"> 60% documented</span>
+          <span class="header-tag"> 62% documented</span>
         </p>
     
           <p class="header-col header-col--secondary">
@@ -1127,6 +1127,9 @@
               <li class="nav-group-task" data-name="At" data-url="Protocols/At.html">
                 <a title="At" class="nav-group-task-link" href="../Protocols/At.html">At</a>
               </li>
+              <li class="nav-group-task" data-name="AutoFold" data-url="Protocols/AutoFold.html">
+                <a title="AutoFold" class="nav-group-task-link" href="../Protocols/AutoFold.html">AutoFold</a>
+              </li>
               <li class="nav-group-task" data-name="AutoGetter" data-url="Protocols/AutoGetter.html">
                 <a title="AutoGetter" class="nav-group-task-link" href="../Protocols/AutoGetter.html">AutoGetter</a>
               </li>
@@ -1144,6 +1147,9 @@
               </li>
               <li class="nav-group-task" data-name="AutoSetter" data-url="Protocols/AutoSetter.html">
                 <a title="AutoSetter" class="nav-group-task-link" href="../Protocols/AutoSetter.html">AutoSetter</a>
+              </li>
+              <li class="nav-group-task" data-name="AutoTraversal" data-url="Protocols/AutoTraversal.html">
+                <a title="AutoTraversal" class="nav-group-task-link" href="../Protocols/AutoTraversal.html">AutoTraversal</a>
               </li>
               <li class="nav-group-task" data-name="Bimonad" data-url="Protocols.html#/s:3Bow7BimonadP">
                 <a title="Bimonad" class="nav-group-task-link" href="../Protocols.html#/s:3Bow7BimonadP">Bimonad</a>
@@ -2404,6 +2410,13 @@
               </ul>
             </div>
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Extension%20when%20focus%20has%20%60At%60%20Instance"></a>
+                <a name="//apple_ref/swift/Section/Extension when focus has `At` Instance" class="dashAnchor"></a>
+                <a href="#/Extension%20when%20focus%20has%20%60At%60%20Instance">
+                  <h3 id="Extension%20when%20focus%20has%20%60At%60%20Instance" class="section-name">Extension when focus has `At` Instance<span class="anchor-icon" /></h3>
+                </a>
+              </div>
               <ul class="item-container">
                 <li class="item">
                   <div>
@@ -2418,7 +2431,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Focuses on a specific index of this fold.</p>
 
                       </div>
                       <div class="declaration">
@@ -2429,12 +2442,42 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  i
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Index to focus.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A fold from this structure to the focused index.</p>
+                      </div>
                     </section>
                   </div>
                 </li>
               </ul>
             </div>
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Extension%20when%20focus%20has%20%60Each%60%20instance"></a>
+                <a name="//apple_ref/swift/Section/Extension when focus has `Each` instance" class="dashAnchor"></a>
+                <a href="#/Extension%20when%20focus%20has%20%60Each%60%20instance">
+                  <h3 id="Extension%20when%20focus%20has%20%60Each%60%20instance" class="section-name">Extension when focus has `Each` instance<span class="anchor-icon" /></h3>
+                </a>
+              </div>
               <ul class="item-container">
                 <li class="item">
                   <div>
@@ -2449,7 +2492,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Provides a fold over all elements of the foci of this fold.</p>
 
                       </div>
                       <div class="declaration">
@@ -2466,6 +2509,13 @@
               </ul>
             </div>
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Extension%20when%20focus%20has%20instance%20of%20%60Index%60"></a>
+                <a name="//apple_ref/swift/Section/Extension when focus has instance of `Index`" class="dashAnchor"></a>
+                <a href="#/Extension%20when%20focus%20has%20instance%20of%20%60Index%60">
+                  <h3 id="Extension%20when%20focus%20has%20instance%20of%20%60Index%60" class="section-name">Extension when focus has instance of `Index`<span class="anchor-icon" /></h3>
+                </a>
+              </div>
               <ul class="item-container">
                 <li class="item">
                   <div>
@@ -2480,7 +2530,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Provides a fold focused on an index of the focus of this fold.</p>
 
                       </div>
                       <div class="declaration">
@@ -2490,6 +2540,29 @@
                           <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">index</span><span class="p">(</span><span class="n">_</span> <span class="nv">i</span><span class="p">:</span> <span class="kt">A</span><span class="o">.</span><span class="kt">IndexType</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Fold</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">A</span><span class="o">.</span><span class="kt">IndexFoci</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  i
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Index to focus.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A fold focused on an index of the focus of this fold.</p>
                       </div>
                     </section>
                   </div>
@@ -2507,7 +2580,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Provides a fold focused on an index of the focus of this fold.</p>
 
                       </div>
                       <div class="declaration">
@@ -2517,6 +2590,29 @@
                           <pre class="highlight swift"><code><span class="nf">subscript</span><span class="p">(</span><span class="nv">i</span><span class="p">:</span> <span class="kt">A</span><span class="o">.</span><span class="kt">IndexType</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Fold</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">A</span><span class="o">.</span><span class="kt">IndexFoci</span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  i
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Index to focus.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A fold focused on an index of the focus of this fold.</p>
                       </div>
                     </section>
                   </div>

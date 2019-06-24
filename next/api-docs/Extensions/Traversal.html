@@ -65,7 +65,7 @@
             <img style="height: 18px;" class="header-icon" src="../img/bow-logo.png" alt="Bow Docs"/>
             <span class="header-title">Bow</span>
           </a>
-          <span class="header-tag"> 60% documented</span>
+          <span class="header-tag"> 62% documented</span>
         </p>
     
           <p class="header-col header-col--secondary">
@@ -1127,6 +1127,9 @@
               <li class="nav-group-task" data-name="At" data-url="Protocols/At.html">
                 <a title="At" class="nav-group-task-link" href="../Protocols/At.html">At</a>
               </li>
+              <li class="nav-group-task" data-name="AutoFold" data-url="Protocols/AutoFold.html">
+                <a title="AutoFold" class="nav-group-task-link" href="../Protocols/AutoFold.html">AutoFold</a>
+              </li>
               <li class="nav-group-task" data-name="AutoGetter" data-url="Protocols/AutoGetter.html">
                 <a title="AutoGetter" class="nav-group-task-link" href="../Protocols/AutoGetter.html">AutoGetter</a>
               </li>
@@ -1144,6 +1147,9 @@
               </li>
               <li class="nav-group-task" data-name="AutoSetter" data-url="Protocols/AutoSetter.html">
                 <a title="AutoSetter" class="nav-group-task-link" href="../Protocols/AutoSetter.html">AutoSetter</a>
+              </li>
+              <li class="nav-group-task" data-name="AutoTraversal" data-url="Protocols/AutoTraversal.html">
+                <a title="AutoTraversal" class="nav-group-task-link" href="../Protocols/AutoTraversal.html">AutoTraversal</a>
               </li>
               <li class="nav-group-task" data-name="Bimonad" data-url="Protocols.html#/s:3Bow7BimonadP">
                 <a title="Bimonad" class="nav-group-task-link" href="../Protocols.html#/s:3Bow7BimonadP">Bimonad</a>
@@ -1631,7 +1637,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Focuses on a specific index of this traversal.</p>
 
                       </div>
                       <div class="declaration">
@@ -1641,6 +1647,29 @@
                           <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">at</span><span class="p">(</span><span class="n">_</span> <span class="nv">i</span><span class="p">:</span> <span class="kt">A</span><span class="o">.</span><span class="kt">AtIndex</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Traversal</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">A</span><span class="o">.</span><span class="kt">AtFoci</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  i
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Index to focus.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A traversal from this structure to the focused index.</p>
                       </div>
                     </section>
                   </div>
@@ -1662,7 +1691,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Provides a traversal over all elements of the foci of this traversal.</p>
 
                       </div>
                       <div class="declaration">
@@ -1693,7 +1722,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Provides a traversal focused on an index of the focus of this traversal.</p>
 
                       </div>
                       <div class="declaration">
@@ -1703,6 +1732,29 @@
                           <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">index</span><span class="p">(</span><span class="n">_</span> <span class="nv">i</span><span class="p">:</span> <span class="kt">A</span><span class="o">.</span><span class="kt">IndexType</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Traversal</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">A</span><span class="o">.</span><span class="kt">IndexFoci</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  i
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Index to focus.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A traversal focused on an index of the focus of this traversal.</p>
                       </div>
                     </section>
                   </div>
@@ -1720,7 +1772,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Provides a traversal focused on an index of the focus of this traversal.</p>
 
                       </div>
                       <div class="declaration">
@@ -1728,6 +1780,195 @@
                         <div class="language key-main">
                           <p class="aside-title key-main-text">Swift</p>
                           <pre class="highlight swift"><code><span class="nf">subscript</span><span class="p">(</span><span class="nv">i</span><span class="p">:</span> <span class="kt">A</span><span class="o">.</span><span class="kt">IndexType</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Traversal</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">A</span><span class="o">.</span><span class="kt">IndexFoci</span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  i
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Index to focus.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A traversal focused on an index of the focus of this traversal.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9BowOptics10PTraversalCAAq_Rszq1_Rs0_rlE6updatey0A06StateTCyAE5ForIdCxAE6ArrayKCyq0_GGq0_q0_cF"></a>
+                    <a name="//apple_ref/swift/Method/update(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9BowOptics10PTraversalCAAq_Rszq1_Rs0_rlE6updatey0A06StateTCyAE5ForIdCxAE6ArrayKCyq0_GGq0_q0_cF">
+                      <span class="token-name">update(_:)</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">update</span><span class="p">(</span><span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:3Bow5Statea">State</a></span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt"><a href="../Classes/ArrayK.html">ArrayK</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9BowOptics10PTraversalCAAq_Rszq1_Rs0_rlE9updateOldy0A06StateTCyAE5ForIdCxAE6ArrayKCyq0_GGq0_q0_cF"></a>
+                    <a name="//apple_ref/swift/Method/updateOld(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9BowOptics10PTraversalCAAq_Rszq1_Rs0_rlE9updateOldy0A06StateTCyAE5ForIdCxAE6ArrayKCyq0_GGq0_q0_cF">
+                      <span class="token-name">updateOld(_:)</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">updateOld</span><span class="p">(</span><span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:3Bow5Statea">State</a></span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt"><a href="../Classes/ArrayK.html">ArrayK</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9BowOptics10PTraversalCAAq_Rszq1_Rs0_rlE7update_y0A06StateTCyAE5ForIdCxytGq0_q0_cF"></a>
+                    <a name="//apple_ref/swift/Method/update_(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9BowOptics10PTraversalCAAq_Rszq1_Rs0_rlE7update_y0A06StateTCyAE5ForIdCxytGq0_q0_cF">
+                      <span class="token-name">update_(_:)</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">update_</span><span class="p">(</span><span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:3Bow5Statea">State</a></span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="p">()</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9BowOptics10PTraversalCAAq_Rszq1_Rs0_rlE6assigny0A06StateTCyAE5ForIdCxAE6ArrayKCyq0_GGq0_F"></a>
+                    <a name="//apple_ref/swift/Method/assign(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9BowOptics10PTraversalCAAq_Rszq1_Rs0_rlE6assigny0A06StateTCyAE5ForIdCxAE6ArrayKCyq0_GGq0_F">
+                      <span class="token-name">assign(_:)</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">assign</span><span class="p">(</span><span class="n">_</span> <span class="nv">a</span><span class="p">:</span> <span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:3Bow5Statea">State</a></span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt"><a href="../Classes/ArrayK.html">ArrayK</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9BowOptics10PTraversalCAAq_Rszq1_Rs0_rlE9assignOldy0A06StateTCyAE5ForIdCxAE6ArrayKCyq0_GGq0_F"></a>
+                    <a name="//apple_ref/swift/Method/assignOld(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9BowOptics10PTraversalCAAq_Rszq1_Rs0_rlE9assignOldy0A06StateTCyAE5ForIdCxAE6ArrayKCyq0_GGq0_F">
+                      <span class="token-name">assignOld(_:)</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">assignOld</span><span class="p">(</span><span class="n">_</span> <span class="nv">a</span><span class="p">:</span> <span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:3Bow5Statea">State</a></span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt"><a href="../Classes/ArrayK.html">ArrayK</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9BowOptics10PTraversalCAAq_Rszq1_Rs0_rlE7assign_y0A06StateTCyAE5ForIdCxytGq0_F"></a>
+                    <a name="//apple_ref/swift/Method/assign_(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9BowOptics10PTraversalCAAq_Rszq1_Rs0_rlE7assign_y0A06StateTCyAE5ForIdCxytGq0_F">
+                      <span class="token-name">assign_(_:)</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">assign_</span><span class="p">(</span><span class="n">_</span> <span class="nv">a</span><span class="p">:</span> <span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:3Bow5Statea">State</a></span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="p">()</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
