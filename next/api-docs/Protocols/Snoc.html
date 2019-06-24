@@ -65,7 +65,7 @@
             <img style="height: 18px;" class="header-icon" src="../img/bow-logo.png" alt="Bow Docs"/>
             <span class="header-title">Bow</span>
           </a>
-          <span class="header-tag"> 58% documented</span>
+          <span class="header-tag"> 60% documented</span>
         </p>
     
           <p class="header-col header-col--secondary">
@@ -1609,7 +1609,7 @@
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p><code>Snoc</code> defines a <code>Prism</code> between this structure and its init (all elements but the last one) and last elements. It can be seen as the reverse of <code><a href="../Protocols/Cons.html">Cons</a></code>. It provides a way to attach or detach elements on the end side of a structure.</p>
 
           </div>
         </section>
@@ -1658,7 +1658,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Provides a <code>Prism</code> between this structure and its init and last element.</p>
 
                       </div>
                       <div class="declaration">
@@ -1675,6 +1675,13 @@
               </ul>
             </div>
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Related%20functions"></a>
+                <a name="//apple_ref/swift/Section/Related functions" class="dashAnchor"></a>
+                <a href="#/Related%20functions">
+                  <h3 id="Related%20functions" class="section-name">Related functions<span class="anchor-icon" /></h3>
+                </a>
+              </div>
               <ul class="item-container">
                 <li class="item">
                   <div>
@@ -1692,7 +1699,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Provides an <code>Optional</code> between this structure and its initial part (all elements but the last one).</p>
 
                       </div>
                       <div class="declaration">
@@ -1722,7 +1729,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Provides an <code>Optional</code> between this structure and its last element.</p>
 
                       </div>
                       <div class="declaration">
@@ -1752,7 +1759,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Pre-composes the <code>Prism</code> provided by this <code>Snoc</code> with an isomorphism.</p>
 
                       </div>
                       <div class="declaration">
@@ -1762,6 +1769,29 @@
                           <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="n"><a href="../Protocols/Snoc.html#/s:9BowOptics4SnocP4snocAA6PPrismCyxxx_4LastQztx_AHtGvpZ">snoc</a></span><span class="o">&lt;</span><span class="kt">B</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">iso</span><span class="p">:</span> <span class="kt">Iso</span><span class="o">&lt;</span><span class="kt">B</span><span class="p">,</span> <span class="k">Self</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Prism</span><span class="o">&lt;</span><span class="kt">B</span><span class="p">,</span> <span class="p">(</span><span class="kt">B</span><span class="p">,</span> <span class="kt"><a href="../Protocols/Snoc.html#/s:9BowOptics4SnocP4LastQa">Last</a></span><span class="p">)</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  iso
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An isomorphism.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>Prism</code> between an structure that is isomorphic to this one and its init and last element.</p>
                       </div>
                     </section>
                   </div>
@@ -1782,7 +1812,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Post-composes the <code>Prism</code> provided by this <code>Snoc</code> with an isomorphism.</p>
 
                       </div>
                       <div class="declaration">
@@ -1792,6 +1822,29 @@
                           <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="n"><a href="../Protocols/Snoc.html#/s:9BowOptics4SnocP4snocAA6PPrismCyxxx_4LastQztx_AHtGvpZ">snoc</a></span><span class="o">&lt;</span><span class="kt">B</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">iso</span><span class="p">:</span> <span class="kt">Iso</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Snoc.html#/s:9BowOptics4SnocP4LastQa">Last</a></span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Prism</span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="p">(</span><span class="k">Self</span><span class="p">,</span> <span class="kt">B</span><span class="p">)</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  iso
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An isomorphism.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>Prism</code> between this structure and a new foci that is isomorphic to the original one.</p>
                       </div>
                     </section>
                   </div>
@@ -1812,7 +1865,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Retrieves the initial part of this structure (all elements but the last one).</p>
 
                       </div>
                       <div class="declaration">
@@ -1820,6 +1873,36 @@
                         <div class="language key-main">
                           <p class="aside-title key-main-text">Swift</p>
                           <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">initial</span><span class="p">:</span> <span class="kt"><a href="../Classes/Option.html">Option</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9BowOptics4SnocPAAE4last0A06OptionCy4LastQzGvp"></a>
+                    <a name="//apple_ref/swift/Property/last" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9BowOptics4SnocPAAE4last0A06OptionCy4LastQzGvp">
+                      <span class="token-name">last</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Retrieves the last element of this structure.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">last</span><span class="p">:</span> <span class="kt"><a href="../Classes/Option.html">Option</a></span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Snoc.html#/s:9BowOptics4SnocP4LastQa">Last</a></span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -1842,7 +1925,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Appends an element at the end of this structure.</p>
 
                       </div>
                       <div class="declaration">
@@ -1852,6 +1935,29 @@
                           <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">append</span><span class="p">(</span><span class="n">_</span> <span class="nv">a</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Snoc.html#/s:9BowOptics4SnocP4LastQa">Last</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  a
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Element to append.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A new structure with the provided element at the end.</p>
                       </div>
                     </section>
                   </div>
@@ -1872,7 +1978,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Deconstructs this structure into its initial part (all elements but the last one) and its last element.</p>
 
                       </div>
                       <div class="declaration">
@@ -1899,7 +2005,7 @@
         <p>with support from <a href="https://47deg.com/">47 Degrees</a></p>
       </div>
       <div>
-        <p>&copy; 2019 <a class="link" href="https://bow-swift.io" target="_blank" rel="external">Bow</a>. All rights reserved. (Last updated: 2019-06-20)</p>
+        <p>&copy; 2019 <a class="link" href="https://bow-swift.io" target="_blank" rel="external">Bow</a>. All rights reserved. (Last updated: 2019-06-24)</p>
         <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
       </div>
     </section>

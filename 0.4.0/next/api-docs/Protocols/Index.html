@@ -65,7 +65,7 @@
             <img style="height: 18px;" class="header-icon" src="../img/bow-logo.png" alt="Bow Docs"/>
             <span class="header-title">Bow</span>
           </a>
-          <span class="header-tag"> 58% documented</span>
+          <span class="header-tag"> 60% documented</span>
         </p>
     
           <p class="header-col header-col--secondary">
@@ -1609,7 +1609,7 @@
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p><code>Index</code> provides an <code>Optional</code> for this structure to focus on an optional <code>IndexFoci</code> at a given index <code>IndexType</code>.</p>
 
           </div>
         </section>
@@ -1685,7 +1685,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Provides an <code>Optional</code> that focuses on a value at a given index.</p>
 
                       </div>
                       <div class="declaration">
@@ -1696,12 +1696,42 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  i
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Index to focus on.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An <code>Optional</code> optic that focuses on a value of this structure.</p>
+                      </div>
                     </section>
                   </div>
                 </li>
               </ul>
             </div>
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Related%20functions"></a>
+                <a name="//apple_ref/swift/Section/Related functions" class="dashAnchor"></a>
+                <a href="#/Related%20functions">
+                  <h3 id="Related%20functions" class="section-name">Related functions<span class="anchor-icon" /></h3>
+                </a>
+              </div>
               <ul class="item-container">
                 <li class="item">
                   <div>
@@ -1719,7 +1749,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Pre-composes the <code>Optional</code> provided by this <code>Index</code> with an isomorphism.</p>
 
                       </div>
                       <div class="declaration">
@@ -1729,6 +1759,41 @@
                           <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="n">index</span><span class="o">&lt;</span><span class="kt">B</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">i</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Index.html#/s:9BowOptics5IndexP0C4TypeQa">IndexType</a></span><span class="p">,</span> <span class="nv">iso</span><span class="p">:</span> <span class="kt">Iso</span><span class="o">&lt;</span><span class="kt">B</span><span class="p">,</span> <span class="k">Self</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Optional</span><span class="o">&lt;</span><span class="kt">B</span><span class="p">,</span> <span class="kt"><a href="../Protocols/Index.html#/s:9BowOptics5IndexP0C4FociQa">IndexFoci</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  i
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Index to focus this structure.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  iso
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An isomorphism.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An <code>Optional</code> optic between a structure that is isomorphic to this one and the same foci, focused at the provided index.</p>
                       </div>
                     </section>
                   </div>
@@ -1749,7 +1814,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Post-composes the <code>Optional</code> provided by this <code>Index</code> with an isomorphism.</p>
 
                       </div>
                       <div class="declaration">
@@ -1759,6 +1824,41 @@
                           <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="n">index</span><span class="o">&lt;</span><span class="kt">B</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">i</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Index.html#/s:9BowOptics5IndexP0C4TypeQa">IndexType</a></span><span class="p">,</span> <span class="nv">iso</span><span class="p">:</span> <span class="kt">Iso</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Index.html#/s:9BowOptics5IndexP0C4FociQa">IndexFoci</a></span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Optional</span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  i
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Index to focus this structure.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  iso
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An isomorphism.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An <code>Optional</code> between this optic and new foci isomorphic to the original one, focused at the provided index.</p>
                       </div>
                     </section>
                   </div>
@@ -1776,7 +1876,7 @@
         <p>with support from <a href="https://47deg.com/">47 Degrees</a></p>
       </div>
       <div>
-        <p>&copy; 2019 <a class="link" href="https://bow-swift.io" target="_blank" rel="external">Bow</a>. All rights reserved. (Last updated: 2019-06-20)</p>
+        <p>&copy; 2019 <a class="link" href="https://bow-swift.io" target="_blank" rel="external">Bow</a>. All rights reserved. (Last updated: 2019-06-24)</p>
         <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
       </div>
     </section>
