@@ -65,7 +65,7 @@
             <img style="height: 18px;" class="header-icon" src="../img/bow-logo.png" alt="Bow Docs"/>
             <span class="header-title">Bow</span>
           </a>
-          <span class="header-tag"> 62% documented</span>
+          <span class="header-tag"> 64% documented</span>
         </p>
     
           <p class="header-col header-col--secondary">
@@ -2622,6 +2622,13 @@
               </ul>
             </div>
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Optics%20extensions2"></a>
+                <a name="//apple_ref/swift/Section/Optics extensions" class="dashAnchor"></a>
+                <a href="#/Optics%20extensions2">
+                  <h3 id="Optics%20extensions2" class="section-name">Optics extensions<span class="anchor-icon" /></h3>
+                </a>
+              </div>
               <ul class="item-container">
                 <li class="item">
                   <div>
@@ -2636,7 +2643,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Provides a polymorphic Iso between Validated and Either.</p>
 
                       </div>
                       <div class="declaration">
@@ -2646,6 +2653,10 @@
                           <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="n">toPEither</span><span class="o">&lt;</span><span class="kt">E2</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/PIso.html">PIso</a></span><span class="o">&lt;</span><span class="kt">Validated</span><span class="o">&lt;</span><span class="kt">E</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt">Validated</span><span class="o">&lt;</span><span class="kt">E2</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt"><a href="../Classes/Either.html">Either</a></span><span class="o">&lt;</span><span class="kt">E</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt"><a href="../Classes/Either.html">Either</a></span><span class="o">&lt;</span><span class="kt">E2</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A polymorphic Iso between Validated and Either.</p>
                       </div>
                     </section>
                   </div>
@@ -2663,7 +2674,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Provides an Iso between Validated and Either.</p>
 
                       </div>
                       <div class="declaration">
@@ -2690,7 +2701,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Provides a polymorphic Iso between Validated and Try.</p>
 
                       </div>
                       <div class="declaration">
@@ -2700,6 +2711,10 @@
                           <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="n">toPTry</span><span class="o">&lt;</span><span class="kt">B</span><span class="o">&gt;</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/PIso.html">PIso</a></span><span class="o">&lt;</span><span class="kt">Validated</span><span class="o">&lt;</span><span class="kt">Error</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt">Validated</span><span class="o">&lt;</span><span class="kt">Error</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt"><a href="../Classes/Try.html">Try</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt"><a href="../Classes/Try.html">Try</a></span><span class="o">&lt;</span><span class="kt">B</span><span class="o">&gt;&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A polymorphic Iso between Validated and Try.</p>
                       </div>
                     </section>
                   </div>
@@ -2717,7 +2732,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Provides an Iso between Validated and Try.</p>
 
                       </div>
                       <div class="declaration">
@@ -2744,7 +2759,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Provides a polymorphic Prism focused on the valid side of a Validated.</p>
 
                       </div>
                       <div class="declaration">
@@ -2754,6 +2769,10 @@
                           <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="n">pValidPrism</span><span class="o">&lt;</span><span class="kt">B</span><span class="o">&gt;</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/PPrism.html">PPrism</a></span><span class="o">&lt;</span><span class="kt">Validated</span><span class="o">&lt;</span><span class="kt">E</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt">Validated</span><span class="o">&lt;</span><span class="kt">E</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A polymorphic Prism focused on the valid side of a Validated.</p>
                       </div>
                     </section>
                   </div>
@@ -2771,7 +2790,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Provides a Prism focused on the valid side of a Validated.</p>
 
                       </div>
                       <div class="declaration">
@@ -2798,7 +2817,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Provides a polymorphic Prism focused on the invalid side of a Validated.</p>
 
                       </div>
                       <div class="declaration">
@@ -2808,6 +2827,10 @@
                           <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="n">pInvalidPrism</span><span class="o">&lt;</span><span class="kt">EE</span><span class="o">&gt;</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/PPrism.html">PPrism</a></span><span class="o">&lt;</span><span class="kt">Validated</span><span class="o">&lt;</span><span class="kt">E</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt">Validated</span><span class="o">&lt;</span><span class="kt">EE</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt">E</span><span class="p">,</span> <span class="kt">EE</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A polymorphic Prism focused on the invalid side of a Validated.</p>
                       </div>
                     </section>
                   </div>
@@ -2825,7 +2848,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Provides a Prism focused on the invalid side of a Validated.</p>
 
                       </div>
                       <div class="declaration">

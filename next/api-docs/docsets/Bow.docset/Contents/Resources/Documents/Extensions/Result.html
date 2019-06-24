@@ -65,7 +65,7 @@
             <img style="height: 18px;" class="header-icon" src="../img/bow-logo.png" alt="Bow Docs"/>
             <span class="header-title">Bow</span>
           </a>
-          <span class="header-tag"> 62% documented</span>
+          <span class="header-tag"> 64% documented</span>
         </p>
     
           <p class="header-col header-col--secondary">
@@ -1637,7 +1637,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Provides a prism focused on the success side of a Result.</p>
 
                       </div>
                       <div class="declaration">
@@ -1664,7 +1664,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Provides a prism focused on the failure side of a Result.</p>
 
                       </div>
                       <div class="declaration">
@@ -1672,6 +1672,60 @@
                         <div class="language key-main">
                           <p class="aside-title key-main-text">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">failurePrism</span><span class="p">:</span> <span class="kt">Prism</span><span class="o">&lt;</span><span class="kt">Result</span><span class="o">&lt;</span><span class="kt">Success</span><span class="p">,</span> <span class="kt">Failure</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt">Failure</span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:s6ResultO9BowOpticsE8toEitherAC4PIsoCyAByxq_GAG0B00E0Cyq_xGAKGvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/toEither" class="dashAnchor"></a>
+                    <a class="token" href="#/s:s6ResultO9BowOpticsE8toEitherAC4PIsoCyAByxq_GAG0B00E0Cyq_xGAKGvpZ">
+                      <span class="token-name">toEither</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Provides an Iso between Result and Either.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">toEither</span><span class="p">:</span> <span class="kt">Iso</span><span class="o">&lt;</span><span class="kt">Result</span><span class="o">&lt;</span><span class="kt">Success</span><span class="p">,</span> <span class="kt">Failure</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt"><a href="../Classes/Either.html">Either</a></span><span class="o">&lt;</span><span class="kt">Failure</span><span class="p">,</span> <span class="kt">Success</span><span class="o">&gt;&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:s6ResultO9BowOpticsE11toValidatedAC4PIsoCyAByxq_GAG0B00E0Cyq_xGAKGvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/toValidated" class="dashAnchor"></a>
+                    <a class="token" href="#/s:s6ResultO9BowOpticsE11toValidatedAC4PIsoCyAByxq_GAG0B00E0Cyq_xGAKGvpZ">
+                      <span class="token-name">toValidated</span>
+                      <span class="token-icon" /></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <section class="section">
+                      <div class="abstract">
+                        <p>Provides an Iso between Result and Validated.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language key-main">
+                          <p class="aside-title key-main-text">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">toValidated</span><span class="p">:</span> <span class="kt">Iso</span><span class="o">&lt;</span><span class="kt">Result</span><span class="o">&lt;</span><span class="kt">Success</span><span class="p">,</span> <span class="kt">Failure</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt"><a href="../Classes/Validated.html">Validated</a></span><span class="o">&lt;</span><span class="kt">Failure</span><span class="p">,</span> <span class="kt">Success</span><span class="o">&gt;&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
