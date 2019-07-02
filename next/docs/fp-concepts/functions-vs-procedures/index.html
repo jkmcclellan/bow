@@ -21,16 +21,23 @@
     <meta name="twitter:creator" content="@bow_swift">
     <meta name="twitter:image" content="https://bow-swift.io/img/twitter-card.png" />
 
+    <!-- Bow version metadata -->
+    
+    <meta name="bow-version" data-title="next" />
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="/bow/next/img/favicon.png">
+    <link rel="shortcut icon" href="/next/img/favicon.png">
     <!-- Main css -->
-    <link rel="stylesheet" type="text/css" href="/bow/next/css/docs.css">
+    <link rel="stylesheet" type="text/css" href="/next/css/docs.css">
     <!-- Highlighting css -->
-    <link rel="stylesheet" type="text/css" href="/bow/next/api-docs/css/highlight.css">
+    <link rel="stylesheet" type="text/css" href="/next/api-docs/css/highlight.css">
+
+    <!-- Code to manage version information -->
+    <script src="/next/js/doc-versions.js" defer></script>
 
     
         <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -51,14 +58,55 @@
 <div id="wrapper">
     <div id="sidebar-wrapper">
     <div class="sidebar-brand">
-        <a class="brand" href="/bow/next/">
-            <img src="/bow/next/img/icon.svg" alt="Bow logo">
+        <a class="brand" href="/next/">
+            <img src="/next/img/icon.svg" alt="Bow logo">
             <span>Bow</span>
         </a>
         <button type="button" id="main-toggle" class="sidebar-toggle">
             <span class="close"></span>
         </button>
     </div>
+
+    <div id="version-dropdown">
+
+    <button class="button link-like" onclick="displayToggle(event)" title="Documentation">
+      <span>Bow version</span>
+      <span id="bow-version">
+        
+        next
+      </span>
+    </button>
+
+    <ul class="dropdown dropdown-content">
+
+      <li class="dropdown-item">
+        <a class="dropdown-item-link" href="/docs">
+            <span>
+              master
+            </span>
+        </a>
+      </li>
+
+      
+      <li class="dropdown-item">
+        <a class="dropdown-item-link" href="next/docs">
+            <span>
+              next
+            </span>
+        </a>
+      </li>
+      
+      <li class="dropdown-item">
+        <a class="dropdown-item-link" href="0.4.0/docs">
+            <span>
+              0.4.0
+            </span>
+        </a>
+      </li>
+      
+    </ul>
+</div>
+
 
     <ul class="sidebar-nav">
         
@@ -73,21 +121,21 @@
             <ul>
                 
                 <li>
-                    <a href="/bow/next/docs/quick-start/getting-started/">
+                    <a href="/next/docs/quick-start/getting-started/">
                         <i class="fa fa-circle"></i>
                         <span>Getting started</span>
                     </a>
                 </li>
                 
                 <li>
-                    <a href="/bow/next/docs/quick-start/modules/">
+                    <a href="/next/docs/quick-start/modules/">
                         <i class="fa fa-circle"></i>
                         <span>Modules</span>
                     </a>
                 </li>
                 
                 <li>
-                    <a href="/bow/next/docs/quick-start/resources/">
+                    <a href="/next/docs/quick-start/resources/">
                         <i class="fa fa-circle"></i>
                         <span>Resources</span>
                     </a>
@@ -108,35 +156,35 @@
             <ul>
                 
                 <li>
-                    <a href="/bow/next/docs/fp-concepts/glossary/">
+                    <a href="/next/docs/fp-concepts/glossary/">
                         <i class="fa fa-circle"></i>
                         <span>Glossary</span>
                     </a>
                 </li>
                 
                 <li>
-                    <a href="/bow/next/docs/fp-concepts/functions-vs-procedures/">
+                    <a href="/next/docs/fp-concepts/functions-vs-procedures/">
                         <i class="fa fa-circle"></i>
                         <span>Functions vs Procedures</span>
                     </a>
                 </li>
                 
                 <li>
-                    <a href="/bow/next/docs/fp-concepts/higher-kinded-types/">
+                    <a href="/next/docs/fp-concepts/higher-kinded-types/">
                         <i class="fa fa-circle"></i>
                         <span>Higher Kinded Types</span>
                     </a>
                 </li>
                 
                 <li>
-                    <a href="/bow/next/docs/fp-concepts/type-classes/">
+                    <a href="/next/docs/fp-concepts/type-classes/">
                         <i class="fa fa-circle"></i>
                         <span>Type classes</span>
                     </a>
                 </li>
                 
                 <li>
-                    <a href="/bow/next/docs/fp-concepts/data-types/">
+                    <a href="/next/docs/fp-concepts/data-types/">
                         <i class="fa fa-circle"></i>
                         <span>Data types</span>
                     </a>
@@ -157,21 +205,21 @@
             <ul>
                 
                 <li>
-                    <a href="/bow/next/docs/patterns/error-handling/">
+                    <a href="/next/docs/patterns/error-handling/">
                         <i class="fa fa-circle"></i>
                         <span>Error handling</span>
                     </a>
                 </li>
                 
                 <li>
-                    <a href="/bow/next/docs/patterns/dependency-injection/">
+                    <a href="/next/docs/patterns/dependency-injection/">
                         <i class="fa fa-circle"></i>
                         <span>Dependency injection</span>
                     </a>
                 </li>
                 
                 <li>
-                    <a href="/bow/next/docs/patterns/polymorphic-programs/">
+                    <a href="/next/docs/patterns/polymorphic-programs/">
                         <i class="fa fa-circle"></i>
                         <span>Polymorphic programs</span>
                     </a>
@@ -192,14 +240,14 @@
             <ul>
                 
                 <li>
-                    <a href="/bow/next/docs/legal/credits/">
+                    <a href="/next/docs/legal/credits/">
                         <i class="fa fa-circle"></i>
                         <span>Credits</span>
                     </a>
                 </li>
                 
                 <li>
-                    <a href="/bow/next/docs/legal/license/">
+                    <a href="/next/docs/legal/license/">
                         <i class="fa fa-circle"></i>
                         <span>License</span>
                     </a>
@@ -405,7 +453,7 @@
 
 </div>
 <!-- Custom scripts for this template -->
-<script src="/bow/next/js/docs.js"></script>
+<script src="/next/js/docs.js"></script>
 <!-- Gitter -->
 <script>
   ((window.gitter = {}).chat = {}).options = {
