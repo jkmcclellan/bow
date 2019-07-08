@@ -309,93 +309,112 @@
         </button>
     </div>
     <div class="doc-content">
-        <h1 id="glossary">Glossary</h1>
+        <h1 id="overview">Overview</h1>
 
 <p class="beginner">beginner</p>
 
-<p>This is a compendium of some of the terminology that is used in the documentation for Bow and in literature about Functional Programming. It is expected to grow over time as we make progress in the documentation of the library. If there is a term that you would like to see in this list, please, open an issue and we will consider adding it here.</p>
+<p>The optics module in Bow provides several utilities to work with immutable data structures. It enables easy access to getting, setting and modifying deeply nested data structure without the burden of making explicit copies of the involved values.</p>
 
-<h1 id="a">A</h1>
+<p>In order to use the module, you just need to import it:</p>
 
-<h3 id="ad-hoc-polymorphism">Ad-hoc polymorphism</h3>
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">import</span> <span class="kt">BowOptics</span>
+</code></pre></div></div>
 
-<p><strong>Ad-hoc polymorphism</strong> is a type of polymorphism achieved by having functions with the same name but different signatures and/or different number of arguments. In Functional Programming, ad-hoc polymorphism is achieved with type classes that act as constraints added to type parameters in parametrically polymorphic types or functions. Ad-hoc polymorphism is also known as function overloading.</p>
-
-<h1 id="f">F</h1>
-
-<h3 id="function">Function</h3>
-
-<p>A function is a piece of code that has the following properties:</p>
+<p>This module includes multiple facilities to work with immutable nested data structures:</p>
 
 <ul>
-  <li><strong>Total</strong>: it must provide an output for every input.</li>
-  <li><strong>Deterministic</strong>: for a given input, the function always returns the same output.</li>
-  <li><strong>Pure</strong>: the evaluation of the function does not cause any other effects besides computing the output.</li>
+  <li>Optics: it includes several data types that let us work with different types of structures.</li>
+  <li>Type classes: several abstractions are provided to generalize operations of accessing data structures internals.</li>
+  <li>Automatic generation: in some cases, the library is able to automatically provide certain optics for some data types, so that you do not need to write them.</li>
 </ul>
 
-<p>Notice that Swift does not enforce any of these properties in their definition. Swift functions that have these properties are generally referred as <strong>pure functions</strong>, whereas the ones that do not have some of them are called <strong>impure functions</strong>.</p>
+<h2 id="optics">Optics</h2>
 
-<h3 id="functional-programming">Functional Programming</h3>
+<p>The provided optics operate on two type arguments that are typically named <code class="highlighter-rouge">S</code> and <code class="highlighter-rouge">A</code>, which correspond to the source (the whole structure we have) and the focus (the part we want to obtain or modify). The following table summarizes the individual optics that are provided in <code class="highlighter-rouge">BowOptics</code>:</p>
 
-<p><strong>Functional Programming</strong> is a programming paradigm that treats computation as the evaluation of mathematical functions and avoids changing state and mutable data.</p>
+<table>
+  <thead>
+    <tr>
+      <th>Optic</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Iso</td>
+      <td>A lossless invertible optic defining an isomorphism between two types</td>
+    </tr>
+    <tr>
+      <td>Getter</td>
+      <td>An optic that can focus into a structure and get its focus</td>
+    </tr>
+    <tr>
+      <td>Setter</td>
+      <td>An optic that can focus into a structure and set or modify its focus</td>
+    </tr>
+    <tr>
+      <td>Lens</td>
+      <td>An optic that can focus into a structure and get, set or modify its focus</td>
+    </tr>
+    <tr>
+      <td>Optional</td>
+      <td>An optic whose focus is optional and can get, set or modify it</td>
+    </tr>
+    <tr>
+      <td>Prism</td>
+      <td>An optic whose focus is present only in some cases (of a sum type) and can get, set or modify it</td>
+    </tr>
+    <tr>
+      <td>Fold</td>
+      <td>An optic that can have multiple foci and is able to fold them into a single value</td>
+    </tr>
+    <tr>
+      <td>Traversal</td>
+      <td>An optic that can have multiple foci and get, set or modify them</td>
+    </tr>
+  </tbody>
+</table>
 
-<h1 id="i">I</h1>
+<p>Besides, the optics provided in this module are able to operate polymorphically. In this case, their name is prepended by a <code class="highlighter-rouge">P</code> (e.g. <code class="highlighter-rouge">PIso</code>, <code class="highlighter-rouge">PLens</code> or <code class="highlighter-rouge">PPrism</code>) and have two additional type parameters: <code class="highlighter-rouge">T</code>, the modified source, and <code class="highlighter-rouge">B</code>, the modified focus. This means those optics can operate on structures that change the type of the source or the focus (usually parametrically polymorphic types).</p>
 
-<h3 id="instance-of-a-type-class">Instance (of a type class)</h3>
+<h2 id="type-classes">Type classes</h2>
 
-<p>An <strong>instance</strong> of a type class is the implementation of such type class for a given type. They are usually done in Swift using the <code class="highlighter-rouge">extension</code> functionality in the language.</p>
+<p>These are the provided type classes in the <code class="highlighter-rouge">BowOptics</code> module:</p>
 
-<h1 id="k">K</h1>
-
-<h3 id="kind">Kind</h3>
-
-<p>A <strong>kind</strong> is a group of types. As values are grouped into types, types are grouped into kinds. The notion of kind lets us conceptualize type constructors that receive a number of type arguments and abstract over them. This generalization is known as <strong>higher kinded types</strong> and enable generic polymorphic programs. Swift does not support this feature natively, but it is simulated in Bow.</p>
-
-<h1 id="m">M</h1>
-
-<h3 id="memoization">Memoization</h3>
-
-<p><strong>Memoization</strong> is an optimization technique that transforms expensive computational function calls into searches in a lookup table by caching previous calls.</p>
-
-<h1 id="p">P</h1>
-
-<h3 id="parametric-polymorphism">Parametric polymorphism</h3>
-
-<p><strong>Parametric polymorphism</strong> is a type of polymorphism that allows specifying generic types to create functions and/or other types. These generic types are called <em>type parameters</em>.</p>
-
-<h3 id="procedure">Procedure</h3>
-
-<p>A <strong>procedure</strong> is a Swift function that is not total, deterministic and/or pure, as required in the mathematical definition of function. Generally, it is referred to as an <strong>impure function</strong>.</p>
-
-<h1 id="r">R</h1>
-
-<h3 id="referential-transparency">Referential Transparency</h3>
-
-<p><strong>Referential transparency</strong> is a property of a function that allows it to be replaced by the result of its execution without altering the overall behavior of the program.</p>
-
-<h1 id="t">T</h1>
-
-<h3 id="type">Type</h3>
-
-<p>A <strong>type</strong> is a set of values that helps us conceptualize data and restrict the possible values that functions can accept as input or provide as output. Types can be finite (like <code class="highlighter-rouge">Bool</code>, with two values: <code class="highlighter-rouge">true</code> and <code class="highlighter-rouge">false</code>) or infinite (like <code class="highlighter-rouge">String</code>).</p>
-
-<h3 id="type-class">Type class</h3>
-
-<p>A <strong>type class</strong> is a group of functions that operate on generic type parameters and is governed by algebraic laws. They are usually represented in Swift as protocols with associated types or self requirements.</p>
-
-<h3 id="type-constructor">Type constructor</h3>
-
-<p>A <strong>type constructor</strong> is a type that receives other types and produces new types. Examples of type constructors are <code class="highlighter-rouge">Array&lt;Element&gt;</code> or <code class="highlighter-rouge">Optional&lt;Wrapped&gt;</code>, where providing types for <code class="highlighter-rouge">Element</code> or <code class="highlighter-rouge">Wrapper</code> types yields new types like <code class="highlighter-rouge">Array&lt;Int&gt;</code> or <code class="highlighter-rouge">Optional&lt;String&gt;</code>.</p>
-
-<h3 id="type-parameter">Type parameter</h3>
-
-<p>A <strong>type parameter</strong> is a placeholder in a type constructor or generic function that let us provide different types and generate a family of types or functions. For instance, in <code class="highlighter-rouge">Array&lt;Element&gt;</code>, <code class="highlighter-rouge">Element</code> is a type parameter for <code class="highlighter-rouge">Array</code> and replacing with concrete types yields a family of new types.</p>
-
-<h1 id="w">W</h1>
-
-<h3 id="witness">Witness</h3>
-
-<p>A <strong>witness</strong> is an intermediate class that is used to simulate Higher Kinded Types in Bow. As a convention, they are prefixed by <code class="highlighter-rouge">For</code>. As an example, consider the <code class="highlighter-rouge">Option&lt;A&gt;</code> data type in Bow. This data type extends <code class="highlighter-rouge">Kind&lt;ForOption, A&gt;</code> in order to enable HKT support. <code class="highlighter-rouge">ForOption</code> is the witness for <code class="highlighter-rouge">Option</code>.</p>
+<table>
+  <thead>
+    <tr>
+      <th>Type class</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Cons</td>
+      <td>Splits a structure into its first element and the rest</td>
+    </tr>
+    <tr>
+      <td>Snoc</td>
+      <td>Splits a structure into a prefix with all elements but the last, and the last</td>
+    </tr>
+    <tr>
+      <td>At</td>
+      <td>Provides a Lens at a given index</td>
+    </tr>
+    <tr>
+      <td>Index</td>
+      <td>Provides an Optional at a given index</td>
+    </tr>
+    <tr>
+      <td>FilterIndex</td>
+      <td>Provides a Traversal of elements whose index fulfils a predicate</td>
+    </tr>
+    <tr>
+      <td>Each</td>
+      <td>Provides a Traversal that can focus into a structure to see all foci</td>
+    </tr>
+  </tbody>
+</table>
 
     </div>
 </div>

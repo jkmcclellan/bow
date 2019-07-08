@@ -1,5 +1,5 @@
 current directory: /Users/travis/build/bow-swift/bow/docs/vendor/bundle/ruby/2.4.0/gems/redcarpet-3.4.0/ext/redcarpet
-/Users/travis/.rvm/rubies/ruby-2.4.5/bin/ruby -I /Users/travis/.rvm/rubies/ruby-2.4.5/lib/ruby/site_ruby/2.4.0 -r ./siteconf20190708-6573-1s6rxuk.rb extconf.rb
+/Users/travis/.rvm/rubies/ruby-2.4.5/bin/ruby -I /Users/travis/.rvm/rubies/ruby-2.4.5/lib/ruby/site_ruby/2.4.0 -r ./siteconf20190708-6591-rnxpgv.rb extconf.rb
 creating Makefile
 
 current directory: /Users/travis/build/bow-swift/bow/docs/vendor/bundle/ruby/2.4.0/gems/redcarpet-3.4.0/ext/redcarpet
@@ -68,4 +68,4 @@ linking shared-object redcarpet.bundle
 
 current directory: /Users/travis/build/bow-swift/bow/docs/vendor/bundle/ruby/2.4.0/gems/redcarpet-3.4.0/ext/redcarpet
 make "DESTDIR=" install
-/usr/bin/install -m 0755 redcarpet.bundle ./.gem.20190708-6573-1kwpdjk
+/usr/bin/install -m 0755 redcarpet.bundle ./.gem.20190708-6591-1on62eg

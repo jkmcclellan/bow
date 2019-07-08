@@ -48,6 +48,23 @@ options:
           url: /docs/patterns/polymorphic-programs/
 
 
+  - title: Optics
+
+    nested_options:
+
+        - title: Overview
+          url: /docs/optics/overview/
+
+        - title: Writing your own optics
+          url: /docs/optics/writing-your-own-optics/
+
+        - title: Automatic derivation
+          url: /docs/optics/automatic-derivation/
+
+        - title: Composition
+          url: /docs/optics/composition/
+
+
   - title: Legal
 
     nested_options:
