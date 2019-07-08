@@ -65,7 +65,7 @@
             <img style="height: 18px;" class="header-icon" src="../img/bow-logo.png" alt="Bow Docs"/>
             <span class="header-title">Bow</span>
           </a>
-          <span class="header-tag"> 69% documented</span>
+          <span class="header-tag"> 74% documented</span>
         </p>
     
           <p class="header-col header-col--secondary">
@@ -1558,7 +1558,7 @@
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p>Represents a sum type of 2 different types.</p>
 
           </div>
         </section>
@@ -1580,7 +1580,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Creates an instance of a coproduct providing a value of the first type.</p>
 
                       </div>
                       <div class="declaration">
@@ -1590,6 +1590,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">first</span><span class="p">(</span><span class="n">_</span> <span class="nv">a</span><span class="p">:</span> <span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Coproduct2</span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  a
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Value of the first type of the coproduct.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A coproduct with a value of the first type.</p>
                       </div>
                     </section>
                   </div>
@@ -1607,7 +1630,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Creates an instance of a coproduct providing a value of the second type.</p>
 
                       </div>
                       <div class="declaration">
@@ -1617,6 +1640,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">second</span><span class="p">(</span><span class="n">_</span> <span class="nv">b</span><span class="p">:</span> <span class="kt">B</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Coproduct2</span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  b
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Value of the second type of the coproduct.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A coproduct with a value of the second type.</p>
                       </div>
                     </section>
                   </div>
@@ -1634,7 +1680,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Applies a function depending on the content of the coproduct.</p>
 
                       </div>
                       <div class="declaration">
@@ -1645,6 +1691,41 @@
                     <span class="n">_</span> <span class="nv">fb</span><span class="p">:</span> <span class="p">(</span><span class="kt">B</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Z</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Z</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  fa
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Function to apply with a value of the first type.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  fb
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Function to apply with a value of the second type.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A value resulting of the application of the corresponding function based on the content of the coproduct.</p>
                       </div>
                     </section>
                   </div>
@@ -1662,7 +1743,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Retrieves the value of the first type, if present.</p>
 
                       </div>
                       <div class="declaration">
@@ -1689,7 +1770,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Retrieves the value of the second type, if present.</p>
 
                       </div>
                       <div class="declaration">
@@ -1716,7 +1797,7 @@
         <p>with support from <a href="https://47deg.com/">47 Degrees</a></p>
       </div>
       <div>
-        <p>&copy; 2019 <a class="link" href="https://bow-swift.io" target="_blank" rel="external">Bow</a>. All rights reserved. (Last updated: 2019-07-03)</p>
+        <p>&copy; 2019 <a class="link" href="https://bow-swift.io" target="_blank" rel="external">Bow</a>. All rights reserved. (Last updated: 2019-07-08)</p>
         <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
       </div>
     </section>
