@@ -65,7 +65,7 @@
             <img style="height: 18px;" class="header-icon" src="../img/bow-logo.png" alt="Bow Docs"/>
             <span class="header-title">Bow</span>
           </a>
-          <span class="header-tag"> 74% documented</span>
+          <span class="header-tag"> 81% documented</span>
         </p>
     
           <p class="header-col header-col--secondary">
@@ -1558,7 +1558,15 @@
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p>A Traversal is an optic that allows to see into a structure with 0 to N foci.</p>
+
+<p>Traversal is a generalization of <code><a href="../Protocols/Traverse.html">Traverse</a></code> and can be seen as a representation of <code>modifyF</code>. All methods are written in terms of <code>modifyF</code>.</p>
+
+<p>Type parameters:
+    - <code>S</code>: Source.
+    - <code>T</code>: Modified source.
+    - <code>A</code>: Focus.
+    - <code>B</code>: Modified focus.</p>
 
           </div>
         </section>
@@ -1580,7 +1588,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Modifies the source wiht an <code><a href="../Protocols/Applicative.html">Applicative</a></code> function.</p>
 
                       </div>
                       <div class="declaration">
@@ -1590,6 +1598,41 @@
                           <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="n">modifyF</span><span class="o">&lt;</span><span class="kt">F</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Applicative.html">Applicative</a></span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">s</span><span class="p">:</span> <span class="kt">S</span><span class="p">,</span> <span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">T</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  s
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Source.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  f
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Modifying function.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Modified source in the context of the <code><a href="../Protocols/Applicative.html">Applicative</a></code>.</p>
                       </div>
                     </section>
                   </div>
@@ -1607,7 +1650,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Provides a Traversal with no focus.</p>
 
                       </div>
                       <div class="declaration">
@@ -1634,7 +1677,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Provides a Traversal based on the implementation of <code><a href="../Protocols/Traverse.html">Traverse</a></code> for <code>F</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -1644,6 +1687,10 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">fromTraverse</span><span class="o">&lt;</span><span class="kt">F</span><span class="o">&gt;</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">PTraversal</span><span class="o">&lt;</span><span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">S</span> <span class="p">:</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt">F</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/Traverse.html">Traverse</a></span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A Traversal based on the implementation of <code><a href="../Protocols/Traverse.html">Traverse</a></code> for <code>F</code>.</p>
                       </div>
                     </section>
                   </div>
@@ -1661,18 +1708,65 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Creates a Traversal from multiple getters of the same source.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language key-main">
                           <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">from</span><span class="p">(</span><span class="n">_</span> <span class="nv">get1</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
-                        <span class="n">_</span> <span class="nv">get2</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
-                        <span class="n">_</span> <span class="nv">set</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">PTraversal</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">T</span><span class="p">,</span> <span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">from</span><span class="p">(</span><span class="n">_</span> <span class="nv">get1</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
+                        <span class="n">_</span> <span class="nv">get2</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
+                        <span class="n">_</span> <span class="nv">set</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">PTraversal</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">T</span><span class="p">,</span> <span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  get1
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>1st getter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  get2
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>2nd getter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  set
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Setter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A Traversal from the provided getters and setter.</p>
                       </div>
                     </section>
                   </div>
@@ -1690,19 +1784,78 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Creates a Traversal from multiple getters of the same source.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language key-main">
                           <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">from</span><span class="p">(</span><span class="n">_</span> <span class="nv">get1</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
-                        <span class="n">_</span> <span class="nv">get2</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
-                        <span class="n">_</span> <span class="nv">get3</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
-                        <span class="n">_</span> <span class="nv">set</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">PTraversal</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">T</span><span class="p">,</span> <span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">from</span><span class="p">(</span><span class="n">_</span> <span class="nv">get1</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
+                        <span class="n">_</span> <span class="nv">get2</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
+                        <span class="n">_</span> <span class="nv">get3</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
+                        <span class="n">_</span> <span class="nv">set</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">PTraversal</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">T</span><span class="p">,</span> <span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  get1
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>1st getter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  get2
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>2nd getter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  get3
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>3rd getter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  set
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Setter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A Traversal from the provided getters and setter.</p>
                       </div>
                     </section>
                   </div>
@@ -1720,20 +1873,91 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Creates a Traversal from multiple getters of the same source.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language key-main">
                           <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">from</span><span class="p">(</span><span class="n">_</span> <span class="nv">get1</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
-                        <span class="n">_</span> <span class="nv">get2</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
-                        <span class="n">_</span> <span class="nv">get3</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
-                        <span class="n">_</span> <span class="nv">get4</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
-                        <span class="n">_</span> <span class="nv">set</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">PTraversal</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">T</span><span class="p">,</span> <span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">from</span><span class="p">(</span><span class="n">_</span> <span class="nv">get1</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
+                        <span class="n">_</span> <span class="nv">get2</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
+                        <span class="n">_</span> <span class="nv">get3</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
+                        <span class="n">_</span> <span class="nv">get4</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
+                        <span class="n">_</span> <span class="nv">set</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">PTraversal</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">T</span><span class="p">,</span> <span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  get1
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>1st getter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  get2
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>2nd getter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  get3
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>3rd getter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  get4
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>4th getter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  set
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Setter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A Traversal from the provided getters and setter.</p>
                       </div>
                     </section>
                   </div>
@@ -1751,21 +1975,104 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Creates a Traversal from multiple getters of the same source.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language key-main">
                           <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">from</span><span class="p">(</span><span class="n">_</span> <span class="nv">get1</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
-                        <span class="n">_</span> <span class="nv">get2</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
-                        <span class="n">_</span> <span class="nv">get3</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
-                        <span class="n">_</span> <span class="nv">get4</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
-                        <span class="n">_</span> <span class="nv">get5</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
-                        <span class="n">_</span> <span class="nv">set</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">PTraversal</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">T</span><span class="p">,</span> <span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">from</span><span class="p">(</span><span class="n">_</span> <span class="nv">get1</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
+                        <span class="n">_</span> <span class="nv">get2</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
+                        <span class="n">_</span> <span class="nv">get3</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
+                        <span class="n">_</span> <span class="nv">get4</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
+                        <span class="n">_</span> <span class="nv">get5</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
+                        <span class="n">_</span> <span class="nv">set</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">PTraversal</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">T</span><span class="p">,</span> <span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  get1
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>1st getter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  get2
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>2nd getter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  get3
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>3rd getter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  get4
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>4th getter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  get5
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>5th getter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  set
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Setter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A Traversal from the provided getters and setter.</p>
                       </div>
                     </section>
                   </div>
@@ -1783,22 +2090,117 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Creates a Traversal from multiple getters of the same source.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language key-main">
                           <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">from</span><span class="p">(</span><span class="n">_</span> <span class="nv">get1</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
-                        <span class="n">_</span> <span class="nv">get2</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
-                        <span class="n">_</span> <span class="nv">get3</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
-                        <span class="n">_</span> <span class="nv">get4</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
-                        <span class="n">_</span> <span class="nv">get5</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
-                        <span class="n">_</span> <span class="nv">get6</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">from</span><span class="p">(</span><span class="n">_</span> <span class="nv">get1</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
+                        <span class="n">_</span> <span class="nv">get2</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
+                        <span class="n">_</span> <span class="nv">get3</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
+                        <span class="n">_</span> <span class="nv">get4</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
+                        <span class="n">_</span> <span class="nv">get5</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
+                        <span class="n">_</span> <span class="nv">get6</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
                         <span class="n">_</span> <span class="nv">set</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">PTraversal</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">T</span><span class="p">,</span> <span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  get1
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>1st getter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  get2
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>2nd getter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  get3
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>3rd getter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  get4
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>4th getter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  get5
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>5th getter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  get6
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>6th getter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  set
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Setter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A Traversal from the provided getters and setter.</p>
                       </div>
                     </section>
                   </div>
@@ -1816,23 +2218,130 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Creates a Traversal from multiple getters of the same source.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language key-main">
                           <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">from</span><span class="p">(</span><span class="n">_</span> <span class="nv">get1</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
-                        <span class="n">_</span> <span class="nv">get2</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
-                        <span class="n">_</span> <span class="nv">get3</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
-                        <span class="n">_</span> <span class="nv">get4</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
-                        <span class="n">_</span> <span class="nv">get5</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
-                        <span class="n">_</span> <span class="nv">get6</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
-                        <span class="n">_</span> <span class="nv">get7</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
-                        <span class="n">_</span> <span class="nv">set</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">PTraversal</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">T</span><span class="p">,</span> <span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">from</span><span class="p">(</span><span class="n">_</span> <span class="nv">get1</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
+                        <span class="n">_</span> <span class="nv">get2</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
+                        <span class="n">_</span> <span class="nv">get3</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
+                        <span class="n">_</span> <span class="nv">get4</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
+                        <span class="n">_</span> <span class="nv">get5</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
+                        <span class="n">_</span> <span class="nv">get6</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
+                        <span class="n">_</span> <span class="nv">get7</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
+                        <span class="n">_</span> <span class="nv">set</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">PTraversal</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">T</span><span class="p">,</span> <span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  get1
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>1st getter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  get2
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>2nd getter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  get3
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>3rd getter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  get4
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>4th getter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  get5
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>5th getter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  get6
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>6th getter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  get7
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>7th getter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  set
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Setter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A Traversal from the provided getters and setter.</p>
                       </div>
                     </section>
                   </div>
@@ -1850,24 +2359,143 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Creates a Traversal from multiple getters of the same source.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language key-main">
                           <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">from</span><span class="p">(</span><span class="n">_</span> <span class="nv">get1</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
-                        <span class="n">_</span> <span class="nv">get2</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
-                        <span class="n">_</span> <span class="nv">get3</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
-                        <span class="n">_</span> <span class="nv">get4</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
-                        <span class="n">_</span> <span class="nv">get5</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
-                        <span class="n">_</span> <span class="nv">get6</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
-                        <span class="n">_</span> <span class="nv">get7</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
-                        <span class="n">_</span> <span class="nv">get8</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
-                        <span class="n">_</span> <span class="nv">set</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">PTraversal</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">T</span><span class="p">,</span> <span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">from</span><span class="p">(</span><span class="n">_</span> <span class="nv">get1</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
+                        <span class="n">_</span> <span class="nv">get2</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
+                        <span class="n">_</span> <span class="nv">get3</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
+                        <span class="n">_</span> <span class="nv">get4</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
+                        <span class="n">_</span> <span class="nv">get5</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
+                        <span class="n">_</span> <span class="nv">get6</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
+                        <span class="n">_</span> <span class="nv">get7</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
+                        <span class="n">_</span> <span class="nv">get8</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
+                        <span class="n">_</span> <span class="nv">set</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">PTraversal</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">T</span><span class="p">,</span> <span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  get1
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>1st getter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  get2
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>2nd getter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  get3
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>3rd getter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  get4
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>4th getter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  get5
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>5th getter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  get6
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>6th getter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  get7
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>7th getter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  get8
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>8th getter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  set
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Setter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A Traversal from the provided getters and setter.</p>
                       </div>
                     </section>
                   </div>
@@ -1885,25 +2513,156 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Creates a Traversal from multiple getters of the same source.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language key-main">
                           <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">from</span><span class="p">(</span><span class="n">_</span> <span class="nv">get1</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
-                        <span class="n">_</span> <span class="nv">get2</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
-                        <span class="n">_</span> <span class="nv">get3</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
-                        <span class="n">_</span> <span class="nv">get4</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
-                        <span class="n">_</span> <span class="nv">get5</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
-                        <span class="n">_</span> <span class="nv">get6</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
-                        <span class="n">_</span> <span class="nv">get7</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
-                        <span class="n">_</span> <span class="nv">get8</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
-                        <span class="n">_</span> <span class="nv">get9</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
-                        <span class="n">_</span> <span class="nv">set</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">PTraversal</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">T</span><span class="p">,</span> <span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">from</span><span class="p">(</span><span class="n">_</span> <span class="nv">get1</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
+                        <span class="n">_</span> <span class="nv">get2</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
+                        <span class="n">_</span> <span class="nv">get3</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
+                        <span class="n">_</span> <span class="nv">get4</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
+                        <span class="n">_</span> <span class="nv">get5</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
+                        <span class="n">_</span> <span class="nv">get6</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
+                        <span class="n">_</span> <span class="nv">get7</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
+                        <span class="n">_</span> <span class="nv">get8</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
+                        <span class="n">_</span> <span class="nv">get9</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span><span class="p">,</span>
+                        <span class="n">_</span> <span class="nv">set</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">PTraversal</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">T</span><span class="p">,</span> <span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  get1
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>1st getter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  get2
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>2nd getter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  get3
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>3rd getter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  get4
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>4th getter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  get5
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>5th getter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  get6
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>6th getter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  get7
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>7th getter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  get8
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>8th getter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  get9
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>9th getter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  set
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Setter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A Traversal from the provided getters and setter.</p>
                       </div>
                     </section>
                   </div>
@@ -1921,7 +2680,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Composes a <code>PTraversal</code> with a <code>PTraversal</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -1931,6 +2690,41 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">+</span> <span class="o">&lt;</span><span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">PTraversal</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">T</span><span class="p">,</span> <span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">PTraversal</span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">PTraversal</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">T</span><span class="p">,</span> <span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  lhs
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Left side of the composition.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  rhs
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Right side of the composition.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>PTraversal</code> resulting from the sequential application of the two provided optics.</p>
                       </div>
                     </section>
                   </div>
@@ -1948,7 +2742,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Composes a <code>PTraversal</code> with a <code><a href="../Classes/PSetter.html">PSetter</a></code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -1958,6 +2752,41 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">+</span> <span class="o">&lt;</span><span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">PTraversal</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">T</span><span class="p">,</span> <span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt"><a href="../Classes/PSetter.html">PSetter</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/PSetter.html">PSetter</a></span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">T</span><span class="p">,</span> <span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  lhs
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Left side of the composition.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  rhs
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Right side of the composition.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code><a href="../Classes/PSetter.html">PSetter</a></code> resulting from the sequential application of the two provided optics.</p>
                       </div>
                     </section>
                   </div>
@@ -1975,7 +2804,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Composes a <code>PTraversal</code> with a <code><a href="../Classes/Fold.html">Fold</a></code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -1985,6 +2814,41 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">+</span> <span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">PTraversal</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">T</span><span class="p">,</span> <span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt"><a href="../Classes/Fold.html">Fold</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Fold.html">Fold</a></span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  lhs
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Left side of the composition.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  rhs
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Right side of the composition.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code><a href="../Classes/Fold.html">Fold</a></code> resulting from the sequential application of the two provided optics.</p>
                       </div>
                     </section>
                   </div>
@@ -2002,7 +2866,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Composes a <code>PTraversal</code> with a <code><a href="../Classes/POptional.html">POptional</a></code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -2012,6 +2876,41 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">+</span> <span class="o">&lt;</span><span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">PTraversal</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">T</span><span class="p">,</span> <span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt"><a href="../Classes/POptional.html">POptional</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">PTraversal</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">T</span><span class="p">,</span> <span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  lhs
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Left side of the composition.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  rhs
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Right side of the composition.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>PTraversal</code> resulting from the sequential application of the two provided optics.</p>
                       </div>
                     </section>
                   </div>
@@ -2029,7 +2928,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Composes a <code>PTraversal</code> with a <code><a href="../Classes/PPrism.html">PPrism</a></code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -2039,6 +2938,41 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">+</span> <span class="o">&lt;</span><span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">PTraversal</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">T</span><span class="p">,</span> <span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt"><a href="../Classes/PPrism.html">PPrism</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">PTraversal</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">T</span><span class="p">,</span> <span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  lhs
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Left side of the composition.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  rhs
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Right side of the composition.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>PTraversal</code> resulting from the sequential application of the two provided optics.</p>
                       </div>
                     </section>
                   </div>
@@ -2056,7 +2990,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Composes a <code>PTraversal</code> with a <code><a href="../Classes/PLens.html">PLens</a></code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -2066,6 +3000,41 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">+</span> <span class="o">&lt;</span><span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">PTraversal</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">T</span><span class="p">,</span> <span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt"><a href="../Classes/PLens.html">PLens</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">PTraversal</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">T</span><span class="p">,</span> <span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  lhs
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Left side of the composition.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  rhs
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Right side of the composition.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>PTraversal</code> resulting from the sequential application of the two provided optics.</p>
                       </div>
                     </section>
                   </div>
@@ -2083,7 +3052,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Composes a <code>PTraversal</code> with a <code><a href="../Classes/PIso.html">PIso</a></code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -2093,6 +3062,41 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">+</span> <span class="o">&lt;</span><span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">PTraversal</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">T</span><span class="p">,</span> <span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt"><a href="../Classes/PIso.html">PIso</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">PTraversal</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">T</span><span class="p">,</span> <span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  lhs
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Left side of the composition.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  rhs
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Right side of the composition.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>PTraversal</code> resulting from the sequential application of the two provided optics.</p>
                       </div>
                     </section>
                   </div>
@@ -2110,7 +3114,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Transforms all foci in this Traversal and folds them using their <code><a href="../Protocols/Monoid.html">Monoid</a></code> instance.</p>
 
                       </div>
                       <div class="declaration">
@@ -2120,6 +3124,41 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">foldMap</span><span class="o">&lt;</span><span class="kt">R</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Monoid.html">Monoid</a></span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">s</span><span class="p">:</span> <span class="kt">S</span><span class="p">,</span> <span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">R</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">R</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  s
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Source.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  f
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Transforming function.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A summary value of the transformation and folding.</p>
                       </div>
                     </section>
                   </div>
@@ -2137,7 +3176,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Obtains all foci.</p>
 
                       </div>
                       <div class="declaration">
@@ -2147,6 +3186,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getAll</span><span class="p">(</span><span class="n">_</span> <span class="nv">s</span><span class="p">:</span> <span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/ArrayK.html">ArrayK</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  s
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Source</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An <code><a href="../Classes/ArrayK.html">ArrayK</a></code> with all foci.</p>
                       </div>
                     </section>
                   </div>
@@ -2164,7 +3226,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Sets a new focus.</p>
 
                       </div>
                       <div class="declaration">
@@ -2174,6 +3236,41 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">set</span><span class="p">(</span><span class="n">_</span> <span class="nv">s</span><span class="p">:</span> <span class="kt">S</span><span class="p">,</span> <span class="n">_</span> <span class="nv">b</span><span class="p">:</span> <span class="kt">B</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  s
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Source.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  b
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Modified focus.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Modified source.</p>
                       </div>
                     </section>
                   </div>
@@ -2191,7 +3288,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Counts the number of foci.</p>
 
                       </div>
                       <div class="declaration">
@@ -2201,6 +3298,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">size</span><span class="p">(</span><span class="n">_</span> <span class="nv">s</span><span class="p">:</span> <span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  s
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Source.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Number of foci in this Traversal.</p>
                       </div>
                     </section>
                   </div>
@@ -2218,7 +3338,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Checks if this Traversal has any focus.</p>
 
                       </div>
                       <div class="declaration">
@@ -2228,6 +3348,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">isEmpty</span><span class="p">(</span><span class="n">_</span> <span class="nv">s</span><span class="p">:</span> <span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  s
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Source.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>True if this Traversal do not have any focus; false otherwise.</p>
                       </div>
                     </section>
                   </div>
@@ -2245,7 +3388,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Checks if this Traversal has any focus.</p>
 
                       </div>
                       <div class="declaration">
@@ -2255,6 +3398,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">nonEmpty</span><span class="p">(</span><span class="n">_</span> <span class="nv">s</span><span class="p">:</span> <span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  s
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Source.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>False if this Traversal do not have any focus; true otherwise.</p>
                       </div>
                     </section>
                   </div>
@@ -2272,7 +3438,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Retrieves the first focus of this Traversal, if any.</p>
 
                       </div>
                       <div class="declaration">
@@ -2282,6 +3448,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">headOption</span><span class="p">(</span><span class="n">_</span> <span class="nv">s</span><span class="p">:</span> <span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Option.html">Option</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  s
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Source.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An optional value with the first focus of the source, if any.</p>
                       </div>
                     </section>
                   </div>
@@ -2299,7 +3488,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Retrieves the last focus of this Traversal, if any.</p>
 
                       </div>
                       <div class="declaration">
@@ -2309,6 +3498,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">lastOption</span><span class="p">(</span><span class="n">_</span> <span class="nv">s</span><span class="p">:</span> <span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Option.html">Option</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  s
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Source.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An optional value with the last focus of the source, if any.</p>
                       </div>
                     </section>
                   </div>
@@ -2326,7 +3538,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Joins two Traversal with the same focus.</p>
 
                       </div>
                       <div class="declaration">
@@ -2336,6 +3548,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">choice</span><span class="o">&lt;</span><span class="kt">U</span><span class="p">,</span> <span class="kt">V</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">other</span><span class="p">:</span> <span class="kt">PTraversal</span><span class="o">&lt;</span><span class="kt">U</span><span class="p">,</span> <span class="kt">V</span><span class="p">,</span> <span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">PTraversal</span><span class="o">&lt;</span><span class="kt"><a href="../Classes/Either.html">Either</a></span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">U</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt"><a href="../Classes/Either.html">Either</a></span><span class="o">&lt;</span><span class="kt">T</span><span class="p">,</span> <span class="kt">V</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  other
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Value to join with.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A Traversal that operates on either of the original sources.</p>
                       </div>
                     </section>
                   </div>
@@ -2353,7 +3588,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Composes this with a <code>PTraversal</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -2363,6 +3598,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">compose</span><span class="o">&lt;</span><span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">other</span><span class="p">:</span> <span class="kt">PTraversal</span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">PTraversal</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">T</span><span class="p">,</span> <span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  other
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Value to compose with.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>PTraversal</code> resulting from the sequential application of the two optics.</p>
                       </div>
                     </section>
                   </div>
@@ -2380,7 +3638,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Composes this with a <code><a href="../Classes/PSetter.html">PSetter</a></code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -2390,6 +3648,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">compose</span><span class="o">&lt;</span><span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">other</span><span class="p">:</span> <span class="kt"><a href="../Classes/PSetter.html">PSetter</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/PSetter.html">PSetter</a></span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">T</span><span class="p">,</span> <span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  other
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Value to compose with.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code><a href="../Classes/PSetter.html">PSetter</a></code> resulting from the sequential application of the two optics.</p>
                       </div>
                     </section>
                   </div>
@@ -2407,7 +3688,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Composes this with a <code><a href="../Classes/Fold.html">Fold</a></code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -2417,6 +3698,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">compose</span><span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">other</span><span class="p">:</span> <span class="kt"><a href="../Classes/Fold.html">Fold</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Fold.html">Fold</a></span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  other
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Value to compose with.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code><a href="../Classes/Fold.html">Fold</a></code> resulting from the sequential application of the two optics.</p>
                       </div>
                     </section>
                   </div>
@@ -2434,7 +3738,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Composes this with a <code><a href="../Classes/POptional.html">POptional</a></code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -2444,6 +3748,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">compose</span><span class="o">&lt;</span><span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">other</span><span class="p">:</span> <span class="kt"><a href="../Classes/POptional.html">POptional</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">PTraversal</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">T</span><span class="p">,</span> <span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  other
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Value to compose with.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>PTraversal</code> resulting from the sequential application of the two optics.</p>
                       </div>
                     </section>
                   </div>
@@ -2461,7 +3788,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Composes this with a <code><a href="../Classes/PPrism.html">PPrism</a></code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -2471,6 +3798,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">compose</span><span class="o">&lt;</span><span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">other</span><span class="p">:</span> <span class="kt"><a href="../Classes/PPrism.html">PPrism</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">PTraversal</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">T</span><span class="p">,</span> <span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  other
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Value to compose with.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>PTraversal</code> resulting from the sequential application of the two optics.</p>
                       </div>
                     </section>
                   </div>
@@ -2488,7 +3838,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Composes this with a <code><a href="../Classes/PLens.html">PLens</a></code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -2498,6 +3848,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">compose</span><span class="o">&lt;</span><span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">other</span><span class="p">:</span> <span class="kt"><a href="../Classes/PLens.html">PLens</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">PTraversal</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">T</span><span class="p">,</span> <span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  other
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Value to compose with.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>PTraversal</code> resulting from the sequential application of the two optics.</p>
                       </div>
                     </section>
                   </div>
@@ -2515,7 +3888,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Composes this with a <code><a href="../Classes/PIso.html">PIso</a></code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -2525,6 +3898,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">compose</span><span class="o">&lt;</span><span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">other</span><span class="p">:</span> <span class="kt"><a href="../Classes/PIso.html">PIso</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">B</span><span class="p">,</span> <span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">PTraversal</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">T</span><span class="p">,</span> <span class="kt">C</span><span class="p">,</span> <span class="kt">D</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  other
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Value to compose with.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>PTraversal</code> resulting from the sequential application of the two optics.</p>
                       </div>
                     </section>
                   </div>
@@ -2542,7 +3938,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Converts this to a <code><a href="../Classes/PSetter.html">PSetter</a></code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -2569,7 +3965,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Converts this to a <code><a href="../Classes/Fold.html">Fold</a></code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -2596,16 +3992,51 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Obtains the first focus that matches a predicate.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language key-main">
                           <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">find</span><span class="p">(</span><span class="n">_</span> <span class="nv">s</span> <span class="p">:</span> <span class="kt">S</span><span class="p">,</span> <span class="n">_</span> <span class="nv">predicate</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Option.html">Option</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">find</span><span class="p">(</span><span class="n">_</span> <span class="nv">s</span><span class="p">:</span> <span class="kt">S</span><span class="p">,</span> <span class="n">_</span> <span class="nv">predicate</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Option.html">Option</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  s
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Source.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  predicate
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Testing predicate.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An optional value with the first focus that matches the predicate, if any.</p>
                       </div>
                     </section>
                   </div>
@@ -2623,16 +4054,51 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Modifies the focus with a function.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language key-main">
                           <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">modify</span><span class="p">(</span><span class="n">_</span> <span class="nv">s</span><span class="p">:</span> <span class="kt">S</span><span class="p">,</span> <span class="n">_</span> <span class="nv">f</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">B</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">modify</span><span class="p">(</span><span class="n">_</span> <span class="nv">s</span><span class="p">:</span> <span class="kt">S</span><span class="p">,</span> <span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">B</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  s
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Source.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  f
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Modifying function.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Modified source.</p>
                       </div>
                     </section>
                   </div>
@@ -2650,16 +4116,51 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Checks if any focus matches a predicate.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language key-main">
                           <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">exists</span><span class="p">(</span><span class="n">_</span> <span class="nv">s</span> <span class="p">:</span> <span class="kt">S</span><span class="p">,</span> <span class="n">_</span> <span class="nv">predicate</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">exists</span><span class="p">(</span><span class="n">_</span> <span class="nv">s</span><span class="p">:</span> <span class="kt">S</span><span class="p">,</span> <span class="n">_</span> <span class="nv">predicate</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  s
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Source.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  predicate
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Testing predicate.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>True if any focus matches the predicate; false otherwise.</p>
                       </div>
                     </section>
                   </div>
@@ -2677,16 +4178,51 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Checks if all foci match a predicate.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language key-main">
                           <p class="aside-title key-main-text">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">forall</span><span class="p">(</span><span class="n">_</span> <span class="nv">s</span> <span class="p">:</span> <span class="kt">S</span><span class="p">,</span> <span class="n">_</span> <span class="nv">predicate</span> <span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">forall</span><span class="p">(</span><span class="n">_</span> <span class="nv">s</span><span class="p">:</span> <span class="kt">S</span><span class="p">,</span> <span class="n">_</span> <span class="nv">predicate</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  s
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Source.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  predicate
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Testing predicate.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>True if all foci match the predicate; false otherwitse.</p>
                       </div>
                     </section>
                   </div>
@@ -2704,7 +4240,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Extracts the focus viewed through the <code>PTraversal</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -2714,6 +4250,10 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">extract</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:3Bow5Statea">State</a></span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt"><a href="../Classes/ArrayK.html">ArrayK</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code><a href="../Typealiases.html#/s:3Bow5Statea">State</a></code> of the source and target.</p>
                       </div>
                     </section>
                   </div>
@@ -2731,7 +4271,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Extracts the focus viewed through the <code>PTraversal</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -2741,6 +4281,10 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">toState</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:3Bow5Statea">State</a></span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt"><a href="../Classes/ArrayK.html">ArrayK</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code><a href="../Typealiases.html#/s:3Bow5Statea">State</a></code> of the source and target.</p>
                       </div>
                     </section>
                   </div>
@@ -2758,7 +4302,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Extracts the focus viewed through the <code>PTraversal</code> and applies the provided function to it.</p>
 
                       </div>
                       <div class="declaration">
@@ -2768,6 +4312,10 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">extractMap</span><span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">C</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:3Bow5Statea">State</a></span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt"><a href="../Classes/ArrayK.html">ArrayK</a></span><span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code><a href="../Typealiases.html#/s:3Bow5Statea">State</a></code> of the source and target, modified by the provided function.</p>
                       </div>
                     </section>
                   </div>
@@ -2789,7 +4337,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Folds all foci using their instance of <code><a href="../Protocols/Monoid.html">Monoid</a></code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -2799,6 +4347,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">fold</span><span class="p">(</span><span class="n">_</span> <span class="nv">s</span><span class="p">:</span> <span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  s
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Source.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Comination of all foci using their instance of <code><a href="../Protocols/Monoid.html">Monoid</a></code>.</p>
                       </div>
                     </section>
                   </div>
@@ -2816,7 +4387,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Folds all foci using their instance of <code><a href="../Protocols/Monoid.html">Monoid</a></code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -2826,6 +4397,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">combineAll</span><span class="p">(</span><span class="n">_</span> <span class="nv">s</span><span class="p">:</span> <span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  s
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Source.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Comination of all foci using their instance of <code><a href="../Protocols/Monoid.html">Monoid</a></code>.</p>
                       </div>
                     </section>
                   </div>

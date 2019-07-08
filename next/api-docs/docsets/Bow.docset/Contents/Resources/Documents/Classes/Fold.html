@@ -65,7 +65,7 @@
             <img style="height: 18px;" class="header-icon" src="../img/bow-logo.png" alt="Bow Docs"/>
             <span class="header-title">Bow</span>
           </a>
-          <span class="header-tag"> 74% documented</span>
+          <span class="header-tag"> 81% documented</span>
         </p>
     
           <p class="header-col header-col--secondary">
@@ -1558,7 +1558,13 @@
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p>A Fold is an optic that allows to focus into a structure and get multiple results.</p>
+
+<p>Fold is a generalization of an instance of <code><a href="../Protocols/Foldable.html">Foldable</a></code> and it is implemented in terms of <code>foldMap</code>.</p>
+
+<p>Type parameters:
+    - <code>S</code>: Source.
+    - <code>A</code>: Focus.</p>
 
           </div>
         </section>
@@ -1580,7 +1586,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Creates a Fold that has no focus.</p>
 
                       </div>
                       <div class="declaration">
@@ -1607,7 +1613,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Creates a Fold based on the instance of <code><a href="../Protocols/Foldable.html">Foldable</a></code> for <code>F</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -1617,6 +1623,10 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">fromFoldable</span><span class="o">&lt;</span><span class="kt">F</span><span class="o">&gt;</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Fold</span><span class="o">&lt;</span><span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">S</span> <span class="p">:</span> <span class="kt"><a href="../Classes/Kind.html">Kind</a></span><span class="o">&lt;</span><span class="kt">F</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt">F</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/Foldable.html">Foldable</a></span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A Fold based on <code><a href="../Protocols/Foldable.html">Foldable</a></code> for <code>F</code>.</p>
                       </div>
                     </section>
                   </div>
@@ -1634,7 +1644,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Composes a <code>Fold</code> with a <code>Fold</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -1644,6 +1654,41 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">+</span> <span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">Fold</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">Fold</span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Fold</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  lhs
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Left hand side of the composition.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  rhs
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Right hand side of the composition.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>Fold</code> resulting from the sequential application of the two provided optics.</p>
                       </div>
                     </section>
                   </div>
@@ -1661,7 +1706,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Composes a <code>Fold</code> with an <code>Iso</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -1671,6 +1716,41 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">+</span> <span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">Fold</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">Iso</span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Fold</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  lhs
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Left hand side of the composition.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  rhs
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Right hand side of the composition.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>Fold</code> resulting from the sequential application of the two provided optics.</p>
                       </div>
                     </section>
                   </div>
@@ -1688,7 +1768,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Composes a <code>Fold</code> with a <code><a href="../Classes/Getter.html">Getter</a></code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -1698,6 +1778,41 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">+</span> <span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">Fold</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt"><a href="../Classes/Getter.html">Getter</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Fold</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  lhs
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Left hand side of the composition.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  rhs
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Right hand side of the composition.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>Fold</code> resulting from the sequential application of the two provided optics.</p>
                       </div>
                     </section>
                   </div>
@@ -1715,7 +1830,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Composes a <code>Fold</code> with a <code>Lens</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -1725,6 +1840,41 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">+</span> <span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">Fold</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">Lens</span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Fold</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  lhs
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Left hand side of the composition.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  rhs
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Right hand side of the composition.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>Fold</code> resulting from the sequential application of the two provided optics.</p>
                       </div>
                     </section>
                   </div>
@@ -1742,7 +1892,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Composes a <code>Fold</code> with a <code>Prism</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -1752,6 +1902,41 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">+</span> <span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">Fold</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">Prism</span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Fold</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  lhs
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Left hand side of the composition.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  rhs
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Right hand side of the composition.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>Fold</code> resulting from the sequential application of the two provided optics.</p>
                       </div>
                     </section>
                   </div>
@@ -1769,7 +1954,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Composes a <code>Fold</code> with an <code>Optional</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -1779,6 +1964,41 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">+</span> <span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">Fold</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">Optional</span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Fold</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  lhs
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Left hand side of the composition.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  rhs
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Right hand side of the composition.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>Fold</code> resulting from the sequential application of the two provided optics.</p>
                       </div>
                     </section>
                   </div>
@@ -1796,7 +2016,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Composes a <code>Fold</code> with a <code>Traversal</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -1806,6 +2026,41 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">+</span> <span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">Fold</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">Traversal</span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Fold</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  lhs
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Left hand side of the composition.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  rhs
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Right hand side of the composition.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>Fold</code> resulting from the sequential application of the two provided optics.</p>
                       </div>
                     </section>
                   </div>
@@ -1823,7 +2078,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Map each foci to a type <code>R</code> and use a <code><a href="../Protocols/Monoid.html">Monoid</a></code> to fold the results.</p>
 
                       </div>
                       <div class="declaration">
@@ -1833,6 +2088,41 @@
                           <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="n">foldMap</span><span class="o">&lt;</span><span class="kt">R</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Monoid.html">Monoid</a></span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">s</span><span class="p">:</span> <span class="kt">S</span><span class="p">,</span> <span class="n">_</span> <span class="nv">f</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">R</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">R</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  s
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Source.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  f
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Mapping function.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Summary value resulting from the fold.</p>
                       </div>
                     </section>
                   </div>
@@ -1850,7 +2140,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Counts the number of foci in the source.</p>
 
                       </div>
                       <div class="declaration">
@@ -1860,6 +2150,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">size</span><span class="p">(</span><span class="n">_</span> <span class="nv">s</span><span class="p">:</span> <span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  s
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Source.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Number of foci.</p>
                       </div>
                     </section>
                   </div>
@@ -1877,7 +2190,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Checks if all foci match a predicate.</p>
 
                       </div>
                       <div class="declaration">
@@ -1887,6 +2200,41 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">forAll</span><span class="p">(</span><span class="n">_</span> <span class="nv">s</span><span class="p">:</span> <span class="kt">S</span><span class="p">,</span> <span class="n">_</span> <span class="nv">predicate</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  s
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Source.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  predicate
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Testing predicate.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Boolean value indicating if all foci match the predicate.</p>
                       </div>
                     </section>
                   </div>
@@ -1904,7 +2252,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Checks if a source is empty.</p>
 
                       </div>
                       <div class="declaration">
@@ -1914,6 +2262,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">isEmpty</span><span class="p">(</span><span class="n">_</span> <span class="nv">s</span><span class="p">:</span> <span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  s
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Source.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>True if the source has no foci; false otherwise.</p>
                       </div>
                     </section>
                   </div>
@@ -1931,7 +2302,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Checks if a source is non-empty.</p>
 
                       </div>
                       <div class="declaration">
@@ -1941,6 +2312,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">nonEmpty</span><span class="p">(</span><span class="n">_</span> <span class="nv">s</span><span class="p">:</span> <span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  s
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Source.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>False is the source has no foci; true otherwise.</p>
                       </div>
                     </section>
                   </div>
@@ -1958,7 +2352,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Retrieves the first focus, if any.</p>
 
                       </div>
                       <div class="declaration">
@@ -1968,6 +2362,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">headOption</span><span class="p">(</span><span class="n">_</span> <span class="nv">s</span><span class="p">:</span> <span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Option.html">Option</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  s
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Source.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An optional value with the first focus.</p>
                       </div>
                     </section>
                   </div>
@@ -1985,7 +2402,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Retrieves the last focus, if any.</p>
 
                       </div>
                       <div class="declaration">
@@ -1995,6 +2412,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">lastOption</span><span class="p">(</span><span class="n">_</span> <span class="nv">s</span><span class="p">:</span> <span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Option.html">Option</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  s
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Source.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An optional value with the last focus.</p>
                       </div>
                     </section>
                   </div>
@@ -2012,7 +2452,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Gets all foci.</p>
 
                       </div>
                       <div class="declaration">
@@ -2022,6 +2462,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getAll</span><span class="p">(</span><span class="n">_</span> <span class="nv">s</span><span class="p">:</span> <span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/ArrayK.html">ArrayK</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  s
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Source.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An <code><a href="../Classes/ArrayK.html">ArrayK</a></code> with all foci.</p>
                       </div>
                     </section>
                   </div>
@@ -2039,7 +2502,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Joins to Fold with the same focus.</p>
 
                       </div>
                       <div class="declaration">
@@ -2049,6 +2512,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">choice</span><span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">other</span><span class="p">:</span> <span class="kt">Fold</span><span class="o">&lt;</span><span class="kt">C</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Fold</span><span class="o">&lt;</span><span class="kt"><a href="../Classes/Either.html">Either</a></span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  other
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Fold to join with.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A Fold that operates on either of the two original sources, with the same target.</p>
                       </div>
                     </section>
                   </div>
@@ -2066,7 +2552,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Creates the sum of this <code>Fold</code> with another type, placing this as the left side.</p>
 
                       </div>
                       <div class="declaration">
@@ -2076,6 +2562,10 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">left</span><span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Fold</span><span class="o">&lt;</span><span class="kt"><a href="../Classes/Either.html">Either</a></span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt"><a href="../Classes/Either.html">Either</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>Fold</code> that operates on <code><a href="../Classes/Either.html">Either</a></code>s where the right side remains unchanged.</p>
                       </div>
                     </section>
                   </div>
@@ -2093,7 +2583,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Creates the sum of this <code>Fold</code> with another type, placing this as the right side.</p>
 
                       </div>
                       <div class="declaration">
@@ -2103,6 +2593,10 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">right</span><span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Fold</span><span class="o">&lt;</span><span class="kt"><a href="../Classes/Either.html">Either</a></span><span class="o">&lt;</span><span class="kt">C</span><span class="p">,</span> <span class="kt">S</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt"><a href="../Classes/Either.html">Either</a></span><span class="o">&lt;</span><span class="kt">C</span><span class="p">,</span> <span class="kt">A</span><span class="o">&gt;&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>Fold</code> that operates on <code><a href="../Classes/Either.html">Either</a></code>s where the left side remains unchanged.</p>
                       </div>
                     </section>
                   </div>
@@ -2120,7 +2614,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Composes this <code>Fold</code> with a <code>Fold</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -2130,6 +2624,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">compose</span><span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">other</span><span class="p">:</span> <span class="kt">Fold</span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Fold</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  other
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Value to compose with.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>Fold</code> resulting from the sequential application of the two optics.</p>
                       </div>
                     </section>
                   </div>
@@ -2147,7 +2664,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Composes this <code>Fold</code> with an <code>Iso</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -2157,6 +2674,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">compose</span><span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">other</span><span class="p">:</span> <span class="kt">Iso</span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Fold</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  other
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Value to compose with.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>Fold</code> resulting from the sequential application of the two optics.</p>
                       </div>
                     </section>
                   </div>
@@ -2174,7 +2714,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Composes this <code>Fold</code> with a <code><a href="../Classes/Getter.html">Getter</a></code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -2184,6 +2724,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">compose</span><span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">other</span><span class="p">:</span> <span class="kt"><a href="../Classes/Getter.html">Getter</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Fold</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  other
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Value to compose with.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>Fold</code> resulting from the sequential application of the two optics.</p>
                       </div>
                     </section>
                   </div>
@@ -2201,7 +2764,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Composes this <code>Fold</code> with a <code>Lens</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -2211,6 +2774,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">compose</span><span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">other</span><span class="p">:</span> <span class="kt">Lens</span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Fold</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  other
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Value to compose with.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>Fold</code> resulting from the sequential application of the two optics.</p>
                       </div>
                     </section>
                   </div>
@@ -2228,7 +2814,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Composes this <code>Fold</code> with a <code>Prism</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -2238,6 +2824,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">compose</span><span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">other</span><span class="p">:</span> <span class="kt">Prism</span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Fold</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  other
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Value to compose with.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>Fold</code> resulting from the sequential application of the two optics.</p>
                       </div>
                     </section>
                   </div>
@@ -2255,7 +2864,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Composes this <code>Fold</code> with an <code>Optional</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -2265,6 +2874,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">compose</span><span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">other</span><span class="p">:</span> <span class="kt">Optional</span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Fold</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  other
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Value to compose with.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>Fold</code> resulting from the sequential application of the two optics.</p>
                       </div>
                     </section>
                   </div>
@@ -2282,7 +2914,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Composes this <code>Fold</code> with a <code>Traversal</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -2292,6 +2924,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">compose</span><span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">other</span><span class="p">:</span> <span class="kt">Traversal</span><span class="o">&lt;</span><span class="kt">A</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Fold</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">C</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  other
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Value to compose with.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>Fold</code> resulting from the sequential application of the two optics.</p>
                       </div>
                     </section>
                   </div>
@@ -2309,7 +2964,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Finds the first focus that matches a predicate.</p>
 
                       </div>
                       <div class="declaration">
@@ -2319,6 +2974,41 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">find</span><span class="p">(</span><span class="n">_</span> <span class="nv">s</span><span class="p">:</span> <span class="kt">S</span><span class="p">,</span> <span class="n">_</span> <span class="nv">predicate</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Option.html">Option</a></span><span class="o">&lt;</span><span class="kt">A</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  s
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Source.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  predicate
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Testing predicate.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An optional value containing the focus, if any.</p>
                       </div>
                     </section>
                   </div>
@@ -2336,7 +3026,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Checks if any focus in the provided source match a predicate.</p>
 
                       </div>
                       <div class="declaration">
@@ -2346,6 +3036,41 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">exists</span><span class="p">(</span><span class="n">_</span> <span class="nv">s</span><span class="p">:</span> <span class="kt">S</span><span class="p">,</span> <span class="n">_</span> <span class="nv">predicate</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  s
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Source.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                  predicate
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Testing predicate.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>True if any focus matches the predicate; false otherwise.</p>
                       </div>
                     </section>
                   </div>
@@ -2466,7 +3191,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Provides an identity Fold.</p>
 
                       </div>
                       <div class="declaration">
@@ -2493,7 +3218,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Provides a Fold that takes either an <code>S</code> or an <code>S</code> and strips the choice of <code>S</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -2520,7 +3245,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Provides a Fold based on a predicate on the source.</p>
 
                       </div>
                       <div class="declaration">
@@ -2530,6 +3255,29 @@
                           <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">select</span><span class="p">(</span><span class="n">_</span> <span class="nv">predicate</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Fold</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">,</span> <span class="kt">S</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  predicate
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Testing predicate.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A Fold based on the provided predicate.</p>
                       </div>
                     </section>
                   </div>
@@ -2551,7 +3299,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Folds all foci into a summary value using its instance of <code><a href="../Protocols/Monoid.html">Monoid</a></code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -2561,6 +3309,29 @@
                           <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">fold</span><span class="p">(</span><span class="n">_</span> <span class="nv">s</span><span class="p">:</span> <span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  s
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Source.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Summary value.</p>
                       </div>
                     </section>
                   </div>
@@ -2578,7 +3349,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Folds all foci into a summary value using its instance of <code><a href="../Protocols/Monoid.html">Monoid</a></code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -2588,6 +3359,29 @@
                           <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">combineAll</span><span class="p">(</span><span class="n">_</span> <span class="nv">s</span><span class="p">:</span> <span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">A</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                  s
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Source.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Summary value.</p>
                       </div>
                     </section>
                   </div>

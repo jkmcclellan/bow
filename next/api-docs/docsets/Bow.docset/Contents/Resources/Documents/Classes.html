@@ -65,7 +65,7 @@
             <img style="height: 18px;" class="header-icon" src="img/bow-logo.png" alt="Bow Docs"/>
             <span class="header-title">Bow</span>
           </a>
-          <span class="header-tag"> 74% documented</span>
+          <span class="header-tag"> 81% documented</span>
         </p>
     
           <p class="header-col header-col--secondary">
@@ -1698,7 +1698,13 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A Fold is an optic that allows to focus into a structure and get multiple results.</p>
+
+<p>Fold is a generalization of an instance of <code><a href="Protocols/Foldable.html">Foldable</a></code> and it is implemented in terms of <code>foldMap</code>.</p>
+
+<p>Type parameters:
+    - <code>S</code>: Source.
+    - <code>A</code>: Focus.</p>
 
                         <a href="Classes/Fold.html" class="slightly-smaller">See more</a>
                       </div>
@@ -1726,7 +1732,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Witness for the <code>Fold&lt;S, A&gt;</code> data type. To be used in simulated Higher Kinded Types.</p>
 
                       </div>
                       <div class="declaration">
@@ -1753,7 +1759,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Partial application of the Fold type constructor, omitting the last parameter.</p>
 
                       </div>
                       <div class="declaration">
@@ -2304,7 +2310,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Witness for the <code>POptional&lt;S, T, A, B&gt;</code> data type. To be used in simulated Higher Kinded Types.</p>
 
                       </div>
                       <div class="declaration">
@@ -2331,7 +2337,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Partial application of the POptional type constructor, omitting the last parameter.</p>
 
                       </div>
                       <div class="declaration">
@@ -2358,7 +2364,19 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>An Optional is an optic that allows to see into a structure and getting, setting or modifying an optional focus.</p>
+
+<p>A (polymorphic) POptional is useful when setting or modifying a value for a type with an optional polymorphic focus.</p>
+
+<p>A POptional can be seen as a weaker <code>Lens</code> and <code>Prism</code> and combines their weakest functions:
+    - <code>set</code> meaning we can focus into an <code>S</code> and set a value <code>B</code> for a target <code>A</code> and obtain a modified source <code>T</code>.
+    - <code>getOrModify</code> meaning it returns the focus of a <code>POptional</code> (if present) or the original value.</p>
+
+<p>Type parameters:
+    - <code>S</code>: Source.
+    - <code>T</code>: Modified source.
+    - <code>A</code>: Focus.
+    - <code>B</code>: Modified focus.</p>
 
                         <a href="Classes/POptional.html" class="slightly-smaller">See more</a>
                       </div>
@@ -2719,7 +2737,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Witness for the <code>PTraversal&lt;S, T, A, B&gt;</code> data type. To be used in simulated Higher Kinded Types.</p>
 
                       </div>
                       <div class="declaration">
@@ -2746,7 +2764,7 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Partial application of the PTraversal type constructor, omitting the last parameter.</p>
 
                       </div>
                       <div class="declaration">
@@ -2773,7 +2791,15 @@
                   <div class="height-container">
                     <section class="section">
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A Traversal is an optic that allows to see into a structure with 0 to N foci.</p>
+
+<p>Traversal is a generalization of <code><a href="Protocols/Traverse.html">Traverse</a></code> and can be seen as a representation of <code>modifyF</code>. All methods are written in terms of <code>modifyF</code>.</p>
+
+<p>Type parameters:
+    - <code>S</code>: Source.
+    - <code>T</code>: Modified source.
+    - <code>A</code>: Focus.
+    - <code>B</code>: Modified focus.</p>
 
                         <a href="Classes/PTraversal.html" class="slightly-smaller">See more</a>
                       </div>
