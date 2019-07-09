@@ -1581,6 +1581,19 @@
 <li><code>BowRx</code>: module to provide an integration with RxSwift.</li>
 </ul>
 
+<p>There are also some modules for testing:</p>
+
+<ul>
+<li><code>BowLaws</code>: laws for type classes in the core module.</li>
+<li><code>BowOpticsLaws</code>: laws for optics.</li>
+<li><code>BowEffectsLaws</code>: laws for effects.</li>
+<li><code>BowGenerators</code>: generators for Property-based Testing for data types in the core module.</li>
+<li><code>BowFreeGenerators</code>: generators for Property-based Testing for data types in BowFree.</li>
+<li><code>BowEffectsGenerators</code>: generators for Property-based Testing for data types in BowEffects.</li>
+<li><code>BowRxGenerators</code>: generators for Property-based Testing for data types in BowRx.</li>
+<li><code>BowBrightFuturesGenerators</code>: generators for Property-based Testing for data types in BowBrightFutures.</li>
+</ul>
+
 <p>Bow is available using CocoaPods, Carthage and Swift Package Manager.</p>
 <h3 id='cocoapods' class='heading'>CocoaPods</h3>
 
@@ -1594,6 +1607,20 @@
 <span class="n">pod</span> <span class="s2">"BowRx"</span><span class="p">,</span>               <span class="s2">"~&gt; 0.4.0"</span>
 <span class="n">pod</span> <span class="s2">"BowBrightFutures"</span><span class="p">,</span>    <span class="s2">"~&gt; 0.4.0"</span>
 </code></pre>
+
+<p>Testing laws:</p>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s2">"BowLaws"</span><span class="p">,</span>        <span class="s2">"~&gt; {version}"</span>
+<span class="n">pod</span> <span class="s2">"BowOpticsLaws"</span><span class="p">,</span>  <span class="s2">"~&gt; {version}"</span>
+<span class="n">pod</span> <span class="s2">"BowEffectsLaws"</span><span class="p">,</span> <span class="s2">"~&gt; {version}"</span>
+</code></pre>
+
+<p>Generators for property-based testing with SwiftCheck:</p>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s2">"BowGenerators"</span><span class="p">,</span>              <span class="s2">"~&gt; {version}"</span>
+<span class="n">pod</span> <span class="s2">"BowFreeGenerators"</span><span class="p">,</span>          <span class="s2">"~&gt; {version}"</span>
+<span class="n">pod</span> <span class="s2">"BowEffectsGenerators"</span><span class="p">,</span>       <span class="s2">"~&gt; {version}"</span>
+<span class="n">pod</span> <span class="s2">"BowRxGenerators"</span><span class="p">,</span>            <span class="s2">"~&gt; {version}"</span>
+<span class="n">pod</span> <span class="s2">"BowBrightFuturesGenerators"</span><span class="p">,</span> <span class="s2">"~&gt; {version}"</span>
+</code></pre>
 <h3 id='carthage' class='heading'>Carthage</h3>
 
 <p>Carthage will download the whole Bow project, but it will compile individual frameworks for each module that you can use separately. Add this line to your Cartfile:</p>
@@ -1602,29 +1629,41 @@
 <h3 id='swift-package-manager' class='heading'>Swift Package Manager</h3>
 
 <p>Create a <code>Package.swift</code> file similar to the next one and use the dependencies at your convenience.</p>
-<pre class="highlight plaintext"><code>// swift-tools-version:5.0
+<pre class="highlight swift"><code><span class="c1">// swift-tools-version:5.0</span>
 
-import PackageDescription
+<span class="kd">import</span> <span class="kt">PackageDescription</span>
 
-let package = Package(
-    name: "BowTestProject",
-    dependencies: [
-        .package(url: "https://github.com/bow-swift/bow.git", from: "0.4.0")
-    ],
-    targets: [
-        .target(name: "BowTestProject",
-                dependencies: [
-                    "Bow",
-                    "BowOptics",
-                    "BowRecursionSchemes",
-                    "BowFree",
-                    "BowGeneric",
-                    "BowEffects",
-                    "BowRx",
-                    "BowBrightFutures"]
-        )
-    ]
-)
+<span class="k">let</span> <span class="nv">package</span> <span class="o">=</span> <span class="kt">Package</span><span class="p">(</span>
+    <span class="nv">name</span><span class="p">:</span> <span class="s">"BowTestProject"</span><span class="p">,</span>
+    <span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
+        <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/bow-swift/bow.git"</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="s">"{version}"</span><span class="p">)</span>
+    <span class="p">],</span>
+    <span class="nv">targets</span><span class="p">:</span> <span class="p">[</span>
+        <span class="o">.</span><span class="nf">target</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"BowTestProject"</span><span class="p">,</span>
+                <span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="s">"Bow"</span><span class="p">,</span>
+                    <span class="s">"BowOptics"</span><span class="p">,</span>
+                    <span class="s">"BowRecursionSchemes"</span><span class="p">,</span>
+                    <span class="s">"BowFree"</span><span class="p">,</span>
+                    <span class="s">"BowGeneric"</span><span class="p">,</span>
+                    <span class="s">"BowEffects"</span><span class="p">,</span>
+                    <span class="s">"BowRx"</span><span class="p">,</span>
+                    <span class="s">"BowBrightFutures"</span><span class="p">]),</span>
+        <span class="o">.</span><span class="nf">testTarget</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"BowTestProjectTests"</span><span class="p">,</span>
+                    <span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="c1">// Type class laws</span>
+                        <span class="s">"BowLaws"</span><span class="p">,</span>
+                        <span class="s">"BowOpticsLaws"</span><span class="p">,</span>
+                        <span class="s">"BowEffectsLaws"</span><span class="p">,</span>
+
+                        <span class="c1">// Generators for PBT with SwiftCheck</span>
+                        <span class="s">"BowGenerators"</span><span class="p">,</span>
+                        <span class="s">"BowFreeGenerators"</span><span class="p">,</span>
+                        <span class="s">"BowEffectsGenerators"</span><span class="p">,</span>
+                        <span class="s">"BowRxGenerators"</span><span class="p">,</span>
+                        <span class="s">"BowBrightFuturesGenerators"</span><span class="p">])</span>
+    <span class="p">]</span>
+<span class="p">)</span>
 </code></pre>
 
 <p>To build it, just run:</p>
@@ -1672,7 +1711,7 @@ limitations under the License.
         <p>with support from <a href="https://47deg.com/">47 Degrees</a></p>
       </div>
       <div>
-        <p>&copy; 2019 <a class="link" href="https://bow-swift.io" target="_blank" rel="external">Bow</a>. All rights reserved. (Last updated: 2019-07-08)</p>
+        <p>&copy; 2019 <a class="link" href="https://bow-swift.io" target="_blank" rel="external">Bow</a>. All rights reserved. (Last updated: 2019-07-09)</p>
         <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
       </div>
     </section>

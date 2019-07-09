@@ -1,0 +1,16 @@
+current directory: /Users/travis/build/bow-swift/bow/docs/vendor/bundle/ruby/2.4.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+/Users/travis/.rvm/rubies/ruby-2.4.5/bin/ruby -I /Users/travis/.rvm/rubies/ruby-2.4.5/lib/ruby/site_ruby/2.4.0 -r ./siteconf20190709-6590-18hw3de.rb extconf.rb
+creating Makefile
+
+current directory: /Users/travis/build/bow-swift/bow/docs/vendor/bundle/ruby/2.4.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+make "DESTDIR=" clean
+
+current directory: /Users/travis/build/bow-swift/bow/docs/vendor/bundle/ruby/2.4.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+make "DESTDIR="
+compiling ruby_http_parser.c
+compiling ryah_http_parser.c
+linking shared-object ruby_http_parser.bundle
+
+current directory: /Users/travis/build/bow-swift/bow/docs/vendor/bundle/ruby/2.4.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+make "DESTDIR=" install
+/usr/bin/install -m 0755 ruby_http_parser.bundle ./.gem.20190709-6590-gk0ata

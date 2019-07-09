@@ -329,7 +329,23 @@
  <span class="n">pod</span> <span class="s2">"BowBrightFutures"</span><span class="p">,</span>    <span class="s2">"~&gt; {version}"</span>
 </code></pre></div></div>
 
-<p>After that, run the following command in the terminal:</p>
+<p>Bow also provides some pods for testing that can be consumed with:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">pod</span> <span class="s2">"BowLaws"</span><span class="p">,</span>        <span class="s2">"~&gt; {version}"</span>
+ <span class="n">pod</span> <span class="s2">"BowOpticsLaws"</span><span class="p">,</span>  <span class="s2">"~&gt; {version}"</span>
+ <span class="n">pod</span> <span class="s2">"BowEffectsLaws"</span><span class="p">,</span> <span class="s2">"~&gt; {version}"</span>
+</code></pre></div></div>
+
+<p>And generators for property-based testing with SwiftCheck:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">pod</span> <span class="s2">"BowGenerators"</span><span class="p">,</span>              <span class="s2">"~&gt; {version}"</span>
+ <span class="n">pod</span> <span class="s2">"BowFreeGenerators"</span><span class="p">,</span>          <span class="s2">"~&gt; {version}"</span>
+ <span class="n">pod</span> <span class="s2">"BowEffectsGenerators"</span><span class="p">,</span>       <span class="s2">"~&gt; {version}"</span>
+ <span class="n">pod</span> <span class="s2">"BowRxGenerators"</span><span class="p">,</span>            <span class="s2">"~&gt; {version}"</span>
+ <span class="n">pod</span> <span class="s2">"BowBrightFuturesGenerators"</span><span class="p">,</span> <span class="s2">"~&gt; {version}"</span>
+</code></pre></div></div>
+
+<p>After including the pods you would like to use in your Podfile, run the following command in the terminal:</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ pod install
 </code></pre></div></div>
@@ -375,13 +391,25 @@
                     <span class="s">"BowGeneric"</span><span class="p">,</span>
                     <span class="s">"BowEffects"</span><span class="p">,</span>
                     <span class="s">"BowRx"</span><span class="p">,</span>
-                    <span class="s">"BowBrightFutures"</span><span class="p">]</span>
-        <span class="p">)</span>
+                    <span class="s">"BowBrightFutures"</span><span class="p">]),</span>
+        <span class="o">.</span><span class="nf">testTarget</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"BowTestProjectTests"</span><span class="p">,</span>
+                    <span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="c1">// Type class laws</span>
+                        <span class="s">"BowLaws"</span><span class="p">,</span>
+                        <span class="s">"BowOpticsLaws"</span><span class="p">,</span>
+                        <span class="s">"BowEffectsLaws"</span><span class="p">,</span>
+ 
+                        <span class="c1">// Generators for PBT with SwiftCheck</span>
+                        <span class="s">"BowGenerators"</span><span class="p">,</span>
+                        <span class="s">"BowFreeGenerators"</span><span class="p">,</span>
+                        <span class="s">"BowEffectsGenerators"</span><span class="p">,</span>
+                        <span class="s">"BowRxGenerators"</span><span class="p">,</span>
+                        <span class="s">"BowBrightFuturesGenerators"</span><span class="p">])</span>
     <span class="p">]</span>
 <span class="p">)</span>
 </code></pre></div></div>
 
-<p>To build it, just run the following command in the terminal:</p>
+<p>Feel free to include or remove the targets above at your convenience. To build the project, just run the following command in the terminal:</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ swift build
 </code></pre></div></div>
